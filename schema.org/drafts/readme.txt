@@ -1,0 +1,2 @@
+
+Stub file for Mercurial.
