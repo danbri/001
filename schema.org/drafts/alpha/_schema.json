@@ -1,0 +1,4462 @@
+{
+    "@context": {
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#", 
+        "schema": "http://schema.org/", 
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#", 
+        "http://schema.org/range": {
+            "@type": "@id"
+        }, 
+        "http://www.w3.org/2000/01/rdf-schema#subClassOf": {
+            "@type": "@id"
+        }, 
+        "http://schema.org/domain": {
+            "@type": "@id"
+        }
+    }, 
+    "@id": [
+        {
+            "@id": "schema:Volcano", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:Landform", 
+            "rdfs:comment": "A volcano, like Fuji san", 
+            "rdfs:label": "Volcano"
+        }, 
+        {
+            "@id": "schema:address", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "Physical address of the item.", 
+            "schema:range": "schema:PostalAddress", 
+            "schema:domain": [
+                "schema:Person", 
+                "schema:Organization", 
+                "schema:Place"
+            ], 
+            "rdfs:label": "address"
+        }, 
+        {
+            "@id": "schema:AutoBodyShop", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:AutomotiveBusiness", 
+            "rdfs:comment": "Auto body shop.", 
+            "rdfs:label": "AutoBodyShop"
+        }, 
+        {
+            "@id": "schema:image", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "URL of an image of the item.", 
+            "schema:range": "schema:URL", 
+            "schema:domain": "schema:Thing", 
+            "rdfs:label": "image"
+        }, 
+        {
+            "@id": "schema:performerin", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "Event that this person is a performer or participant in.", 
+            "schema:range": "schema:Event", 
+            "schema:domain": "schema:Person", 
+            "rdfs:label": "performerin"
+        }, 
+        {
+            "@id": "schema:HomeGoodsStore", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:Store", 
+            "rdfs:comment": "A home goods store.", 
+            "rdfs:label": "HomeGoodsStore"
+        }, 
+        {
+            "@id": "schema:LakeBodyOfWater", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:BodyOfWater", 
+            "rdfs:comment": "A lake (for example, Lake Pontrachain).", 
+            "rdfs:label": "LakeBodyOfWater"
+        }, 
+        {
+            "@id": "schema:memberof", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "An organization to which the person belongs.", 
+            "schema:range": "schema:Organization", 
+            "schema:domain": "schema:Person", 
+            "rdfs:label": "memberof"
+        }, 
+        {
+            "@id": "schema:School", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:EducationalOrganization", 
+            "rdfs:comment": "A school.", 
+            "rdfs:label": "School"
+        }, 
+        {
+            "@id": "schema:TelevisionStation", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:LocalBusiness", 
+            "rdfs:comment": "A television station.", 
+            "rdfs:label": "TelevisionStation"
+        }, 
+        {
+            "@id": "schema:UserInteraction", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:Event", 
+            "rdfs:comment": "A user interacting with a page", 
+            "rdfs:label": "UserInteraction"
+        }, 
+        {
+            "@id": "schema:CafeOrCoffeeShop", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:FoodEstablishment", 
+            "rdfs:comment": "A cafe or coffee shop.", 
+            "rdfs:label": "CafeOrCoffeeShop"
+        }, 
+        {
+            "@id": "schema:UserLikes", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:UserInteraction", 
+            "rdfs:comment": "User interaction: Like an item.", 
+            "rdfs:label": "UserLikes"
+        }, 
+        {
+            "@id": "schema:about", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "The subject matter of the content.", 
+            "schema:range": "schema:Thing", 
+            "schema:domain": "schema:CreativeWork", 
+            "rdfs:label": "about"
+        }, 
+        {
+            "@id": "schema:alumni", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "Alumni of educational organization.", 
+            "schema:range": "schema:Person", 
+            "schema:domain": "schema:EducationalOrganization", 
+            "rdfs:label": "alumni"
+        }, 
+        {
+            "@id": "schema:ProfessionalService", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:LocalBusiness", 
+            "rdfs:comment": "Provider of professional services.", 
+            "rdfs:label": "ProfessionalService"
+        }, 
+        {
+            "@id": "schema:videoquality", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "The quality of the video.", 
+            "schema:range": "schema:Text", 
+            "schema:domain": "schema:VideoObject", 
+            "rdfs:label": "videoquality"
+        }, 
+        {
+            "@id": "schema:inlanguage", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "The language of the content. please use one of the language codes from the IETF BCP 47 standard.", 
+            "schema:range": "schema:Text", 
+            "schema:domain": "schema:CreativeWork", 
+            "rdfs:label": "inlanguage"
+        }, 
+        {
+            "@id": "schema:Text", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:DataType", 
+            "rdfs:comment": "Data type: Text.", 
+            "rdfs:label": "Text"
+        }, 
+        {
+            "@id": "schema:responsibilities", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "Responsibilities associated with this role.", 
+            "schema:range": "schema:Text", 
+            "schema:domain": "schema:JobPosting", 
+            "rdfs:label": "responsibilities"
+        }, 
+        {
+            "@id": "schema:BikeStore", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:Store", 
+            "rdfs:comment": "A bike store.", 
+            "rdfs:label": "BikeStore"
+        }, 
+        {
+            "@id": "schema:BuddhistTemple", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:PlaceOfWorship", 
+            "rdfs:comment": "A Buddhist temple.", 
+            "rdfs:label": "BuddhistTemple"
+        }, 
+        {
+            "@id": "schema:contentsize", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "File size in (mega/kilo) bytes.", 
+            "schema:range": "schema:Text", 
+            "schema:domain": "schema:MediaObject", 
+            "rdfs:label": "contentsize"
+        }, 
+        {
+            "@id": "schema:Beach", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:CivicStructure", 
+            "rdfs:comment": "Beach.", 
+            "rdfs:label": "Beach"
+        }, 
+        {
+            "@id": "schema:UserPlays", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:UserInteraction", 
+            "rdfs:comment": "User interaction: Play count of an item, for example a video or a song.", 
+            "rdfs:label": "UserPlays"
+        }, 
+        {
+            "@id": "schema:isbn", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "The ISBN of the book.", 
+            "schema:range": "schema:Text", 
+            "schema:domain": "schema:Book", 
+            "rdfs:label": "isbn"
+        }, 
+        {
+            "@id": "schema:printpage", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "If this NewsArticle appears in print, this field indicates the name of the page on which the article is found. Please note that this field is intended for the exact page name (e.g. A5, B18).", 
+            "schema:range": "schema:Text", 
+            "schema:domain": "schema:NewsArticle", 
+            "rdfs:label": "printpage"
+        }, 
+        {
+            "@id": "schema:fatcontent", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "The number of grams of fat.", 
+            "schema:range": "schema:Mass", 
+            "schema:domain": "schema:NutritionInformation", 
+            "rdfs:label": "fatcontent"
+        }, 
+        {
+            "@id": "schema:ratingcount", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "The count of total number of ratings.", 
+            "schema:range": "schema:Number", 
+            "schema:domain": "schema:AggregateRating", 
+            "rdfs:label": "ratingcount"
+        }, 
+        {
+            "@id": "schema:associatedarticle", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "A NewsArticle associated with the Media Object.", 
+            "schema:range": "schema:NewsArticle", 
+            "schema:domain": "schema:MediaObject", 
+            "rdfs:label": "associatedarticle"
+        }, 
+        {
+            "@id": "schema:circle", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "A circle is the circular region of a specified radius centered at a specified latitude and longitude. A circle is expressed as a pair followed by a radius in meters.", 
+            "schema:range": "schema:Text", 
+            "schema:domain": "schema:GeoShape", 
+            "rdfs:label": "circle"
+        }, 
+        {
+            "@id": "schema:partoftvseries", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "The TV series to which this episode or season belongs.", 
+            "schema:range": "schema:TVSeries", 
+            "schema:domain": [
+                "schema:TVSeason", 
+                "schema:TVEpisode"
+            ], 
+            "rdfs:label": "partoftvseries"
+        }, 
+        {
+            "@id": "schema:GroceryStore", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:Store", 
+            "rdfs:comment": "A grocery store.", 
+            "rdfs:label": "GroceryStore"
+        }, 
+        {
+            "@id": "schema:printcolumn", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "The number of the column in which the NewsArticle appears in the print edition.", 
+            "schema:range": "schema:Text", 
+            "schema:domain": "schema:NewsArticle", 
+            "rdfs:label": "printcolumn"
+        }, 
+        {
+            "@id": "schema:acceptsreservations", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "Either Yes/No, or a URL at which reservations can be made.", 
+            "schema:range": [
+                "schema:URL", 
+                "schema:Text"
+            ], 
+            "schema:domain": "schema:FoodEstablishment", 
+            "rdfs:label": "acceptsreservations"
+        }, 
+        {
+            "@id": "schema:thumbnail", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "Thumbnail image for an image or video.", 
+            "schema:range": "schema:ImageObject", 
+            "schema:domain": [
+                "schema:VideoObject", 
+                "schema:ImageObject"
+            ], 
+            "rdfs:label": "thumbnail"
+        }, 
+        {
+            "@id": "schema:productioncompany", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "The production company or studio that made the movie, TV series, season, or episode, or video.", 
+            "schema:range": "schema:Organization", 
+            "schema:domain": [
+                "schema:VideoObject", 
+                "schema:Movie", 
+                "schema:TVEpisode", 
+                "schema:TVSeries"
+            ], 
+            "rdfs:label": "productioncompany"
+        }, 
+        {
+            "@id": "schema:AboutPage", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:WebPage", 
+            "rdfs:comment": "Web page type: About page.", 
+            "rdfs:label": "AboutPage"
+        }, 
+        {
+            "@id": "schema:superevent", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "An event that this event is a part of. For example, a collection of individual music performances might each have a music festival as their superEvent.", 
+            "schema:range": "schema:Event", 
+            "schema:domain": "schema:Event", 
+            "rdfs:label": "superevent"
+        }, 
+        {
+            "@id": "schema:MusicVideoObject", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:MediaObject", 
+            "rdfs:comment": "A music video file.", 
+            "rdfs:label": "MusicVideoObject"
+        }, 
+        {
+            "@id": "schema:accountableperson", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "Specifies the Person that is legally accountable for the CreativeWork.", 
+            "schema:range": "schema:Person", 
+            "schema:domain": "schema:CreativeWork", 
+            "rdfs:label": "accountableperson"
+        }, 
+        {
+            "@id": "schema:primaryimageofpage", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "Indicates the main image on the page", 
+            "schema:range": "schema:ImageObject", 
+            "schema:domain": "schema:WebPage", 
+            "rdfs:label": "primaryimageofpage"
+        }, 
+        {
+            "@id": "schema:softwareapplicationcategory", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "Type of software application.", 
+            "schema:range": {
+                "@id": "schema:SoftwareApplicationType", 
+                "@type": "rdfs:Class", 
+                "rdfs:subClassOf": "schema:Enumeration", 
+                "rdfs:comment": "Type of software application.", 
+                "rdfs:label": "SoftwareApplicationType"
+            }, 
+            "schema:domain": "schema:SoftwareApplication", 
+            "rdfs:label": "softwareapplicationcategory"
+        }, 
+        {
+            "@id": "schema:LandmarksOrHistoricalBuildings", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:Place", 
+            "rdfs:comment": "An historical landmark or building.", 
+            "rdfs:label": "LandmarksOrHistoricalBuildings"
+        }, 
+        {
+            "@id": "schema:InsuranceAgency", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:FinancialService", 
+            "rdfs:comment": "Insurance agency.", 
+            "rdfs:label": "InsuranceAgency"
+        }, 
+        {
+            "@id": "schema:GardenStore", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:Store", 
+            "rdfs:comment": "A garden store.", 
+            "rdfs:label": "GardenStore"
+        }, 
+        {
+            "@id": "schema:itemreviewed", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "The item that is being reviewed/rated.", 
+            "schema:range": "schema:Thing", 
+            "schema:domain": [
+                "schema:AggregateRating", 
+                "schema:Review"
+            ], 
+            "rdfs:label": "itemreviewed"
+        }, 
+        {
+            "@id": "schema:transfatcontent", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "The number of grams of trans fat.", 
+            "schema:range": "schema:Mass", 
+            "schema:domain": "schema:NutritionInformation", 
+            "rdfs:label": "transfatcontent"
+        }, 
+        {
+            "@id": "schema:AudioObject", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:MediaObject", 
+            "rdfs:comment": "An audio file.", 
+            "rdfs:label": "AudioObject"
+        }, 
+        {
+            "@id": "schema:bestrating", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "The highest value allowed in this rating system. If bestRating is omitted, 5 is assumed.", 
+            "schema:range": [
+                "schema:Number", 
+                "schema:Text"
+            ], 
+            "schema:domain": "schema:Rating", 
+            "rdfs:label": "bestrating"
+        }, 
+        {
+            "@id": "schema:Plumber", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": [
+                "schema:HomeAndConstructionBusiness", 
+                "schema:ProfessionalService"
+            ], 
+            "rdfs:comment": "A plumbing service.", 
+            "rdfs:label": "Plumber"
+        }, 
+        {
+            "@id": "schema:SportsTeam", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:Organization", 
+            "rdfs:comment": "Organization: Sports team.", 
+            "rdfs:label": "SportsTeam"
+        }, 
+        {
+            "@id": "schema:SeaBodyOfWater", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:BodyOfWater", 
+            "rdfs:comment": "A sea (for example, the Caspian sea).", 
+            "rdfs:label": "SeaBodyOfWater"
+        }, 
+        {
+            "@id": "schema:ConvenienceStore", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:Store", 
+            "rdfs:comment": "A convenience store.", 
+            "rdfs:label": "ConvenienceStore"
+        }, 
+        {
+            "@id": "schema:illustrator", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "The illustrator of the book.", 
+            "schema:range": "schema:Person", 
+            "schema:domain": "schema:Book", 
+            "rdfs:label": "illustrator"
+        }, 
+        {
+            "@id": "schema:ArtGallery", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:EntertainmentBusiness", 
+            "rdfs:comment": "An art gallery.", 
+            "rdfs:label": "ArtGallery"
+        }, 
+        {
+            "@id": "schema:box", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "A polygon is the area enclosed by a point-to-point path for which the starting and ending points are the same. A polygon is expressed as a series of four or more spacedelimited points where the first and final points are identical.", 
+            "schema:range": "schema:Text", 
+            "schema:domain": "schema:GeoShape", 
+            "rdfs:label": "box"
+        }, 
+        {
+            "@id": "schema:gender", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "Gender of the person.", 
+            "schema:range": "schema:Text", 
+            "schema:domain": "schema:Person", 
+            "rdfs:label": "gender"
+        }, 
+        {
+            "@id": "schema:WPHeader", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:WebPageElement", 
+            "rdfs:comment": "The header section of the page.", 
+            "rdfs:label": "WPHeader"
+        }, 
+        {
+            "@id": "schema:TattooParlor", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:HealthAndBeautyBusiness", 
+            "rdfs:comment": "A tattoo parlor.", 
+            "rdfs:label": "TattooParlor"
+        }, 
+        {
+            "@id": "schema:JewelryStore", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:Store", 
+            "rdfs:comment": "A jewelry store.", 
+            "rdfs:label": "JewelryStore"
+        }, 
+        {
+            "@id": "schema:honorificsuffix", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "An honorific suffix preceding a Person's name such as M.D. /PhD/MSCSW.", 
+            "schema:range": "schema:Text", 
+            "schema:domain": "schema:Person", 
+            "rdfs:label": "honorificsuffix"
+        }, 
+        {
+            "@id": "schema:worksfor", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "Organizations that the person works for.", 
+            "schema:range": "schema:Organization", 
+            "schema:domain": "schema:Person", 
+            "rdfs:label": "worksfor"
+        }, 
+        {
+            "@id": "schema:Movie", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:CreativeWork", 
+            "rdfs:comment": "A movie.", 
+            "rdfs:label": "Movie"
+        }, 
+        {
+            "@id": "schema:IceCreamShop", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:FoodEstablishment", 
+            "rdfs:comment": "An ice cream shop", 
+            "rdfs:label": "IceCreamShop"
+        }, 
+        {
+            "@id": "schema:Notary", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:ProfessionalService", 
+            "rdfs:comment": "A notary.", 
+            "rdfs:label": "Notary"
+        }, 
+        {
+            "@id": "schema:deathdate", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "Date of death.", 
+            "schema:range": "schema:Date", 
+            "schema:domain": "schema:Person", 
+            "rdfs:label": "deathdate"
+        }, 
+        {
+            "@id": "schema:Dentist", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": [
+                "schema:MedicalOrganization", 
+                "schema:ProfessionalService"
+            ], 
+            "rdfs:comment": "A dentist.", 
+            "rdfs:label": "Dentist"
+        }, 
+        {
+            "@id": "schema:type", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "Auto added type field.", 
+            "schema:range": "schema:Text", 
+            "schema:domain": "schema:Thing", 
+            "rdfs:label": "type"
+        }, 
+        {
+            "@id": "schema:faxnumber", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "The fax number.", 
+            "schema:range": "schema:Text", 
+            "schema:domain": [
+                "schema:Person", 
+                "schema:ContactPoint", 
+                "schema:Organization", 
+                "schema:Place"
+            ], 
+            "rdfs:label": "faxnumber"
+        }, 
+        {
+            "@id": "schema:startdate", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "The start date and time of the event (in ISO 8601 date format).", 
+            "schema:range": "schema:Date", 
+            "schema:domain": [
+                "schema:TVSeason", 
+                "schema:TVSeries", 
+                "schema:Event"
+            ], 
+            "rdfs:label": "startdate"
+        }, 
+        {
+            "@id": "schema:WPFooter", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:WebPageElement", 
+            "rdfs:comment": "The footer section of the page.", 
+            "rdfs:label": "WPFooter"
+        }, 
+        {
+            "@id": "schema:saturatedfatcontent", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "The number of grams of saturated fat.", 
+            "schema:range": "schema:Mass", 
+            "schema:domain": "schema:NutritionInformation", 
+            "rdfs:label": "saturatedfatcontent"
+        }, 
+        {
+            "@id": "schema:dateposted", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "Publication date for the job posting.", 
+            "schema:range": "schema:Date", 
+            "schema:domain": "schema:JobPosting", 
+            "rdfs:label": "dateposted"
+        }, 
+        {
+            "@id": "schema:printedition", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "The edition of the print product in which the NewsArticle appears.", 
+            "schema:range": "schema:Text", 
+            "schema:domain": "schema:NewsArticle", 
+            "rdfs:label": "printedition"
+        }, 
+        {
+            "@id": "schema:spouse", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "The person's spouse.", 
+            "schema:range": "schema:Person", 
+            "schema:domain": "schema:Person", 
+            "rdfs:label": "spouse"
+        }, 
+        {
+            "@id": "schema:members", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "A member of this organization.", 
+            "schema:range": [
+                "schema:Person", 
+                "schema:Organization"
+            ], 
+            "schema:domain": "schema:Organization", 
+            "rdfs:label": "members"
+        }, 
+        {
+            "@id": "schema:FastFoodRestaurant", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:FoodEstablishment", 
+            "rdfs:comment": "A fast-food restaurant.", 
+            "rdfs:label": "FastFoodRestaurant"
+        }, 
+        {
+            "@id": "schema:AutoPartsStore", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": [
+                "schema:Store", 
+                "schema:AutomotiveBusiness"
+            ], 
+            "rdfs:comment": "An auto parts store.", 
+            "rdfs:label": "AutoPartsStore"
+        }, 
+        {
+            "@id": "schema:manufacturer", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "The manufacturer of the product.", 
+            "schema:range": "schema:Organization", 
+            "schema:domain": "schema:Product", 
+            "rdfs:label": "manufacturer"
+        }, 
+        {
+            "@id": "schema:WPAdBlock", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:WebPageElement", 
+            "rdfs:comment": "An advertising section of the page.", 
+            "rdfs:label": "WPAdBlock"
+        }, 
+        {
+            "@id": "schema:Restaurant", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:FoodEstablishment", 
+            "rdfs:comment": "A restaurant.", 
+            "rdfs:label": "Restaurant"
+        }, 
+        {
+            "@id": "schema:proteincontent", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "The number of grams of protein.", 
+            "schema:range": "schema:Mass", 
+            "schema:domain": "schema:NutritionInformation", 
+            "rdfs:label": "proteincontent"
+        }, 
+        {
+            "@id": "schema:MotorcycleRepair", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:AutomotiveBusiness", 
+            "rdfs:comment": "A motorcycle repair shop.", 
+            "rdfs:label": "MotorcycleRepair"
+        }, 
+        {
+            "@id": "schema:numtracks", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "The number of tracks in this album or playlist.", 
+            "schema:range": "schema:Integer", 
+            "schema:domain": "schema:MusicPlaylist", 
+            "rdfs:label": "numtracks"
+        }, 
+        {
+            "@id": "schema:model", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "The model of the product.", 
+            "schema:range": "schema:Text", 
+            "schema:domain": "schema:Product", 
+            "rdfs:label": "model"
+        }, 
+        {
+            "@id": "schema:Recipe", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:CreativeWork", 
+            "rdfs:comment": "A recipe.", 
+            "rdfs:label": "Recipe"
+        }, 
+        {
+            "@id": "schema:DryCleaningOrLaundry", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:LocalBusiness", 
+            "rdfs:comment": "A dry-cleaning business.", 
+            "rdfs:label": "DryCleaningOrLaundry"
+        }, 
+        {
+            "@id": "schema:FurnitureStore", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:Store", 
+            "rdfs:comment": "A furniture store.", 
+            "rdfs:label": "FurnitureStore"
+        }, 
+        {
+            "@id": "schema:experiencerequirements", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "Description of skills and experience needed for the position.", 
+            "schema:range": "schema:Text", 
+            "schema:domain": "schema:JobPosting", 
+            "rdfs:label": "experiencerequirements"
+        }, 
+        {
+            "@id": "schema:SoftwareApplication", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:CreativeWork", 
+            "rdfs:comment": "A software application.", 
+            "rdfs:label": "SoftwareApplication"
+        }, 
+        {
+            "@id": "schema:hiringorganization", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "Organization offering the job position.", 
+            "schema:range": "schema:Organization", 
+            "schema:domain": "schema:JobPosting", 
+            "rdfs:label": "hiringorganization"
+        }, 
+        {
+            "@id": "schema:postofficeboxnumber", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "The post offce box number for PO box addresses.", 
+            "schema:range": "schema:Text", 
+            "schema:domain": "schema:PostalAddress", 
+            "rdfs:label": "postofficeboxnumber"
+        }, 
+        {
+            "@id": "schema:contactpoints", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "A contact point for a person or organization.", 
+            "schema:range": "schema:ContactPoint", 
+            "schema:domain": [
+                "schema:Person", 
+                "schema:Organization"
+            ], 
+            "rdfs:label": "contactpoints"
+        }, 
+        {
+            "@id": "schema:availability", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "The availability of this item—for example In stock, Out of stock, Pre-order, etc.", 
+            "schema:range": {
+                "@id": "schema:ItemAvailability", 
+                "@type": "rdfs:Class", 
+                "rdfs:subClassOf": "schema:Enumeration", 
+                "rdfs:comment": "A list of possible product availablity options.", 
+                "rdfs:label": "ItemAvailability"
+            }, 
+            "schema:domain": "schema:Offer", 
+            "rdfs:label": "availability"
+        }, 
+        {
+            "@id": "schema:contentlocation", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "The location of the content.", 
+            "schema:range": "schema:Place", 
+            "schema:domain": "schema:CreativeWork", 
+            "rdfs:label": "contentlocation"
+        }, 
+        {
+            "@id": "schema:Zoo", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:CivicStructure", 
+            "rdfs:comment": "A zoo.", 
+            "rdfs:label": "Zoo"
+        }, 
+        {
+            "@id": "schema:Integer", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:Number", 
+            "rdfs:comment": "Data type: Integer.", 
+            "rdfs:label": "Integer"
+        }, 
+        {
+            "@id": "schema:siblings", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "A sibling of the person.", 
+            "schema:range": "schema:Person", 
+            "schema:domain": "schema:Person", 
+            "rdfs:label": "siblings"
+        }, 
+        {
+            "@id": "schema:CreativeWork", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:Thing", 
+            "rdfs:comment": "The most generic kind of creative work, including books, movies, photographs, software programs, etc.", 
+            "rdfs:label": "CreativeWork"
+        }, 
+        {
+            "@id": "schema:copyrightyear", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "The year during which the claimed copyright for the CreativeWork was first asserted.", 
+            "schema:range": "schema:Number", 
+            "schema:domain": "schema:CreativeWork", 
+            "rdfs:label": "copyrightyear"
+        }, 
+        {
+            "@id": "schema:partofseason", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "The season to which this episode belongs.", 
+            "schema:range": "schema:TVSeason", 
+            "schema:domain": "schema:TVEpisode", 
+            "rdfs:label": "partofseason"
+        }, 
+        {
+            "@id": "schema:offercount", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "The number of offers for the product.", 
+            "schema:range": "schema:Integer", 
+            "schema:domain": "schema:AggregateOffer", 
+            "rdfs:label": "offercount"
+        }, 
+        {
+            "@id": "schema:ispartof", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "Indicates the collection or gallery to which the item belongs.", 
+            "schema:range": "schema:CollectionPage", 
+            "schema:domain": "schema:WebPage", 
+            "rdfs:label": "ispartof"
+        }, 
+        {
+            "@id": "schema:Park", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:CivicStructure", 
+            "rdfs:comment": "A park.", 
+            "rdfs:label": "Park"
+        }, 
+        {
+            "@id": "schema:joblocation", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "A (typically single) geographic location associated with the job position.", 
+            "schema:range": "schema:Place", 
+            "schema:domain": "schema:JobPosting", 
+            "rdfs:label": "joblocation"
+        }, 
+        {
+            "@id": "schema:alternativeheadline", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "A secondary title of the CreativeWork.", 
+            "schema:range": "schema:Text", 
+            "schema:domain": "schema:CreativeWork", 
+            "rdfs:label": "alternativeheadline"
+        }, 
+        {
+            "@id": "schema:alumniof", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "An educational organizations that the person is an alumni of.", 
+            "schema:range": "schema:EducationalOrganization", 
+            "schema:domain": "schema:Person", 
+            "rdfs:label": "alumniof"
+        }, 
+        {
+            "@id": "schema:pricecurrency", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "The currency (in 3-letter ISO 4217 format) of the offer price.", 
+            "schema:range": "schema:Text", 
+            "schema:domain": "schema:Offer", 
+            "rdfs:label": "pricecurrency"
+        }, 
+        {
+            "@id": "schema:elevation", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "The elevation of a location.", 
+            "schema:range": [
+                "schema:Number", 
+                "schema:Text"
+            ], 
+            "schema:domain": [
+                "schema:GeoCoordinates", 
+                "schema:GeoShape"
+            ], 
+            "rdfs:label": "elevation"
+        }, 
+        {
+            "@id": "schema:price", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "The offer price of the product.", 
+            "schema:range": [
+                "schema:Number", 
+                "schema:Text"
+            ], 
+            "schema:domain": "schema:Offer", 
+            "rdfs:label": "price"
+        }, 
+        {
+            "@id": "schema:URL", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:Text", 
+            "rdfs:comment": "Data type: URL.", 
+            "rdfs:label": "URL"
+        }, 
+        {
+            "@id": "schema:SportingGoodsStore", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:Store", 
+            "rdfs:comment": "A sporting goods store.", 
+            "rdfs:label": "SportingGoodsStore"
+        }, 
+        {
+            "@id": "schema:servingsize", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "The serving size, in terms of the number of volume or mass", 
+            "schema:range": "schema:Text", 
+            "schema:domain": "schema:NutritionInformation", 
+            "rdfs:label": "servingsize"
+        }, 
+        {
+            "@id": "schema:Table", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:WebPageElement", 
+            "rdfs:comment": "A table on the page.", 
+            "rdfs:label": "Table"
+        }, 
+        {
+            "@id": "schema:Boolean", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:DataType", 
+            "rdfs:comment": "Boolean: True or False.", 
+            "rdfs:label": "Boolean"
+        }, 
+        {
+            "@id": "schema:ComedyClub", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:EntertainmentBusiness", 
+            "rdfs:comment": "A comedy club.", 
+            "rdfs:label": "ComedyClub"
+        }, 
+        {
+            "@id": "schema:colleagues", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "A colleague of the person.", 
+            "schema:range": "schema:Person", 
+            "schema:domain": "schema:Person", 
+            "rdfs:label": "colleagues"
+        }, 
+        {
+            "@id": "schema:MedicalClinic", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:MedicalOrganization", 
+            "rdfs:comment": "A medical clinic.", 
+            "rdfs:label": "MedicalClinic"
+        }, 
+        {
+            "@id": "schema:GovernmentOrganization", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:Organization", 
+            "rdfs:comment": "A governmental organization or agency.", 
+            "rdfs:label": "GovernmentOrganization"
+        }, 
+        {
+            "@id": "schema:StructuredValue", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:Intangible", 
+            "rdfs:comment": "Structured values are strings—for example, addresses—that have certain constraints on their structure.", 
+            "rdfs:label": "StructuredValue"
+        }, 
+        {
+            "@id": "schema:affiliation", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "An organization that this person is affiliated with. For example, a school/university, a club, or a team.", 
+            "schema:range": "schema:Organization", 
+            "schema:domain": "schema:Person", 
+            "rdfs:label": "affiliation"
+        }, 
+        {
+            "@id": "schema:honorificprefix", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "An honorific prefix preceding a Person's name such as Dr/Mrs/Mr.", 
+            "schema:range": "schema:Text", 
+            "schema:domain": "schema:Person", 
+            "rdfs:label": "honorificprefix"
+        }, 
+        {
+            "@id": "schema:carbohydratecontent", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "The number of grams of carbohydrates.", 
+            "schema:range": "schema:Mass", 
+            "schema:domain": "schema:NutritionInformation", 
+            "rdfs:label": "carbohydratecontent"
+        }, 
+        {
+            "@id": "schema:Synagogue", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:PlaceOfWorship", 
+            "rdfs:comment": "A synagogue.", 
+            "rdfs:label": "Synagogue"
+        }, 
+        {
+            "@id": "schema:recipecategory", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "The category of the recipe—for example, appetizer, entree, etc.", 
+            "schema:range": "schema:Text", 
+            "schema:domain": "schema:Recipe", 
+            "rdfs:label": "recipecategory"
+        }, 
+        {
+            "@id": "schema:TireShop", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:Store", 
+            "rdfs:comment": "A tire shop.", 
+            "rdfs:label": "TireShop"
+        }, 
+        {
+            "@id": "schema:creator", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "The creator/author of this CreativeWork or UserComments. This is the same as the Author property for CreativeWork.", 
+            "schema:range": [
+                "schema:Person", 
+                "schema:Organization"
+            ], 
+            "schema:domain": [
+                "schema:CreativeWork", 
+                "schema:UserComments"
+            ], 
+            "rdfs:label": "creator"
+        }, 
+        {
+            "@id": "schema:PoliceStation", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": [
+                "schema:CivicStructure", 
+                "schema:EmergencyService"
+            ], 
+            "rdfs:comment": "A police station.", 
+            "rdfs:label": "PoliceStation"
+        }, 
+        {
+            "@id": "schema:EmploymentAgency", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:LocalBusiness", 
+            "rdfs:comment": "An employment agency.", 
+            "rdfs:label": "EmploymentAgency"
+        }, 
+        {
+            "@id": "schema:latitude", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "The latitude of a location. For example 37.42242.", 
+            "schema:range": [
+                "schema:Number", 
+                "schema:Text"
+            ], 
+            "schema:domain": "schema:GeoCoordinates", 
+            "rdfs:label": "latitude"
+        }, 
+        {
+            "@id": "schema:itemcondition", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "The condition of the item for sale—for example New, Refurbished, Used, etc.", 
+            "schema:range": {
+                "@id": "schema:OfferItemCondition", 
+                "@type": "rdfs:Class", 
+                "rdfs:subClassOf": "schema:Enumeration", 
+                "rdfs:comment": "A list of possible conditions for the item for sale.", 
+                "rdfs:label": "OfferItemCondition"
+            }, 
+            "schema:domain": "schema:Offer", 
+            "rdfs:label": "itemcondition"
+        }, 
+        {
+            "@id": "schema:BusinessEvent", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:Event", 
+            "rdfs:comment": "Event type: Business event.", 
+            "rdfs:label": "BusinessEvent"
+        }, 
+        {
+            "@id": "schema:AutoWash", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:AutomotiveBusiness", 
+            "rdfs:comment": "A car wash business.", 
+            "rdfs:label": "AutoWash"
+        }, 
+        {
+            "@id": "schema:SportsActivityLocation", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:LocalBusiness", 
+            "rdfs:comment": "A sports location, such as a playing field.", 
+            "rdfs:label": "SportsActivityLocation"
+        }, 
+        {
+            "@id": "schema:OfficeEquipmentStore", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:Store", 
+            "rdfs:comment": "An office equipment store.", 
+            "rdfs:label": "OfficeEquipmentStore"
+        }, 
+        {
+            "@id": "schema:attendees", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "A person attending the event.", 
+            "schema:range": [
+                "schema:Person", 
+                "schema:Organization"
+            ], 
+            "schema:domain": "schema:Event", 
+            "rdfs:label": "attendees"
+        }, 
+        {
+            "@id": "schema:Hotel", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:LodgingBusiness", 
+            "rdfs:comment": "A hotel.", 
+            "rdfs:label": "Hotel"
+        }, 
+        {
+            "@id": "schema:HealthClub", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": [
+                "schema:SportsActivityLocation", 
+                "schema:HealthAndBeautyBusiness"
+            ], 
+            "rdfs:comment": "A health club.", 
+            "rdfs:label": "HealthClub"
+        }, 
+        {
+            "@id": "schema:MusicAlbum", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:MusicPlaylist", 
+            "rdfs:comment": "A collection of music tracks.", 
+            "rdfs:label": "MusicAlbum"
+        }, 
+        {
+            "@id": "schema:recipeinstructions", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "The steps to make the dish.", 
+            "schema:range": "schema:Text", 
+            "schema:domain": "schema:Recipe", 
+            "rdfs:label": "recipeinstructions"
+        }, 
+        {
+            "@id": "schema:subevents", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "Events that are a part of this event. For example, a conference event includes many presentations, each are subEvents of the conference.", 
+            "schema:range": "schema:Event", 
+            "schema:domain": "schema:Event", 
+            "rdfs:label": "subevents"
+        }, 
+        {
+            "@id": "schema:seasons", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "The seasons of the TV series.", 
+            "schema:range": "schema:TVSeason", 
+            "schema:domain": "schema:TVSeries", 
+            "rdfs:label": "seasons"
+        }, 
+        {
+            "@id": "schema:givenname", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "Given name. In the U.S., the first name of a Person. This can be used along with familyName instead of the Name property.", 
+            "schema:range": "schema:Text", 
+            "schema:domain": "schema:Person", 
+            "rdfs:label": "givenname"
+        }, 
+        {
+            "@id": "schema:Bakery", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:FoodEstablishment", 
+            "rdfs:comment": "A bakery.", 
+            "rdfs:label": "Bakery"
+        }, 
+        {
+            "@id": "schema:Person", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:Thing", 
+            "rdfs:comment": "A person (alive, dead, undead, or fictional).", 
+            "rdfs:label": "Person"
+        }, 
+        {
+            "@id": "schema:Physician", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:MedicalOrganization", 
+            "rdfs:comment": "A doctor's office.", 
+            "rdfs:label": "Physician"
+        }, 
+        {
+            "@id": "schema:ItemPage", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:WebPage", 
+            "rdfs:comment": "A page devoted to a single item, such as a particular product or hotel.", 
+            "rdfs:label": "ItemPage"
+        }, 
+        {
+            "@id": "schema:Country", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:AdministrativeArea", 
+            "rdfs:comment": "A country.", 
+            "rdfs:label": "Country"
+        }, 
+        {
+            "@id": "schema:PlaceOfWorship", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:CivicStructure", 
+            "rdfs:comment": "Place of worship, such as a church, synagogue, or mosque.", 
+            "rdfs:label": "PlaceOfWorship"
+        }, 
+        {
+            "@id": "schema:AutoRental", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:AutomotiveBusiness", 
+            "rdfs:comment": "A car rental business.", 
+            "rdfs:label": "AutoRental"
+        }, 
+        {
+            "@id": "schema:AnimalShelter", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:LocalBusiness", 
+            "rdfs:comment": "Animal shelter.", 
+            "rdfs:label": "AnimalShelter"
+        }, 
+        {
+            "@id": "schema:worstrating", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "The lowest value allowed in this rating system. If worstRating is omitted, 1 is assumed.", 
+            "schema:range": [
+                "schema:Number", 
+                "schema:Text"
+            ], 
+            "schema:domain": "schema:Rating", 
+            "rdfs:label": "worstrating"
+        }, 
+        {
+            "@id": "schema:Intangible", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:Thing", 
+            "rdfs:comment": "A utility class that serves as the umbrella for a number of 'intangible' things such as quantities, structured values, etc.", 
+            "rdfs:label": "Intangible"
+        }, 
+        {
+            "@id": "schema:ElectronicsStore", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:Store", 
+            "rdfs:comment": "An electronics store.", 
+            "rdfs:label": "ElectronicsStore"
+        }, 
+        {
+            "@id": "schema:audio", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "An embedded audio object.", 
+            "schema:range": "schema:AudioObject", 
+            "schema:domain": "schema:CreativeWork", 
+            "rdfs:label": "audio"
+        }, 
+        {
+            "@id": "schema:encodescreativework", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "The creative work encoded by this media object", 
+            "schema:range": "schema:CreativeWork", 
+            "schema:domain": "schema:MediaObject", 
+            "rdfs:label": "encodescreativework"
+        }, 
+        {
+            "@id": "schema:regionsallowed", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "The regions where the media is allowed. If not specified, then it's assumed to be allowed everywhere. Specify the countries in ISO 3166 format.", 
+            "schema:range": "schema:Place", 
+            "schema:domain": "schema:MediaObject", 
+            "rdfs:label": "regionsallowed"
+        }, 
+        {
+            "@id": "schema:employees", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "People working for this organization.", 
+            "schema:range": "schema:Person", 
+            "schema:domain": "schema:Organization", 
+            "rdfs:label": "employees"
+        }, 
+        {
+            "@id": "schema:calories", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "The number of calories", 
+            "schema:range": {
+                "@id": "schema:Energy", 
+                "@type": "rdfs:Class", 
+                "rdfs:subClassOf": "schema:Quantity", 
+                "rdfs:comment": "Properties that take Enerygy as values are of the form '<Number> <Energy unit of measure>'", 
+                "rdfs:label": "Energy"
+            }, 
+            "schema:domain": "schema:NutritionInformation", 
+            "rdfs:label": "calories"
+        }, 
+        {
+            "@id": "schema:ratingvalue", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "The rating for the content.", 
+            "schema:range": "schema:Text", 
+            "schema:domain": "schema:Rating", 
+            "rdfs:label": "ratingvalue"
+        }, 
+        {
+            "@id": "schema:FoodEstablishment", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:LocalBusiness", 
+            "rdfs:comment": "A food-related business.", 
+            "rdfs:label": "FoodEstablishment"
+        }, 
+        {
+            "@id": "schema:NailSalon", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:HealthAndBeautyBusiness", 
+            "rdfs:comment": "A nail salon.", 
+            "rdfs:label": "NailSalon"
+        }, 
+        {
+            "@id": "schema:significantlinks", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "The most significant URLs on the page. Typically, these are the non-navigation links that are clicked on the most", 
+            "schema:range": "schema:URL", 
+            "schema:domain": "schema:WebPage", 
+            "rdfs:label": "significantlinks"
+        }, 
+        {
+            "@id": "schema:Mountain", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:Landform", 
+            "rdfs:comment": "A mountain, like Mount Whitney or Mount Everest", 
+            "rdfs:label": "Mountain"
+        }, 
+        {
+            "@id": "schema:discussionurl", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "A link to the page containing the comments of the CreativeWork.", 
+            "schema:range": "schema:URL", 
+            "schema:domain": "schema:CreativeWork", 
+            "rdfs:label": "discussionurl"
+        }, 
+        {
+            "@id": "schema:telephone", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "The telephone number.", 
+            "schema:range": "schema:Text", 
+            "schema:domain": [
+                "schema:Person", 
+                "schema:ContactPoint", 
+                "schema:Organization", 
+                "schema:Place"
+            ], 
+            "rdfs:label": "telephone"
+        }, 
+        {
+            "@id": "schema:provider", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "Specifies the Person or Organization that distributed the CreativeWork.", 
+            "schema:range": [
+                "schema:Person", 
+                "schema:Organization"
+            ], 
+            "schema:domain": "schema:CreativeWork", 
+            "rdfs:label": "provider"
+        }, 
+        {
+            "@id": "schema:numdownloads", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "Number of Downloads.", 
+            "schema:range": "schema:Integer", 
+            "schema:domain": "schema:SoftwareApplication", 
+            "rdfs:label": "numdownloads"
+        }, 
+        {
+            "@id": "schema:seasonnumber", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "The season number.", 
+            "schema:range": "schema:Integer", 
+            "schema:domain": "schema:TVSeason", 
+            "rdfs:label": "seasonnumber"
+        }, 
+        {
+            "@id": "schema:exifdata", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "exif data for this object.", 
+            "schema:range": "schema:Text", 
+            "schema:domain": "schema:ImageObject", 
+            "rdfs:label": "exifdata"
+        }, 
+        {
+            "@id": "schema:polygon", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "A polygon is the area enclosed by a point-to-point path for which the starting and ending points are the same. A polygon is expressed as a series of four or more spacedelimited points where the first and final points are identical.", 
+            "schema:range": "schema:Text", 
+            "schema:domain": "schema:GeoShape", 
+            "rdfs:label": "polygon"
+        }, 
+        {
+            "@id": "schema:TennisComplex", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:SportsActivityLocation", 
+            "rdfs:comment": "A tennis complex.", 
+            "rdfs:label": "TennisComplex"
+        }, 
+        {
+            "@id": "schema:director", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "The director of the movie, TV episode, or series.", 
+            "schema:range": "schema:Person", 
+            "schema:domain": [
+                "schema:Movie", 
+                "schema:TVEpisode", 
+                "schema:TVSeries"
+            ], 
+            "rdfs:label": "director"
+        }, 
+        {
+            "@id": "schema:Thing", 
+            "@type": "rdfs:Class", 
+            "rdfs:comment": "The most generic type of item.", 
+            "rdfs:label": "Thing"
+        }, 
+        {
+            "@id": "schema:albums", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "A collection of music albums.", 
+            "schema:range": "schema:MusicAlbum", 
+            "schema:domain": "schema:MusicGroup", 
+            "rdfs:label": "albums"
+        }, 
+        {
+            "@id": "schema:Book", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:CreativeWork", 
+            "rdfs:comment": "A book.", 
+            "rdfs:label": "Book"
+        }, 
+        {
+            "@id": "schema:transcript", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "If this MediaObject is an AudioObject or VideoObject, the transcript of that object.", 
+            "schema:range": "schema:Text", 
+            "schema:domain": [
+                "schema:VideoObject", 
+                "schema:AudioObject"
+            ], 
+            "rdfs:label": "transcript"
+        }, 
+        {
+            "@id": "schema:Organization", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:Thing", 
+            "rdfs:comment": "An organization such as a school, NGO, corporation, club, etc.", 
+            "rdfs:label": "Organization"
+        }, 
+        {
+            "@id": "schema:printsection", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "If this NewsArticle appears in print, this field indicates the print section in which the article appeared.", 
+            "schema:range": "schema:Text", 
+            "schema:domain": "schema:NewsArticle", 
+            "rdfs:label": "printsection"
+        }, 
+        {
+            "@id": "schema:MusicStore", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:Store", 
+            "rdfs:comment": "A music store.", 
+            "rdfs:label": "MusicStore"
+        }, 
+        {
+            "@id": "schema:Crematorium", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:CivicStructure", 
+            "rdfs:comment": "A crematorium.", 
+            "rdfs:label": "Crematorium"
+        }, 
+        {
+            "@id": "schema:SubwayStation", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:CivicStructure", 
+            "rdfs:comment": "A subway station.", 
+            "rdfs:label": "SubwayStation"
+        }, 
+        {
+            "@id": "schema:cookingmethod", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "The method of cooking, such as Frying, Steaming, ...", 
+            "schema:range": "schema:Text", 
+            "schema:domain": "schema:Recipe", 
+            "rdfs:label": "cookingmethod"
+        }, 
+        {
+            "@id": "schema:reviewrating", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "The rating given in this review. Note that reviews can themselves be rated. The reviewRating applies to rating given by the review. The aggregateRating property applies to the review itself, as a creative work.", 
+            "schema:range": "schema:Rating", 
+            "schema:domain": "schema:Review", 
+            "rdfs:label": "reviewrating"
+        }, 
+        {
+            "@id": "schema:ContactPoint", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:StructuredValue", 
+            "rdfs:comment": "A contact point—for example, a Customer Complaints department.", 
+            "rdfs:label": "ContactPoint"
+        }, 
+        {
+            "@id": "schema:fileformat", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "MIME format of the binary (e.g. application/zip).", 
+            "schema:range": "schema:Text", 
+            "schema:domain": "schema:SoftwareApplication", 
+            "rdfs:label": "fileformat"
+        }, 
+        {
+            "@id": "schema:Campground", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:CivicStructure", 
+            "rdfs:comment": "A campground.", 
+            "rdfs:label": "Campground"
+        }, 
+        {
+            "@id": "schema:workhours", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "The typical working hours for this job (e.g. 1st shift, night shift, 8am-5pm).", 
+            "schema:range": "schema:Text", 
+            "schema:domain": "schema:JobPosting", 
+            "rdfs:label": "workhours"
+        }, 
+        {
+            "@id": "schema:SiteNavigationElement", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:WebPageElement", 
+            "rdfs:comment": "A navigation element of the page.", 
+            "rdfs:label": "SiteNavigationElement"
+        }, 
+        {
+            "@id": "schema:NutritionInformation", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:StructuredValue", 
+            "rdfs:comment": "Nutritional information about the recipe.", 
+            "rdfs:label": "NutritionInformation"
+        }, 
+        {
+            "@id": "schema:CivicStructure", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:Place", 
+            "rdfs:comment": "A public structure, such as a town hall or concert hall.", 
+            "rdfs:label": "CivicStructure"
+        }, 
+        {
+            "@id": "schema:benefits", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "Description of benefits associated with the job.", 
+            "schema:range": "schema:Text", 
+            "schema:domain": "schema:JobPosting", 
+            "rdfs:label": "benefits"
+        }, 
+        {
+            "@id": "schema:FinancialService", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:LocalBusiness", 
+            "rdfs:comment": "Financial services business.", 
+            "rdfs:label": "FinancialService"
+        }, 
+        {
+            "@id": "schema:Courthouse", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:GovernmentBuilding", 
+            "rdfs:comment": "A courthouse.", 
+            "rdfs:label": "Courthouse"
+        }, 
+        {
+            "@id": "schema:producer", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "The producer of the movie, TV series, season, or episode, or video.", 
+            "schema:range": "schema:Person", 
+            "schema:domain": [
+                "schema:Movie", 
+                "schema:TVEpisode", 
+                "schema:TVSeries"
+            ], 
+            "rdfs:label": "producer"
+        }, 
+        {
+            "@id": "schema:VideoObject", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:MediaObject", 
+            "rdfs:comment": "A video file.", 
+            "rdfs:label": "VideoObject"
+        }, 
+        {
+            "@id": "schema:highprice", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "The highest price of all offers available.", 
+            "schema:range": [
+                "schema:Number", 
+                "schema:Text"
+            ], 
+            "schema:domain": "schema:AggregateOffer", 
+            "rdfs:label": "highprice"
+        }, 
+        {
+            "@id": "schema:cooktime", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "The time it takes to actually cook the dish, in ISO 8601 duration format.", 
+            "schema:range": "schema:Duration", 
+            "schema:domain": "schema:Recipe", 
+            "rdfs:label": "cooktime"
+        }, 
+        {
+            "@id": "schema:GovernmentBuilding", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:CivicStructure", 
+            "rdfs:comment": "A government building.", 
+            "rdfs:label": "GovernmentBuilding"
+        }, 
+        {
+            "@id": "schema:EmergencyService", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:LocalBusiness", 
+            "rdfs:comment": "An emergency service, such as a fire station or ER.", 
+            "rdfs:label": "EmergencyService"
+        }, 
+        {
+            "@id": "schema:email", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "Email address.", 
+            "schema:range": "schema:Text", 
+            "schema:domain": [
+                "schema:Person", 
+                "schema:ContactPoint", 
+                "schema:Organization"
+            ], 
+            "rdfs:label": "email"
+        }, 
+        {
+            "@id": "schema:jobtitle", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "The job title of the person (for example, Financial Manager).", 
+            "schema:range": "schema:Text", 
+            "schema:domain": "schema:Person", 
+            "rdfs:label": "jobtitle"
+        }, 
+        {
+            "@id": "schema:branchof", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "The larger organization that this local business is a branch of, if any.", 
+            "schema:range": "schema:Organization", 
+            "schema:domain": "schema:LocalBusiness", 
+            "rdfs:label": "branchof"
+        }, 
+        {
+            "@id": "schema:HardwareStore", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:Store", 
+            "rdfs:comment": "A hardware store.", 
+            "rdfs:label": "HardwareStore"
+        }, 
+        {
+            "@id": "schema:CollectionPage", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:WebPage", 
+            "rdfs:comment": "Web page type: Collection page.", 
+            "rdfs:label": "CollectionPage"
+        }, 
+        {
+            "@id": "schema:homelocation", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "A contact location for a person's residence.", 
+            "schema:range": [
+                "schema:ContactPoint", 
+                "schema:Place"
+            ], 
+            "schema:domain": "schema:Person", 
+            "rdfs:label": "homelocation"
+        }, 
+        {
+            "@id": "schema:countriesnotsupported", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "Countries that dlsallow the application.", 
+            "schema:range": "schema:Text", 
+            "schema:domain": "schema:MobileSoftwareApplication", 
+            "rdfs:label": "countriesnotsupported"
+        }, 
+        {
+            "@id": "schema:ApartmentComplex", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:Residence", 
+            "rdfs:comment": "Residence type: Apartment complex.", 
+            "rdfs:label": "ApartmentComplex"
+        }, 
+        {
+            "@id": "schema:HealthAndBeautyBusiness", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:LocalBusiness", 
+            "rdfs:comment": "Health and beauty.", 
+            "rdfs:label": "HealthAndBeautyBusiness"
+        }, 
+        {
+            "@id": "schema:HousePainter", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": [
+                "schema:HomeAndConstructionBusiness", 
+                "schema:ProfessionalService"
+            ], 
+            "rdfs:comment": "A house painting service.", 
+            "rdfs:label": "HousePainter"
+        }, 
+        {
+            "@id": "schema:ContactPage", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:WebPage", 
+            "rdfs:comment": "Web page type: Contact page.", 
+            "rdfs:label": "ContactPage"
+        }, 
+        {
+            "@id": "schema:qualifications", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "Specific qualifications required for this role.", 
+            "schema:range": "schema:Text", 
+            "schema:domain": "schema:JobPosting", 
+            "rdfs:label": "qualifications"
+        }, 
+        {
+            "@id": "schema:pricehttp://schema.org/range", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "The price http://schema.org/range of the business, for example $$$.", 
+            "schema:range": "schema:Text", 
+            "schema:domain": "schema:LocalBusiness", 
+            "rdfs:label": "pricehttp://schema.org/range"
+        }, 
+        {
+            "@id": "schema:mentions", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "Indicates that the CreativeWork contains a reference to, but is not necessarily about a concept.", 
+            "schema:range": "schema:Thing", 
+            "schema:domain": "schema:CreativeWork", 
+            "rdfs:label": "mentions"
+        }, 
+        {
+            "@id": "schema:Attorney", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:ProfessionalService", 
+            "rdfs:comment": "Professional service: Attorney.", 
+            "rdfs:label": "Attorney"
+        }, 
+        {
+            "@id": "schema:Electrician", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": [
+                "schema:HomeAndConstructionBusiness", 
+                "schema:ProfessionalService"
+            ], 
+            "rdfs:comment": "An electrician.", 
+            "rdfs:label": "Electrician"
+        }, 
+        {
+            "@id": "schema:GeneralContractor", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": [
+                "schema:HomeAndConstructionBusiness", 
+                "schema:ProfessionalService"
+            ], 
+            "rdfs:comment": "A general contractor.", 
+            "rdfs:label": "GeneralContractor"
+        }, 
+        {
+            "@id": "schema:Rating", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:Intangible", 
+            "rdfs:comment": "The rating of the video.", 
+            "rdfs:label": "Rating"
+        }, 
+        {
+            "@id": "schema:ToyStore", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:Store", 
+            "rdfs:comment": "A toystore.", 
+            "rdfs:label": "ToyStore"
+        }, 
+        {
+            "@id": "schema:VisualArtsEvent", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:Event", 
+            "rdfs:comment": "Event type: Visual arts event.", 
+            "rdfs:label": "VisualArtsEvent"
+        }, 
+        {
+            "@id": "schema:keywords", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "The keywords/tags used to describe this content.", 
+            "schema:range": "schema:Text", 
+            "schema:domain": "schema:CreativeWork", 
+            "rdfs:label": "keywords"
+        }, 
+        {
+            "@id": "schema:follows", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "The most generic uni-directional social relation.", 
+            "schema:range": "schema:Person", 
+            "schema:domain": "schema:Person", 
+            "rdfs:label": "follows"
+        }, 
+        {
+            "@id": "schema:TravelAgency", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:LocalBusiness", 
+            "rdfs:comment": "A travel agency.", 
+            "rdfs:label": "TravelAgency"
+        }, 
+        {
+            "@id": "schema:UserCheckins", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:UserInteraction", 
+            "rdfs:comment": "User interaction: Check-in at a place.", 
+            "rdfs:label": "UserCheckins"
+        }, 
+        {
+            "@id": "schema:LegislativeBuilding", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:GovernmentBuilding", 
+            "rdfs:comment": "A legislative building—for example, the state capitol.", 
+            "rdfs:label": "LegislativeBuilding"
+        }, 
+        {
+            "@id": "schema:BodyOfWater", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:Landform", 
+            "rdfs:comment": "A body of water, such as a sea, ocean, or lake.", 
+            "rdfs:label": "BodyOfWater"
+        }, 
+        {
+            "@id": "schema:version", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "The version of the CreativeWork embodied by a specified resource.", 
+            "schema:range": "schema:Number", 
+            "schema:domain": "schema:CreativeWork", 
+            "rdfs:label": "version"
+        }, 
+        {
+            "@id": "schema:description", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "A short description of the item.", 
+            "schema:range": "schema:Text", 
+            "schema:domain": "schema:Thing", 
+            "rdfs:label": "description"
+        }, 
+        {
+            "@id": "schema:url", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "URL of the item.", 
+            "schema:range": "schema:URL", 
+            "schema:domain": "schema:Thing", 
+            "rdfs:label": "url"
+        }, 
+        {
+            "@id": "schema:EducationEvent", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:Event", 
+            "rdfs:comment": "Event type: Education event.", 
+            "rdfs:label": "EducationEvent"
+        }, 
+        {
+            "@id": "schema:BankOrCreditUnion", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:FinancialService", 
+            "rdfs:comment": "Bank or credit union.", 
+            "rdfs:label": "BankOrCreditUnion"
+        }, 
+        {
+            "@id": "schema:sugarcontent", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "The number of grams of sugar.", 
+            "schema:range": "schema:Mass", 
+            "schema:domain": "schema:NutritionInformation", 
+            "rdfs:label": "sugarcontent"
+        }, 
+        {
+            "@id": "schema:SaleEvent", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:Event", 
+            "rdfs:comment": "Event type: Sales event.", 
+            "rdfs:label": "SaleEvent"
+        }, 
+        {
+            "@id": "schema:geo", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "The geo coordinates of the place.", 
+            "schema:range": [
+                "schema:GeoCoordinates", 
+                "schema:GeoShape"
+            ], 
+            "schema:domain": "schema:Place", 
+            "rdfs:label": "geo"
+        }, 
+        {
+            "@id": "schema:FireStation", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": [
+                "schema:CivicStructure", 
+                "schema:EmergencyService"
+            ], 
+            "rdfs:comment": "A fire station. With firemen.", 
+            "rdfs:label": "FireStation"
+        }, 
+        {
+            "@id": "schema:tracks", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "A music recording (track)—usually a single song.", 
+            "schema:range": "schema:MusicRecording", 
+            "schema:domain": [
+                "schema:MusicPlaylist", 
+                "schema:MusicGroup"
+            ], 
+            "rdfs:label": "tracks"
+        }, 
+        {
+            "@id": "schema:Quantity", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:Intangible", 
+            "rdfs:comment": "Quantities such as distance, time, mass, weight, etc. Particular instances of say Mass are entities like '3 Kg' or '4 milligrams'.", 
+            "rdfs:label": "Quantity"
+        }, 
+        {
+            "@id": "schema:Sculpture", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:CreativeWork", 
+            "rdfs:comment": "A piece of sculpture.", 
+            "rdfs:label": "Sculpture"
+        }, 
+        {
+            "@id": "schema:ComputerStore", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:Store", 
+            "rdfs:comment": "A computer store.", 
+            "rdfs:label": "ComputerStore"
+        }, 
+        {
+            "@id": "schema:RadioStation", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:LocalBusiness", 
+            "rdfs:comment": "A radio station.", 
+            "rdfs:label": "RadioStation"
+        }, 
+        {
+            "@id": "schema:interactioncount", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "A count of a specific user interactions with this item—for example, 20 UserLikes, 5 UserComments, or 300 UserDownloads. The user interaction type should be one of the sub types of UserInteraction.", 
+            "schema:range": "schema:Text", 
+            "schema:domain": [
+                "schema:Person", 
+                "schema:CreativeWork", 
+                "schema:MediaObject", 
+                "schema:Organization", 
+                "schema:Place"
+            ], 
+            "rdfs:label": "interactioncount"
+        }, 
+        {
+            "@id": "schema:requiressubscription", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "Indicates if use of the media require a subscription  (either paid or free). Allowed values are yes or no.", 
+            "schema:range": "schema:Boolean", 
+            "schema:domain": "schema:MediaObject", 
+            "rdfs:label": "requiressubscription"
+        }, 
+        {
+            "@id": "schema:softwareapplicationcategorydeprecated", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "Type of software application.", 
+            "schema:range": "schema:Thing", 
+            "schema:domain": "schema:SoftwareApplication", 
+            "rdfs:label": "softwareapplicationcategorydeprecated"
+        }, 
+        {
+            "@id": "schema:Duration", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:Quantity", 
+            "rdfs:comment": "Quantity: Duration (use  ISO 8601 duration format).", 
+            "rdfs:label": "Duration"
+        }, 
+        {
+            "@id": "schema:BedAndBreakfast", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:LodgingBusiness", 
+            "rdfs:comment": "Bed and breakfast.", 
+            "rdfs:label": "BedAndBreakfast"
+        }, 
+        {
+            "@id": "schema:numberofpages", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "The number of pages in the book.", 
+            "schema:range": "schema:Integer", 
+            "schema:domain": "schema:Book", 
+            "rdfs:label": "numberofpages"
+        }, 
+        {
+            "@id": "schema:Reservoir", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:BodyOfWater", 
+            "rdfs:comment": "A reservoir, like the Lake Kariba reservoir.", 
+            "rdfs:label": "Reservoir"
+        }, 
+        {
+            "@id": "schema:RoofingContractor", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": [
+                "schema:HomeAndConstructionBusiness", 
+                "schema:ProfessionalService"
+            ], 
+            "rdfs:comment": "A roofing contractor.", 
+            "rdfs:label": "RoofingContractor"
+        }, 
+        {
+            "@id": "schema:MobileSoftwareApplication", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:SoftwareApplication", 
+            "rdfs:comment": "A mobile software application.", 
+            "rdfs:label": "MobileSoftwareApplication"
+        }, 
+        {
+            "@id": "schema:encodingformat", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "mp3, mpeg4, etc.", 
+            "schema:range": "schema:Text", 
+            "schema:domain": "schema:MediaObject", 
+            "rdfs:label": "encodingformat"
+        }, 
+        {
+            "@id": "schema:inplaylist", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "The playlist to which this recording belongs.", 
+            "schema:range": "schema:MusicPlaylist", 
+            "schema:domain": "schema:MusicRecording", 
+            "rdfs:label": "inplaylist"
+        }, 
+        {
+            "@id": "schema:GolfCourse", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:SportsActivityLocation", 
+            "rdfs:comment": "A golf course.", 
+            "rdfs:label": "GolfCourse"
+        }, 
+        {
+            "@id": "schema:AggregateOffer", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:Offer", 
+            "rdfs:comment": "When a single product that has different offers (for example, the same pair of shoes is offered by different merchants), then AggregateOffer can be used.", 
+            "rdfs:label": "AggregateOffer"
+        }, 
+        {
+            "@id": "schema:MovingCompany", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:HomeAndConstructionBusiness", 
+            "rdfs:comment": "A moving company.", 
+            "rdfs:label": "MovingCompany"
+        }, 
+        {
+            "@id": "schema:height", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "The height of the media object.", 
+            "schema:range": "schema:Distance", 
+            "schema:domain": "schema:MediaObject", 
+            "rdfs:label": "height"
+        }, 
+        {
+            "@id": "schema:ChildrensEvent", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:Event", 
+            "rdfs:comment": "Event type: Children's event.", 
+            "rdfs:label": "ChildrensEvent"
+        }, 
+        {
+            "@id": "schema:Enumeration", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:Intangible", 
+            "rdfs:comment": "Lists or enumerations—for example, a list of cuisines or music genres, etc.", 
+            "rdfs:label": "Enumeration"
+        }, 
+        {
+            "@id": "schema:SingleFamilyResidence", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:Residence", 
+            "rdfs:comment": "Residence type: Single-family home.", 
+            "rdfs:label": "SingleFamilyResidence"
+        }, 
+        {
+            "@id": "schema:isfamilyfriendly", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "Indicates whether this content is family friendly.", 
+            "schema:range": "schema:Boolean", 
+            "schema:domain": "schema:CreativeWork", 
+            "rdfs:label": "isfamilyfriendly"
+        }, 
+        {
+            "@id": "schema:GeoCoordinates", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:StructuredValue", 
+            "rdfs:comment": "The geographic coordinates of a place or event.", 
+            "rdfs:label": "GeoCoordinates"
+        }, 
+        {
+            "@id": "schema:PostOffice", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": {
+                "@id": "schema:GovernmentOffice", 
+                "@type": "rdfs:Class", 
+                "rdfs:subClassOf": "schema:LocalBusiness", 
+                "rdfs:comment": "A government office—for example, an IRS or DMV office.", 
+                "rdfs:label": "GovernmentOffice"
+            }, 
+            "rdfs:comment": "A post office.", 
+            "rdfs:label": "PostOffice"
+        }, 
+        {
+            "@id": "schema:HobbyShop", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:Store", 
+            "rdfs:comment": "A hobby store.", 
+            "rdfs:label": "HobbyShop"
+        }, 
+        {
+            "@id": "schema:worklocation", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "A contact location for a person's place of work.", 
+            "schema:range": [
+                "schema:ContactPoint", 
+                "schema:Place"
+            ], 
+            "schema:domain": "schema:Person", 
+            "rdfs:label": "worklocation"
+        }, 
+        {
+            "@id": "schema:CityHall", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:GovernmentBuilding", 
+            "rdfs:comment": "A city hall.", 
+            "rdfs:label": "CityHall"
+        }, 
+        {
+            "@id": "schema:location", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "The location of the event or organization.", 
+            "schema:range": [
+                "schema:PostalAddress", 
+                "schema:Place"
+            ], 
+            "schema:domain": [
+                "schema:Organization", 
+                "schema:Event"
+            ], 
+            "rdfs:label": "location"
+        }, 
+        {
+            "@id": "schema:ComedyEvent", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:Event", 
+            "rdfs:comment": "Event type: Comedy event.", 
+            "rdfs:label": "ComedyEvent"
+        }, 
+        {
+            "@id": "schema:StadiumOrArena", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": [
+                "schema:SportsActivityLocation", 
+                "schema:CivicStructure"
+            ], 
+            "rdfs:comment": "A stadium.", 
+            "rdfs:label": "StadiumOrArena"
+        }, 
+        {
+            "@id": "schema:blogposts", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "The postings that are part of this blog", 
+            "schema:range": {
+                "@id": "schema:BlogPosting", 
+                "@type": "rdfs:Class", 
+                "rdfs:subClassOf": "schema:Article", 
+                "rdfs:comment": "A blog post.", 
+                "rdfs:label": "BlogPosting"
+            }, 
+            "schema:domain": {
+                "@id": "schema:Blog", 
+                "@type": "rdfs:Class", 
+                "rdfs:subClassOf": "schema:CreativeWork", 
+                "rdfs:comment": "A blog", 
+                "rdfs:label": "Blog"
+            }, 
+            "rdfs:label": "blogposts"
+        }, 
+        {
+            "@id": "schema:episodenumber", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "The episode number.", 
+            "schema:range": "schema:Number", 
+            "schema:domain": "schema:TVEpisode", 
+            "rdfs:label": "episodenumber"
+        }, 
+        {
+            "@id": "schema:VeterinaryCare", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:MedicalOrganization", 
+            "rdfs:comment": "A vet's office.", 
+            "rdfs:label": "VeterinaryCare"
+        }, 
+        {
+            "@id": "schema:Map", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:CreativeWork", 
+            "rdfs:comment": "A map.", 
+            "rdfs:label": "Map"
+        }, 
+        {
+            "@id": "schema:itemlistorder", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "Type of ordering (e.g. Ascending, Descending, Unordered).", 
+            "schema:range": "schema:Text", 
+            "schema:domain": "schema:ItemList", 
+            "rdfs:label": "itemlistorder"
+        }, 
+        {
+            "@id": "schema:AutoDealer", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:AutomotiveBusiness", 
+            "rdfs:comment": "An car dealership.", 
+            "rdfs:label": "AutoDealer"
+        }, 
+        {
+            "@id": "schema:addresscountry", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "The country. For example, USA. You can also provide the two-letter ISO 3166-1 alpha-2 country code.", 
+            "schema:range": "schema:Country", 
+            "schema:domain": "schema:PostalAddress", 
+            "rdfs:label": "addresscountry"
+        }, 
+        {
+            "@id": "schema:recipecuisine", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "The cuisine of the recipe (for example, French or Ethopian).", 
+            "schema:range": "schema:Text", 
+            "schema:domain": "schema:Recipe", 
+            "rdfs:label": "recipecuisine"
+        }, 
+        {
+            "@id": "schema:AutoRepair", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:AutomotiveBusiness", 
+            "rdfs:comment": "Car repair business.", 
+            "rdfs:label": "AutoRepair"
+        }, 
+        {
+            "@id": "schema:genre", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "Genre of the creative work", 
+            "schema:range": "schema:Text", 
+            "schema:domain": "schema:CreativeWork", 
+            "rdfs:label": "genre"
+        }, 
+        {
+            "@id": "schema:BusStop", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:CivicStructure", 
+            "rdfs:comment": "A bus stop.", 
+            "rdfs:label": "BusStop"
+        }, 
+        {
+            "@id": "schema:datemodified", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "The date on which the CreativeWork was most recently modified.", 
+            "schema:range": "schema:Date", 
+            "schema:domain": "schema:CreativeWork", 
+            "rdfs:label": "datemodified"
+        }, 
+        {
+            "@id": "schema:WPSideBar", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:WebPageElement", 
+            "rdfs:comment": "A sidebar section of the page.", 
+            "rdfs:label": "WPSideBar"
+        }, 
+        {
+            "@id": "schema:ExerciseGym", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:SportsActivityLocation", 
+            "rdfs:comment": "A gym.", 
+            "rdfs:label": "ExerciseGym"
+        }, 
+        {
+            "@id": "schema:brand", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "The brand of the product.", 
+            "schema:range": "schema:Organization", 
+            "schema:domain": "schema:Product", 
+            "rdfs:label": "brand"
+        }, 
+        {
+            "@id": "schema:UserComments", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:UserInteraction", 
+            "rdfs:comment": "User interaction: A comment about an item.", 
+            "rdfs:label": "UserComments"
+        }, 
+        {
+            "@id": "schema:DepartmentStore", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:Store", 
+            "rdfs:comment": "A department store.", 
+            "rdfs:label": "DepartmentStore"
+        }, 
+        {
+            "@id": "schema:ProfilePage", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:WebPage", 
+            "rdfs:comment": "Web page type: Profile page.", 
+            "rdfs:label": "ProfilePage"
+        }, 
+        {
+            "@id": "schema:operatingsystems", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "Operating systems supported (Windows 7, OSX 10.6, Android 1.6).", 
+            "schema:range": "schema:Text", 
+            "schema:domain": "schema:SoftwareApplication", 
+            "rdfs:label": "operatingsystems"
+        }, 
+        {
+            "@id": "schema:sourceorganization", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "The Organization on whose behalf the creator was working.", 
+            "schema:range": "schema:Organization", 
+            "schema:domain": "schema:CreativeWork", 
+            "rdfs:label": "sourceorganization"
+        }, 
+        {
+            "@id": "schema:reviews", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "Review of the item.", 
+            "schema:range": "schema:Review", 
+            "schema:domain": [
+                "schema:Offer", 
+                "schema:CreativeWork", 
+                "schema:Product", 
+                "schema:Organization", 
+                "schema:Place"
+            ], 
+            "rdfs:label": "reviews"
+        }, 
+        {
+            "@id": "schema:caption", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "The caption for this object.", 
+            "schema:range": "schema:Text", 
+            "schema:domain": [
+                "schema:VideoObject", 
+                "schema:ImageObject"
+            ], 
+            "rdfs:label": "caption"
+        }, 
+        {
+            "@id": "schema:performers", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "The main performer or performers of the event—for example, a presenter, musician, or actor.", 
+            "schema:range": [
+                "schema:Person", 
+                "schema:Organization"
+            ], 
+            "schema:domain": "schema:Event", 
+            "rdfs:label": "performers"
+        }, 
+        {
+            "@id": "schema:Number", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:DataType", 
+            "rdfs:comment": "Data type: Number.", 
+            "rdfs:label": "Number"
+        }, 
+        {
+            "@id": "schema:reviewcount", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "The count of total number of reviews.", 
+            "schema:range": "schema:Number", 
+            "schema:domain": "schema:AggregateRating", 
+            "rdfs:label": "reviewcount"
+        }, 
+        {
+            "@id": "schema:permissions", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "Permissions required on OS to run the application (e.g. app requires Internet access).", 
+            "schema:range": "schema:Text", 
+            "schema:domain": "schema:MobileSoftwareApplication", 
+            "rdfs:label": "permissions"
+        }, 
+        {
+            "@id": "schema:WholesaleStore", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:Store", 
+            "rdfs:comment": "A wholesale store.", 
+            "rdfs:label": "WholesaleStore"
+        }, 
+        {
+            "@id": "schema:ShoeStore", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:Store", 
+            "rdfs:comment": "A shoe store.", 
+            "rdfs:label": "ShoeStore"
+        }, 
+        {
+            "@id": "schema:PetStore", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:Store", 
+            "rdfs:comment": "A pet store.", 
+            "rdfs:label": "PetStore"
+        }, 
+        {
+            "@id": "schema:SkiResort", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:SportsActivityLocation", 
+            "rdfs:comment": "A ski resort.", 
+            "rdfs:label": "SkiResort"
+        }, 
+        {
+            "@id": "schema:embedurl", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "A URL pointing to a player for a specific video. In general, this is the information in the src element of an embed tag and should not be the same as the content of the loc tag.", 
+            "schema:range": "schema:URL", 
+            "schema:domain": "schema:MediaObject", 
+            "rdfs:label": "embedurl"
+        }, 
+        {
+            "@id": "schema:duration", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "The duration of the item (movie, audio recording, event, etc.) in ISO 8601 date format.", 
+            "schema:range": "schema:Duration", 
+            "schema:domain": [
+                "schema:Movie", 
+                "schema:MediaObject", 
+                "schema:MusicRecording", 
+                "schema:Event"
+            ], 
+            "rdfs:label": "duration"
+        }, 
+        {
+            "@id": "schema:AutomatedTeller", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:FinancialService", 
+            "rdfs:comment": "ATM/cash machine.", 
+            "rdfs:label": "AutomatedTeller"
+        }, 
+        {
+            "@id": "schema:HomeAndConstructionBusiness", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:LocalBusiness", 
+            "rdfs:comment": "A construction business.", 
+            "rdfs:label": "HomeAndConstructionBusiness"
+        }, 
+        {
+            "@id": "schema:Canal", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:BodyOfWater", 
+            "rdfs:comment": "A canal, like the Panama Canal", 
+            "rdfs:label": "Canal"
+        }, 
+        {
+            "@id": "schema:MovieRentalStore", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:Store", 
+            "rdfs:comment": "A movie rental store.", 
+            "rdfs:label": "MovieRentalStore"
+        }, 
+        {
+            "@id": "schema:NGO", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:Organization", 
+            "rdfs:comment": "Organization: Non-governmental Organization.", 
+            "rdfs:label": "NGO"
+        }, 
+        {
+            "@id": "schema:editor", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "Specifies the Person who edited the CreativeWork.", 
+            "schema:range": "schema:Person", 
+            "schema:domain": "schema:CreativeWork", 
+            "rdfs:label": "editor"
+        }, 
+        {
+            "@id": "schema:offers", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "An offer to sell this item—for example, an offer to sell a product, the DVD of a movie, or tickets to an event.", 
+            "schema:range": "schema:Offer", 
+            "schema:domain": [
+                "schema:CreativeWork", 
+                "schema:Product", 
+                "schema:Event", 
+                "schema:MediaObject"
+            ], 
+            "rdfs:label": "offers"
+        }, 
+        {
+            "@id": "schema:musicby", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "The composer of the movie or TV soundtrack.", 
+            "schema:range": [
+                "schema:Person", 
+                "schema:MusicGroup"
+            ], 
+            "schema:domain": [
+                "schema:Movie", 
+                "schema:TVEpisode", 
+                "schema:TVSeries"
+            ], 
+            "rdfs:label": "musicby"
+        }, 
+        {
+            "@id": "schema:ImageObject", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:MediaObject", 
+            "rdfs:comment": "An image file.", 
+            "rdfs:label": "ImageObject"
+        }, 
+        {
+            "@id": "schema:streetaddress", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "The street address. For example, 1600 Amphitheatre Pkwy.", 
+            "schema:range": "schema:Text", 
+            "schema:domain": "schema:PostalAddress", 
+            "rdfs:label": "streetaddress"
+        }, 
+        {
+            "@id": "schema:bitrate", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "The bitrate of the media object.", 
+            "schema:range": "schema:Text", 
+            "schema:domain": "schema:MediaObject", 
+            "rdfs:label": "bitrate"
+        }, 
+        {
+            "@id": "schema:Place", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:Thing", 
+            "rdfs:comment": "Entities that have a somewhat fixed, physical extension.", 
+            "rdfs:label": "Place"
+        }, 
+        {
+            "@id": "schema:browsers", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "One or more browsers required to run the app.", 
+            "schema:range": "schema:Text", 
+            "schema:domain": {
+                "@id": "schema:WebApplication", 
+                "@type": "rdfs:Class", 
+                "rdfs:subClassOf": "schema:SoftwareApplication", 
+                "rdfs:comment": "Web applications.", 
+                "rdfs:label": "WebApplication"
+            }, 
+            "rdfs:label": "browsers"
+        }, 
+        {
+            "@id": "schema:nationality", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "Nationality of the person.", 
+            "schema:range": "schema:Country", 
+            "schema:domain": "schema:Person", 
+            "rdfs:label": "nationality"
+        }, 
+        {
+            "@id": "schema:Distance", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:Quantity", 
+            "rdfs:comment": "Properties that take Distances as values are of the form '<Number> <Length unit of measure>'. E.g., '7 ft'", 
+            "rdfs:label": "Distance"
+        }, 
+        {
+            "@id": "schema:TouristAttraction", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:Place", 
+            "rdfs:comment": "A tourist attraction.", 
+            "rdfs:label": "TouristAttraction"
+        }, 
+        {
+            "@id": "schema:MusicPlaylist", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:CreativeWork", 
+            "rdfs:comment": "A collection of music tracks in playlist form.", 
+            "rdfs:label": "MusicPlaylist"
+        }, 
+        {
+            "@id": "schema:educationrequirements", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "Educational background needed for the position.", 
+            "schema:range": "schema:Text", 
+            "schema:domain": "schema:JobPosting", 
+            "rdfs:label": "educationrequirements"
+        }, 
+        {
+            "@id": "schema:encodings", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "The media objects that encode this creative work", 
+            "schema:range": "schema:MediaObject", 
+            "schema:domain": "schema:CreativeWork", 
+            "rdfs:label": "encodings"
+        }, 
+        {
+            "@id": "schema:uploaddate", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "Date when this media object was uploaded to this site.", 
+            "schema:range": "schema:Date", 
+            "schema:domain": "schema:MediaObject", 
+            "rdfs:label": "uploaddate"
+        }, 
+        {
+            "@id": "schema:TVSeries", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:CreativeWork", 
+            "rdfs:comment": "A television series.", 
+            "rdfs:label": "TVSeries"
+        }, 
+        {
+            "@id": "schema:publishingprinciples", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "Link to page describing the editorial principles of the organization primarily responsible for the creation of the CreativeWork.", 
+            "schema:range": "schema:URL", 
+            "schema:domain": "schema:CreativeWork", 
+            "rdfs:label": "publishingprinciples"
+        }, 
+        {
+            "@id": "schema:Event", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:Thing", 
+            "rdfs:comment": "An event happening at a certain time at a certain location.", 
+            "rdfs:label": "Event"
+        }, 
+        {
+            "@id": "schema:BarOrPub", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:FoodEstablishment", 
+            "rdfs:comment": "A bar or pub.", 
+            "rdfs:label": "BarOrPub"
+        }, 
+        {
+            "@id": "schema:DanceGroup", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:PerformingGroup", 
+            "rdfs:comment": "A dance group—for example, the Alvin Ailey Dance Theater or Riverdance.", 
+            "rdfs:label": "DanceGroup"
+        }, 
+        {
+            "@id": "schema:Float", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:Number", 
+            "rdfs:comment": "Data type: Floating number.", 
+            "rdfs:label": "Float"
+        }, 
+        {
+            "@id": "schema:DataType", 
+            "@type": "rdfs:Class", 
+            "rdfs:comment": "The basic data types such as Integers, Strings, etc.", 
+            "rdfs:label": "DataType"
+        }, 
+        {
+            "@id": "schema:softwareversion", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "Version of the software instance.", 
+            "schema:range": "schema:Text", 
+            "schema:domain": "schema:SoftwareApplication", 
+            "rdfs:label": "softwareversion"
+        }, 
+        {
+            "@id": "schema:PerformingArtsTheater", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:CivicStructure", 
+            "rdfs:comment": "A theatre or other performing art center.", 
+            "rdfs:label": "PerformingArtsTheater"
+        }, 
+        {
+            "@id": "schema:LocalBusiness", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": [
+                "schema:Organization", 
+                "schema:Place"
+            ], 
+            "rdfs:comment": "A particular physical business or branch of an organization. Examples of LocalBusiness include a restaurant, a particular branch of a restaurant chain, a branch of a bank, a medical practice, a club, a bowling alley, etc.", 
+            "rdfs:label": "LocalBusiness"
+        }, 
+        {
+            "@id": "schema:ScholarlyArticle", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:Article", 
+            "rdfs:comment": "A scholarly article.", 
+            "rdfs:label": "ScholarlyArticle"
+        }, 
+        {
+            "@id": "schema:representativeofpage", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "Indicates whether this image is representative of the content of the page.", 
+            "schema:range": "schema:Boolean", 
+            "schema:domain": "schema:ImageObject", 
+            "rdfs:label": "representativeofpage"
+        }, 
+        {
+            "@id": "schema:countriessupported", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "Countries that allow the application.", 
+            "schema:range": "schema:Text", 
+            "schema:domain": "schema:MobileSoftwareApplication", 
+            "rdfs:label": "countriessupported"
+        }, 
+        {
+            "@id": "schema:bookedition", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "The edition of the book.", 
+            "schema:range": "schema:Text", 
+            "schema:domain": "schema:Book", 
+            "rdfs:label": "bookedition"
+        }, 
+        {
+            "@id": "schema:Mosque", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:PlaceOfWorship", 
+            "rdfs:comment": "A mosque.", 
+            "rdfs:label": "Mosque"
+        }, 
+        {
+            "@id": "schema:City", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:AdministrativeArea", 
+            "rdfs:comment": "A city or town.", 
+            "rdfs:label": "City"
+        }, 
+        {
+            "@id": "schema:GasStation", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:AutomotiveBusiness", 
+            "rdfs:comment": "A gas station.", 
+            "rdfs:label": "GasStation"
+        }, 
+        {
+            "@id": "schema:contentrating", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "Official rating of a piece of content—for example,'MPAA PG-13'.", 
+            "schema:range": "schema:Text", 
+            "schema:domain": "schema:CreativeWork", 
+            "rdfs:label": "contentrating"
+        }, 
+        {
+            "@id": "schema:AdministrativeArea", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:Place", 
+            "rdfs:comment": "A geographical region under the jurisdiction of a particular government.", 
+            "rdfs:label": "AdministrativeArea"
+        }, 
+        {
+            "@id": "schema:EntertainmentBusiness", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:LocalBusiness", 
+            "rdfs:comment": "A business providing entertainment.", 
+            "rdfs:label": "EntertainmentBusiness"
+        }, 
+        {
+            "@id": "schema:seller", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "The seller of the product.", 
+            "schema:range": "schema:Organization", 
+            "schema:domain": "schema:Offer", 
+            "rdfs:label": "seller"
+        }, 
+        {
+            "@id": "schema:title", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "The title of the job.", 
+            "schema:range": "schema:Text", 
+            "schema:domain": "schema:JobPosting", 
+            "rdfs:label": "title"
+        }, 
+        {
+            "@id": "schema:MovieTheater", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": [
+                "schema:EntertainmentBusiness", 
+                "schema:CivicStructure"
+            ], 
+            "rdfs:comment": "A movie theater.", 
+            "rdfs:label": "MovieTheater"
+        }, 
+        {
+            "@id": "schema:author", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "The author of this content. Please note that author is special in that HTML 5 provides a special mechanism for indicating authorship via the rel tag. That is equivalent to this and may be used interchangabely.", 
+            "schema:range": [
+                "schema:Person", 
+                "schema:Organization"
+            ], 
+            "schema:domain": "schema:CreativeWork", 
+            "rdfs:label": "author"
+        }, 
+        {
+            "@id": "schema:salarycurrency", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "The currency (coded using ISO 4217, http://en.wikipedia.org/wiki/ISO_4217 used for the main salary information in this job posting.", 
+            "schema:range": "schema:Text", 
+            "schema:domain": "schema:JobPosting", 
+            "rdfs:label": "salarycurrency"
+        }, 
+        {
+            "@id": "schema:AdultEntertainment", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:EntertainmentBusiness", 
+            "rdfs:comment": "An adult entertainment establishment.", 
+            "rdfs:label": "AdultEntertainment"
+        }, 
+        {
+            "@id": "schema:line", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "A line is a point-to-point path consisting of two or more points. A line is expressed as a series of two or more point objects separated by space.", 
+            "schema:range": "schema:Text", 
+            "schema:domain": "schema:GeoShape", 
+            "rdfs:label": "line"
+        }, 
+        {
+            "@id": "schema:MensClothingStore", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:Store", 
+            "rdfs:comment": "A men's clothing store.", 
+            "rdfs:label": "MensClothingStore"
+        }, 
+        {
+            "@id": "schema:photos", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "Photographs of this place.", 
+            "schema:range": [
+                "schema:ImageObject", 
+                {
+                    "@id": "schema:Photograph", 
+                    "@type": "rdfs:Class", 
+                    "rdfs:subClassOf": "schema:CreativeWork", 
+                    "rdfs:comment": "A photograph.", 
+                    "rdfs:label": "Photograph"
+                }
+            ], 
+            "schema:domain": "schema:Place", 
+            "rdfs:label": "photos"
+        }, 
+        {
+            "@id": "schema:Language", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:Intangible", 
+            "rdfs:comment": "Natural languages such as Spanish, Tamil, Hindi, English, etc. and programming languages such as Scheme and Lisp.", 
+            "rdfs:label": "Language"
+        }, 
+        {
+            "@id": "schema:specialcommitments", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "Any special commitments associated with this job posting. Valid entries include VeteranCommit, MilitarySpouseCommit, etc.", 
+            "schema:range": "schema:Text", 
+            "schema:domain": "schema:JobPosting", 
+            "rdfs:label": "specialcommitments"
+        }, 
+        {
+            "@id": "schema:MotorcycleDealer", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:AutomotiveBusiness", 
+            "rdfs:comment": "A motorcycle dealer.", 
+            "rdfs:label": "MotorcycleDealer"
+        }, 
+        {
+            "@id": "schema:Optician", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:MedicalOrganization", 
+            "rdfs:comment": "An optician's store.", 
+            "rdfs:label": "Optician"
+        }, 
+        {
+            "@id": "schema:Continent", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:Landform", 
+            "rdfs:comment": "One of the continents (for example, Europe or Africa).", 
+            "rdfs:label": "Continent"
+        }, 
+        {
+            "@id": "schema:trailer", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "The trailer of the movie or TV series, season, or episode.", 
+            "schema:range": "schema:VideoObject", 
+            "schema:domain": [
+                "schema:TVEpisode", 
+                "schema:Movie", 
+                "schema:TVSeason", 
+                "schema:TVSeries"
+            ], 
+            "rdfs:label": "trailer"
+        }, 
+        {
+            "@id": "schema:MusicRecording", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:CreativeWork", 
+            "rdfs:comment": "A music recording (track), usually a single song.", 
+            "rdfs:label": "MusicRecording"
+        }, 
+        {
+            "@id": "schema:Library", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:LocalBusiness", 
+            "rdfs:comment": "A library.", 
+            "rdfs:label": "Library"
+        }, 
+        {
+            "@id": "schema:TouristInformationCenter", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:LocalBusiness", 
+            "rdfs:comment": "A tourist information center.", 
+            "rdfs:label": "TouristInformationCenter"
+        }, 
+        {
+            "@id": "schema:Review", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:CreativeWork", 
+            "rdfs:comment": "A review of an item - for example, a restaurant, movie, or store.", 
+            "rdfs:label": "Review"
+        }, 
+        {
+            "@id": "schema:NightClub", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:EntertainmentBusiness", 
+            "rdfs:comment": "A nightclub or discotheque.", 
+            "rdfs:label": "NightClub"
+        }, 
+        {
+            "@id": "schema:Brewery", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:FoodEstablishment", 
+            "rdfs:comment": "Brewery.", 
+            "rdfs:label": "Brewery"
+        }, 
+        {
+            "@id": "schema:RealEstateAgent", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:LocalBusiness", 
+            "rdfs:comment": "A real-estate agent.", 
+            "rdfs:label": "RealEstateAgent"
+        }, 
+        {
+            "@id": "schema:MusicEvent", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:Event", 
+            "rdfs:comment": "Event type: Music event.", 
+            "rdfs:label": "MusicEvent"
+        }, 
+        {
+            "@id": "schema:screenshots", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "Link(s) to app screenshots.", 
+            "schema:range": "schema:URL", 
+            "schema:domain": "schema:MobileSoftwareApplication", 
+            "rdfs:label": "screenshots"
+        }, 
+        {
+            "@id": "schema:softwareapplicationsubcategory", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "Subcategory of the application.", 
+            "schema:range": "schema:Text", 
+            "schema:domain": "schema:SoftwareApplication", 
+            "rdfs:label": "softwareapplicationsubcategory"
+        }, 
+        {
+            "@id": "schema:Store", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:LocalBusiness", 
+            "rdfs:comment": "A retail good store.", 
+            "rdfs:label": "Store"
+        }, 
+        {
+            "@id": "schema:children", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "A child of the person.", 
+            "schema:range": "schema:Person", 
+            "schema:domain": "schema:Person", 
+            "rdfs:label": "children"
+        }, 
+        {
+            "@id": "schema:HairSalon", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:HealthAndBeautyBusiness", 
+            "rdfs:comment": "A hair salon.", 
+            "rdfs:label": "HairSalon"
+        }, 
+        {
+            "@id": "schema:events", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "Upcoming or past events associated with this place or organization.", 
+            "schema:range": "schema:Event", 
+            "schema:domain": [
+                "schema:Organization", 
+                "schema:Place"
+            ], 
+            "rdfs:label": "events"
+        }, 
+        {
+            "@id": "schema:articlesection", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "Articles may belong to one or more 'sections' in a magazine or newspaper, such as Sports, Lifestyle, etc.", 
+            "schema:range": "schema:Text", 
+            "schema:domain": "schema:Article", 
+            "rdfs:label": "articlesection"
+        }, 
+        {
+            "@id": "schema:DaySpa", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:HealthAndBeautyBusiness", 
+            "rdfs:comment": "A day spa.", 
+            "rdfs:label": "DaySpa"
+        }, 
+        {
+            "@id": "schema:EducationalOrganization", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:Organization", 
+            "rdfs:comment": "An educational organization.", 
+            "rdfs:label": "EducationalOrganization"
+        }, 
+        {
+            "@id": "schema:NewsArticle", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:Article", 
+            "rdfs:comment": "A news article", 
+            "rdfs:label": "NewsArticle"
+        }, 
+        {
+            "@id": "schema:width", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "The width of the media object.", 
+            "schema:range": "schema:Distance", 
+            "schema:domain": "schema:MediaObject", 
+            "rdfs:label": "width"
+        }, 
+        {
+            "@id": "schema:Aquarium", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:CivicStructure", 
+            "rdfs:comment": "Aquarium.", 
+            "rdfs:label": "Aquarium"
+        }, 
+        {
+            "@id": "schema:inalbum", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "The album to which this recording belongs.", 
+            "schema:range": "schema:MusicAlbum", 
+            "schema:domain": "schema:MusicRecording", 
+            "rdfs:label": "inalbum"
+        }, 
+        {
+            "@id": "schema:TheaterGroup", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:PerformingGroup", 
+            "rdfs:comment": "A theater group or company—for example, the Royal Shakespeare Company or Druid Theatre.", 
+            "rdfs:label": "TheaterGroup"
+        }, 
+        {
+            "@id": "schema:thumbnailurl", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "A thumbnail image relevant to the Thing.", 
+            "schema:range": "schema:URL", 
+            "schema:domain": "schema:CreativeWork", 
+            "rdfs:label": "thumbnailurl"
+        }, 
+        {
+            "@id": "schema:SelfStorage", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:LocalBusiness", 
+            "rdfs:comment": "Self-storage facility.", 
+            "rdfs:label": "SelfStorage"
+        }, 
+        {
+            "@id": "schema:actors", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "A cast member of the movie, TV series, season, or episode, or video.", 
+            "schema:range": "schema:Person", 
+            "schema:domain": [
+                "schema:Movie", 
+                "schema:TVEpisode", 
+                "schema:TVSeries"
+            ], 
+            "rdfs:label": "actors"
+        }, 
+        {
+            "@id": "schema:ElementarySchool", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:EducationalOrganization", 
+            "rdfs:comment": "An elementary school.", 
+            "rdfs:label": "ElementarySchool"
+        }, 
+        {
+            "@id": "schema:Mass", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:Quantity", 
+            "rdfs:comment": "Properties that take Mass as values are of the form '<Number> <Mass unit of measure>'. E.g., '7 kg'", 
+            "rdfs:label": "Mass"
+        }, 
+        {
+            "@id": "schema:breadcrumb", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "A set of links that can help a user understand and navigate a website hierarchy.", 
+            "schema:range": "schema:Text", 
+            "schema:domain": "schema:WebPage", 
+            "rdfs:label": "breadcrumb"
+        }, 
+        {
+            "@id": "schema:UserPlusOnes", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:UserInteraction", 
+            "rdfs:comment": "User interaction: +1.", 
+            "rdfs:label": "UserPlusOnes"
+        }, 
+        {
+            "@id": "schema:preptime", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "The length of time it takes to prepare the recipe, in ISO 8601 duration format.", 
+            "schema:range": "schema:Duration", 
+            "schema:domain": "schema:Recipe", 
+            "rdfs:label": "preptime"
+        }, 
+        {
+            "@id": "schema:videoframesize", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "The frame size of the video.", 
+            "schema:range": "schema:Text", 
+            "schema:domain": "schema:VideoObject", 
+            "rdfs:label": "videoframesize"
+        }, 
+        {
+            "@id": "schema:PublicSwimmingPool", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:SportsActivityLocation", 
+            "rdfs:comment": "A public swimming pool.", 
+            "rdfs:label": "PublicSwimmingPool"
+        }, 
+        {
+            "@id": "schema:WebPage", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:CreativeWork", 
+            "rdfs:comment": "A web page. Every web page is implicitly assumed to be declared to be of type WebPage, so the various properties about that webpage, such as breadcrumb may be used. We recommend explicit declaration if these properties are specified, but if they are found outside of an itemscope, they will be assumed to be about the page", 
+            "rdfs:label": "WebPage"
+        }, 
+        {
+            "@id": "schema:Residence", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:Place", 
+            "rdfs:comment": "The place where a person lives.", 
+            "rdfs:label": "Residence"
+        }, 
+        {
+            "@id": "schema:aggregaterating", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "The overall rating, based on a collection of reviews or ratings, of the item.", 
+            "schema:range": "schema:AggregateRating", 
+            "schema:domain": [
+                "schema:Offer", 
+                "schema:CreativeWork", 
+                "schema:Product", 
+                "schema:Organization", 
+                "schema:Place"
+            ], 
+            "rdfs:label": "aggregaterating"
+        }, 
+        {
+            "@id": "schema:HinduTemple", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:PlaceOfWorship", 
+            "rdfs:comment": "A Hindu temple.", 
+            "rdfs:label": "HinduTemple"
+        }, 
+        {
+            "@id": "schema:TVSeason", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:CreativeWork", 
+            "rdfs:comment": "A TV season.", 
+            "rdfs:label": "TVSeason"
+        }, 
+        {
+            "@id": "schema:Florist", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:Store", 
+            "rdfs:comment": "A florist.", 
+            "rdfs:label": "Florist"
+        }, 
+        {
+            "@id": "schema:ingredients", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "An ingredient used in the recipe.", 
+            "schema:range": "schema:Text", 
+            "schema:domain": "schema:Recipe", 
+            "rdfs:label": "ingredients"
+        }, 
+        {
+            "@id": "schema:pricevaliduntil", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "The date after which the price is no longer available.", 
+            "schema:range": "schema:Date", 
+            "schema:domain": "schema:Offer", 
+            "rdfs:label": "pricevaliduntil"
+        }, 
+        {
+            "@id": "schema:discusses", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "Specifies the CreativeWork associated with the UserComment.", 
+            "schema:range": "schema:CreativeWork", 
+            "schema:domain": "schema:UserComments", 
+            "rdfs:label": "discusses"
+        }, 
+        {
+            "@id": "schema:SearchResultsPage", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:WebPage", 
+            "rdfs:comment": "Web page type: Search results page.", 
+            "rdfs:label": "SearchResultsPage"
+        }, 
+        {
+            "@id": "schema:itemconditiondeprecated", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "The condition of the item for sale—for example New, Refurbished, Used, etc.", 
+            "schema:range": "schema:Thing", 
+            "schema:domain": "schema:Offer", 
+            "rdfs:label": "itemconditiondeprecated"
+        }, 
+        {
+            "@id": "schema:UserBlocks", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:UserInteraction", 
+            "rdfs:comment": "User interaction: Block this content.", 
+            "rdfs:label": "UserBlocks"
+        }, 
+        {
+            "@id": "schema:skills", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "Skills required to fulfill this role.", 
+            "schema:range": "schema:Text", 
+            "schema:domain": "schema:JobPosting", 
+            "rdfs:label": "skills"
+        }, 
+        {
+            "@id": "schema:DanceEvent", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:Event", 
+            "rdfs:comment": "Event type: A social dance.", 
+            "rdfs:label": "DanceEvent"
+        }, 
+        {
+            "@id": "schema:replytourl", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "The URL at which a reply may be posted to the specified UserComment.", 
+            "schema:range": "schema:URL", 
+            "schema:domain": "schema:UserComments", 
+            "rdfs:label": "replytourl"
+        }, 
+        {
+            "@id": "schema:BookStore", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:Store", 
+            "rdfs:comment": "A bookstore.", 
+            "rdfs:label": "BookStore"
+        }, 
+        {
+            "@id": "schema:Hostel", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:LodgingBusiness", 
+            "rdfs:comment": "A hostel.", 
+            "rdfs:label": "Hostel"
+        }, 
+        {
+            "@id": "schema:PerformingGroup", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:Organization", 
+            "rdfs:comment": "A performance group, such as a band, an orchestra, or a circus.", 
+            "rdfs:label": "PerformingGroup"
+        }, 
+        {
+            "@id": "schema:AccountingService", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": [
+                "schema:FinancialService", 
+                "schema:ProfessionalService"
+            ], 
+            "rdfs:comment": "Accountancy business.", 
+            "rdfs:label": "AccountingService"
+        }, 
+        {
+            "@id": "schema:MediaObject", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:CreativeWork", 
+            "rdfs:comment": "An image, video, or audio object embedded in a web page. Note that a creative work may have many media objects associated with it on the same web page. For example, a page about a single song (MusicRecording) may have a music video (VideoObject), and a high and low bandwidth audio stream (2 AudioObject's).", 
+            "rdfs:label": "MediaObject"
+        }, 
+        {
+            "@id": "schema:Cemetery", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:CivicStructure", 
+            "rdfs:comment": "A graveyard.", 
+            "rdfs:label": "Cemetery"
+        }, 
+        {
+            "@id": "schema:UserPageVisits", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:UserInteraction", 
+            "rdfs:comment": "User interaction: Visit to a web page.", 
+            "rdfs:label": "UserPageVisits"
+        }, 
+        {
+            "@id": "schema:contacttype", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "A person or organization can have different contact points, for different purposes. For example, a sales contact point, a PR contact point and so on. This property is used to specify the kind of contact point.", 
+            "schema:range": "schema:Text", 
+            "schema:domain": "schema:ContactPoint", 
+            "rdfs:label": "contacttype"
+        }, 
+        {
+            "@id": "schema:JobPosting", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:Intangible", 
+            "rdfs:comment": "A listing that describes a job opening in a certain organization.", 
+            "rdfs:label": "JobPosting"
+        }, 
+        {
+            "@id": "schema:Date", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:DataType", 
+            "rdfs:comment": "A date value in ISO 8601 date format.", 
+            "rdfs:label": "Date"
+        }, 
+        {
+            "@id": "schema:downloadurl", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "If the file can be downloaded, URL to download the binary.", 
+            "schema:range": "schema:URL", 
+            "schema:domain": "schema:SoftwareApplication", 
+            "rdfs:label": "downloadurl"
+        }, 
+        {
+            "@id": "schema:ItemList", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:CreativeWork", 
+            "rdfs:comment": "A list of items of any sort—for example, Top 10 Movies About Weathermen, or Top 100 Party Songs. Not to be confused with HTML lists, which are often used only for formatting.", 
+            "rdfs:label": "ItemList"
+        }, 
+        {
+            "@id": "schema:Winery", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:FoodEstablishment", 
+            "rdfs:comment": "A winery.", 
+            "rdfs:label": "Winery"
+        }, 
+        {
+            "@id": "schema:awards", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "Awards won by this person or for this creative work.", 
+            "schema:range": "schema:Text", 
+            "schema:domain": [
+                "schema:Person", 
+                "schema:CreativeWork"
+            ], 
+            "rdfs:label": "awards"
+        }, 
+        {
+            "@id": "schema:Airport", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:CivicStructure", 
+            "rdfs:comment": "An airport.", 
+            "rdfs:label": "Airport"
+        }, 
+        {
+            "@id": "schema:Hospital", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": [
+                "schema:MedicalOrganization", 
+                "schema:CivicStructure", 
+                "schema:EmergencyService"
+            ], 
+            "rdfs:comment": "A hospital.", 
+            "rdfs:label": "Hospital"
+        }, 
+        {
+            "@id": "schema:incentives", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "Description of bonus and commission compensation aspects of the job.", 
+            "schema:range": "schema:Text", 
+            "schema:domain": "schema:JobPosting", 
+            "rdfs:label": "incentives"
+        }, 
+        {
+            "@id": "schema:lowprice", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "The lowest price of all offers available.", 
+            "schema:range": [
+                "schema:Number", 
+                "schema:Text"
+            ], 
+            "schema:domain": "schema:AggregateOffer", 
+            "rdfs:label": "lowprice"
+        }, 
+        {
+            "@id": "schema:copyrightholder", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "The party holding the legal copyright to the CreativeWork.", 
+            "schema:range": [
+                "schema:Person", 
+                "schema:Organization"
+            ], 
+            "schema:domain": "schema:CreativeWork", 
+            "rdfs:label": "copyrightholder"
+        }, 
+        {
+            "@id": "schema:additionalname", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "An additional name for a Person, can be used for a middle name.", 
+            "schema:range": "schema:Text", 
+            "schema:domain": "schema:Person", 
+            "rdfs:label": "additionalname"
+        }, 
+        {
+            "@id": "schema:wordcount", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "The number of words in the text of the Article.", 
+            "schema:range": "schema:Integer", 
+            "schema:domain": "schema:Article", 
+            "rdfs:label": "wordcount"
+        }, 
+        {
+            "@id": "schema:associatedmedia", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "The media objects that encode this creative work. This property is a synonym for encodings.", 
+            "schema:range": "schema:MediaObject", 
+            "schema:domain": "schema:CreativeWork", 
+            "rdfs:label": "associatedmedia"
+        }, 
+        {
+            "@id": "schema:GatedResidenceCommunity", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:Residence", 
+            "rdfs:comment": "Residence type: Gated community.", 
+            "rdfs:label": "GatedResidenceCommunity"
+        }, 
+        {
+            "@id": "schema:VideoGallery", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:CollectionPage", 
+            "rdfs:comment": "Web page type: Video gallery page.", 
+            "rdfs:label": "VideoGallery"
+        }, 
+        {
+            "@id": "schema:Embassy", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:GovernmentBuilding", 
+            "rdfs:comment": "An embassy.", 
+            "rdfs:label": "Embassy"
+        }, 
+        {
+            "@id": "schema:FoodEvent", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:Event", 
+            "rdfs:comment": "Event type: Food event.", 
+            "rdfs:label": "FoodEvent"
+        }, 
+        {
+            "@id": "schema:totaltime", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "The total time it takes to prepare and cook the recipe, in ISO 8601 duration format.", 
+            "schema:range": "schema:Duration", 
+            "schema:domain": "schema:Recipe", 
+            "rdfs:label": "totaltime"
+        }, 
+        {
+            "@id": "schema:Preschool", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:EducationalOrganization", 
+            "rdfs:comment": "A preschool.", 
+            "rdfs:label": "Preschool"
+        }, 
+        {
+            "@id": "schema:OutletStore", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:Store", 
+            "rdfs:comment": "An outlet store.", 
+            "rdfs:label": "OutletStore"
+        }, 
+        {
+            "@id": "schema:longitude", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "The longitude of a location. For example -122.08585.", 
+            "schema:range": [
+                "schema:Number", 
+                "schema:Text"
+            ], 
+            "schema:domain": "schema:GeoCoordinates", 
+            "rdfs:label": "longitude"
+        }, 
+        {
+            "@id": "schema:familyname", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "Family name. In the U.S., the last name of an Person. This can be used along with givenName instead of the Name property.", 
+            "schema:range": "schema:Text", 
+            "schema:domain": "schema:Person", 
+            "rdfs:label": "familyname"
+        }, 
+        {
+            "@id": "schema:LodgingBusiness", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:LocalBusiness", 
+            "rdfs:comment": "A lodging business, such as a motel, hotel, or inn.", 
+            "rdfs:label": "LodgingBusiness"
+        }, 
+        {
+            "@id": "schema:episodes", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "The episode of a TV series or season.", 
+            "schema:range": "schema:TVEpisode", 
+            "schema:domain": [
+                "schema:TVSeries", 
+                "schema:TVSeason"
+            ], 
+            "rdfs:label": "episodes"
+        }, 
+        {
+            "@id": "schema:itemoffered", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "The item being sold.", 
+            "schema:range": "schema:Product", 
+            "schema:domain": "schema:Offer", 
+            "rdfs:label": "itemoffered"
+        }, 
+        {
+            "@id": "schema:video", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "An embedded video object.", 
+            "schema:range": "schema:VideoObject", 
+            "schema:domain": "schema:CreativeWork", 
+            "rdfs:label": "video"
+        }, 
+        {
+            "@id": "schema:RecyclingCenter", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:LocalBusiness", 
+            "rdfs:comment": "A recycling center.", 
+            "rdfs:label": "RecyclingCenter"
+        }, 
+        {
+            "@id": "schema:TVEpisode", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:CreativeWork", 
+            "rdfs:comment": "An episode of a TV series or season.", 
+            "rdfs:label": "TVEpisode"
+        }, 
+        {
+            "@id": "schema:currenciesaccepted", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "The currency accepted (in ISO 4217 currency format).", 
+            "schema:range": "schema:Text", 
+            "schema:domain": "schema:LocalBusiness", 
+            "rdfs:label": "currenciesaccepted"
+        }, 
+        {
+            "@id": "schema:byartist", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "The artist that performed this album or recording.", 
+            "schema:range": "schema:MusicGroup", 
+            "schema:domain": [
+                "schema:MusicAlbum", 
+                "schema:MusicRecording"
+            ], 
+            "rdfs:label": "byartist"
+        }, 
+        {
+            "@id": "schema:maincontentofpage", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "Indicates if this web page element is the main subject of the page.", 
+            "schema:range": "schema:WebPageElement", 
+            "schema:domain": "schema:WebPage", 
+            "rdfs:label": "maincontentofpage"
+        }, 
+        {
+            "@id": "schema:Painting", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:CreativeWork", 
+            "rdfs:comment": "A painting.", 
+            "rdfs:label": "Painting"
+        }, 
+        {
+            "@id": "schema:RiverBodyOfWater", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:BodyOfWater", 
+            "rdfs:comment": "A river (for example, the broad majestic Shannon).", 
+            "rdfs:label": "RiverBodyOfWater"
+        }, 
+        {
+            "@id": "schema:Festival", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:Event", 
+            "rdfs:comment": "Event type: Festival.", 
+            "rdfs:label": "Festival"
+        }, 
+        {
+            "@id": "schema:EventVenue", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:CivicStructure", 
+            "rdfs:comment": "An event venue.", 
+            "rdfs:label": "EventVenue"
+        }, 
+        {
+            "@id": "schema:Waterfall", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:BodyOfWater", 
+            "rdfs:comment": "A waterfall, like Niagara", 
+            "rdfs:label": "Waterfall"
+        }, 
+        {
+            "@id": "schema:articlebody", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "The actual body of the article.", 
+            "schema:range": "schema:Text", 
+            "schema:domain": "schema:Article", 
+            "rdfs:label": "articlebody"
+        }, 
+        {
+            "@id": "schema:menu", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "Either the actual menu or a URL of the menu.", 
+            "schema:range": [
+                "schema:URL", 
+                "schema:Text"
+            ], 
+            "schema:domain": "schema:FoodEstablishment", 
+            "rdfs:label": "menu"
+        }, 
+        {
+            "@id": "schema:reviewbody", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "The actual body of the review", 
+            "schema:range": "schema:Text", 
+            "schema:domain": "schema:Review", 
+            "rdfs:label": "reviewbody"
+        }, 
+        {
+            "@id": "schema:ShoppingCenter", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:LocalBusiness", 
+            "rdfs:comment": "A shopping center or mall.", 
+            "rdfs:label": "ShoppingCenter"
+        }, 
+        {
+            "@id": "schema:CatholicChurch", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:PlaceOfWorship", 
+            "rdfs:comment": "A Catholic church.", 
+            "rdfs:label": "CatholicChurch"
+        }, 
+        {
+            "@id": "schema:usagetermsdeprecated", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "A statement about the usage terms pertaining to the CreativeWork.", 
+            "schema:range": [
+                "schema:URL", 
+                "schema:Text"
+            ], 
+            "schema:domain": "schema:CreativeWork", 
+            "rdfs:label": "usagetermsdeprecated"
+        }, 
+        {
+            "@id": "schema:MobilePhoneStore", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:Store", 
+            "rdfs:comment": "A mobile-phone store.", 
+            "rdfs:label": "MobilePhoneStore"
+        }, 
+        {
+            "@id": "schema:itemlistelement", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "A single list item.", 
+            "schema:range": "schema:Text", 
+            "schema:domain": "schema:ItemList", 
+            "rdfs:label": "itemlistelement"
+        }, 
+        {
+            "@id": "schema:Casino", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:EntertainmentBusiness", 
+            "rdfs:comment": "A casino.", 
+            "rdfs:label": "Casino"
+        }, 
+        {
+            "@id": "schema:addresslocality", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "The locality. For example, Mountain View.", 
+            "schema:range": "schema:Text", 
+            "schema:domain": "schema:PostalAddress", 
+            "rdfs:label": "addresslocality"
+        }, 
+        {
+            "@id": "schema:ClothingStore", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:Store", 
+            "rdfs:comment": "A clothing store.", 
+            "rdfs:label": "ClothingStore"
+        }, 
+        {
+            "@id": "schema:MusicGroup", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:PerformingGroup", 
+            "rdfs:comment": "A musical group, such as a band, an orchestra, or a choir. Can also be a solo musician.", 
+            "rdfs:label": "MusicGroup"
+        }, 
+        {
+            "@id": "schema:employmenttype", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "Type of employment (e.g. full-time, part-time, contract, temporary, seasonal, internship).", 
+            "schema:range": "schema:Text", 
+            "schema:domain": "schema:JobPosting", 
+            "rdfs:label": "employmenttype"
+        }, 
+        {
+            "@id": "schema:AmusementPark", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:EntertainmentBusiness", 
+            "rdfs:comment": "An amusement park.", 
+            "rdfs:label": "AmusementPark"
+        }, 
+        {
+            "@id": "schema:HVACBusiness", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:HomeAndConstructionBusiness", 
+            "rdfs:comment": "An HVAC service.", 
+            "rdfs:label": "HVACBusiness"
+        }, 
+        {
+            "@id": "schema:publisher", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "The publisher of the creative work.", 
+            "schema:range": "schema:Organization", 
+            "schema:domain": "schema:CreativeWork", 
+            "rdfs:label": "publisher"
+        }, 
+        {
+            "@id": "schema:enddate", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "The end date and time of the event (in ISO 8601 date format).", 
+            "schema:range": "schema:Date", 
+            "schema:domain": [
+                "schema:TVSeason", 
+                "schema:TVSeries", 
+                "schema:Event"
+            ], 
+            "rdfs:label": "enddate"
+        }, 
+        {
+            "@id": "schema:TaxiStand", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:CivicStructure", 
+            "rdfs:comment": "A taxi stand.", 
+            "rdfs:label": "TaxiStand"
+        }, 
+        {
+            "@id": "schema:State", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:AdministrativeArea", 
+            "rdfs:comment": "A state or province.", 
+            "rdfs:label": "State"
+        }, 
+        {
+            "@id": "schema:Playground", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:CivicStructure", 
+            "rdfs:comment": "A playground.", 
+            "rdfs:label": "Playground"
+        }, 
+        {
+            "@id": "schema:numberofepisodes", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "The number of episodes in this season or series.", 
+            "schema:range": "schema:Number", 
+            "schema:domain": [
+                "schema:TVSeries", 
+                "schema:TVSeason"
+            ], 
+            "rdfs:label": "numberofepisodes"
+        }, 
+        {
+            "@id": "schema:copyrightnoticedeprecated", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "Any necessary copyright notice for claiming the intellectual property for the CreativeWork.", 
+            "schema:range": [
+                "schema:URL", 
+                "schema:Text"
+            ], 
+            "schema:domain": "schema:CreativeWork", 
+            "rdfs:label": "copyrightnoticedeprecated"
+        }, 
+        {
+            "@id": "schema:Motel", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:LodgingBusiness", 
+            "rdfs:comment": "A motel.", 
+            "rdfs:label": "Motel"
+        }, 
+        {
+            "@id": "schema:filesize", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "Size of the application / package in bytes.", 
+            "schema:range": "schema:Integer", 
+            "schema:domain": "schema:SoftwareApplication", 
+            "rdfs:label": "filesize"
+        }, 
+        {
+            "@id": "schema:AggregateRating", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:Rating", 
+            "rdfs:comment": "The average rating based on multiple ratings or reviews.", 
+            "rdfs:label": "AggregateRating"
+        }, 
+        {
+            "@id": "schema:RVPark", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:CivicStructure", 
+            "rdfs:comment": "An RV park.", 
+            "rdfs:label": "RVPark"
+        }, 
+        {
+            "@id": "schema:parents", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "A parents of the person.", 
+            "schema:range": "schema:Person", 
+            "schema:domain": "schema:Person", 
+            "rdfs:label": "parents"
+        }, 
+        {
+            "@id": "schema:bookformatdeprecated", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "The format of the book.", 
+            "schema:range": "schema:Thing", 
+            "schema:domain": "schema:Book", 
+            "rdfs:label": "bookformatdeprecated"
+        }, 
+        {
+            "@id": "schema:paymentaccepted", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "Cash, credit card, etc.", 
+            "schema:range": "schema:Text", 
+            "schema:domain": "schema:LocalBusiness", 
+            "rdfs:label": "paymentaccepted"
+        }, 
+        {
+            "@id": "schema:contenturl", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "Actual bytes of the media object, for example the image file or video file.", 
+            "schema:range": "schema:URL", 
+            "schema:domain": "schema:MediaObject", 
+            "rdfs:label": "contenturl"
+        }, 
+        {
+            "@id": "schema:dateline", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "The location where the NewsArticle was produced.", 
+            "schema:range": "schema:Text", 
+            "schema:domain": "schema:NewsArticle", 
+            "rdfs:label": "dateline"
+        }, 
+        {
+            "@id": "schema:Museum", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:CivicStructure", 
+            "rdfs:comment": "A museum.", 
+            "rdfs:label": "Museum"
+        }, 
+        {
+            "@id": "schema:headline", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "Headline of the article", 
+            "schema:range": "schema:Text", 
+            "schema:domain": "schema:CreativeWork", 
+            "rdfs:label": "headline"
+        }, 
+        {
+            "@id": "schema:containedin", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "The basic containment relation between places.", 
+            "schema:range": "schema:Place", 
+            "schema:domain": "schema:Place", 
+            "rdfs:label": "containedin"
+        }, 
+        {
+            "@id": "schema:unsaturatedfatcontent", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "The number of grams of unsaturated fat.", 
+            "schema:range": "schema:Mass", 
+            "schema:domain": "schema:NutritionInformation", 
+            "rdfs:label": "unsaturatedfatcontent"
+        }, 
+        {
+            "@id": "schema:CollegeOrUniversity", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:EducationalOrganization", 
+            "rdfs:comment": "A college, university, or other third-level educational institution.", 
+            "rdfs:label": "CollegeOrUniversity"
+        }, 
+        {
+            "@id": "schema:addressregion", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "The region. For example, CA.", 
+            "schema:range": "schema:Text", 
+            "schema:domain": "schema:PostalAddress", 
+            "rdfs:label": "addressregion"
+        }, 
+        {
+            "@id": "schema:ChildCare", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:LocalBusiness", 
+            "rdfs:comment": "A Childcare center.", 
+            "rdfs:label": "ChildCare"
+        }, 
+        {
+            "@id": "schema:Landform", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:Place", 
+            "rdfs:comment": "A landform or physical feature.  Landform elements include mountains, plains, lakes, rivers, seascape and oceanic waterbody interface features such as bays, peninsulas, seas and so forth, including sub-aqueous terrain features such as submersed mountain http://schema.org/ranges, volcanoes, and the great ocean basins.", 
+            "rdfs:label": "Landform"
+        }, 
+        {
+            "@id": "schema:productid", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "The product identifier, such as ISBN. For example: <meta itemprop='productID' content='isbn:123-456-789'/>.", 
+            "schema:range": "schema:Text", 
+            "schema:domain": "schema:Product", 
+            "rdfs:label": "productid"
+        }, 
+        {
+            "@id": "schema:postalcode", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "The postal code. For example, 94043.", 
+            "schema:range": "schema:Text", 
+            "schema:domain": "schema:PostalAddress", 
+            "rdfs:label": "postalcode"
+        }, 
+        {
+            "@id": "schema:basesalary", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "The base salary of the job.", 
+            "schema:range": "schema:Number", 
+            "schema:domain": "schema:JobPosting", 
+            "rdfs:label": "basesalary"
+        }, 
+        {
+            "@id": "schema:nutrition", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "Nutrition information about the recipe.", 
+            "schema:range": "schema:NutritionInformation", 
+            "schema:domain": "schema:Recipe", 
+            "rdfs:label": "nutrition"
+        }, 
+        {
+            "@id": "schema:expires", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "Date the content expires and is no longer useful or available. Useful for videos.", 
+            "schema:range": "schema:Date", 
+            "schema:domain": "schema:MediaObject", 
+            "rdfs:label": "expires"
+        }, 
+        {
+            "@id": "schema:BeautySalon", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:HealthAndBeautyBusiness", 
+            "rdfs:comment": "Beauty salon.", 
+            "rdfs:label": "BeautySalon"
+        }, 
+        {
+            "@id": "schema:tickersymbol", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "The exchange traded instrument associated with a Corporation object. The tickerSymbol is expressed as an exchange and an instrument name separated by a space character. For the exchange component of the tickerSymbol attribute, we reccommend using the controlled vocaulary of Market Identifier Codes (MIC) specified in ISO15022.", 
+            "schema:range": "schema:Text", 
+            "schema:domain": {
+                "@id": "schema:Corporation", 
+                "@type": "rdfs:Class", 
+                "rdfs:subClassOf": "schema:Organization", 
+                "rdfs:comment": "Organization: A business corporation.", 
+                "rdfs:label": "Corporation"
+            }, 
+            "rdfs:label": "tickersymbol"
+        }, 
+        {
+            "@id": "schema:musicgroupmember", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "A member of the music group—for example, John, Paul, George, or Ringo.", 
+            "schema:range": "schema:Person", 
+            "schema:domain": "schema:MusicGroup", 
+            "rdfs:label": "musicgroupmember"
+        }, 
+        {
+            "@id": "schema:CheckoutPage", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:WebPage", 
+            "rdfs:comment": "Web page type: Checkout page.", 
+            "rdfs:label": "CheckoutPage"
+        }, 
+        {
+            "@id": "schema:name", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "The name of the item.", 
+            "schema:range": "schema:Text", 
+            "schema:domain": "schema:Thing", 
+            "rdfs:label": "name"
+        }, 
+        {
+            "@id": "schema:industry", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "The industry associated with the job position.", 
+            "schema:range": "schema:Text", 
+            "schema:domain": "schema:JobPosting", 
+            "rdfs:label": "industry"
+        }, 
+        {
+            "@id": "schema:datecreated", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "The date on which the CreativeWork was created.", 
+            "schema:range": "schema:Date", 
+            "schema:domain": "schema:CreativeWork", 
+            "rdfs:label": "datecreated"
+        }, 
+        {
+            "@id": "schema:BusStation", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:CivicStructure", 
+            "rdfs:comment": "A bus station.", 
+            "rdfs:label": "BusStation"
+        }, 
+        {
+            "@id": "schema:birthdate", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "Date of birth.", 
+            "schema:range": "schema:Date", 
+            "schema:domain": "schema:Person", 
+            "rdfs:label": "birthdate"
+        }, 
+        {
+            "@id": "schema:Locksmith", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": [
+                "schema:HomeAndConstructionBusiness", 
+                "schema:ProfessionalService"
+            ], 
+            "rdfs:comment": "A locksmith.", 
+            "rdfs:label": "Locksmith"
+        }, 
+        {
+            "@id": "schema:ParkingFacility", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:CivicStructure", 
+            "rdfs:comment": "A parking lot or other parking facility.", 
+            "rdfs:label": "ParkingFacility"
+        }, 
+        {
+            "@id": "schema:recipeyield", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "The quantity produced by the recipe (for example, number of people served, number of servings, etc).", 
+            "schema:range": "schema:Text", 
+            "schema:domain": "schema:Recipe", 
+            "rdfs:label": "recipeyield"
+        }, 
+        {
+            "@id": "schema:fibercontent", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "The number of grams of fiber.", 
+            "schema:range": "schema:Mass", 
+            "schema:domain": "schema:NutritionInformation", 
+            "rdfs:label": "fibercontent"
+        }, 
+        {
+            "@id": "schema:HighSchool", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:EducationalOrganization", 
+            "rdfs:comment": "A high school.", 
+            "rdfs:label": "HighSchool"
+        }, 
+        {
+            "@id": "schema:contributor", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "A secondary contributor to the CreativeWork.", 
+            "schema:range": [
+                "schema:Person", 
+                "schema:Organization"
+            ], 
+            "schema:domain": "schema:CreativeWork", 
+            "rdfs:label": "contributor"
+        }, 
+        {
+            "@id": "schema:isdownloadable", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "Indicates whether the software is available for download.", 
+            "schema:range": "schema:Boolean", 
+            "schema:domain": "schema:SoftwareApplication", 
+            "rdfs:label": "isdownloadable"
+        }, 
+        {
+            "@id": "schema:maps", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "A URL to a map of the place.", 
+            "schema:range": "schema:URL", 
+            "schema:domain": "schema:Place", 
+            "rdfs:label": "maps"
+        }, 
+        {
+            "@id": "schema:MusicVenue", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:CivicStructure", 
+            "rdfs:comment": "A music venue.", 
+            "rdfs:label": "MusicVenue"
+        }, 
+        {
+            "@id": "schema:occupationalcategory", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "Category or categories describing the job. Use BLS O*NET-SOC taxonomy: http://www.onetcenter.org/taxonomy.html. Ideally includes textual label and formal code, with the property repeated for each applicable value.", 
+            "schema:range": "schema:Text", 
+            "schema:domain": "schema:JobPosting", 
+            "rdfs:label": "occupationalcategory"
+        }, 
+        {
+            "@id": "schema:AutomotiveBusiness", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:LocalBusiness", 
+            "rdfs:comment": "Car repair, sales, or parts.", 
+            "rdfs:label": "AutomotiveBusiness"
+        }, 
+        {
+            "@id": "schema:MiddleSchool", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:EducationalOrganization", 
+            "rdfs:comment": "A middle school.", 
+            "rdfs:label": "MiddleSchool"
+        }, 
+        {
+            "@id": "schema:comment", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "Comments, typically from users, on this CreativeWork.", 
+            "schema:range": "schema:UserComments", 
+            "schema:domain": "schema:CreativeWork", 
+            "rdfs:label": "comment"
+        }, 
+        {
+            "@id": "schema:commenttime", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "The time at which the UserComment was made.", 
+            "schema:range": "schema:Date", 
+            "schema:domain": "schema:UserComments", 
+            "rdfs:label": "commenttime"
+        }, 
+        {
+            "@id": "schema:OceanBodyOfWater", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:BodyOfWater", 
+            "rdfs:comment": "An ocean (for example, the Pacific).", 
+            "rdfs:label": "OceanBodyOfWater"
+        }, 
+        {
+            "@id": "schema:BowlingAlley", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:SportsActivityLocation", 
+            "rdfs:comment": "A bowling alley.", 
+            "rdfs:label": "BowlingAlley"
+        }, 
+        {
+            "@id": "schema:Pharmacy", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:MedicalOrganization", 
+            "rdfs:comment": "A pharmacy or drugstore.", 
+            "rdfs:label": "Pharmacy"
+        }, 
+        {
+            "@id": "schema:ImageGallery", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:CollectionPage", 
+            "rdfs:comment": "Web page type: Image gallery page.", 
+            "rdfs:label": "ImageGallery"
+        }, 
+        {
+            "@id": "schema:UserDownloads", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:UserInteraction", 
+            "rdfs:comment": "User interaction: Download of an item.", 
+            "rdfs:label": "UserDownloads"
+        }, 
+        {
+            "@id": "schema:MedicalOrganization", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:LocalBusiness", 
+            "rdfs:comment": "A medical organization, such as a doctor's office or clinic.", 
+            "rdfs:label": "MedicalOrganization"
+        }, 
+        {
+            "@id": "schema:cholesterolcontent", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "The number of milligrams of cholesterol.", 
+            "schema:range": "schema:Mass", 
+            "schema:domain": "schema:NutritionInformation", 
+            "rdfs:label": "cholesterolcontent"
+        }, 
+        {
+            "@id": "schema:PawnShop", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:Store", 
+            "rdfs:comment": "A pawnstore.", 
+            "rdfs:label": "PawnShop"
+        }, 
+        {
+            "@id": "schema:Offer", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:Intangible", 
+            "rdfs:comment": "An offer to sell an item—for example, an offer to sell a product, the DVD of a movie, or tickets to an event.", 
+            "rdfs:label": "Offer"
+        }, 
+        {
+            "@id": "schema:relatedto", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "The most generic familial relation.", 
+            "schema:range": "schema:Person", 
+            "schema:domain": "schema:Person", 
+            "rdfs:label": "relatedto"
+        }, 
+        {
+            "@id": "schema:Product", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:Thing", 
+            "rdfs:comment": "A product is anything that is made available for sale—for example, a pair of shoes, a concert ticket, or a car.", 
+            "rdfs:label": "Product"
+        }, 
+        {
+            "@id": "schema:InternetCafe", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:LocalBusiness", 
+            "rdfs:comment": "An internet cafe.", 
+            "rdfs:label": "InternetCafe"
+        }, 
+        {
+            "@id": "schema:TrainStation", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:CivicStructure", 
+            "rdfs:comment": "A train station.", 
+            "rdfs:label": "TrainStation"
+        }, 
+        {
+            "@id": "schema:SocialEvent", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:Event", 
+            "rdfs:comment": "Event type: Social event.", 
+            "rdfs:label": "SocialEvent"
+        }, 
+        {
+            "@id": "schema:PostalAddress", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:ContactPoint", 
+            "rdfs:comment": "The mailing address.", 
+            "rdfs:label": "PostalAddress"
+        }, 
+        {
+            "@id": "schema:sodiumcontent", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "The number of milligrams of sodium.", 
+            "schema:range": "schema:Mass", 
+            "schema:domain": "schema:NutritionInformation", 
+            "rdfs:label": "sodiumcontent"
+        }, 
+        {
+            "@id": "schema:knows", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "The most generic bi-directional social/work relation.", 
+            "schema:range": "schema:Person", 
+            "schema:domain": "schema:Person", 
+            "rdfs:label": "knows"
+        }, 
+        {
+            "@id": "schema:bookformat", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "The format of the book.", 
+            "schema:range": {
+                "@id": "schema:BookFormatType", 
+                "@type": "rdfs:Class", 
+                "rdfs:subClassOf": "schema:Enumeration", 
+                "rdfs:comment": "The publication format of the book.", 
+                "rdfs:label": "BookFormatType"
+            }, 
+            "schema:domain": "schema:Book", 
+            "rdfs:label": "bookformat"
+        }, 
+        {
+            "@id": "schema:TheaterEvent", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:Event", 
+            "rdfs:comment": "Event type: Theater performance.", 
+            "rdfs:label": "TheaterEvent"
+        }, 
+        {
+            "@id": "schema:DefenceEstablishment", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:GovernmentBuilding", 
+            "rdfs:comment": "A defence establishment, such as an army or navy base.", 
+            "rdfs:label": "DefenceEstablishment"
+        }, 
+        {
+            "@id": "schema:Church", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:PlaceOfWorship", 
+            "rdfs:comment": "A church.", 
+            "rdfs:label": "Church"
+        }, 
+        {
+            "@id": "schema:LiquorStore", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:Store", 
+            "rdfs:comment": "A liquor store.", 
+            "rdfs:label": "LiquorStore"
+        }, 
+        {
+            "@id": "schema:Pond", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:BodyOfWater", 
+            "rdfs:comment": "A pond", 
+            "rdfs:label": "Pond"
+        }, 
+        {
+            "@id": "schema:LiteraryEvent", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:Event", 
+            "rdfs:comment": "Event type: Literary event.", 
+            "rdfs:label": "LiteraryEvent"
+        }, 
+        {
+            "@id": "schema:SportsClub", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:SportsActivityLocation", 
+            "rdfs:comment": "A sports club.", 
+            "rdfs:label": "SportsClub"
+        }, 
+        {
+            "@id": "schema:foundingdate", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "The date that this organization was founded.", 
+            "schema:range": "schema:Date", 
+            "schema:domain": "schema:Organization", 
+            "rdfs:label": "foundingdate"
+        }, 
+        {
+            "@id": "schema:openinghours", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "The opening hours for a business. Opening hours can be specified as a weekly time http://schema.org/range, starting with days, then times per day. Multiple days can be listed with commas ',' separating each day. Day or time http://schema.org/ranges are specified using a hyphen '-'.- Days are specified using the following two-letter combinations: Mo, Tu, We, Th, Fr, Sa, Su.- Times are specified using 24:00 time. For example, 3pm is specified as 15:00. - Here is an example: <time itemprop=\"openingHours\" datetime=\"Tu,Th 16:00-20:00\">Tuesdays and Thursdays 4-8pm</time>. - If a business is open 7 days a week, then it can be specified as <time itemprop=\"openingHours\" datetime=\"Mo-Su\">Monday through Sunday, all day</time>.", 
+            "schema:range": "schema:Duration", 
+            "schema:domain": [
+                "schema:LocalBusiness", 
+                "schema:CivicStructure"
+            ], 
+            "rdfs:label": "openinghours"
+        }, 
+        {
+            "@id": "schema:SportsEvent", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:Event", 
+            "rdfs:comment": "Event type: Sports event.", 
+            "rdfs:label": "SportsEvent"
+        }, 
+        {
+            "@id": "schema:servescuisine", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "The cuisine of the restaurant.", 
+            "schema:range": "schema:Text", 
+            "schema:domain": "schema:FoodEstablishment", 
+            "rdfs:label": "servescuisine"
+        }, 
+        {
+            "@id": "schema:WebPageElement", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:CreativeWork", 
+            "rdfs:comment": "A web page element, like a table or an image", 
+            "rdfs:label": "WebPageElement"
+        }, 
+        {
+            "@id": "schema:commenttext", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "The text of the UserComment.", 
+            "schema:range": "schema:Text", 
+            "schema:domain": "schema:UserComments", 
+            "rdfs:label": "commenttext"
+        }, 
+        {
+            "@id": "schema:GeoShape", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:StructuredValue", 
+            "rdfs:comment": "The geographic shape of a place.", 
+            "rdfs:label": "GeoShape"
+        }, 
+        {
+            "@id": "schema:Article", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:CreativeWork", 
+            "rdfs:comment": "An article, such as a news article or piece of investigative report. Newspapers and magazines have articles of many different types and this is intended to cover them all.", 
+            "rdfs:label": "Article"
+        }, 
+        {
+            "@id": "schema:founders", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "A person who founded this organization.", 
+            "schema:range": "schema:Person", 
+            "schema:domain": "schema:Organization", 
+            "rdfs:label": "founders"
+        }, 
+        {
+            "@id": "schema:datepublished", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "Date of first broadcast/publication.", 
+            "schema:range": "schema:Date", 
+            "schema:domain": "schema:CreativeWork", 
+            "rdfs:label": "datepublished"
+        }, 
+        {
+            "@id": "schema:playertype", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "Player type required—for example, Flash or Silverlight.", 
+            "schema:range": "schema:Text", 
+            "schema:domain": "schema:MediaObject", 
+            "rdfs:label": "playertype"
+        }, 
+        {
+            "@id": "schema:availabilitydeprecated", 
+            "@type": "rdf:Property", 
+            "rdfs:comment": "The availability of this item—for example In stock, Out of stock, Pre-order, etc.", 
+            "schema:range": "schema:Thing", 
+            "schema:domain": "schema:Offer", 
+            "rdfs:label": "availabilitydeprecated"
+        }, 
+        {
+            "@id": "schema:UserTweets", 
+            "@type": "rdfs:Class", 
+            "rdfs:subClassOf": "schema:UserInteraction", 
+            "rdfs:comment": "User interaction: Tweets.", 
+            "rdfs:label": "UserTweets"
+        }
+    ]
+}
