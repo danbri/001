@@ -1,0 +1,2068 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>RDFa Lite Reflection</title>
+  </head>
+  <body xmlns="http://schema.org/" xml:rdf="http://www.w3.org/1999/02-22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+
+<p>This is an <b>experimental</b> RDFa 1.1 Lite representation of the schema.org schema, copied here for collaboration and feedback.</p>
+
+<p>Known issues include downcased property names, and the use of markup within rdfs:comment text. Feedback/comments to danbri@danbri.org please.</p>
+
+<hr />
+
+    <div typeof="rdfs:Class" about="http://schema.org/Thing">
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/CreativeWork">
+       <a property="rdfs:subClassOf" href="http://schema.org/Thing"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/WebPage">
+       <a property="rdfs:subClassOf" href="http://schema.org/CreativeWork"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/AboutPage">
+       <a property="rdfs:subClassOf" href="http://schema.org/WebPage"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/Organization">
+       <a property="rdfs:subClassOf" href="http://schema.org/Thing"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/Place">
+       <a property="rdfs:subClassOf" href="http://schema.org/Thing"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/LocalBusiness">
+       <a property="rdfs:subClassOf" href="http://schema.org/Organization"></a>
+       <a property="rdfs:subClassOf" href="http://schema.org/Place"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/FinancialService">
+       <a property="rdfs:subClassOf" href="http://schema.org/LocalBusiness"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/ProfessionalService">
+       <a property="rdfs:subClassOf" href="http://schema.org/LocalBusiness"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/AccountingService">
+       <a property="rdfs:subClassOf" href="http://schema.org/FinancialService"></a>
+       <a property="rdfs:subClassOf" href="http://schema.org/ProfessionalService"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/AdministrativeArea">
+       <a property="rdfs:subClassOf" href="http://schema.org/Place"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/EntertainmentBusiness">
+       <a property="rdfs:subClassOf" href="http://schema.org/LocalBusiness"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/AdultEntertainment">
+       <a property="rdfs:subClassOf" href="http://schema.org/EntertainmentBusiness"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/Intangible">
+       <a property="rdfs:subClassOf" href="http://schema.org/Thing"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/Offer">
+       <a property="rdfs:subClassOf" href="http://schema.org/Intangible"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/AggregateOffer">
+       <a property="rdfs:subClassOf" href="http://schema.org/Offer"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/Rating">
+       <a property="rdfs:subClassOf" href="http://schema.org/Intangible"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/AggregateRating">
+       <a property="rdfs:subClassOf" href="http://schema.org/Rating"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/CivicStructure">
+       <a property="rdfs:subClassOf" href="http://schema.org/Place"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/Airport">
+       <a property="rdfs:subClassOf" href="http://schema.org/CivicStructure"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/AmusementPark">
+       <a property="rdfs:subClassOf" href="http://schema.org/EntertainmentBusiness"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/AnimalShelter">
+       <a property="rdfs:subClassOf" href="http://schema.org/LocalBusiness"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/Residence">
+       <a property="rdfs:subClassOf" href="http://schema.org/Place"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/ApartmentComplex">
+       <a property="rdfs:subClassOf" href="http://schema.org/Residence"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/Aquarium">
+       <a property="rdfs:subClassOf" href="http://schema.org/CivicStructure"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/ArtGallery">
+       <a property="rdfs:subClassOf" href="http://schema.org/EntertainmentBusiness"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/Article">
+       <a property="rdfs:subClassOf" href="http://schema.org/CreativeWork"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/Attorney">
+       <a property="rdfs:subClassOf" href="http://schema.org/ProfessionalService"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/MediaObject">
+       <a property="rdfs:subClassOf" href="http://schema.org/CreativeWork"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/AudioObject">
+       <a property="rdfs:subClassOf" href="http://schema.org/MediaObject"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/AutomotiveBusiness">
+       <a property="rdfs:subClassOf" href="http://schema.org/LocalBusiness"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/AutoBodyShop">
+       <a property="rdfs:subClassOf" href="http://schema.org/AutomotiveBusiness"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/AutoDealer">
+       <a property="rdfs:subClassOf" href="http://schema.org/AutomotiveBusiness"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/Store">
+       <a property="rdfs:subClassOf" href="http://schema.org/LocalBusiness"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/AutoPartsStore">
+       <a property="rdfs:subClassOf" href="http://schema.org/Store"></a>
+       <a property="rdfs:subClassOf" href="http://schema.org/AutomotiveBusiness"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/AutoRental">
+       <a property="rdfs:subClassOf" href="http://schema.org/AutomotiveBusiness"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/AutoRepair">
+       <a property="rdfs:subClassOf" href="http://schema.org/AutomotiveBusiness"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/AutoWash">
+       <a property="rdfs:subClassOf" href="http://schema.org/AutomotiveBusiness"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/AutomatedTeller">
+       <a property="rdfs:subClassOf" href="http://schema.org/FinancialService"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/FoodEstablishment">
+       <a property="rdfs:subClassOf" href="http://schema.org/LocalBusiness"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/Bakery">
+       <a property="rdfs:subClassOf" href="http://schema.org/FoodEstablishment"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/BankOrCreditUnion">
+       <a property="rdfs:subClassOf" href="http://schema.org/FinancialService"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/BarOrPub">
+       <a property="rdfs:subClassOf" href="http://schema.org/FoodEstablishment"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/Beach">
+       <a property="rdfs:subClassOf" href="http://schema.org/CivicStructure"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/HealthAndBeautyBusiness">
+       <a property="rdfs:subClassOf" href="http://schema.org/LocalBusiness"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/BeautySalon">
+       <a property="rdfs:subClassOf" href="http://schema.org/HealthAndBeautyBusiness"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/LodgingBusiness">
+       <a property="rdfs:subClassOf" href="http://schema.org/LocalBusiness"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/BedAndBreakfast">
+       <a property="rdfs:subClassOf" href="http://schema.org/LodgingBusiness"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/BikeStore">
+       <a property="rdfs:subClassOf" href="http://schema.org/Store"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/Blog">
+       <a property="rdfs:subClassOf" href="http://schema.org/CreativeWork"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/BlogPosting">
+       <a property="rdfs:subClassOf" href="http://schema.org/Article"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/Landform">
+       <a property="rdfs:subClassOf" href="http://schema.org/Place"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/BodyOfWater">
+       <a property="rdfs:subClassOf" href="http://schema.org/Landform"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/Book">
+       <a property="rdfs:subClassOf" href="http://schema.org/CreativeWork"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/Enumeration">
+       <a property="rdfs:subClassOf" href="http://schema.org/Intangible"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/BookFormatType">
+       <a property="rdfs:subClassOf" href="http://schema.org/Enumeration"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/BookStore">
+       <a property="rdfs:subClassOf" href="http://schema.org/Store"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/DataType">
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/Boolean">
+       <a property="rdfs:subClassOf" href="http://schema.org/DataType"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/SportsActivityLocation">
+       <a property="rdfs:subClassOf" href="http://schema.org/LocalBusiness"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/BowlingAlley">
+       <a property="rdfs:subClassOf" href="http://schema.org/SportsActivityLocation"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/Brewery">
+       <a property="rdfs:subClassOf" href="http://schema.org/FoodEstablishment"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/PlaceOfWorship">
+       <a property="rdfs:subClassOf" href="http://schema.org/CivicStructure"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/BuddhistTemple">
+       <a property="rdfs:subClassOf" href="http://schema.org/PlaceOfWorship"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/BusStation">
+       <a property="rdfs:subClassOf" href="http://schema.org/CivicStructure"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/BusStop">
+       <a property="rdfs:subClassOf" href="http://schema.org/CivicStructure"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/Event">
+       <a property="rdfs:subClassOf" href="http://schema.org/Thing"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/BusinessEvent">
+       <a property="rdfs:subClassOf" href="http://schema.org/Event"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/CafeOrCoffeeShop">
+       <a property="rdfs:subClassOf" href="http://schema.org/FoodEstablishment"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/Campground">
+       <a property="rdfs:subClassOf" href="http://schema.org/CivicStructure"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/Canal">
+       <a property="rdfs:subClassOf" href="http://schema.org/BodyOfWater"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/Casino">
+       <a property="rdfs:subClassOf" href="http://schema.org/EntertainmentBusiness"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/CatholicChurch">
+       <a property="rdfs:subClassOf" href="http://schema.org/PlaceOfWorship"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/Cemetery">
+       <a property="rdfs:subClassOf" href="http://schema.org/CivicStructure"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/CheckoutPage">
+       <a property="rdfs:subClassOf" href="http://schema.org/WebPage"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/ChildCare">
+       <a property="rdfs:subClassOf" href="http://schema.org/LocalBusiness"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/ChildrensEvent">
+       <a property="rdfs:subClassOf" href="http://schema.org/Event"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/Church">
+       <a property="rdfs:subClassOf" href="http://schema.org/PlaceOfWorship"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/City">
+       <a property="rdfs:subClassOf" href="http://schema.org/AdministrativeArea"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/GovernmentBuilding">
+       <a property="rdfs:subClassOf" href="http://schema.org/CivicStructure"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/CityHall">
+       <a property="rdfs:subClassOf" href="http://schema.org/GovernmentBuilding"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/ClothingStore">
+       <a property="rdfs:subClassOf" href="http://schema.org/Store"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/CollectionPage">
+       <a property="rdfs:subClassOf" href="http://schema.org/WebPage"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/EducationalOrganization">
+       <a property="rdfs:subClassOf" href="http://schema.org/Organization"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/CollegeOrUniversity">
+       <a property="rdfs:subClassOf" href="http://schema.org/EducationalOrganization"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/ComedyClub">
+       <a property="rdfs:subClassOf" href="http://schema.org/EntertainmentBusiness"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/ComedyEvent">
+       <a property="rdfs:subClassOf" href="http://schema.org/Event"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/ComputerStore">
+       <a property="rdfs:subClassOf" href="http://schema.org/Store"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/ContactPage">
+       <a property="rdfs:subClassOf" href="http://schema.org/WebPage"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/StructuredValue">
+       <a property="rdfs:subClassOf" href="http://schema.org/Intangible"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/ContactPoint">
+       <a property="rdfs:subClassOf" href="http://schema.org/StructuredValue"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/Continent">
+       <a property="rdfs:subClassOf" href="http://schema.org/Landform"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/ConvenienceStore">
+       <a property="rdfs:subClassOf" href="http://schema.org/Store"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/Corporation">
+       <a property="rdfs:subClassOf" href="http://schema.org/Organization"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/Country">
+       <a property="rdfs:subClassOf" href="http://schema.org/AdministrativeArea"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/Courthouse">
+       <a property="rdfs:subClassOf" href="http://schema.org/GovernmentBuilding"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/Crematorium">
+       <a property="rdfs:subClassOf" href="http://schema.org/CivicStructure"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/DanceEvent">
+       <a property="rdfs:subClassOf" href="http://schema.org/Event"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/PerformingGroup">
+       <a property="rdfs:subClassOf" href="http://schema.org/Organization"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/DanceGroup">
+       <a property="rdfs:subClassOf" href="http://schema.org/PerformingGroup"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/Date">
+       <a property="rdfs:subClassOf" href="http://schema.org/DataType"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/DaySpa">
+       <a property="rdfs:subClassOf" href="http://schema.org/HealthAndBeautyBusiness"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/DefenceEstablishment">
+       <a property="rdfs:subClassOf" href="http://schema.org/GovernmentBuilding"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/MedicalOrganization">
+       <a property="rdfs:subClassOf" href="http://schema.org/LocalBusiness"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/Dentist">
+       <a property="rdfs:subClassOf" href="http://schema.org/MedicalOrganization"></a>
+       <a property="rdfs:subClassOf" href="http://schema.org/ProfessionalService"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/DepartmentStore">
+       <a property="rdfs:subClassOf" href="http://schema.org/Store"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/Quantity">
+       <a property="rdfs:subClassOf" href="http://schema.org/Intangible"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/Distance">
+       <a property="rdfs:subClassOf" href="http://schema.org/Quantity"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/DryCleaningOrLaundry">
+       <a property="rdfs:subClassOf" href="http://schema.org/LocalBusiness"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/Duration">
+       <a property="rdfs:subClassOf" href="http://schema.org/Quantity"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/EducationEvent">
+       <a property="rdfs:subClassOf" href="http://schema.org/Event"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/HomeAndConstructionBusiness">
+       <a property="rdfs:subClassOf" href="http://schema.org/LocalBusiness"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/Electrician">
+       <a property="rdfs:subClassOf" href="http://schema.org/HomeAndConstructionBusiness"></a>
+       <a property="rdfs:subClassOf" href="http://schema.org/ProfessionalService"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/ElectronicsStore">
+       <a property="rdfs:subClassOf" href="http://schema.org/Store"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/ElementarySchool">
+       <a property="rdfs:subClassOf" href="http://schema.org/EducationalOrganization"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/Embassy">
+       <a property="rdfs:subClassOf" href="http://schema.org/GovernmentBuilding"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/EmergencyService">
+       <a property="rdfs:subClassOf" href="http://schema.org/LocalBusiness"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/EmploymentAgency">
+       <a property="rdfs:subClassOf" href="http://schema.org/LocalBusiness"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/Energy">
+       <a property="rdfs:subClassOf" href="http://schema.org/Quantity"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/EventVenue">
+       <a property="rdfs:subClassOf" href="http://schema.org/CivicStructure"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/ExerciseGym">
+       <a property="rdfs:subClassOf" href="http://schema.org/SportsActivityLocation"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/FastFoodRestaurant">
+       <a property="rdfs:subClassOf" href="http://schema.org/FoodEstablishment"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/Festival">
+       <a property="rdfs:subClassOf" href="http://schema.org/Event"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/FireStation">
+       <a property="rdfs:subClassOf" href="http://schema.org/CivicStructure"></a>
+       <a property="rdfs:subClassOf" href="http://schema.org/EmergencyService"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/Number">
+       <a property="rdfs:subClassOf" href="http://schema.org/DataType"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/Float">
+       <a property="rdfs:subClassOf" href="http://schema.org/Number"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/Florist">
+       <a property="rdfs:subClassOf" href="http://schema.org/Store"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/FoodEvent">
+       <a property="rdfs:subClassOf" href="http://schema.org/Event"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/FurnitureStore">
+       <a property="rdfs:subClassOf" href="http://schema.org/Store"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/GardenStore">
+       <a property="rdfs:subClassOf" href="http://schema.org/Store"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/GasStation">
+       <a property="rdfs:subClassOf" href="http://schema.org/AutomotiveBusiness"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/GatedResidenceCommunity">
+       <a property="rdfs:subClassOf" href="http://schema.org/Residence"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/GeneralContractor">
+       <a property="rdfs:subClassOf" href="http://schema.org/HomeAndConstructionBusiness"></a>
+       <a property="rdfs:subClassOf" href="http://schema.org/ProfessionalService"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/GeoCoordinates">
+       <a property="rdfs:subClassOf" href="http://schema.org/StructuredValue"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/GeoShape">
+       <a property="rdfs:subClassOf" href="http://schema.org/StructuredValue"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/GolfCourse">
+       <a property="rdfs:subClassOf" href="http://schema.org/SportsActivityLocation"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/GovernmentOffice">
+       <a property="rdfs:subClassOf" href="http://schema.org/LocalBusiness"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/GovernmentOrganization">
+       <a property="rdfs:subClassOf" href="http://schema.org/Organization"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/GroceryStore">
+       <a property="rdfs:subClassOf" href="http://schema.org/Store"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/HVACBusiness">
+       <a property="rdfs:subClassOf" href="http://schema.org/HomeAndConstructionBusiness"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/HairSalon">
+       <a property="rdfs:subClassOf" href="http://schema.org/HealthAndBeautyBusiness"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/HardwareStore">
+       <a property="rdfs:subClassOf" href="http://schema.org/Store"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/HealthClub">
+       <a property="rdfs:subClassOf" href="http://schema.org/HealthAndBeautyBusiness"></a>
+       <a property="rdfs:subClassOf" href="http://schema.org/SportsActivityLocation"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/HighSchool">
+       <a property="rdfs:subClassOf" href="http://schema.org/EducationalOrganization"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/HinduTemple">
+       <a property="rdfs:subClassOf" href="http://schema.org/PlaceOfWorship"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/HobbyShop">
+       <a property="rdfs:subClassOf" href="http://schema.org/Store"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/HomeGoodsStore">
+       <a property="rdfs:subClassOf" href="http://schema.org/Store"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/Hospital">
+       <a property="rdfs:subClassOf" href="http://schema.org/MedicalOrganization"></a>
+       <a property="rdfs:subClassOf" href="http://schema.org/CivicStructure"></a>
+       <a property="rdfs:subClassOf" href="http://schema.org/EmergencyService"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/Hostel">
+       <a property="rdfs:subClassOf" href="http://schema.org/LodgingBusiness"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/Hotel">
+       <a property="rdfs:subClassOf" href="http://schema.org/LodgingBusiness"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/HousePainter">
+       <a property="rdfs:subClassOf" href="http://schema.org/HomeAndConstructionBusiness"></a>
+       <a property="rdfs:subClassOf" href="http://schema.org/ProfessionalService"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/IceCreamShop">
+       <a property="rdfs:subClassOf" href="http://schema.org/FoodEstablishment"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/ImageGallery">
+       <a property="rdfs:subClassOf" href="http://schema.org/CollectionPage"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/ImageObject">
+       <a property="rdfs:subClassOf" href="http://schema.org/MediaObject"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/InsuranceAgency">
+       <a property="rdfs:subClassOf" href="http://schema.org/FinancialService"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/Integer">
+       <a property="rdfs:subClassOf" href="http://schema.org/Number"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/InternetCafe">
+       <a property="rdfs:subClassOf" href="http://schema.org/LocalBusiness"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/ItemAvailability">
+       <a property="rdfs:subClassOf" href="http://schema.org/Enumeration"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/ItemList">
+       <a property="rdfs:subClassOf" href="http://schema.org/CreativeWork"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/ItemPage">
+       <a property="rdfs:subClassOf" href="http://schema.org/WebPage"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/JewelryStore">
+       <a property="rdfs:subClassOf" href="http://schema.org/Store"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/JobPosting">
+       <a property="rdfs:subClassOf" href="http://schema.org/Intangible"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/LakeBodyOfWater">
+       <a property="rdfs:subClassOf" href="http://schema.org/BodyOfWater"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/LandmarksOrHistoricalBuildings">
+       <a property="rdfs:subClassOf" href="http://schema.org/Place"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/Language">
+       <a property="rdfs:subClassOf" href="http://schema.org/Intangible"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/LegislativeBuilding">
+       <a property="rdfs:subClassOf" href="http://schema.org/GovernmentBuilding"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/Library">
+       <a property="rdfs:subClassOf" href="http://schema.org/LocalBusiness"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/LiquorStore">
+       <a property="rdfs:subClassOf" href="http://schema.org/Store"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/LiteraryEvent">
+       <a property="rdfs:subClassOf" href="http://schema.org/Event"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/Locksmith">
+       <a property="rdfs:subClassOf" href="http://schema.org/HomeAndConstructionBusiness"></a>
+       <a property="rdfs:subClassOf" href="http://schema.org/ProfessionalService"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/Map">
+       <a property="rdfs:subClassOf" href="http://schema.org/CreativeWork"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/Mass">
+       <a property="rdfs:subClassOf" href="http://schema.org/Quantity"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/MedicalClinic">
+       <a property="rdfs:subClassOf" href="http://schema.org/MedicalOrganization"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/MensClothingStore">
+       <a property="rdfs:subClassOf" href="http://schema.org/Store"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/MiddleSchool">
+       <a property="rdfs:subClassOf" href="http://schema.org/EducationalOrganization"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/MobilePhoneStore">
+       <a property="rdfs:subClassOf" href="http://schema.org/Store"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/SoftwareApplication">
+       <a property="rdfs:subClassOf" href="http://schema.org/CreativeWork"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/MobileSoftwareApplication">
+       <a property="rdfs:subClassOf" href="http://schema.org/SoftwareApplication"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/Mosque">
+       <a property="rdfs:subClassOf" href="http://schema.org/PlaceOfWorship"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/Motel">
+       <a property="rdfs:subClassOf" href="http://schema.org/LodgingBusiness"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/MotorcycleDealer">
+       <a property="rdfs:subClassOf" href="http://schema.org/AutomotiveBusiness"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/MotorcycleRepair">
+       <a property="rdfs:subClassOf" href="http://schema.org/AutomotiveBusiness"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/Mountain">
+       <a property="rdfs:subClassOf" href="http://schema.org/Landform"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/Movie">
+       <a property="rdfs:subClassOf" href="http://schema.org/CreativeWork"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/MovieRentalStore">
+       <a property="rdfs:subClassOf" href="http://schema.org/Store"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/MovieTheater">
+       <a property="rdfs:subClassOf" href="http://schema.org/EntertainmentBusiness"></a>
+       <a property="rdfs:subClassOf" href="http://schema.org/CivicStructure"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/MovingCompany">
+       <a property="rdfs:subClassOf" href="http://schema.org/HomeAndConstructionBusiness"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/Museum">
+       <a property="rdfs:subClassOf" href="http://schema.org/CivicStructure"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/MusicPlaylist">
+       <a property="rdfs:subClassOf" href="http://schema.org/CreativeWork"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/MusicAlbum">
+       <a property="rdfs:subClassOf" href="http://schema.org/MusicPlaylist"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/MusicEvent">
+       <a property="rdfs:subClassOf" href="http://schema.org/Event"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/MusicGroup">
+       <a property="rdfs:subClassOf" href="http://schema.org/PerformingGroup"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/MusicRecording">
+       <a property="rdfs:subClassOf" href="http://schema.org/CreativeWork"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/MusicStore">
+       <a property="rdfs:subClassOf" href="http://schema.org/Store"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/MusicVenue">
+       <a property="rdfs:subClassOf" href="http://schema.org/CivicStructure"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/MusicVideoObject">
+       <a property="rdfs:subClassOf" href="http://schema.org/MediaObject"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/NGO">
+       <a property="rdfs:subClassOf" href="http://schema.org/Organization"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/NailSalon">
+       <a property="rdfs:subClassOf" href="http://schema.org/HealthAndBeautyBusiness"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/NewsArticle">
+       <a property="rdfs:subClassOf" href="http://schema.org/Article"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/NightClub">
+       <a property="rdfs:subClassOf" href="http://schema.org/EntertainmentBusiness"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/Notary">
+       <a property="rdfs:subClassOf" href="http://schema.org/ProfessionalService"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/NutritionInformation">
+       <a property="rdfs:subClassOf" href="http://schema.org/StructuredValue"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/OceanBodyOfWater">
+       <a property="rdfs:subClassOf" href="http://schema.org/BodyOfWater"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/OfferItemCondition">
+       <a property="rdfs:subClassOf" href="http://schema.org/Enumeration"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/OfficeEquipmentStore">
+       <a property="rdfs:subClassOf" href="http://schema.org/Store"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/Optician">
+       <a property="rdfs:subClassOf" href="http://schema.org/MedicalOrganization"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/OutletStore">
+       <a property="rdfs:subClassOf" href="http://schema.org/Store"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/Painting">
+       <a property="rdfs:subClassOf" href="http://schema.org/CreativeWork"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/Park">
+       <a property="rdfs:subClassOf" href="http://schema.org/CivicStructure"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/ParkingFacility">
+       <a property="rdfs:subClassOf" href="http://schema.org/CivicStructure"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/PawnShop">
+       <a property="rdfs:subClassOf" href="http://schema.org/Store"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/PerformingArtsTheater">
+       <a property="rdfs:subClassOf" href="http://schema.org/CivicStructure"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/Person">
+       <a property="rdfs:subClassOf" href="http://schema.org/Thing"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/PetStore">
+       <a property="rdfs:subClassOf" href="http://schema.org/Store"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/Pharmacy">
+       <a property="rdfs:subClassOf" href="http://schema.org/MedicalOrganization"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/Photograph">
+       <a property="rdfs:subClassOf" href="http://schema.org/CreativeWork"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/Physician">
+       <a property="rdfs:subClassOf" href="http://schema.org/MedicalOrganization"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/Playground">
+       <a property="rdfs:subClassOf" href="http://schema.org/CivicStructure"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/Plumber">
+       <a property="rdfs:subClassOf" href="http://schema.org/HomeAndConstructionBusiness"></a>
+       <a property="rdfs:subClassOf" href="http://schema.org/ProfessionalService"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/PoliceStation">
+       <a property="rdfs:subClassOf" href="http://schema.org/CivicStructure"></a>
+       <a property="rdfs:subClassOf" href="http://schema.org/EmergencyService"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/Pond">
+       <a property="rdfs:subClassOf" href="http://schema.org/BodyOfWater"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/PostOffice">
+       <a property="rdfs:subClassOf" href="http://schema.org/GovernmentOffice"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/PostalAddress">
+       <a property="rdfs:subClassOf" href="http://schema.org/ContactPoint"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/Preschool">
+       <a property="rdfs:subClassOf" href="http://schema.org/EducationalOrganization"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/Product">
+       <a property="rdfs:subClassOf" href="http://schema.org/Thing"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/ProfilePage">
+       <a property="rdfs:subClassOf" href="http://schema.org/WebPage"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/PublicSwimmingPool">
+       <a property="rdfs:subClassOf" href="http://schema.org/SportsActivityLocation"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/RVPark">
+       <a property="rdfs:subClassOf" href="http://schema.org/CivicStructure"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/RadioStation">
+       <a property="rdfs:subClassOf" href="http://schema.org/LocalBusiness"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/RealEstateAgent">
+       <a property="rdfs:subClassOf" href="http://schema.org/LocalBusiness"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/Recipe">
+       <a property="rdfs:subClassOf" href="http://schema.org/CreativeWork"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/RecyclingCenter">
+       <a property="rdfs:subClassOf" href="http://schema.org/LocalBusiness"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/Reservoir">
+       <a property="rdfs:subClassOf" href="http://schema.org/BodyOfWater"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/Restaurant">
+       <a property="rdfs:subClassOf" href="http://schema.org/FoodEstablishment"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/Review">
+       <a property="rdfs:subClassOf" href="http://schema.org/CreativeWork"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/RiverBodyOfWater">
+       <a property="rdfs:subClassOf" href="http://schema.org/BodyOfWater"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/RoofingContractor">
+       <a property="rdfs:subClassOf" href="http://schema.org/HomeAndConstructionBusiness"></a>
+       <a property="rdfs:subClassOf" href="http://schema.org/ProfessionalService"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/SaleEvent">
+       <a property="rdfs:subClassOf" href="http://schema.org/Event"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/ScholarlyArticle">
+       <a property="rdfs:subClassOf" href="http://schema.org/Article"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/School">
+       <a property="rdfs:subClassOf" href="http://schema.org/EducationalOrganization"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/Sculpture">
+       <a property="rdfs:subClassOf" href="http://schema.org/CreativeWork"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/SeaBodyOfWater">
+       <a property="rdfs:subClassOf" href="http://schema.org/BodyOfWater"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/SearchResultsPage">
+       <a property="rdfs:subClassOf" href="http://schema.org/WebPage"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/SelfStorage">
+       <a property="rdfs:subClassOf" href="http://schema.org/LocalBusiness"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/ShoeStore">
+       <a property="rdfs:subClassOf" href="http://schema.org/Store"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/ShoppingCenter">
+       <a property="rdfs:subClassOf" href="http://schema.org/LocalBusiness"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/SingleFamilyResidence">
+       <a property="rdfs:subClassOf" href="http://schema.org/Residence"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/WebPageElement">
+       <a property="rdfs:subClassOf" href="http://schema.org/CreativeWork"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/SiteNavigationElement">
+       <a property="rdfs:subClassOf" href="http://schema.org/WebPageElement"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/SkiResort">
+       <a property="rdfs:subClassOf" href="http://schema.org/SportsActivityLocation"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/SocialEvent">
+       <a property="rdfs:subClassOf" href="http://schema.org/Event"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/SoftwareApplicationType">
+       <a property="rdfs:subClassOf" href="http://schema.org/Enumeration"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/SportingGoodsStore">
+       <a property="rdfs:subClassOf" href="http://schema.org/Store"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/SportsClub">
+       <a property="rdfs:subClassOf" href="http://schema.org/SportsActivityLocation"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/SportsEvent">
+       <a property="rdfs:subClassOf" href="http://schema.org/Event"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/SportsTeam">
+       <a property="rdfs:subClassOf" href="http://schema.org/Organization"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/StadiumOrArena">
+       <a property="rdfs:subClassOf" href="http://schema.org/CivicStructure"></a>
+       <a property="rdfs:subClassOf" href="http://schema.org/SportsActivityLocation"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/State">
+       <a property="rdfs:subClassOf" href="http://schema.org/AdministrativeArea"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/SubwayStation">
+       <a property="rdfs:subClassOf" href="http://schema.org/CivicStructure"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/Synagogue">
+       <a property="rdfs:subClassOf" href="http://schema.org/PlaceOfWorship"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/TVEpisode">
+       <a property="rdfs:subClassOf" href="http://schema.org/CreativeWork"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/TVSeason">
+       <a property="rdfs:subClassOf" href="http://schema.org/CreativeWork"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/TVSeries">
+       <a property="rdfs:subClassOf" href="http://schema.org/CreativeWork"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/Table">
+       <a property="rdfs:subClassOf" href="http://schema.org/WebPageElement"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/TattooParlor">
+       <a property="rdfs:subClassOf" href="http://schema.org/HealthAndBeautyBusiness"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/TaxiStand">
+       <a property="rdfs:subClassOf" href="http://schema.org/CivicStructure"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/TelevisionStation">
+       <a property="rdfs:subClassOf" href="http://schema.org/LocalBusiness"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/TennisComplex">
+       <a property="rdfs:subClassOf" href="http://schema.org/SportsActivityLocation"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/Text">
+       <a property="rdfs:subClassOf" href="http://schema.org/DataType"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/TheaterEvent">
+       <a property="rdfs:subClassOf" href="http://schema.org/Event"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/TheaterGroup">
+       <a property="rdfs:subClassOf" href="http://schema.org/PerformingGroup"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/TireShop">
+       <a property="rdfs:subClassOf" href="http://schema.org/Store"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/TouristAttraction">
+       <a property="rdfs:subClassOf" href="http://schema.org/Place"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/TouristInformationCenter">
+       <a property="rdfs:subClassOf" href="http://schema.org/LocalBusiness"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/ToyStore">
+       <a property="rdfs:subClassOf" href="http://schema.org/Store"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/TrainStation">
+       <a property="rdfs:subClassOf" href="http://schema.org/CivicStructure"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/TravelAgency">
+       <a property="rdfs:subClassOf" href="http://schema.org/LocalBusiness"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/URL">
+       <a property="rdfs:subClassOf" href="http://schema.org/Text"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/UserInteraction">
+       <a property="rdfs:subClassOf" href="http://schema.org/Event"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/UserBlocks">
+       <a property="rdfs:subClassOf" href="http://schema.org/UserInteraction"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/UserCheckins">
+       <a property="rdfs:subClassOf" href="http://schema.org/UserInteraction"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/UserComments">
+       <a property="rdfs:subClassOf" href="http://schema.org/UserInteraction"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/UserDownloads">
+       <a property="rdfs:subClassOf" href="http://schema.org/UserInteraction"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/UserLikes">
+       <a property="rdfs:subClassOf" href="http://schema.org/UserInteraction"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/UserPageVisits">
+       <a property="rdfs:subClassOf" href="http://schema.org/UserInteraction"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/UserPlays">
+       <a property="rdfs:subClassOf" href="http://schema.org/UserInteraction"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/UserPlusOnes">
+       <a property="rdfs:subClassOf" href="http://schema.org/UserInteraction"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/UserTweets">
+       <a property="rdfs:subClassOf" href="http://schema.org/UserInteraction"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/VeterinaryCare">
+       <a property="rdfs:subClassOf" href="http://schema.org/MedicalOrganization"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/VideoGallery">
+       <a property="rdfs:subClassOf" href="http://schema.org/CollectionPage"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/VideoObject">
+       <a property="rdfs:subClassOf" href="http://schema.org/MediaObject"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/VisualArtsEvent">
+       <a property="rdfs:subClassOf" href="http://schema.org/Event"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/Volcano">
+       <a property="rdfs:subClassOf" href="http://schema.org/Landform"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/WPAdBlock">
+       <a property="rdfs:subClassOf" href="http://schema.org/WebPageElement"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/WPFooter">
+       <a property="rdfs:subClassOf" href="http://schema.org/WebPageElement"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/WPHeader">
+       <a property="rdfs:subClassOf" href="http://schema.org/WebPageElement"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/WPSideBar">
+       <a property="rdfs:subClassOf" href="http://schema.org/WebPageElement"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/Waterfall">
+       <a property="rdfs:subClassOf" href="http://schema.org/BodyOfWater"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/WebApplication">
+       <a property="rdfs:subClassOf" href="http://schema.org/SoftwareApplication"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/WholesaleStore">
+       <a property="rdfs:subClassOf" href="http://schema.org/Store"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/Winery">
+       <a property="rdfs:subClassOf" href="http://schema.org/FoodEstablishment"></a>
+    </div>
+    <div typeof="rdfs:Class" about="http://schema.org/Zoo">
+       <a property="rdfs:subClassOf" href="http://schema.org/CivicStructure"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/highprice">
+      <a property="http://schema.org/domain" href="http://schema.org/AggregateOffer"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Number"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Text"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/lowprice">
+      <a property="http://schema.org/domain" href="http://schema.org/AggregateOffer"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Number"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Text"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/offercount">
+      <a property="http://schema.org/domain" href="http://schema.org/AggregateOffer"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Integer"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/itemreviewed">
+      <a property="http://schema.org/domain" href="http://schema.org/AggregateRating"></a>
+      <a property="http://schema.org/domain" href="http://schema.org/Review"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Thing"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/ratingcount">
+      <a property="http://schema.org/domain" href="http://schema.org/AggregateRating"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Number"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/reviewcount">
+      <a property="http://schema.org/domain" href="http://schema.org/AggregateRating"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Number"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/articlebody">
+      <a property="http://schema.org/domain" href="http://schema.org/Article"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Text"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/articlesection">
+      <a property="http://schema.org/domain" href="http://schema.org/Article"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Text"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/wordcount">
+      <a property="http://schema.org/domain" href="http://schema.org/Article"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Integer"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/transcript">
+      <a property="http://schema.org/domain" href="http://schema.org/AudioObject"></a>
+      <a property="http://schema.org/domain" href="http://schema.org/VideoObject"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Text"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/blogposts">
+      <a property="http://schema.org/domain" href="http://schema.org/Blog"></a>
+      <a property="http://schema.org/range" href="http://schema.org/BlogPosting"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/bookedition">
+      <a property="http://schema.org/domain" href="http://schema.org/Book"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Text"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/bookformat">
+      <a property="http://schema.org/domain" href="http://schema.org/Book"></a>
+      <a property="http://schema.org/range" href="http://schema.org/BookFormatType"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/bookformatdeprecated">
+      <a property="http://schema.org/domain" href="http://schema.org/Book"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Thing"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/illustrator">
+      <a property="http://schema.org/domain" href="http://schema.org/Book"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Person"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/isbn">
+      <a property="http://schema.org/domain" href="http://schema.org/Book"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Text"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/numberofpages">
+      <a property="http://schema.org/domain" href="http://schema.org/Book"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Integer"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/openinghours">
+      <a property="http://schema.org/domain" href="http://schema.org/LocalBusiness"></a>
+      <a property="http://schema.org/domain" href="http://schema.org/CivicStructure"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Duration"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/contacttype">
+      <a property="http://schema.org/domain" href="http://schema.org/ContactPoint"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Text"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/email">
+      <a property="http://schema.org/domain" href="http://schema.org/Organization"></a>
+      <a property="http://schema.org/domain" href="http://schema.org/ContactPoint"></a>
+      <a property="http://schema.org/domain" href="http://schema.org/Person"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Text"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/faxnumber">
+      <a property="http://schema.org/domain" href="http://schema.org/Organization"></a>
+      <a property="http://schema.org/domain" href="http://schema.org/Place"></a>
+      <a property="http://schema.org/domain" href="http://schema.org/ContactPoint"></a>
+      <a property="http://schema.org/domain" href="http://schema.org/Person"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Text"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/telephone">
+      <a property="http://schema.org/domain" href="http://schema.org/Organization"></a>
+      <a property="http://schema.org/domain" href="http://schema.org/Place"></a>
+      <a property="http://schema.org/domain" href="http://schema.org/ContactPoint"></a>
+      <a property="http://schema.org/domain" href="http://schema.org/Person"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Text"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/tickersymbol">
+      <a property="http://schema.org/domain" href="http://schema.org/Corporation"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Text"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/about">
+      <a property="http://schema.org/domain" href="http://schema.org/CreativeWork"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Thing"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/accountableperson">
+      <a property="http://schema.org/domain" href="http://schema.org/CreativeWork"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Person"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/aggregaterating">
+      <a property="http://schema.org/domain" href="http://schema.org/CreativeWork"></a>
+      <a property="http://schema.org/domain" href="http://schema.org/Organization"></a>
+      <a property="http://schema.org/domain" href="http://schema.org/Place"></a>
+      <a property="http://schema.org/domain" href="http://schema.org/Offer"></a>
+      <a property="http://schema.org/domain" href="http://schema.org/Product"></a>
+      <a property="http://schema.org/range" href="http://schema.org/AggregateRating"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/alternativeheadline">
+      <a property="http://schema.org/domain" href="http://schema.org/CreativeWork"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Text"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/associatedmedia">
+      <a property="http://schema.org/domain" href="http://schema.org/CreativeWork"></a>
+      <a property="http://schema.org/range" href="http://schema.org/MediaObject"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/audio">
+      <a property="http://schema.org/domain" href="http://schema.org/CreativeWork"></a>
+      <a property="http://schema.org/range" href="http://schema.org/AudioObject"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/author">
+      <a property="http://schema.org/domain" href="http://schema.org/CreativeWork"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Person"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Organization"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/awards">
+      <a property="http://schema.org/domain" href="http://schema.org/CreativeWork"></a>
+      <a property="http://schema.org/domain" href="http://schema.org/Person"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Text"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/comment">
+      <a property="http://schema.org/domain" href="http://schema.org/CreativeWork"></a>
+      <a property="http://schema.org/range" href="http://schema.org/UserComments"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/contentlocation">
+      <a property="http://schema.org/domain" href="http://schema.org/CreativeWork"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Place"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/contentrating">
+      <a property="http://schema.org/domain" href="http://schema.org/CreativeWork"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Text"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/contributor">
+      <a property="http://schema.org/domain" href="http://schema.org/CreativeWork"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Person"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Organization"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/copyrightholder">
+      <a property="http://schema.org/domain" href="http://schema.org/CreativeWork"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Person"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Organization"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/copyrightnoticedeprecated">
+      <a property="http://schema.org/domain" href="http://schema.org/CreativeWork"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Text"></a>
+      <a property="http://schema.org/range" href="http://schema.org/URL"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/copyrightyear">
+      <a property="http://schema.org/domain" href="http://schema.org/CreativeWork"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Number"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/creator">
+      <a property="http://schema.org/domain" href="http://schema.org/CreativeWork"></a>
+      <a property="http://schema.org/domain" href="http://schema.org/UserComments"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Person"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Organization"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/datecreated">
+      <a property="http://schema.org/domain" href="http://schema.org/CreativeWork"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Date"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/datemodified">
+      <a property="http://schema.org/domain" href="http://schema.org/CreativeWork"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Date"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/datepublished">
+      <a property="http://schema.org/domain" href="http://schema.org/CreativeWork"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Date"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/discussionurl">
+      <a property="http://schema.org/domain" href="http://schema.org/CreativeWork"></a>
+      <a property="http://schema.org/range" href="http://schema.org/URL"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/editor">
+      <a property="http://schema.org/domain" href="http://schema.org/CreativeWork"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Person"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/encodings">
+      <a property="http://schema.org/domain" href="http://schema.org/CreativeWork"></a>
+      <a property="http://schema.org/range" href="http://schema.org/MediaObject"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/genre">
+      <a property="http://schema.org/domain" href="http://schema.org/CreativeWork"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Text"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/headline">
+      <a property="http://schema.org/domain" href="http://schema.org/CreativeWork"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Text"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/inlanguage">
+      <a property="http://schema.org/domain" href="http://schema.org/CreativeWork"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Text"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/interactioncount">
+      <a property="http://schema.org/domain" href="http://schema.org/CreativeWork"></a>
+      <a property="http://schema.org/domain" href="http://schema.org/Organization"></a>
+      <a property="http://schema.org/domain" href="http://schema.org/Place"></a>
+      <a property="http://schema.org/domain" href="http://schema.org/MediaObject"></a>
+      <a property="http://schema.org/domain" href="http://schema.org/Person"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Text"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/isfamilyfriendly">
+      <a property="http://schema.org/domain" href="http://schema.org/CreativeWork"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Boolean"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/keywords">
+      <a property="http://schema.org/domain" href="http://schema.org/CreativeWork"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Text"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/mentions">
+      <a property="http://schema.org/domain" href="http://schema.org/CreativeWork"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Thing"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/offers">
+      <a property="http://schema.org/domain" href="http://schema.org/CreativeWork"></a>
+      <a property="http://schema.org/domain" href="http://schema.org/MediaObject"></a>
+      <a property="http://schema.org/domain" href="http://schema.org/Event"></a>
+      <a property="http://schema.org/domain" href="http://schema.org/Product"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Offer"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/provider">
+      <a property="http://schema.org/domain" href="http://schema.org/CreativeWork"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Person"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Organization"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/publisher">
+      <a property="http://schema.org/domain" href="http://schema.org/CreativeWork"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Organization"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/publishingprinciples">
+      <a property="http://schema.org/domain" href="http://schema.org/CreativeWork"></a>
+      <a property="http://schema.org/range" href="http://schema.org/URL"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/reviews">
+      <a property="http://schema.org/domain" href="http://schema.org/CreativeWork"></a>
+      <a property="http://schema.org/domain" href="http://schema.org/Organization"></a>
+      <a property="http://schema.org/domain" href="http://schema.org/Place"></a>
+      <a property="http://schema.org/domain" href="http://schema.org/Offer"></a>
+      <a property="http://schema.org/domain" href="http://schema.org/Product"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Review"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/sourceorganization">
+      <a property="http://schema.org/domain" href="http://schema.org/CreativeWork"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Organization"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/thumbnailurl">
+      <a property="http://schema.org/domain" href="http://schema.org/CreativeWork"></a>
+      <a property="http://schema.org/range" href="http://schema.org/URL"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/usagetermsdeprecated">
+      <a property="http://schema.org/domain" href="http://schema.org/CreativeWork"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Text"></a>
+      <a property="http://schema.org/range" href="http://schema.org/URL"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/version">
+      <a property="http://schema.org/domain" href="http://schema.org/CreativeWork"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Number"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/video">
+      <a property="http://schema.org/domain" href="http://schema.org/CreativeWork"></a>
+      <a property="http://schema.org/range" href="http://schema.org/VideoObject"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/alumni">
+      <a property="http://schema.org/domain" href="http://schema.org/EducationalOrganization"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Person"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/attendees">
+      <a property="http://schema.org/domain" href="http://schema.org/Event"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Person"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Organization"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/duration">
+      <a property="http://schema.org/domain" href="http://schema.org/MediaObject"></a>
+      <a property="http://schema.org/domain" href="http://schema.org/Event"></a>
+      <a property="http://schema.org/domain" href="http://schema.org/Movie"></a>
+      <a property="http://schema.org/domain" href="http://schema.org/MusicRecording"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Duration"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/enddate">
+      <a property="http://schema.org/domain" href="http://schema.org/Event"></a>
+      <a property="http://schema.org/domain" href="http://schema.org/TVSeason"></a>
+      <a property="http://schema.org/domain" href="http://schema.org/TVSeries"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Date"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/location">
+      <a property="http://schema.org/domain" href="http://schema.org/Organization"></a>
+      <a property="http://schema.org/domain" href="http://schema.org/Event"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Place"></a>
+      <a property="http://schema.org/range" href="http://schema.org/PostalAddress"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/performers">
+      <a property="http://schema.org/domain" href="http://schema.org/Event"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Person"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Organization"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/startdate">
+      <a property="http://schema.org/domain" href="http://schema.org/Event"></a>
+      <a property="http://schema.org/domain" href="http://schema.org/TVSeason"></a>
+      <a property="http://schema.org/domain" href="http://schema.org/TVSeries"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Date"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/subevents">
+      <a property="http://schema.org/domain" href="http://schema.org/Event"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Event"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/superevent">
+      <a property="http://schema.org/domain" href="http://schema.org/Event"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Event"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/acceptsreservations">
+      <a property="http://schema.org/domain" href="http://schema.org/FoodEstablishment"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Text"></a>
+      <a property="http://schema.org/range" href="http://schema.org/URL"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/menu">
+      <a property="http://schema.org/domain" href="http://schema.org/FoodEstablishment"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Text"></a>
+      <a property="http://schema.org/range" href="http://schema.org/URL"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/servescuisine">
+      <a property="http://schema.org/domain" href="http://schema.org/FoodEstablishment"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Text"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/elevation">
+      <a property="http://schema.org/domain" href="http://schema.org/GeoCoordinates"></a>
+      <a property="http://schema.org/domain" href="http://schema.org/GeoShape"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Number"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Text"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/latitude">
+      <a property="http://schema.org/domain" href="http://schema.org/GeoCoordinates"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Number"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Text"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/longitude">
+      <a property="http://schema.org/domain" href="http://schema.org/GeoCoordinates"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Number"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Text"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/box">
+      <a property="http://schema.org/domain" href="http://schema.org/GeoShape"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Text"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/circle">
+      <a property="http://schema.org/domain" href="http://schema.org/GeoShape"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Text"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/line">
+      <a property="http://schema.org/domain" href="http://schema.org/GeoShape"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Text"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/polygon">
+      <a property="http://schema.org/domain" href="http://schema.org/GeoShape"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Text"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/caption">
+      <a property="http://schema.org/domain" href="http://schema.org/ImageObject"></a>
+      <a property="http://schema.org/domain" href="http://schema.org/VideoObject"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Text"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/exifdata">
+      <a property="http://schema.org/domain" href="http://schema.org/ImageObject"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Text"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/representativeofpage">
+      <a property="http://schema.org/domain" href="http://schema.org/ImageObject"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Boolean"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/thumbnail">
+      <a property="http://schema.org/domain" href="http://schema.org/ImageObject"></a>
+      <a property="http://schema.org/domain" href="http://schema.org/VideoObject"></a>
+      <a property="http://schema.org/range" href="http://schema.org/ImageObject"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/itemlistelement">
+      <a property="http://schema.org/domain" href="http://schema.org/ItemList"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Text"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/itemlistorder">
+      <a property="http://schema.org/domain" href="http://schema.org/ItemList"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Text"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/basesalary">
+      <a property="http://schema.org/domain" href="http://schema.org/JobPosting"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Number"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/benefits">
+      <a property="http://schema.org/domain" href="http://schema.org/JobPosting"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Text"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/dateposted">
+      <a property="http://schema.org/domain" href="http://schema.org/JobPosting"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Date"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/educationrequirements">
+      <a property="http://schema.org/domain" href="http://schema.org/JobPosting"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Text"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/employmenttype">
+      <a property="http://schema.org/domain" href="http://schema.org/JobPosting"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Text"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/experiencerequirements">
+      <a property="http://schema.org/domain" href="http://schema.org/JobPosting"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Text"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/hiringorganization">
+      <a property="http://schema.org/domain" href="http://schema.org/JobPosting"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Organization"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/incentives">
+      <a property="http://schema.org/domain" href="http://schema.org/JobPosting"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Text"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/industry">
+      <a property="http://schema.org/domain" href="http://schema.org/JobPosting"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Text"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/joblocation">
+      <a property="http://schema.org/domain" href="http://schema.org/JobPosting"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Place"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/occupationalcategory">
+      <a property="http://schema.org/domain" href="http://schema.org/JobPosting"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Text"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/qualifications">
+      <a property="http://schema.org/domain" href="http://schema.org/JobPosting"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Text"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/responsibilities">
+      <a property="http://schema.org/domain" href="http://schema.org/JobPosting"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Text"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/salarycurrency">
+      <a property="http://schema.org/domain" href="http://schema.org/JobPosting"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Text"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/skills">
+      <a property="http://schema.org/domain" href="http://schema.org/JobPosting"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Text"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/specialcommitments">
+      <a property="http://schema.org/domain" href="http://schema.org/JobPosting"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Text"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/title">
+      <a property="http://schema.org/domain" href="http://schema.org/JobPosting"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Text"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/workhours">
+      <a property="http://schema.org/domain" href="http://schema.org/JobPosting"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Text"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/branchof">
+      <a property="http://schema.org/domain" href="http://schema.org/LocalBusiness"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Organization"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/currenciesaccepted">
+      <a property="http://schema.org/domain" href="http://schema.org/LocalBusiness"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Text"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/paymentaccepted">
+      <a property="http://schema.org/domain" href="http://schema.org/LocalBusiness"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Text"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/pricerange">
+      <a property="http://schema.org/domain" href="http://schema.org/LocalBusiness"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Text"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/associatedarticle">
+      <a property="http://schema.org/domain" href="http://schema.org/MediaObject"></a>
+      <a property="http://schema.org/range" href="http://schema.org/NewsArticle"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/bitrate">
+      <a property="http://schema.org/domain" href="http://schema.org/MediaObject"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Text"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/contentsize">
+      <a property="http://schema.org/domain" href="http://schema.org/MediaObject"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Text"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/contenturl">
+      <a property="http://schema.org/domain" href="http://schema.org/MediaObject"></a>
+      <a property="http://schema.org/range" href="http://schema.org/URL"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/embedurl">
+      <a property="http://schema.org/domain" href="http://schema.org/MediaObject"></a>
+      <a property="http://schema.org/range" href="http://schema.org/URL"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/encodescreativework">
+      <a property="http://schema.org/domain" href="http://schema.org/MediaObject"></a>
+      <a property="http://schema.org/range" href="http://schema.org/CreativeWork"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/encodingformat">
+      <a property="http://schema.org/domain" href="http://schema.org/MediaObject"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Text"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/expires">
+      <a property="http://schema.org/domain" href="http://schema.org/MediaObject"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Date"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/height">
+      <a property="http://schema.org/domain" href="http://schema.org/MediaObject"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Distance"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/playertype">
+      <a property="http://schema.org/domain" href="http://schema.org/MediaObject"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Text"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/regionsallowed">
+      <a property="http://schema.org/domain" href="http://schema.org/MediaObject"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Place"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/requiressubscription">
+      <a property="http://schema.org/domain" href="http://schema.org/MediaObject"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Boolean"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/uploaddate">
+      <a property="http://schema.org/domain" href="http://schema.org/MediaObject"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Date"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/width">
+      <a property="http://schema.org/domain" href="http://schema.org/MediaObject"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Distance"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/countriesnotsupported">
+      <a property="http://schema.org/domain" href="http://schema.org/MobileSoftwareApplication"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Text"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/countriessupported">
+      <a property="http://schema.org/domain" href="http://schema.org/MobileSoftwareApplication"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Text"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/permissions">
+      <a property="http://schema.org/domain" href="http://schema.org/MobileSoftwareApplication"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Text"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/screenshots">
+      <a property="http://schema.org/domain" href="http://schema.org/MobileSoftwareApplication"></a>
+      <a property="http://schema.org/range" href="http://schema.org/URL"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/actors">
+      <a property="http://schema.org/domain" href="http://schema.org/Movie"></a>
+      <a property="http://schema.org/domain" href="http://schema.org/TVEpisode"></a>
+      <a property="http://schema.org/domain" href="http://schema.org/TVSeries"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Person"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/director">
+      <a property="http://schema.org/domain" href="http://schema.org/Movie"></a>
+      <a property="http://schema.org/domain" href="http://schema.org/TVEpisode"></a>
+      <a property="http://schema.org/domain" href="http://schema.org/TVSeries"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Person"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/musicby">
+      <a property="http://schema.org/domain" href="http://schema.org/Movie"></a>
+      <a property="http://schema.org/domain" href="http://schema.org/TVEpisode"></a>
+      <a property="http://schema.org/domain" href="http://schema.org/TVSeries"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Person"></a>
+      <a property="http://schema.org/range" href="http://schema.org/MusicGroup"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/producer">
+      <a property="http://schema.org/domain" href="http://schema.org/Movie"></a>
+      <a property="http://schema.org/domain" href="http://schema.org/TVEpisode"></a>
+      <a property="http://schema.org/domain" href="http://schema.org/TVSeries"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Person"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/productioncompany">
+      <a property="http://schema.org/domain" href="http://schema.org/Movie"></a>
+      <a property="http://schema.org/domain" href="http://schema.org/TVEpisode"></a>
+      <a property="http://schema.org/domain" href="http://schema.org/TVSeries"></a>
+      <a property="http://schema.org/domain" href="http://schema.org/VideoObject"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Organization"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/trailer">
+      <a property="http://schema.org/domain" href="http://schema.org/Movie"></a>
+      <a property="http://schema.org/domain" href="http://schema.org/TVEpisode"></a>
+      <a property="http://schema.org/domain" href="http://schema.org/TVSeason"></a>
+      <a property="http://schema.org/domain" href="http://schema.org/TVSeries"></a>
+      <a property="http://schema.org/range" href="http://schema.org/VideoObject"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/byartist">
+      <a property="http://schema.org/domain" href="http://schema.org/MusicAlbum"></a>
+      <a property="http://schema.org/domain" href="http://schema.org/MusicRecording"></a>
+      <a property="http://schema.org/range" href="http://schema.org/MusicGroup"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/albums">
+      <a property="http://schema.org/domain" href="http://schema.org/MusicGroup"></a>
+      <a property="http://schema.org/range" href="http://schema.org/MusicAlbum"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/musicgroupmember">
+      <a property="http://schema.org/domain" href="http://schema.org/MusicGroup"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Person"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/tracks">
+      <a property="http://schema.org/domain" href="http://schema.org/MusicPlaylist"></a>
+      <a property="http://schema.org/domain" href="http://schema.org/MusicGroup"></a>
+      <a property="http://schema.org/range" href="http://schema.org/MusicRecording"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/numtracks">
+      <a property="http://schema.org/domain" href="http://schema.org/MusicPlaylist"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Integer"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/inalbum">
+      <a property="http://schema.org/domain" href="http://schema.org/MusicRecording"></a>
+      <a property="http://schema.org/range" href="http://schema.org/MusicAlbum"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/inplaylist">
+      <a property="http://schema.org/domain" href="http://schema.org/MusicRecording"></a>
+      <a property="http://schema.org/range" href="http://schema.org/MusicPlaylist"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/dateline">
+      <a property="http://schema.org/domain" href="http://schema.org/NewsArticle"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Text"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/printcolumn">
+      <a property="http://schema.org/domain" href="http://schema.org/NewsArticle"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Text"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/printedition">
+      <a property="http://schema.org/domain" href="http://schema.org/NewsArticle"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Text"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/printpage">
+      <a property="http://schema.org/domain" href="http://schema.org/NewsArticle"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Text"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/printsection">
+      <a property="http://schema.org/domain" href="http://schema.org/NewsArticle"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Text"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/calories">
+      <a property="http://schema.org/domain" href="http://schema.org/NutritionInformation"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Energy"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/carbohydratecontent">
+      <a property="http://schema.org/domain" href="http://schema.org/NutritionInformation"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Mass"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/cholesterolcontent">
+      <a property="http://schema.org/domain" href="http://schema.org/NutritionInformation"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Mass"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/fatcontent">
+      <a property="http://schema.org/domain" href="http://schema.org/NutritionInformation"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Mass"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/fibercontent">
+      <a property="http://schema.org/domain" href="http://schema.org/NutritionInformation"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Mass"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/proteincontent">
+      <a property="http://schema.org/domain" href="http://schema.org/NutritionInformation"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Mass"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/saturatedfatcontent">
+      <a property="http://schema.org/domain" href="http://schema.org/NutritionInformation"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Mass"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/servingsize">
+      <a property="http://schema.org/domain" href="http://schema.org/NutritionInformation"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Text"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/sodiumcontent">
+      <a property="http://schema.org/domain" href="http://schema.org/NutritionInformation"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Mass"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/sugarcontent">
+      <a property="http://schema.org/domain" href="http://schema.org/NutritionInformation"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Mass"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/transfatcontent">
+      <a property="http://schema.org/domain" href="http://schema.org/NutritionInformation"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Mass"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/unsaturatedfatcontent">
+      <a property="http://schema.org/domain" href="http://schema.org/NutritionInformation"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Mass"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/availability">
+      <a property="http://schema.org/domain" href="http://schema.org/Offer"></a>
+      <a property="http://schema.org/range" href="http://schema.org/ItemAvailability"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/availabilitydeprecated">
+      <a property="http://schema.org/domain" href="http://schema.org/Offer"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Thing"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/itemcondition">
+      <a property="http://schema.org/domain" href="http://schema.org/Offer"></a>
+      <a property="http://schema.org/range" href="http://schema.org/OfferItemCondition"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/itemconditiondeprecated">
+      <a property="http://schema.org/domain" href="http://schema.org/Offer"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Thing"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/itemoffered">
+      <a property="http://schema.org/domain" href="http://schema.org/Offer"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Product"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/price">
+      <a property="http://schema.org/domain" href="http://schema.org/Offer"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Number"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Text"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/pricecurrency">
+      <a property="http://schema.org/domain" href="http://schema.org/Offer"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Text"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/pricevaliduntil">
+      <a property="http://schema.org/domain" href="http://schema.org/Offer"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Date"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/seller">
+      <a property="http://schema.org/domain" href="http://schema.org/Offer"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Organization"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/address">
+      <a property="http://schema.org/domain" href="http://schema.org/Organization"></a>
+      <a property="http://schema.org/domain" href="http://schema.org/Place"></a>
+      <a property="http://schema.org/domain" href="http://schema.org/Person"></a>
+      <a property="http://schema.org/range" href="http://schema.org/PostalAddress"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/contactpoints">
+      <a property="http://schema.org/domain" href="http://schema.org/Organization"></a>
+      <a property="http://schema.org/domain" href="http://schema.org/Person"></a>
+      <a property="http://schema.org/range" href="http://schema.org/ContactPoint"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/employees">
+      <a property="http://schema.org/domain" href="http://schema.org/Organization"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Person"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/events">
+      <a property="http://schema.org/domain" href="http://schema.org/Organization"></a>
+      <a property="http://schema.org/domain" href="http://schema.org/Place"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Event"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/founders">
+      <a property="http://schema.org/domain" href="http://schema.org/Organization"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Person"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/foundingdate">
+      <a property="http://schema.org/domain" href="http://schema.org/Organization"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Date"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/members">
+      <a property="http://schema.org/domain" href="http://schema.org/Organization"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Person"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Organization"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/additionalname">
+      <a property="http://schema.org/domain" href="http://schema.org/Person"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Text"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/affiliation">
+      <a property="http://schema.org/domain" href="http://schema.org/Person"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Organization"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/alumniof">
+      <a property="http://schema.org/domain" href="http://schema.org/Person"></a>
+      <a property="http://schema.org/range" href="http://schema.org/EducationalOrganization"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/birthdate">
+      <a property="http://schema.org/domain" href="http://schema.org/Person"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Date"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/children">
+      <a property="http://schema.org/domain" href="http://schema.org/Person"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Person"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/colleagues">
+      <a property="http://schema.org/domain" href="http://schema.org/Person"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Person"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/deathdate">
+      <a property="http://schema.org/domain" href="http://schema.org/Person"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Date"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/familyname">
+      <a property="http://schema.org/domain" href="http://schema.org/Person"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Text"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/follows">
+      <a property="http://schema.org/domain" href="http://schema.org/Person"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Person"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/gender">
+      <a property="http://schema.org/domain" href="http://schema.org/Person"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Text"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/givenname">
+      <a property="http://schema.org/domain" href="http://schema.org/Person"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Text"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/homelocation">
+      <a property="http://schema.org/domain" href="http://schema.org/Person"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Place"></a>
+      <a property="http://schema.org/range" href="http://schema.org/ContactPoint"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/honorificprefix">
+      <a property="http://schema.org/domain" href="http://schema.org/Person"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Text"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/honorificsuffix">
+      <a property="http://schema.org/domain" href="http://schema.org/Person"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Text"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/jobtitle">
+      <a property="http://schema.org/domain" href="http://schema.org/Person"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Text"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/knows">
+      <a property="http://schema.org/domain" href="http://schema.org/Person"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Person"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/memberof">
+      <a property="http://schema.org/domain" href="http://schema.org/Person"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Organization"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/nationality">
+      <a property="http://schema.org/domain" href="http://schema.org/Person"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Country"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/parents">
+      <a property="http://schema.org/domain" href="http://schema.org/Person"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Person"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/performerin">
+      <a property="http://schema.org/domain" href="http://schema.org/Person"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Event"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/relatedto">
+      <a property="http://schema.org/domain" href="http://schema.org/Person"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Person"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/siblings">
+      <a property="http://schema.org/domain" href="http://schema.org/Person"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Person"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/spouse">
+      <a property="http://schema.org/domain" href="http://schema.org/Person"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Person"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/worklocation">
+      <a property="http://schema.org/domain" href="http://schema.org/Person"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Place"></a>
+      <a property="http://schema.org/range" href="http://schema.org/ContactPoint"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/worksfor">
+      <a property="http://schema.org/domain" href="http://schema.org/Person"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Organization"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/containedin">
+      <a property="http://schema.org/domain" href="http://schema.org/Place"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Place"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/geo">
+      <a property="http://schema.org/domain" href="http://schema.org/Place"></a>
+      <a property="http://schema.org/range" href="http://schema.org/GeoCoordinates"></a>
+      <a property="http://schema.org/range" href="http://schema.org/GeoShape"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/maps">
+      <a property="http://schema.org/domain" href="http://schema.org/Place"></a>
+      <a property="http://schema.org/range" href="http://schema.org/URL"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/photos">
+      <a property="http://schema.org/domain" href="http://schema.org/Place"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Photograph"></a>
+      <a property="http://schema.org/range" href="http://schema.org/ImageObject"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/addresscountry">
+      <a property="http://schema.org/domain" href="http://schema.org/PostalAddress"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Country"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/addresslocality">
+      <a property="http://schema.org/domain" href="http://schema.org/PostalAddress"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Text"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/addressregion">
+      <a property="http://schema.org/domain" href="http://schema.org/PostalAddress"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Text"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/postofficeboxnumber">
+      <a property="http://schema.org/domain" href="http://schema.org/PostalAddress"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Text"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/postalcode">
+      <a property="http://schema.org/domain" href="http://schema.org/PostalAddress"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Text"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/streetaddress">
+      <a property="http://schema.org/domain" href="http://schema.org/PostalAddress"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Text"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/brand">
+      <a property="http://schema.org/domain" href="http://schema.org/Product"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Organization"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/manufacturer">
+      <a property="http://schema.org/domain" href="http://schema.org/Product"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Organization"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/model">
+      <a property="http://schema.org/domain" href="http://schema.org/Product"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Text"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/productid">
+      <a property="http://schema.org/domain" href="http://schema.org/Product"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Text"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/bestrating">
+      <a property="http://schema.org/domain" href="http://schema.org/Rating"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Number"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Text"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/ratingvalue">
+      <a property="http://schema.org/domain" href="http://schema.org/Rating"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Text"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/worstrating">
+      <a property="http://schema.org/domain" href="http://schema.org/Rating"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Number"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Text"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/cooktime">
+      <a property="http://schema.org/domain" href="http://schema.org/Recipe"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Duration"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/cookingmethod">
+      <a property="http://schema.org/domain" href="http://schema.org/Recipe"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Text"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/ingredients">
+      <a property="http://schema.org/domain" href="http://schema.org/Recipe"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Text"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/nutrition">
+      <a property="http://schema.org/domain" href="http://schema.org/Recipe"></a>
+      <a property="http://schema.org/range" href="http://schema.org/NutritionInformation"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/preptime">
+      <a property="http://schema.org/domain" href="http://schema.org/Recipe"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Duration"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/recipecategory">
+      <a property="http://schema.org/domain" href="http://schema.org/Recipe"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Text"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/recipecuisine">
+      <a property="http://schema.org/domain" href="http://schema.org/Recipe"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Text"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/recipeinstructions">
+      <a property="http://schema.org/domain" href="http://schema.org/Recipe"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Text"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/recipeyield">
+      <a property="http://schema.org/domain" href="http://schema.org/Recipe"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Text"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/totaltime">
+      <a property="http://schema.org/domain" href="http://schema.org/Recipe"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Duration"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/reviewbody">
+      <a property="http://schema.org/domain" href="http://schema.org/Review"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Text"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/reviewrating">
+      <a property="http://schema.org/domain" href="http://schema.org/Review"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Rating"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/downloadurl">
+      <a property="http://schema.org/domain" href="http://schema.org/SoftwareApplication"></a>
+      <a property="http://schema.org/range" href="http://schema.org/URL"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/fileformat">
+      <a property="http://schema.org/domain" href="http://schema.org/SoftwareApplication"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Text"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/filesize">
+      <a property="http://schema.org/domain" href="http://schema.org/SoftwareApplication"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Integer"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/isdownloadable">
+      <a property="http://schema.org/domain" href="http://schema.org/SoftwareApplication"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Boolean"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/numdownloads">
+      <a property="http://schema.org/domain" href="http://schema.org/SoftwareApplication"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Integer"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/operatingsystems">
+      <a property="http://schema.org/domain" href="http://schema.org/SoftwareApplication"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Text"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/softwareapplicationcategory">
+      <a property="http://schema.org/domain" href="http://schema.org/SoftwareApplication"></a>
+      <a property="http://schema.org/range" href="http://schema.org/SoftwareApplicationType"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/softwareapplicationcategorydeprecated">
+      <a property="http://schema.org/domain" href="http://schema.org/SoftwareApplication"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Thing"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/softwareapplicationsubcategory">
+      <a property="http://schema.org/domain" href="http://schema.org/SoftwareApplication"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Text"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/softwareversion">
+      <a property="http://schema.org/domain" href="http://schema.org/SoftwareApplication"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Text"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/episodenumber">
+      <a property="http://schema.org/domain" href="http://schema.org/TVEpisode"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Number"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/partofseason">
+      <a property="http://schema.org/domain" href="http://schema.org/TVEpisode"></a>
+      <a property="http://schema.org/range" href="http://schema.org/TVSeason"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/partoftvseries">
+      <a property="http://schema.org/domain" href="http://schema.org/TVEpisode"></a>
+      <a property="http://schema.org/domain" href="http://schema.org/TVSeason"></a>
+      <a property="http://schema.org/range" href="http://schema.org/TVSeries"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/episodes">
+      <a property="http://schema.org/domain" href="http://schema.org/TVSeason"></a>
+      <a property="http://schema.org/domain" href="http://schema.org/TVSeries"></a>
+      <a property="http://schema.org/range" href="http://schema.org/TVEpisode"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/numberofepisodes">
+      <a property="http://schema.org/domain" href="http://schema.org/TVSeason"></a>
+      <a property="http://schema.org/domain" href="http://schema.org/TVSeries"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Number"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/seasonnumber">
+      <a property="http://schema.org/domain" href="http://schema.org/TVSeason"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Integer"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/seasons">
+      <a property="http://schema.org/domain" href="http://schema.org/TVSeries"></a>
+      <a property="http://schema.org/range" href="http://schema.org/TVSeason"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/description">
+      <a property="http://schema.org/domain" href="http://schema.org/Thing"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Text"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/image">
+      <a property="http://schema.org/domain" href="http://schema.org/Thing"></a>
+      <a property="http://schema.org/range" href="http://schema.org/URL"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/name">
+      <a property="http://schema.org/domain" href="http://schema.org/Thing"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Text"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/url">
+      <a property="http://schema.org/domain" href="http://schema.org/Thing"></a>
+      <a property="http://schema.org/range" href="http://schema.org/URL"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/type">
+      <a property="http://schema.org/domain" href="http://schema.org/Thing"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Text"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/commenttext">
+      <a property="http://schema.org/domain" href="http://schema.org/UserComments"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Text"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/commenttime">
+      <a property="http://schema.org/domain" href="http://schema.org/UserComments"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Date"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/discusses">
+      <a property="http://schema.org/domain" href="http://schema.org/UserComments"></a>
+      <a property="http://schema.org/range" href="http://schema.org/CreativeWork"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/replytourl">
+      <a property="http://schema.org/domain" href="http://schema.org/UserComments"></a>
+      <a property="http://schema.org/range" href="http://schema.org/URL"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/videoframesize">
+      <a property="http://schema.org/domain" href="http://schema.org/VideoObject"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Text"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/videoquality">
+      <a property="http://schema.org/domain" href="http://schema.org/VideoObject"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Text"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/browsers">
+      <a property="http://schema.org/domain" href="http://schema.org/WebApplication"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Text"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/breadcrumb">
+      <a property="http://schema.org/domain" href="http://schema.org/WebPage"></a>
+      <a property="http://schema.org/range" href="http://schema.org/Text"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/ispartof">
+      <a property="http://schema.org/domain" href="http://schema.org/WebPage"></a>
+      <a property="http://schema.org/range" href="http://schema.org/CollectionPage"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/maincontentofpage">
+      <a property="http://schema.org/domain" href="http://schema.org/WebPage"></a>
+      <a property="http://schema.org/range" href="http://schema.org/WebPageElement"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/primaryimageofpage">
+      <a property="http://schema.org/domain" href="http://schema.org/WebPage"></a>
+      <a property="http://schema.org/range" href="http://schema.org/ImageObject"></a>
+    </div>
+    <div typeof="rdf:Property" about="http://schema.org/significantlinks">
+      <a property="http://schema.org/domain" href="http://schema.org/WebPage"></a>
+      <a property="http://schema.org/range" href="http://schema.org/URL"></a>
+    </div>
+  </body>
+</html>
