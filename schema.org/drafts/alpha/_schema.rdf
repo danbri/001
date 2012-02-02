@@ -1,0 +1,3187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:schema="http://schema.org/"
+>
+  <rdfs:Class rdf:about="http://schema.org/RiverBodyOfWater">
+    <rdfs:label>RiverBodyOfWater</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/BodyOfWater"/>
+    <rdfs:comment>A river (for example, the broad majestic Shannon).</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/HVACBusiness">
+    <rdfs:label>HVACBusiness</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/HomeAndConstructionBusiness"/>
+    <rdfs:comment>An HVAC service.</rdfs:comment>
+  </rdfs:Class>
+  <rdf:Property rdf:about="http://schema.org/homeLocation">
+    <schema:range rdf:resource="http://schema.org/ContactPoint"/>
+    <schema:range rdf:resource="http://schema.org/Place"/>
+    <rdfs:label>homeLocation</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/Person"/>
+    <rdfs:comment>A contact location for a person's residence.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://schema.org/associatedMedia">
+    <schema:range rdf:resource="http://schema.org/MediaObject"/>
+    <rdfs:label>associatedMedia</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/CreativeWork"/>
+    <rdfs:comment>The media objects that encode this creative work. This property is a synonym for encodings.</rdfs:comment>
+  </rdf:Property>
+  <rdfs:Class rdf:about="http://schema.org/ImageGallery">
+    <rdfs:label>ImageGallery</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/CollectionPage"/>
+    <rdfs:comment>Web page type: Image gallery page.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/PerformingArtsTheater">
+    <rdfs:label>PerformingArtsTheater</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/CivicStructure"/>
+    <rdfs:comment>A theatre or other performing art center.</rdfs:comment>
+  </rdfs:Class>
+  <rdf:Property rdf:about="http://schema.org/significantLinks">
+    <schema:range rdf:resource="http://schema.org/URL"/>
+    <rdfs:label>significantLinks</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/WebPage"/>
+    <rdfs:comment>The most significant URLs on the page. Typically, these are the non-navigation links that are clicked on the most</rdfs:comment>
+  </rdf:Property>
+  <rdfs:Class rdf:about="http://schema.org/PublicSwimmingPool">
+    <rdfs:label>PublicSwimmingPool</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/SportsActivityLocation"/>
+    <rdfs:comment>A public swimming pool.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/Campground">
+    <rdfs:label>Campground</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/CivicStructure"/>
+    <rdfs:comment>A campground.</rdfs:comment>
+  </rdfs:Class>
+  <rdf:Property rdf:about="http://schema.org/maps">
+    <schema:range rdf:resource="http://schema.org/URL"/>
+    <rdfs:label>maps</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/Place"/>
+    <rdfs:comment>A URL to a map of the place.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://schema.org/type">
+    <schema:range rdf:resource="http://schema.org/Text"/>
+    <rdfs:label>type</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/Thing"/>
+    <rdfs:comment>Auto added type field.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://schema.org/dateline">
+    <schema:range rdf:resource="http://schema.org/Text"/>
+    <rdfs:label>dateline</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/NewsArticle"/>
+    <rdfs:comment>The location where the NewsArticle was produced.</rdfs:comment>
+  </rdf:Property>
+  <rdfs:Class rdf:about="http://schema.org/ApartmentComplex">
+    <rdfs:label>ApartmentComplex</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/Residence"/>
+    <rdfs:comment>Residence type: Apartment complex.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/Canal">
+    <rdfs:label>Canal</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/BodyOfWater"/>
+    <rdfs:comment>A canal, like the Panama Canal</rdfs:comment>
+  </rdfs:Class>
+  <rdf:Property rdf:about="http://schema.org/browsers">
+    <schema:range rdf:resource="http://schema.org/Text"/>
+    <rdfs:label>browsers</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/WebApplication"/>
+    <rdfs:comment>One or more browsers required to run the app.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://schema.org/longitude">
+    <schema:range rdf:resource="http://schema.org/Number"/>
+    <schema:range rdf:resource="http://schema.org/Text"/>
+    <rdfs:label>longitude</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/GeoCoordinates"/>
+    <rdfs:comment>The longitude of a location. For example -122.08585.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://schema.org/endDate">
+    <schema:range rdf:resource="http://schema.org/Date"/>
+    <rdfs:label>endDate</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/Event"/>
+    <schema:domain rdf:resource="http://schema.org/TVSeries"/>
+    <schema:domain rdf:resource="http://schema.org/TVSeason"/>
+    <rdfs:comment>The end date and time of the event (in ISO 8601 date format).</rdfs:comment>
+  </rdf:Property>
+  <rdfs:Class rdf:about="http://schema.org/OfficeEquipmentStore">
+    <rdfs:label>OfficeEquipmentStore</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/Store"/>
+    <rdfs:comment>An office equipment store.</rdfs:comment>
+  </rdfs:Class>
+  <rdf:Property rdf:about="http://schema.org/recipeCuisine">
+    <schema:range rdf:resource="http://schema.org/Text"/>
+    <rdfs:label>recipeCuisine</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/Recipe"/>
+    <rdfs:comment>The cuisine of the recipe (for example, French or Ethopian).</rdfs:comment>
+  </rdf:Property>
+  <rdfs:Class rdf:about="http://schema.org/PoliceStation">
+    <rdfs:label>PoliceStation</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/CivicStructure"/>
+    <rdfs:subClassOf rdf:resource="http://schema.org/EmergencyService"/>
+    <rdfs:comment>A police station.</rdfs:comment>
+  </rdfs:Class>
+  <rdf:Property rdf:about="http://schema.org/isDownloadable">
+    <schema:range rdf:resource="http://schema.org/Boolean"/>
+    <rdfs:label>isDownloadable</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/SoftwareApplication"/>
+    <rdfs:comment>Indicates whether the software is available for download.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://schema.org/recipeCategory">
+    <schema:range rdf:resource="http://schema.org/Text"/>
+    <rdfs:label>recipeCategory</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/Recipe"/>
+    <rdfs:comment>The category of the recipe—for example, appetizer, entree, etc.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://schema.org/bookFormat">
+    <schema:range rdf:resource="http://schema.org/BookFormatType"/>
+    <rdfs:label>bookFormat</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/Book"/>
+    <rdfs:comment>The format of the book.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://schema.org/model">
+    <schema:range rdf:resource="http://schema.org/Text"/>
+    <rdfs:label>model</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/Product"/>
+    <rdfs:comment>The model of the product.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://schema.org/inLanguage">
+    <schema:range rdf:resource="http://schema.org/Text"/>
+    <rdfs:label>inLanguage</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/CreativeWork"/>
+    <rdfs:comment>The language of the content. please use one of the language codes from the IETF BCP 47 standard.</rdfs:comment>
+  </rdf:Property>
+  <rdfs:Class rdf:about="http://schema.org/Locksmith">
+    <rdfs:label>Locksmith</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/HomeAndConstructionBusiness"/>
+    <rdfs:subClassOf rdf:resource="http://schema.org/ProfessionalService"/>
+    <rdfs:comment>A locksmith.</rdfs:comment>
+  </rdfs:Class>
+  <rdf:Property rdf:about="http://schema.org/fiberContent">
+    <schema:range rdf:resource="http://schema.org/Mass"/>
+    <rdfs:label>fiberContent</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/NutritionInformation"/>
+    <rdfs:comment>The number of grams of fiber.</rdfs:comment>
+  </rdf:Property>
+  <rdfs:Class rdf:about="http://schema.org/AutomatedTeller">
+    <rdfs:label>AutomatedTeller</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/FinancialService"/>
+    <rdfs:comment>ATM/cash machine.</rdfs:comment>
+  </rdfs:Class>
+  <rdf:Property rdf:about="http://schema.org/offers">
+    <schema:range rdf:resource="http://schema.org/Offer"/>
+    <rdfs:label>offers</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/Event"/>
+    <schema:domain rdf:resource="http://schema.org/Product"/>
+    <schema:domain rdf:resource="http://schema.org/CreativeWork"/>
+    <schema:domain rdf:resource="http://schema.org/MediaObject"/>
+    <rdfs:comment>An offer to sell this item—for example, an offer to sell a product, the DVD of a movie, or tickets to an event.</rdfs:comment>
+  </rdf:Property>
+  <rdfs:Class rdf:about="http://schema.org/DepartmentStore">
+    <rdfs:label>DepartmentStore</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/Store"/>
+    <rdfs:comment>A department store.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/SportsTeam">
+    <rdfs:label>SportsTeam</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/Organization"/>
+    <rdfs:comment>Organization: Sports team.</rdfs:comment>
+  </rdfs:Class>
+  <rdf:Property rdf:about="http://schema.org/isFamilyFriendly">
+    <schema:range rdf:resource="http://schema.org/Boolean"/>
+    <rdfs:label>isFamilyFriendly</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/CreativeWork"/>
+    <rdfs:comment>Indicates whether this content is family friendly.</rdfs:comment>
+  </rdf:Property>
+  <rdfs:Class rdf:about="http://schema.org/GovernmentOrganization">
+    <rdfs:label>GovernmentOrganization</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/Organization"/>
+    <rdfs:comment>A governmental organization or agency.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/BedAndBreakfast">
+    <rdfs:label>BedAndBreakfast</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/LodgingBusiness"/>
+    <rdfs:comment>Bed and breakfast.</rdfs:comment>
+  </rdfs:Class>
+  <rdf:Property rdf:about="http://schema.org/paymentAccepted">
+    <schema:range rdf:resource="http://schema.org/Text"/>
+    <rdfs:label>paymentAccepted</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/LocalBusiness"/>
+    <rdfs:comment>Cash, credit card, etc.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://schema.org/containedIn">
+    <schema:range rdf:resource="http://schema.org/Place"/>
+    <rdfs:label>containedIn</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/Place"/>
+    <rdfs:comment>The basic containment relation between places.</rdfs:comment>
+  </rdf:Property>
+  <rdfs:Class rdf:about="http://schema.org/ItemPage">
+    <rdfs:label>ItemPage</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/WebPage"/>
+    <rdfs:comment>A page devoted to a single item, such as a particular product or hotel.</rdfs:comment>
+  </rdfs:Class>
+  <rdf:Property rdf:about="http://schema.org/dateCreated">
+    <schema:range rdf:resource="http://schema.org/Date"/>
+    <rdfs:label>dateCreated</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/CreativeWork"/>
+    <rdfs:comment>The date on which the CreativeWork was created.</rdfs:comment>
+  </rdf:Property>
+  <rdfs:Class rdf:about="http://schema.org/Cemetery">
+    <rdfs:label>Cemetery</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/CivicStructure"/>
+    <rdfs:comment>A graveyard.</rdfs:comment>
+  </rdfs:Class>
+  <rdf:Property rdf:about="http://schema.org/embedURL">
+    <schema:range rdf:resource="http://schema.org/URL"/>
+    <rdfs:label>embedURL</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/MediaObject"/>
+    <rdfs:comment>A URL pointing to a player for a specific video. In general, this is the information in the src element of an embed tag and should not be the same as the content of the loc tag.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://schema.org/countriesNotSupported">
+    <schema:range rdf:resource="http://schema.org/Text"/>
+    <rdfs:label>countriesNotSupported</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/MobileSoftwareApplication"/>
+    <rdfs:comment>Countries that dlsallow the application.</rdfs:comment>
+  </rdf:Property>
+  <rdfs:Class rdf:about="http://schema.org/PetStore">
+    <rdfs:label>PetStore</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/Store"/>
+    <rdfs:comment>A pet store.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/UserLikes">
+    <rdfs:label>UserLikes</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/UserInteraction"/>
+    <rdfs:comment>User interaction: Like an item.</rdfs:comment>
+  </rdfs:Class>
+  <rdf:Property rdf:about="http://schema.org/itemReviewed">
+    <schema:range rdf:resource="http://schema.org/Thing"/>
+    <rdfs:label>itemReviewed</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/Review"/>
+    <schema:domain rdf:resource="http://schema.org/AggregateRating"/>
+    <rdfs:comment>The item that is being reviewed/rated.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://schema.org/faxNumber">
+    <schema:range rdf:resource="http://schema.org/Text"/>
+    <rdfs:label>faxNumber</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/Organization"/>
+    <schema:domain rdf:resource="http://schema.org/ContactPoint"/>
+    <schema:domain rdf:resource="http://schema.org/Place"/>
+    <schema:domain rdf:resource="http://schema.org/Person"/>
+    <rdfs:comment>The fax number.</rdfs:comment>
+  </rdf:Property>
+  <rdfs:Class rdf:about="http://schema.org/Bakery">
+    <rdfs:label>Bakery</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/FoodEstablishment"/>
+    <rdfs:comment>A bakery.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/Brewery">
+    <rdfs:label>Brewery</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/FoodEstablishment"/>
+    <rdfs:comment>Brewery.</rdfs:comment>
+  </rdfs:Class>
+  <rdf:Property rdf:about="http://schema.org/discusses">
+    <schema:range rdf:resource="http://schema.org/CreativeWork"/>
+    <rdfs:label>discusses</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/UserComments"/>
+    <rdfs:comment>Specifies the CreativeWork associated with the UserComment.</rdfs:comment>
+  </rdf:Property>
+  <rdfs:Class rdf:about="http://schema.org/HealthClub">
+    <rdfs:label>HealthClub</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/SportsActivityLocation"/>
+    <rdfs:subClassOf rdf:resource="http://schema.org/HealthAndBeautyBusiness"/>
+    <rdfs:comment>A health club.</rdfs:comment>
+  </rdfs:Class>
+  <rdf:Property rdf:about="http://schema.org/industry">
+    <schema:range rdf:resource="http://schema.org/Text"/>
+    <rdfs:label>industry</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/JobPosting"/>
+    <rdfs:comment>The industry associated with the job position.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://schema.org/servesCuisine">
+    <schema:range rdf:resource="http://schema.org/Text"/>
+    <rdfs:label>servesCuisine</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/FoodEstablishment"/>
+    <rdfs:comment>The cuisine of the restaurant.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://schema.org/copyrightYear">
+    <schema:range rdf:resource="http://schema.org/Number"/>
+    <rdfs:label>copyrightYear</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/CreativeWork"/>
+    <rdfs:comment>The year during which the claimed copyright for the CreativeWork was first asserted.</rdfs:comment>
+  </rdf:Property>
+  <rdfs:Class rdf:about="http://schema.org/ScholarlyArticle">
+    <rdfs:label>ScholarlyArticle</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/Article"/>
+    <rdfs:comment>A scholarly article.</rdfs:comment>
+  </rdfs:Class>
+  <rdf:Property rdf:about="http://schema.org/memberOf">
+    <schema:range rdf:resource="http://schema.org/Organization"/>
+    <rdfs:label>memberOf</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/Person"/>
+    <rdfs:comment>An organization to which the person belongs.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://schema.org/siblings">
+    <schema:range rdf:resource="http://schema.org/Person"/>
+    <rdfs:label>siblings</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/Person"/>
+    <rdfs:comment>A sibling of the person.</rdfs:comment>
+  </rdf:Property>
+  <rdfs:Class rdf:about="http://schema.org/Motel">
+    <rdfs:label>Motel</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/LodgingBusiness"/>
+    <rdfs:comment>A motel.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/RealEstateAgent">
+    <rdfs:label>RealEstateAgent</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/LocalBusiness"/>
+    <rdfs:comment>A real-estate agent.</rdfs:comment>
+  </rdfs:Class>
+  <rdf:Property rdf:about="http://schema.org/ingredients">
+    <schema:range rdf:resource="http://schema.org/Text"/>
+    <rdfs:label>ingredients</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/Recipe"/>
+    <rdfs:comment>An ingredient used in the recipe.</rdfs:comment>
+  </rdf:Property>
+  <rdfs:Class rdf:about="http://schema.org/BusinessEvent">
+    <rdfs:label>BusinessEvent</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/Event"/>
+    <rdfs:comment>Event type: Business event.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/ProfilePage">
+    <rdfs:label>ProfilePage</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/WebPage"/>
+    <rdfs:comment>Web page type: Profile page.</rdfs:comment>
+  </rdfs:Class>
+  <rdf:Property rdf:about="http://schema.org/reviewCount">
+    <schema:range rdf:resource="http://schema.org/Number"/>
+    <rdfs:label>reviewCount</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/AggregateRating"/>
+    <rdfs:comment>The count of total number of reviews.</rdfs:comment>
+  </rdf:Property>
+  <rdfs:Class rdf:about="http://schema.org/CollegeOrUniversity">
+    <rdfs:label>CollegeOrUniversity</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/EducationalOrganization"/>
+    <rdfs:comment>A college, university, or other third-level educational institution.</rdfs:comment>
+  </rdfs:Class>
+  <rdf:Property rdf:about="http://schema.org/bookEdition">
+    <schema:range rdf:resource="http://schema.org/Text"/>
+    <rdfs:label>bookEdition</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/Book"/>
+    <rdfs:comment>The edition of the book.</rdfs:comment>
+  </rdf:Property>
+  <rdfs:Class rdf:about="http://schema.org/Volcano">
+    <rdfs:label>Volcano</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/Landform"/>
+    <rdfs:comment>A volcano, like Fuji san</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/SiteNavigationElement">
+    <rdfs:label>SiteNavigationElement</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/WebPageElement"/>
+    <rdfs:comment>A navigation element of the page.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/ComputerStore">
+    <rdfs:label>ComputerStore</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/Store"/>
+    <rdfs:comment>A computer store.</rdfs:comment>
+  </rdfs:Class>
+  <rdf:Property rdf:about="http://schema.org/performerIn">
+    <schema:range rdf:resource="http://schema.org/Event"/>
+    <rdfs:label>performerIn</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/Person"/>
+    <rdfs:comment>Event that this person is a performer or participant in.</rdfs:comment>
+  </rdf:Property>
+  <rdfs:Class rdf:about="http://schema.org/Synagogue">
+    <rdfs:label>Synagogue</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/PlaceOfWorship"/>
+    <rdfs:comment>A synagogue.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/MensClothingStore">
+    <rdfs:label>MensClothingStore</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/Store"/>
+    <rdfs:comment>A men's clothing store.</rdfs:comment>
+  </rdfs:Class>
+  <rdf:Property rdf:about="http://schema.org/url">
+    <schema:range rdf:resource="http://schema.org/URL"/>
+    <rdfs:label>url</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/Thing"/>
+    <rdfs:comment>URL of the item.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://schema.org/cookingMethod">
+    <schema:range rdf:resource="http://schema.org/Text"/>
+    <rdfs:label>cookingMethod</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/Recipe"/>
+    <rdfs:comment>The method of cooking, such as Frying, Steaming, ...</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://schema.org/comment">
+    <schema:range rdf:resource="http://schema.org/UserComments"/>
+    <rdfs:label>comment</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/CreativeWork"/>
+    <rdfs:comment>Comments, typically from users, on this CreativeWork.</rdfs:comment>
+  </rdf:Property>
+  <rdfs:Class rdf:about="http://schema.org/TheaterEvent">
+    <rdfs:label>TheaterEvent</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/Event"/>
+    <rdfs:comment>Event type: Theater performance.</rdfs:comment>
+  </rdfs:Class>
+  <rdf:Property rdf:about="http://schema.org/priceCurrency">
+    <schema:range rdf:resource="http://schema.org/Text"/>
+    <rdfs:label>priceCurrency</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/Offer"/>
+    <rdfs:comment>The currency (in 3-letter ISO 4217 format) of the offer price.</rdfs:comment>
+  </rdf:Property>
+  <rdfs:Class rdf:about="http://schema.org/FurnitureStore">
+    <rdfs:label>FurnitureStore</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/Store"/>
+    <rdfs:comment>A furniture store.</rdfs:comment>
+  </rdfs:Class>
+  <rdf:Property rdf:about="http://schema.org/softwareApplicationSubCategory">
+    <schema:range rdf:resource="http://schema.org/Text"/>
+    <rdfs:label>softwareApplicationSubCategory</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/SoftwareApplication"/>
+    <rdfs:comment>Subcategory of the application.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://schema.org/publisher">
+    <schema:range rdf:resource="http://schema.org/Organization"/>
+    <rdfs:label>publisher</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/CreativeWork"/>
+    <rdfs:comment>The publisher of the creative work.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://schema.org/events">
+    <schema:range rdf:resource="http://schema.org/Event"/>
+    <rdfs:label>events</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/Organization"/>
+    <schema:domain rdf:resource="http://schema.org/Place"/>
+    <rdfs:comment>Upcoming or past events associated with this place or organization.</rdfs:comment>
+  </rdf:Property>
+  <rdfs:Class rdf:about="http://schema.org/HinduTemple">
+    <rdfs:label>HinduTemple</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/PlaceOfWorship"/>
+    <rdfs:comment>A Hindu temple.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/SocialEvent">
+    <rdfs:label>SocialEvent</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/Event"/>
+    <rdfs:comment>Event type: Social event.</rdfs:comment>
+  </rdfs:Class>
+  <rdf:Property rdf:about="http://schema.org/reviewBody">
+    <schema:range rdf:resource="http://schema.org/Text"/>
+    <rdfs:label>reviewBody</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/Review"/>
+    <rdfs:comment>The actual body of the review</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://schema.org/deathDate">
+    <schema:range rdf:resource="http://schema.org/Date"/>
+    <rdfs:label>deathDate</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/Person"/>
+    <rdfs:comment>Date of death.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://schema.org/partOfSeason">
+    <schema:range rdf:resource="http://schema.org/TVSeason"/>
+    <rdfs:label>partOfSeason</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/TVEpisode"/>
+    <rdfs:comment>The season to which this episode belongs.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://schema.org/priceRange">
+    <schema:range rdf:resource="http://schema.org/Text"/>
+    <rdfs:label>priceRange</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/LocalBusiness"/>
+    <rdfs:comment>The price range of the business, for example $$$.</rdfs:comment>
+  </rdf:Property>
+  <rdfs:Class rdf:about="http://schema.org/SportingGoodsStore">
+    <rdfs:label>SportingGoodsStore</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/Store"/>
+    <rdfs:comment>A sporting goods store.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/CafeOrCoffeeShop">
+    <rdfs:label>CafeOrCoffeeShop</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/FoodEstablishment"/>
+    <rdfs:comment>A cafe or coffee shop.</rdfs:comment>
+  </rdfs:Class>
+  <rdf:Property rdf:about="http://schema.org/genre">
+    <schema:range rdf:resource="http://schema.org/Text"/>
+    <rdfs:label>genre</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/CreativeWork"/>
+    <rdfs:comment>Genre of the creative work</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://schema.org/encodingFormat">
+    <schema:range rdf:resource="http://schema.org/Text"/>
+    <rdfs:label>encodingFormat</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/MediaObject"/>
+    <rdfs:comment>mp3, mpeg4, etc.</rdfs:comment>
+  </rdf:Property>
+  <rdfs:Class rdf:about="http://schema.org/TireShop">
+    <rdfs:label>TireShop</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/Store"/>
+    <rdfs:comment>A tire shop.</rdfs:comment>
+  </rdfs:Class>
+  <rdf:Property rdf:about="http://schema.org/actors">
+    <schema:range rdf:resource="http://schema.org/Person"/>
+    <rdfs:label>actors</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/TVEpisode"/>
+    <schema:domain rdf:resource="http://schema.org/Movie"/>
+    <schema:domain rdf:resource="http://schema.org/TVSeries"/>
+    <rdfs:comment>A cast member of the movie, TV series, season, or episode, or video.</rdfs:comment>
+  </rdf:Property>
+  <rdfs:Class rdf:about="http://schema.org/Museum">
+    <rdfs:label>Museum</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/CivicStructure"/>
+    <rdfs:comment>A museum.</rdfs:comment>
+  </rdfs:Class>
+  <rdf:Property rdf:about="http://schema.org/latitude">
+    <schema:range rdf:resource="http://schema.org/Number"/>
+    <schema:range rdf:resource="http://schema.org/Text"/>
+    <rdfs:label>latitude</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/GeoCoordinates"/>
+    <rdfs:comment>The latitude of a location. For example 37.42242.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://schema.org/givenName">
+    <schema:range rdf:resource="http://schema.org/Text"/>
+    <rdfs:label>givenName</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/Person"/>
+    <rdfs:comment>Given name. In the U.S., the first name of a Person. This can be used along with familyName instead of the Name property.</rdfs:comment>
+  </rdf:Property>
+  <rdfs:Class rdf:about="http://schema.org/SkiResort">
+    <rdfs:label>SkiResort</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/SportsActivityLocation"/>
+    <rdfs:comment>A ski resort.</rdfs:comment>
+  </rdfs:Class>
+  <rdf:Property rdf:about="http://schema.org/circle">
+    <schema:range rdf:resource="http://schema.org/Text"/>
+    <rdfs:label>circle</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/GeoShape"/>
+    <rdfs:comment>A circle is the circular region of a specified radius centered at a specified latitude and longitude. A circle is expressed as a pair followed by a radius in meters.</rdfs:comment>
+  </rdf:Property>
+  <rdfs:Class rdf:about="http://schema.org/ToyStore">
+    <rdfs:label>ToyStore</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/Store"/>
+    <rdfs:comment>A toystore.</rdfs:comment>
+  </rdfs:Class>
+  <rdf:Property rdf:about="http://schema.org/productionCompany">
+    <schema:range rdf:resource="http://schema.org/Organization"/>
+    <rdfs:label>productionCompany</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/TVEpisode"/>
+    <schema:domain rdf:resource="http://schema.org/VideoObject"/>
+    <schema:domain rdf:resource="http://schema.org/Movie"/>
+    <schema:domain rdf:resource="http://schema.org/TVSeries"/>
+    <rdfs:comment>The production company or studio that made the movie, TV series, season, or episode, or video.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://schema.org/copyrightHolder">
+    <schema:range rdf:resource="http://schema.org/Organization"/>
+    <schema:range rdf:resource="http://schema.org/Person"/>
+    <rdfs:label>copyrightHolder</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/CreativeWork"/>
+    <rdfs:comment>The party holding the legal copyright to the CreativeWork.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://schema.org/primaryImageOfPage">
+    <schema:range rdf:resource="http://schema.org/ImageObject"/>
+    <rdfs:label>primaryImageOfPage</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/WebPage"/>
+    <rdfs:comment>Indicates the main image on the page</rdfs:comment>
+  </rdf:Property>
+  <rdfs:Class rdf:about="http://schema.org/AmusementPark">
+    <rdfs:label>AmusementPark</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/EntertainmentBusiness"/>
+    <rdfs:comment>An amusement park.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/WPHeader">
+    <rdfs:label>WPHeader</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/WebPageElement"/>
+    <rdfs:comment>The header section of the page.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/EventVenue">
+    <rdfs:label>EventVenue</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/CivicStructure"/>
+    <rdfs:comment>An event venue.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/TouristInformationCenter">
+    <rdfs:label>TouristInformationCenter</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/LocalBusiness"/>
+    <rdfs:comment>A tourist information center.</rdfs:comment>
+  </rdfs:Class>
+  <rdf:Property rdf:about="http://schema.org/foundingDate">
+    <schema:range rdf:resource="http://schema.org/Date"/>
+    <rdfs:label>foundingDate</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/Organization"/>
+    <rdfs:comment>The date that this organization was founded.</rdfs:comment>
+  </rdf:Property>
+  <rdfs:Class rdf:about="http://schema.org/OceanBodyOfWater">
+    <rdfs:label>OceanBodyOfWater</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/BodyOfWater"/>
+    <rdfs:comment>An ocean (for example, the Pacific).</rdfs:comment>
+  </rdfs:Class>
+  <rdf:Property rdf:about="http://schema.org/printEdition">
+    <schema:range rdf:resource="http://schema.org/Text"/>
+    <rdfs:label>printEdition</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/NewsArticle"/>
+    <rdfs:comment>The edition of the print product in which the NewsArticle appears.</rdfs:comment>
+  </rdf:Property>
+  <rdfs:Class rdf:about="http://schema.org/ShoeStore">
+    <rdfs:label>ShoeStore</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/Store"/>
+    <rdfs:comment>A shoe store.</rdfs:comment>
+  </rdfs:Class>
+  <rdf:Property rdf:about="http://schema.org/contactType">
+    <schema:range rdf:resource="http://schema.org/Text"/>
+    <rdfs:label>contactType</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/ContactPoint"/>
+    <rdfs:comment>A person or organization can have different contact points, for different purposes. For example, a sales contact point, a PR contact point and so on. This property is used to specify the kind of contact point.</rdfs:comment>
+  </rdf:Property>
+  <rdfs:Class rdf:about="http://schema.org/Mosque">
+    <rdfs:label>Mosque</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/PlaceOfWorship"/>
+    <rdfs:comment>A mosque.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/City">
+    <rdfs:label>City</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/AdministrativeArea"/>
+    <rdfs:comment>A city or town.</rdfs:comment>
+  </rdfs:Class>
+  <rdf:Property rdf:about="http://schema.org/fileFormat">
+    <schema:range rdf:resource="http://schema.org/Text"/>
+    <rdfs:label>fileFormat</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/SoftwareApplication"/>
+    <rdfs:comment>MIME format of the binary (e.g. application/zip).</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://schema.org/members">
+    <schema:range rdf:resource="http://schema.org/Organization"/>
+    <schema:range rdf:resource="http://schema.org/Person"/>
+    <rdfs:label>members</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/Organization"/>
+    <rdfs:comment>A member of this organization.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://schema.org/seller">
+    <schema:range rdf:resource="http://schema.org/Organization"/>
+    <rdfs:label>seller</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/Offer"/>
+    <rdfs:comment>The seller of the product.</rdfs:comment>
+  </rdf:Property>
+  <rdfs:Class rdf:about="http://schema.org/DanceEvent">
+    <rdfs:label>DanceEvent</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/Event"/>
+    <rdfs:comment>Event type: A social dance.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/HighSchool">
+    <rdfs:label>HighSchool</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/EducationalOrganization"/>
+    <rdfs:comment>A high school.</rdfs:comment>
+  </rdfs:Class>
+  <rdf:Property rdf:about="http://schema.org/contentLocation">
+    <schema:range rdf:resource="http://schema.org/Place"/>
+    <rdfs:label>contentLocation</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/CreativeWork"/>
+    <rdfs:comment>The location of the content.</rdfs:comment>
+  </rdf:Property>
+  <rdfs:Class rdf:about="http://schema.org/AutoWash">
+    <rdfs:label>AutoWash</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/AutomotiveBusiness"/>
+    <rdfs:comment>A car wash business.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/Beach">
+    <rdfs:label>Beach</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/CivicStructure"/>
+    <rdfs:comment>Beach.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/Waterfall">
+    <rdfs:label>Waterfall</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/BodyOfWater"/>
+    <rdfs:comment>A waterfall, like Niagara</rdfs:comment>
+  </rdfs:Class>
+  <rdf:Property rdf:about="http://schema.org/parents">
+    <schema:range rdf:resource="http://schema.org/Person"/>
+    <rdfs:label>parents</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/Person"/>
+    <rdfs:comment>A parents of the person.</rdfs:comment>
+  </rdf:Property>
+  <rdfs:Class rdf:about="http://schema.org/StadiumOrArena">
+    <rdfs:label>StadiumOrArena</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/SportsActivityLocation"/>
+    <rdfs:subClassOf rdf:resource="http://schema.org/CivicStructure"/>
+    <rdfs:comment>A stadium.</rdfs:comment>
+  </rdfs:Class>
+  <rdf:Property rdf:about="http://schema.org/calories">
+    <schema:range rdf:resource="http://schema.org/Energy"/>
+    <rdfs:label>calories</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/NutritionInformation"/>
+    <rdfs:comment>The number of calories</rdfs:comment>
+  </rdf:Property>
+  <rdfs:Class rdf:about="http://schema.org/JewelryStore">
+    <rdfs:label>JewelryStore</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/Store"/>
+    <rdfs:comment>A jewelry store.</rdfs:comment>
+  </rdfs:Class>
+  <rdf:Property rdf:about="http://schema.org/line">
+    <schema:range rdf:resource="http://schema.org/Text"/>
+    <rdfs:label>line</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/GeoShape"/>
+    <rdfs:comment>A line is a point-to-point path consisting of two or more points. A line is expressed as a series of two or more point objects separated by space.</rdfs:comment>
+  </rdf:Property>
+  <rdfs:Class rdf:about="http://schema.org/SportsEvent">
+    <rdfs:label>SportsEvent</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/Event"/>
+    <rdfs:comment>Event type: Sports event.</rdfs:comment>
+  </rdfs:Class>
+  <rdf:Property rdf:about="http://schema.org/birthDate">
+    <schema:range rdf:resource="http://schema.org/Date"/>
+    <rdfs:label>birthDate</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/Person"/>
+    <rdfs:comment>Date of birth.</rdfs:comment>
+  </rdf:Property>
+  <rdfs:Class rdf:about="http://schema.org/Embassy">
+    <rdfs:label>Embassy</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/GovernmentBuilding"/>
+    <rdfs:comment>An embassy.</rdfs:comment>
+  </rdfs:Class>
+  <rdf:Property rdf:about="http://schema.org/worstRating">
+    <schema:range rdf:resource="http://schema.org/Number"/>
+    <schema:range rdf:resource="http://schema.org/Text"/>
+    <rdfs:label>worstRating</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/Rating"/>
+    <rdfs:comment>The lowest value allowed in this rating system. If worstRating is omitted, 1 is assumed.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://schema.org/softwareApplicationCategory">
+    <schema:range rdf:resource="http://schema.org/SoftwareApplicationType"/>
+    <rdfs:label>softwareApplicationCategory</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/SoftwareApplication"/>
+    <rdfs:comment>Type of software application.</rdfs:comment>
+  </rdf:Property>
+  <rdfs:Class rdf:about="http://schema.org/MiddleSchool">
+    <rdfs:label>MiddleSchool</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/EducationalOrganization"/>
+    <rdfs:comment>A middle school.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/Notary">
+    <rdfs:label>Notary</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/ProfessionalService"/>
+    <rdfs:comment>A notary.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/AdultEntertainment">
+    <rdfs:label>AdultEntertainment</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/EntertainmentBusiness"/>
+    <rdfs:comment>An adult entertainment establishment.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/CityHall">
+    <rdfs:label>CityHall</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/GovernmentBuilding"/>
+    <rdfs:comment>A city hall.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/BusStop">
+    <rdfs:label>BusStop</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/CivicStructure"/>
+    <rdfs:comment>A bus stop.</rdfs:comment>
+  </rdfs:Class>
+  <rdf:Property rdf:about="http://schema.org/geo">
+    <schema:range rdf:resource="http://schema.org/GeoCoordinates"/>
+    <schema:range rdf:resource="http://schema.org/GeoShape"/>
+    <rdfs:label>geo</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/Place"/>
+    <rdfs:comment>The geo coordinates of the place.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://schema.org/superEvent">
+    <schema:range rdf:resource="http://schema.org/Event"/>
+    <rdfs:label>superEvent</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/Event"/>
+    <rdfs:comment>An event that this event is a part of. For example, a collection of individual music performances might each have a music festival as their superEvent.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://schema.org/audio">
+    <schema:range rdf:resource="http://schema.org/AudioObject"/>
+    <rdfs:label>audio</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/CreativeWork"/>
+    <rdfs:comment>An embedded audio object.</rdfs:comment>
+  </rdf:Property>
+  <rdfs:Class rdf:about="http://schema.org/BowlingAlley">
+    <rdfs:label>BowlingAlley</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/SportsActivityLocation"/>
+    <rdfs:comment>A bowling alley.</rdfs:comment>
+  </rdfs:Class>
+  <rdf:Property rdf:about="http://schema.org/version">
+    <schema:range rdf:resource="http://schema.org/Number"/>
+    <rdfs:label>version</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/CreativeWork"/>
+    <rdfs:comment>The version of the CreativeWork embodied by a specified resource.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://schema.org/reviewRating">
+    <schema:range rdf:resource="http://schema.org/Rating"/>
+    <rdfs:label>reviewRating</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/Review"/>
+    <rdfs:comment>The rating given in this review. Note that reviews can themselves be rated. The reviewRating applies to rating given by the review. The aggregateRating property applies to the review itself, as a creative work.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://schema.org/numberOfPages">
+    <schema:range rdf:resource="http://schema.org/Integer"/>
+    <rdfs:label>numberOfPages</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/Book"/>
+    <rdfs:comment>The number of pages in the book.</rdfs:comment>
+  </rdf:Property>
+  <rdfs:Class rdf:about="http://schema.org/AutoRepair">
+    <rdfs:label>AutoRepair</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/AutomotiveBusiness"/>
+    <rdfs:comment>Car repair business.</rdfs:comment>
+  </rdfs:Class>
+  <rdf:Property rdf:about="http://schema.org/bookFormatDeprecated">
+    <schema:range rdf:resource="http://schema.org/Thing"/>
+    <rdfs:label>bookFormatDeprecated</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/Book"/>
+    <rdfs:comment>The format of the book.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://schema.org/jobTitle">
+    <schema:range rdf:resource="http://schema.org/Text"/>
+    <rdfs:label>jobTitle</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/Person"/>
+    <rdfs:comment>The job title of the person (for example, Financial Manager).</rdfs:comment>
+  </rdf:Property>
+  <rdfs:Class rdf:about="http://schema.org/ComedyEvent">
+    <rdfs:label>ComedyEvent</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/Event"/>
+    <rdfs:comment>Event type: Comedy event.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/LakeBodyOfWater">
+    <rdfs:label>LakeBodyOfWater</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/BodyOfWater"/>
+    <rdfs:comment>A lake (for example, Lake Pontrachain).</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/Airport">
+    <rdfs:label>Airport</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/CivicStructure"/>
+    <rdfs:comment>An airport.</rdfs:comment>
+  </rdfs:Class>
+  <rdf:Property rdf:about="http://schema.org/incentives">
+    <schema:range rdf:resource="http://schema.org/Text"/>
+    <rdfs:label>incentives</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/JobPosting"/>
+    <rdfs:comment>Description of bonus and commission compensation aspects of the job.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://schema.org/encodings">
+    <schema:range rdf:resource="http://schema.org/MediaObject"/>
+    <rdfs:label>encodings</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/CreativeWork"/>
+    <rdfs:comment>The media objects that encode this creative work</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://schema.org/contactPoints">
+    <schema:range rdf:resource="http://schema.org/ContactPoint"/>
+    <rdfs:label>contactPoints</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/Organization"/>
+    <schema:domain rdf:resource="http://schema.org/Person"/>
+    <rdfs:comment>A contact point for a person or organization.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://schema.org/inAlbum">
+    <schema:range rdf:resource="http://schema.org/MusicAlbum"/>
+    <rdfs:label>inAlbum</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/MusicRecording"/>
+    <rdfs:comment>The album to which this recording belongs.</rdfs:comment>
+  </rdf:Property>
+  <rdfs:Class rdf:about="http://schema.org/GasStation">
+    <rdfs:label>GasStation</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/AutomotiveBusiness"/>
+    <rdfs:comment>A gas station.</rdfs:comment>
+  </rdfs:Class>
+  <rdf:Property rdf:about="http://schema.org/postOfficeBoxNumber">
+    <schema:range rdf:resource="http://schema.org/Text"/>
+    <rdfs:label>postOfficeBoxNumber</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/PostalAddress"/>
+    <rdfs:comment>The post offce box number for PO box addresses.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://schema.org/softwareApplicationCategoryDeprecated">
+    <schema:range rdf:resource="http://schema.org/Thing"/>
+    <rdfs:label>softwareApplicationCategoryDeprecated</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/SoftwareApplication"/>
+    <rdfs:comment>Type of software application.</rdfs:comment>
+  </rdf:Property>
+  <rdfs:Class rdf:about="http://schema.org/SaleEvent">
+    <rdfs:label>SaleEvent</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/Event"/>
+    <rdfs:comment>Event type: Sales event.</rdfs:comment>
+  </rdfs:Class>
+  <rdf:Property rdf:about="http://schema.org/encodesCreativeWork">
+    <schema:range rdf:resource="http://schema.org/CreativeWork"/>
+    <rdfs:label>encodesCreativeWork</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/MediaObject"/>
+    <rdfs:comment>The creative work encoded by this media object</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://schema.org/ratingCount">
+    <schema:range rdf:resource="http://schema.org/Number"/>
+    <rdfs:label>ratingCount</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/AggregateRating"/>
+    <rdfs:comment>The count of total number of ratings.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://schema.org/currenciesAccepted">
+    <schema:range rdf:resource="http://schema.org/Text"/>
+    <rdfs:label>currenciesAccepted</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/LocalBusiness"/>
+    <rdfs:comment>The currency accepted (in ISO 4217 currency format).</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://schema.org/postalCode">
+    <schema:range rdf:resource="http://schema.org/Text"/>
+    <rdfs:label>postalCode</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/PostalAddress"/>
+    <rdfs:comment>The postal code. For example, 94043.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://schema.org/aggregateRating">
+    <schema:range rdf:resource="http://schema.org/AggregateRating"/>
+    <rdfs:label>aggregateRating</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/Product"/>
+    <schema:domain rdf:resource="http://schema.org/Organization"/>
+    <schema:domain rdf:resource="http://schema.org/CreativeWork"/>
+    <schema:domain rdf:resource="http://schema.org/Place"/>
+    <schema:domain rdf:resource="http://schema.org/Offer"/>
+    <rdfs:comment>The overall rating, based on a collection of reviews or ratings, of the item.</rdfs:comment>
+  </rdf:Property>
+  <rdfs:Class rdf:about="http://schema.org/ParkingFacility">
+    <rdfs:label>ParkingFacility</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/CivicStructure"/>
+    <rdfs:comment>A parking lot or other parking facility.</rdfs:comment>
+  </rdfs:Class>
+  <rdf:Property rdf:about="http://schema.org/location">
+    <schema:range rdf:resource="http://schema.org/PostalAddress"/>
+    <schema:range rdf:resource="http://schema.org/Place"/>
+    <rdfs:label>location</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/Event"/>
+    <schema:domain rdf:resource="http://schema.org/Organization"/>
+    <rdfs:comment>The location of the event or organization.</rdfs:comment>
+  </rdf:Property>
+  <rdfs:Class rdf:about="http://schema.org/HardwareStore">
+    <rdfs:label>HardwareStore</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/Store"/>
+    <rdfs:comment>A hardware store.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/PawnShop">
+    <rdfs:label>PawnShop</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/Store"/>
+    <rdfs:comment>A pawnstore.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/LiteraryEvent">
+    <rdfs:label>LiteraryEvent</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/Event"/>
+    <rdfs:comment>Event type: Literary event.</rdfs:comment>
+  </rdfs:Class>
+  <rdf:Property rdf:about="http://schema.org/wordCount">
+    <schema:range rdf:resource="http://schema.org/Integer"/>
+    <rdfs:label>wordCount</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/Article"/>
+    <rdfs:comment>The number of words in the text of the Article.</rdfs:comment>
+  </rdf:Property>
+  <rdfs:Class rdf:about="http://schema.org/Zoo">
+    <rdfs:label>Zoo</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/CivicStructure"/>
+    <rdfs:comment>A zoo.</rdfs:comment>
+  </rdfs:Class>
+  <rdf:Property rdf:about="http://schema.org/contentRating">
+    <schema:range rdf:resource="http://schema.org/Text"/>
+    <rdfs:label>contentRating</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/CreativeWork"/>
+    <rdfs:comment>Official rating of a piece of content—for example,'MPAA PG-13'.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://schema.org/copyrightNoticeDeprecated">
+    <schema:range rdf:resource="http://schema.org/URL"/>
+    <schema:range rdf:resource="http://schema.org/Text"/>
+    <rdfs:label>copyrightNoticeDeprecated</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/CreativeWork"/>
+    <rdfs:comment>Any necessary copyright notice for claiming the intellectual property for the CreativeWork.</rdfs:comment>
+  </rdf:Property>
+  <rdfs:Class rdf:about="http://schema.org/PostOffice">
+    <rdfs:label>PostOffice</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/GovernmentOffice"/>
+    <rdfs:comment>A post office.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/Crematorium">
+    <rdfs:label>Crematorium</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/CivicStructure"/>
+    <rdfs:comment>A crematorium.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/MedicalClinic">
+    <rdfs:label>MedicalClinic</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/MedicalOrganization"/>
+    <rdfs:comment>A medical clinic.</rdfs:comment>
+  </rdfs:Class>
+  <rdf:Property rdf:about="http://schema.org/hiringOrganization">
+    <schema:range rdf:resource="http://schema.org/Organization"/>
+    <rdfs:label>hiringOrganization</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/JobPosting"/>
+    <rdfs:comment>Organization offering the job position.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://schema.org/spouse">
+    <schema:range rdf:resource="http://schema.org/Person"/>
+    <rdfs:label>spouse</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/Person"/>
+    <rdfs:comment>The person's spouse.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://schema.org/benefits">
+    <schema:range rdf:resource="http://schema.org/Text"/>
+    <rdfs:label>benefits</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/JobPosting"/>
+    <rdfs:comment>Description of benefits associated with the job.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://schema.org/articleSection">
+    <schema:range rdf:resource="http://schema.org/Text"/>
+    <rdfs:label>articleSection</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/Article"/>
+    <rdfs:comment>Articles may belong to one or more 'sections' in a magazine or newspaper, such as Sports, Lifestyle, etc.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://schema.org/totalTime">
+    <schema:range rdf:resource="http://schema.org/Duration"/>
+    <rdfs:label>totalTime</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/Recipe"/>
+    <rdfs:comment>The total time it takes to prepare and cook the recipe, in ISO 8601 duration format.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://schema.org/contributor">
+    <schema:range rdf:resource="http://schema.org/Organization"/>
+    <schema:range rdf:resource="http://schema.org/Person"/>
+    <rdfs:label>contributor</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/CreativeWork"/>
+    <rdfs:comment>A secondary contributor to the CreativeWork.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://schema.org/bestRating">
+    <schema:range rdf:resource="http://schema.org/Number"/>
+    <schema:range rdf:resource="http://schema.org/Text"/>
+    <rdfs:label>bestRating</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/Rating"/>
+    <rdfs:comment>The highest value allowed in this rating system. If bestRating is omitted, 5 is assumed.</rdfs:comment>
+  </rdf:Property>
+  <rdfs:Class rdf:about="http://schema.org/RadioStation">
+    <rdfs:label>RadioStation</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/LocalBusiness"/>
+    <rdfs:comment>A radio station.</rdfs:comment>
+  </rdfs:Class>
+  <rdf:Property rdf:about="http://schema.org/servingSize">
+    <schema:range rdf:resource="http://schema.org/Text"/>
+    <rdfs:label>servingSize</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/NutritionInformation"/>
+    <rdfs:comment>The serving size, in terms of the number of volume or mass</rdfs:comment>
+  </rdf:Property>
+  <rdfs:Class rdf:about="http://schema.org/CatholicChurch">
+    <rdfs:label>CatholicChurch</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/PlaceOfWorship"/>
+    <rdfs:comment>A Catholic church.</rdfs:comment>
+  </rdfs:Class>
+  <rdf:Property rdf:about="http://schema.org/image">
+    <schema:range rdf:resource="http://schema.org/URL"/>
+    <rdfs:label>image</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/Thing"/>
+    <rdfs:comment>URL of an image of the item.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://schema.org/alumniOf">
+    <schema:range rdf:resource="http://schema.org/EducationalOrganization"/>
+    <rdfs:label>alumniOf</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/Person"/>
+    <rdfs:comment>An educational organizations that the person is an alumni of.</rdfs:comment>
+  </rdf:Property>
+  <rdfs:Class rdf:about="http://schema.org/Park">
+    <rdfs:label>Park</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/CivicStructure"/>
+    <rdfs:comment>A park.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/DaySpa">
+    <rdfs:label>DaySpa</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/HealthAndBeautyBusiness"/>
+    <rdfs:comment>A day spa.</rdfs:comment>
+  </rdfs:Class>
+  <rdf:Property rdf:about="http://schema.org/awards">
+    <schema:range rdf:resource="http://schema.org/Text"/>
+    <rdfs:label>awards</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/CreativeWork"/>
+    <schema:domain rdf:resource="http://schema.org/Person"/>
+    <rdfs:comment>Awards won by this person or for this creative work.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://schema.org/addressLocality">
+    <schema:range rdf:resource="http://schema.org/Text"/>
+    <rdfs:label>addressLocality</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/PostalAddress"/>
+    <rdfs:comment>The locality. For example, Mountain View.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://schema.org/height">
+    <schema:range rdf:resource="http://schema.org/Distance"/>
+    <rdfs:label>height</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/MediaObject"/>
+    <rdfs:comment>The height of the media object.</rdfs:comment>
+  </rdf:Property>
+  <rdfs:Class rdf:about="http://schema.org/Pond">
+    <rdfs:label>Pond</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/BodyOfWater"/>
+    <rdfs:comment>A pond</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/MovingCompany">
+    <rdfs:label>MovingCompany</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/HomeAndConstructionBusiness"/>
+    <rdfs:comment>A moving company.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/MusicEvent">
+    <rdfs:label>MusicEvent</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/Event"/>
+    <rdfs:comment>Event type: Music event.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/MovieTheater">
+    <rdfs:label>MovieTheater</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/CivicStructure"/>
+    <rdfs:subClassOf rdf:resource="http://schema.org/EntertainmentBusiness"/>
+    <rdfs:comment>A movie theater.</rdfs:comment>
+  </rdfs:Class>
+  <rdf:Property rdf:about="http://schema.org/telephone">
+    <schema:range rdf:resource="http://schema.org/Text"/>
+    <rdfs:label>telephone</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/Organization"/>
+    <schema:domain rdf:resource="http://schema.org/ContactPoint"/>
+    <schema:domain rdf:resource="http://schema.org/Place"/>
+    <schema:domain rdf:resource="http://schema.org/Person"/>
+    <rdfs:comment>The telephone number.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://schema.org/employees">
+    <schema:range rdf:resource="http://schema.org/Person"/>
+    <rdfs:label>employees</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/Organization"/>
+    <rdfs:comment>People working for this organization.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://schema.org/jobLocation">
+    <schema:range rdf:resource="http://schema.org/Place"/>
+    <rdfs:label>jobLocation</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/JobPosting"/>
+    <rdfs:comment>A (typically single) geographic location associated with the job position.</rdfs:comment>
+  </rdf:Property>
+  <rdfs:Class rdf:about="http://schema.org/ExerciseGym">
+    <rdfs:label>ExerciseGym</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/SportsActivityLocation"/>
+    <rdfs:comment>A gym.</rdfs:comment>
+  </rdfs:Class>
+  <rdf:Property rdf:about="http://schema.org/mentions">
+    <schema:range rdf:resource="http://schema.org/Thing"/>
+    <rdfs:label>mentions</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/CreativeWork"/>
+    <rdfs:comment>Indicates that the CreativeWork contains a reference to, but is not necessarily about a concept.</rdfs:comment>
+  </rdf:Property>
+  <rdfs:Class rdf:about="http://schema.org/OutletStore">
+    <rdfs:label>OutletStore</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/Store"/>
+    <rdfs:comment>An outlet store.</rdfs:comment>
+  </rdfs:Class>
+  <rdf:Property rdf:about="http://schema.org/alternativeHeadline">
+    <schema:range rdf:resource="http://schema.org/Text"/>
+    <rdfs:label>alternativeHeadline</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/CreativeWork"/>
+    <rdfs:comment>A secondary title of the CreativeWork.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://schema.org/producer">
+    <schema:range rdf:resource="http://schema.org/Person"/>
+    <rdfs:label>producer</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/TVEpisode"/>
+    <schema:domain rdf:resource="http://schema.org/Movie"/>
+    <schema:domain rdf:resource="http://schema.org/TVSeries"/>
+    <rdfs:comment>The producer of the movie, TV series, season, or episode, or video.</rdfs:comment>
+  </rdf:Property>
+  <rdfs:Class rdf:about="http://schema.org/ChildCare">
+    <rdfs:label>ChildCare</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/LocalBusiness"/>
+    <rdfs:comment>A Childcare center.</rdfs:comment>
+  </rdfs:Class>
+  <rdf:Property rdf:about="http://schema.org/itemOffered">
+    <schema:range rdf:resource="http://schema.org/Product"/>
+    <rdfs:label>itemOffered</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/Offer"/>
+    <rdfs:comment>The item being sold.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://schema.org/width">
+    <schema:range rdf:resource="http://schema.org/Distance"/>
+    <rdfs:label>width</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/MediaObject"/>
+    <rdfs:comment>The width of the media object.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://schema.org/gender">
+    <schema:range rdf:resource="http://schema.org/Text"/>
+    <rdfs:label>gender</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/Person"/>
+    <rdfs:comment>Gender of the person.</rdfs:comment>
+  </rdf:Property>
+  <rdfs:Class rdf:about="http://schema.org/MotorcycleRepair">
+    <rdfs:label>MotorcycleRepair</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/AutomotiveBusiness"/>
+    <rdfs:comment>A motorcycle repair shop.</rdfs:comment>
+  </rdfs:Class>
+  <rdf:Property rdf:about="http://schema.org/datePosted">
+    <schema:range rdf:resource="http://schema.org/Date"/>
+    <rdfs:label>datePosted</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/JobPosting"/>
+    <rdfs:comment>Publication date for the job posting.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://schema.org/alumni">
+    <schema:range rdf:resource="http://schema.org/Person"/>
+    <rdfs:label>alumni</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/EducationalOrganization"/>
+    <rdfs:comment>Alumni of educational organization.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://schema.org/honorificPrefix">
+    <schema:range rdf:resource="http://schema.org/Text"/>
+    <rdfs:label>honorificPrefix</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/Person"/>
+    <rdfs:comment>An honorific prefix preceding a Person's name such as Dr/Mrs/Mr.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://schema.org/price">
+    <schema:range rdf:resource="http://schema.org/Number"/>
+    <schema:range rdf:resource="http://schema.org/Text"/>
+    <rdfs:label>price</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/Offer"/>
+    <rdfs:comment>The offer price of the product.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://schema.org/recipeYield">
+    <schema:range rdf:resource="http://schema.org/Text"/>
+    <rdfs:label>recipeYield</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/Recipe"/>
+    <rdfs:comment>The quantity produced by the recipe (for example, number of people served, number of servings, etc).</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://schema.org/tracks">
+    <schema:range rdf:resource="http://schema.org/MusicRecording"/>
+    <rdfs:label>tracks</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/MusicGroup"/>
+    <schema:domain rdf:resource="http://schema.org/MusicPlaylist"/>
+    <rdfs:comment>A music recording (track)—usually a single song.</rdfs:comment>
+  </rdf:Property>
+  <rdfs:Class rdf:about="http://schema.org/AccountingService">
+    <rdfs:label>AccountingService</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/FinancialService"/>
+    <rdfs:subClassOf rdf:resource="http://schema.org/ProfessionalService"/>
+    <rdfs:comment>Accountancy business.</rdfs:comment>
+  </rdfs:Class>
+  <rdf:Property rdf:about="http://schema.org/title">
+    <schema:range rdf:resource="http://schema.org/Text"/>
+    <rdfs:label>title</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/JobPosting"/>
+    <rdfs:comment>The title of the job.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://schema.org/datePublished">
+    <schema:range rdf:resource="http://schema.org/Date"/>
+    <rdfs:label>datePublished</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/CreativeWork"/>
+    <rdfs:comment>Date of first broadcast/publication.</rdfs:comment>
+  </rdf:Property>
+  <rdfs:Class rdf:about="http://schema.org/ComedyClub">
+    <rdfs:label>ComedyClub</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/EntertainmentBusiness"/>
+    <rdfs:comment>A comedy club.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/Reservoir">
+    <rdfs:label>Reservoir</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/BodyOfWater"/>
+    <rdfs:comment>A reservoir, like the Lake Kariba reservoir.</rdfs:comment>
+  </rdfs:Class>
+  <rdf:Property rdf:about="http://schema.org/name">
+    <schema:range rdf:resource="http://schema.org/Text"/>
+    <rdfs:label>name</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/Thing"/>
+    <rdfs:comment>The name of the item.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://schema.org/box">
+    <schema:range rdf:resource="http://schema.org/Text"/>
+    <rdfs:label>box</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/GeoShape"/>
+    <rdfs:comment>A polygon is the area enclosed by a point-to-point path for which the starting and ending points are the same. A polygon is expressed as a series of four or more spacedelimited points where the first and final points are identical.</rdfs:comment>
+  </rdf:Property>
+  <rdfs:Class rdf:about="http://schema.org/MusicStore">
+    <rdfs:label>MusicStore</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/Store"/>
+    <rdfs:comment>A music store.</rdfs:comment>
+  </rdfs:Class>
+  <rdf:Property rdf:about="http://schema.org/cookTime">
+    <schema:range rdf:resource="http://schema.org/Duration"/>
+    <rdfs:label>cookTime</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/Recipe"/>
+    <rdfs:comment>The time it takes to actually cook the dish, in ISO 8601 duration format.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://schema.org/availability">
+    <schema:range rdf:resource="http://schema.org/ItemAvailability"/>
+    <rdfs:label>availability</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/Offer"/>
+    <rdfs:comment>The availability of this item—for example In stock, Out of stock, Pre-order, etc.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://schema.org/productID">
+    <schema:range rdf:resource="http://schema.org/Text"/>
+    <rdfs:label>productID</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/Product"/>
+    <rdfs:comment><![CDATA[The product identifier, such as ISBN. For example: <meta itemprop='productID' content='isbn:123-456-789'/>.]]></rdfs:comment>
+  </rdf:Property>
+  <rdfs:Class rdf:about="http://schema.org/TouristAttraction">
+    <rdfs:label>TouristAttraction</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/Place"/>
+    <rdfs:comment>A tourist attraction.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/LiquorStore">
+    <rdfs:label>LiquorStore</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/Store"/>
+    <rdfs:comment>A liquor store.</rdfs:comment>
+  </rdfs:Class>
+  <rdf:Property rdf:about="http://schema.org/replyToUrl">
+    <schema:range rdf:resource="http://schema.org/URL"/>
+    <rdfs:label>replyToUrl</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/UserComments"/>
+    <rdfs:comment>The URL at which a reply may be posted to the specified UserComment.</rdfs:comment>
+  </rdf:Property>
+  <rdfs:Class rdf:about="http://schema.org/MotorcycleDealer">
+    <rdfs:label>MotorcycleDealer</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/AutomotiveBusiness"/>
+    <rdfs:comment>A motorcycle dealer.</rdfs:comment>
+  </rdfs:Class>
+  <rdf:Property rdf:about="http://schema.org/tickerSymbol">
+    <schema:range rdf:resource="http://schema.org/Text"/>
+    <rdfs:label>tickerSymbol</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/Corporation"/>
+    <rdfs:comment>The exchange traded instrument associated with a Corporation object. The tickerSymbol is expressed as an exchange and an instrument name separated by a space character. For the exchange component of the tickerSymbol attribute, we reccommend using the controlled vocaulary of Market Identifier Codes (MIC) specified in ISO15022.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://schema.org/ratingValue">
+    <schema:range rdf:resource="http://schema.org/Text"/>
+    <rdfs:label>ratingValue</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/Rating"/>
+    <rdfs:comment>The rating for the content.</rdfs:comment>
+  </rdf:Property>
+  <rdfs:Class rdf:about="http://schema.org/ElementarySchool">
+    <rdfs:label>ElementarySchool</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/EducationalOrganization"/>
+    <rdfs:comment>An elementary school.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/Hotel">
+    <rdfs:label>Hotel</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/LodgingBusiness"/>
+    <rdfs:comment>A hotel.</rdfs:comment>
+  </rdfs:Class>
+  <rdf:Property rdf:about="http://schema.org/byArtist">
+    <schema:range rdf:resource="http://schema.org/MusicGroup"/>
+    <rdfs:label>byArtist</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/MusicRecording"/>
+    <schema:domain rdf:resource="http://schema.org/MusicAlbum"/>
+    <rdfs:comment>The artist that performed this album or recording.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://schema.org/breadcrumb">
+    <schema:range rdf:resource="http://schema.org/Text"/>
+    <rdfs:label>breadcrumb</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/WebPage"/>
+    <rdfs:comment>A set of links that can help a user understand and navigate a website hierarchy.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://schema.org/editor">
+    <schema:range rdf:resource="http://schema.org/Person"/>
+    <rdfs:label>editor</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/CreativeWork"/>
+    <rdfs:comment>Specifies the Person who edited the CreativeWork.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://schema.org/educationRequirements">
+    <schema:range rdf:resource="http://schema.org/Text"/>
+    <rdfs:label>educationRequirements</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/JobPosting"/>
+    <rdfs:comment>Educational background needed for the position.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://schema.org/proteinContent">
+    <schema:range rdf:resource="http://schema.org/Mass"/>
+    <rdfs:label>proteinContent</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/NutritionInformation"/>
+    <rdfs:comment>The number of grams of protein.</rdfs:comment>
+  </rdf:Property>
+  <rdfs:Class rdf:about="http://schema.org/Optician">
+    <rdfs:label>Optician</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/MedicalOrganization"/>
+    <rdfs:comment>An optician's store.</rdfs:comment>
+  </rdfs:Class>
+  <rdf:Property rdf:about="http://schema.org/responsibilities">
+    <schema:range rdf:resource="http://schema.org/Text"/>
+    <rdfs:label>responsibilities</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/JobPosting"/>
+    <rdfs:comment>Responsibilities associated with this role.</rdfs:comment>
+  </rdf:Property>
+  <rdfs:Class rdf:about="http://schema.org/LegislativeBuilding">
+    <rdfs:label>LegislativeBuilding</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/GovernmentBuilding"/>
+    <rdfs:comment>A legislative building—for example, the state capitol.</rdfs:comment>
+  </rdfs:Class>
+  <rdf:Property rdf:about="http://schema.org/albums">
+    <schema:range rdf:resource="http://schema.org/MusicAlbum"/>
+    <rdfs:label>albums</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/MusicGroup"/>
+    <rdfs:comment>A collection of music albums.</rdfs:comment>
+  </rdf:Property>
+  <rdfs:Class rdf:about="http://schema.org/Mountain">
+    <rdfs:label>Mountain</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/Landform"/>
+    <rdfs:comment>A mountain, like Mount Whitney or Mount Everest</rdfs:comment>
+  </rdfs:Class>
+  <rdf:Property rdf:about="http://schema.org/thumbnailUrl">
+    <schema:range rdf:resource="http://schema.org/URL"/>
+    <rdfs:label>thumbnailUrl</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/CreativeWork"/>
+    <rdfs:comment>A thumbnail image relevant to the Thing.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://schema.org/discussionUrl">
+    <schema:range rdf:resource="http://schema.org/URL"/>
+    <rdfs:label>discussionUrl</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/CreativeWork"/>
+    <rdfs:comment>A link to the page containing the comments of the CreativeWork.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://schema.org/softwareVersion">
+    <schema:range rdf:resource="http://schema.org/Text"/>
+    <rdfs:label>softwareVersion</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/SoftwareApplication"/>
+    <rdfs:comment>Version of the software instance.</rdfs:comment>
+  </rdf:Property>
+  <rdfs:Class rdf:about="http://schema.org/DanceGroup">
+    <rdfs:label>DanceGroup</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/PerformingGroup"/>
+    <rdfs:comment>A dance group—for example, the Alvin Ailey Dance Theater or Riverdance.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/UserTweets">
+    <rdfs:label>UserTweets</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/UserInteraction"/>
+    <rdfs:comment>User interaction: Tweets.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/FireStation">
+    <rdfs:label>FireStation</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/CivicStructure"/>
+    <rdfs:subClassOf rdf:resource="http://schema.org/EmergencyService"/>
+    <rdfs:comment>A fire station. With firemen.</rdfs:comment>
+  </rdfs:Class>
+  <rdf:Property rdf:about="http://schema.org/trailer">
+    <schema:range rdf:resource="http://schema.org/VideoObject"/>
+    <rdfs:label>trailer</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/TVEpisode"/>
+    <schema:domain rdf:resource="http://schema.org/TVSeries"/>
+    <schema:domain rdf:resource="http://schema.org/Movie"/>
+    <schema:domain rdf:resource="http://schema.org/TVSeason"/>
+    <rdfs:comment>The trailer of the movie or TV series, season, or episode.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://schema.org/transcript">
+    <schema:range rdf:resource="http://schema.org/Text"/>
+    <rdfs:label>transcript</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/AudioObject"/>
+    <schema:domain rdf:resource="http://schema.org/VideoObject"/>
+    <rdfs:comment>If this MediaObject is an AudioObject or VideoObject, the transcript of that object.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://schema.org/provider">
+    <schema:range rdf:resource="http://schema.org/Organization"/>
+    <schema:range rdf:resource="http://schema.org/Person"/>
+    <rdfs:label>provider</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/CreativeWork"/>
+    <rdfs:comment>Specifies the Person or Organization that distributed the CreativeWork.</rdfs:comment>
+  </rdf:Property>
+  <rdfs:Class rdf:about="http://schema.org/ArtGallery">
+    <rdfs:label>ArtGallery</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/EntertainmentBusiness"/>
+    <rdfs:comment>An art gallery.</rdfs:comment>
+  </rdfs:Class>
+  <rdf:Property rdf:about="http://schema.org/familyName">
+    <schema:range rdf:resource="http://schema.org/Text"/>
+    <rdfs:label>familyName</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/Person"/>
+    <rdfs:comment>Family name. In the U.S., the last name of an Person. This can be used along with givenName instead of the Name property.</rdfs:comment>
+  </rdf:Property>
+  <rdfs:Class rdf:about="http://schema.org/Language">
+    <rdfs:label>Language</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/Intangible"/>
+    <rdfs:comment>Natural languages such as Spanish, Tamil, Hindi, English, etc. and programming languages such as Scheme and Lisp.</rdfs:comment>
+  </rdfs:Class>
+  <rdf:Property rdf:about="http://schema.org/director">
+    <schema:range rdf:resource="http://schema.org/Person"/>
+    <rdfs:label>director</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/TVEpisode"/>
+    <schema:domain rdf:resource="http://schema.org/Movie"/>
+    <schema:domain rdf:resource="http://schema.org/TVSeries"/>
+    <rdfs:comment>The director of the movie, TV episode, or series.</rdfs:comment>
+  </rdf:Property>
+  <rdfs:Class rdf:about="http://schema.org/TelevisionStation">
+    <rdfs:label>TelevisionStation</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/LocalBusiness"/>
+    <rdfs:comment>A television station.</rdfs:comment>
+  </rdfs:Class>
+  <rdf:Property rdf:about="http://schema.org/associatedArticle">
+    <schema:range rdf:resource="http://schema.org/NewsArticle"/>
+    <rdfs:label>associatedArticle</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/MediaObject"/>
+    <rdfs:comment>A NewsArticle associated with the Media Object.</rdfs:comment>
+  </rdf:Property>
+  <rdfs:Class rdf:about="http://schema.org/Church">
+    <rdfs:label>Church</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/PlaceOfWorship"/>
+    <rdfs:comment>A church.</rdfs:comment>
+  </rdfs:Class>
+  <rdf:Property rdf:about="http://schema.org/articleBody">
+    <schema:range rdf:resource="http://schema.org/Text"/>
+    <rdfs:label>articleBody</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/Article"/>
+    <rdfs:comment>The actual body of the article.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://schema.org/addressRegion">
+    <schema:range rdf:resource="http://schema.org/Text"/>
+    <rdfs:label>addressRegion</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/PostalAddress"/>
+    <rdfs:comment>The region. For example, CA.</rdfs:comment>
+  </rdf:Property>
+  <rdfs:Class rdf:about="http://schema.org/ConvenienceStore">
+    <rdfs:label>ConvenienceStore</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/Store"/>
+    <rdfs:comment>A convenience store.</rdfs:comment>
+  </rdfs:Class>
+  <rdf:Property rdf:about="http://schema.org/relatedTo">
+    <schema:range rdf:resource="http://schema.org/Person"/>
+    <rdfs:label>relatedTo</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/Person"/>
+    <rdfs:comment>The most generic familial relation.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://schema.org/address">
+    <schema:range rdf:resource="http://schema.org/PostalAddress"/>
+    <rdfs:label>address</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/Organization"/>
+    <schema:domain rdf:resource="http://schema.org/Person"/>
+    <schema:domain rdf:resource="http://schema.org/Place"/>
+    <rdfs:comment>Physical address of the item.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://schema.org/contentURL">
+    <schema:range rdf:resource="http://schema.org/URL"/>
+    <rdfs:label>contentURL</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/MediaObject"/>
+    <rdfs:comment>Actual bytes of the media object, for example the image file or video file.</rdfs:comment>
+  </rdf:Property>
+  <rdfs:Class rdf:about="http://schema.org/WPSideBar">
+    <rdfs:label>WPSideBar</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/WebPageElement"/>
+    <rdfs:comment>A sidebar section of the page.</rdfs:comment>
+  </rdfs:Class>
+  <rdf:Property rdf:about="http://schema.org/prepTime">
+    <schema:range rdf:resource="http://schema.org/Duration"/>
+    <rdfs:label>prepTime</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/Recipe"/>
+    <rdfs:comment>The length of time it takes to prepare the recipe, in ISO 8601 duration format.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://schema.org/workLocation">
+    <schema:range rdf:resource="http://schema.org/ContactPoint"/>
+    <schema:range rdf:resource="http://schema.org/Place"/>
+    <rdfs:label>workLocation</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/Person"/>
+    <rdfs:comment>A contact location for a person's place of work.</rdfs:comment>
+  </rdf:Property>
+  <rdfs:Class rdf:about="http://schema.org/UserBlocks">
+    <rdfs:label>UserBlocks</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/UserInteraction"/>
+    <rdfs:comment>User interaction: Block this content.</rdfs:comment>
+  </rdfs:Class>
+  <rdf:Property rdf:about="http://schema.org/availabilityDeprecated">
+    <schema:range rdf:resource="http://schema.org/Thing"/>
+    <rdfs:label>availabilityDeprecated</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/Offer"/>
+    <rdfs:comment>The availability of this item—for example In stock, Out of stock, Pre-order, etc.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://schema.org/recipeInstructions">
+    <schema:range rdf:resource="http://schema.org/Text"/>
+    <rdfs:label>recipeInstructions</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/Recipe"/>
+    <rdfs:comment>The steps to make the dish.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://schema.org/commentTime">
+    <schema:range rdf:resource="http://schema.org/Date"/>
+    <rdfs:label>commentTime</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/UserComments"/>
+    <rdfs:comment>The time at which the UserComment was made.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://schema.org/performers">
+    <schema:range rdf:resource="http://schema.org/Organization"/>
+    <schema:range rdf:resource="http://schema.org/Person"/>
+    <rdfs:label>performers</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/Event"/>
+    <rdfs:comment>The main performer or performers of the event—for example, a presenter, musician, or actor.</rdfs:comment>
+  </rdf:Property>
+  <rdfs:Class rdf:about="http://schema.org/TrainStation">
+    <rdfs:label>TrainStation</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/CivicStructure"/>
+    <rdfs:comment>A train station.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/Courthouse">
+    <rdfs:label>Courthouse</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/GovernmentBuilding"/>
+    <rdfs:comment>A courthouse.</rdfs:comment>
+  </rdfs:Class>
+  <rdf:Property rdf:about="http://schema.org/additionalName">
+    <schema:range rdf:resource="http://schema.org/Text"/>
+    <rdfs:label>additionalName</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/Person"/>
+    <rdfs:comment>An additional name for a Person, can be used for a middle name.</rdfs:comment>
+  </rdf:Property>
+  <rdfs:Class rdf:about="http://schema.org/HousePainter">
+    <rdfs:label>HousePainter</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/HomeAndConstructionBusiness"/>
+    <rdfs:subClassOf rdf:resource="http://schema.org/ProfessionalService"/>
+    <rdfs:comment>A house painting service.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/ShoppingCenter">
+    <rdfs:label>ShoppingCenter</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/LocalBusiness"/>
+    <rdfs:comment>A shopping center or mall.</rdfs:comment>
+  </rdfs:Class>
+  <rdf:Property rdf:about="http://schema.org/videoFrameSize">
+    <schema:range rdf:resource="http://schema.org/Text"/>
+    <rdfs:label>videoFrameSize</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/VideoObject"/>
+    <rdfs:comment>The frame size of the video.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://schema.org/representativeOfPage">
+    <schema:range rdf:resource="http://schema.org/Boolean"/>
+    <rdfs:label>representativeOfPage</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/ImageObject"/>
+    <rdfs:comment>Indicates whether this image is representative of the content of the page.</rdfs:comment>
+  </rdf:Property>
+  <rdfs:Class rdf:about="http://schema.org/VisualArtsEvent">
+    <rdfs:label>VisualArtsEvent</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/Event"/>
+    <rdfs:comment>Event type: Visual arts event.</rdfs:comment>
+  </rdfs:Class>
+  <rdf:Property rdf:about="http://schema.org/permissions">
+    <schema:range rdf:resource="http://schema.org/Text"/>
+    <rdfs:label>permissions</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/MobileSoftwareApplication"/>
+    <rdfs:comment>Permissions required on OS to run the application (e.g. app requires Internet access).</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://schema.org/affiliation">
+    <schema:range rdf:resource="http://schema.org/Organization"/>
+    <rdfs:label>affiliation</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/Person"/>
+    <rdfs:comment>An organization that this person is affiliated with. For example, a school/university, a club, or a team.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://schema.org/itemCondition">
+    <schema:range rdf:resource="http://schema.org/OfferItemCondition"/>
+    <rdfs:label>itemCondition</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/Offer"/>
+    <rdfs:comment>The condition of the item for sale—for example New, Refurbished, Used, etc.</rdfs:comment>
+  </rdf:Property>
+  <rdfs:Class rdf:about="http://schema.org/MovieRentalStore">
+    <rdfs:label>MovieRentalStore</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/Store"/>
+    <rdfs:comment>A movie rental store.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/GeneralContractor">
+    <rdfs:label>GeneralContractor</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/HomeAndConstructionBusiness"/>
+    <rdfs:subClassOf rdf:resource="http://schema.org/ProfessionalService"/>
+    <rdfs:comment>A general contractor.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/RVPark">
+    <rdfs:label>RVPark</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/CivicStructure"/>
+    <rdfs:comment>An RV park.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/GroceryStore">
+    <rdfs:label>GroceryStore</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/Store"/>
+    <rdfs:comment>A grocery store.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/Continent">
+    <rdfs:label>Continent</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/Landform"/>
+    <rdfs:comment>One of the continents (for example, Europe or Africa).</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/Library">
+    <rdfs:label>Library</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/LocalBusiness"/>
+    <rdfs:comment>A library.</rdfs:comment>
+  </rdfs:Class>
+  <rdf:Property rdf:about="http://schema.org/saturatedFatContent">
+    <schema:range rdf:resource="http://schema.org/Mass"/>
+    <rdfs:label>saturatedFatContent</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/NutritionInformation"/>
+    <rdfs:comment>The number of grams of saturated fat.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://schema.org/downloadURL">
+    <schema:range rdf:resource="http://schema.org/URL"/>
+    <rdfs:label>downloadURL</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/SoftwareApplication"/>
+    <rdfs:comment>If the file can be downloaded, URL to download the binary.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://schema.org/photos">
+    <schema:range rdf:resource="http://schema.org/Photograph"/>
+    <schema:range rdf:resource="http://schema.org/ImageObject"/>
+    <rdfs:label>photos</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/Place"/>
+    <rdfs:comment>Photographs of this place.</rdfs:comment>
+  </rdf:Property>
+  <rdfs:Class rdf:about="http://schema.org/Florist">
+    <rdfs:label>Florist</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/Store"/>
+    <rdfs:comment>A florist.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/BuddhistTemple">
+    <rdfs:label>BuddhistTemple</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/PlaceOfWorship"/>
+    <rdfs:comment>A Buddhist temple.</rdfs:comment>
+  </rdfs:Class>
+  <rdf:Property rdf:about="http://schema.org/nationality">
+    <schema:range rdf:resource="http://schema.org/Country"/>
+    <rdfs:label>nationality</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/Person"/>
+    <rdfs:comment>Nationality of the person.</rdfs:comment>
+  </rdf:Property>
+  <rdfs:Class rdf:about="http://schema.org/BeautySalon">
+    <rdfs:label>BeautySalon</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/HealthAndBeautyBusiness"/>
+    <rdfs:comment>Beauty salon.</rdfs:comment>
+  </rdfs:Class>
+  <rdf:Property rdf:about="http://schema.org/fatContent">
+    <schema:range rdf:resource="http://schema.org/Mass"/>
+    <rdfs:label>fatContent</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/NutritionInformation"/>
+    <rdfs:comment>The number of grams of fat.</rdfs:comment>
+  </rdf:Property>
+  <rdfs:Class rdf:about="http://schema.org/HairSalon">
+    <rdfs:label>HairSalon</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/HealthAndBeautyBusiness"/>
+    <rdfs:comment>A hair salon.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/AutoRental">
+    <rdfs:label>AutoRental</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/AutomotiveBusiness"/>
+    <rdfs:comment>A car rental business.</rdfs:comment>
+  </rdfs:Class>
+  <rdf:Property rdf:about="http://schema.org/keywords">
+    <schema:range rdf:resource="http://schema.org/Text"/>
+    <rdfs:label>keywords</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/CreativeWork"/>
+    <rdfs:comment>The keywords/tags used to describe this content.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://schema.org/sodiumContent">
+    <schema:range rdf:resource="http://schema.org/Mass"/>
+    <rdfs:label>sodiumContent</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/NutritionInformation"/>
+    <rdfs:comment>The number of milligrams of sodium.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://schema.org/isbn">
+    <schema:range rdf:resource="http://schema.org/Text"/>
+    <rdfs:label>isbn</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/Book"/>
+    <rdfs:comment>The ISBN of the book.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://schema.org/videoQuality">
+    <schema:range rdf:resource="http://schema.org/Text"/>
+    <rdfs:label>videoQuality</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/VideoObject"/>
+    <rdfs:comment>The quality of the video.</rdfs:comment>
+  </rdf:Property>
+  <rdfs:Class rdf:about="http://schema.org/TravelAgency">
+    <rdfs:label>TravelAgency</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/LocalBusiness"/>
+    <rdfs:comment>A travel agency.</rdfs:comment>
+  </rdfs:Class>
+  <rdf:Property rdf:about="http://schema.org/skills">
+    <schema:range rdf:resource="http://schema.org/Text"/>
+    <rdfs:label>skills</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/JobPosting"/>
+    <rdfs:comment>Skills required to fulfill this role.</rdfs:comment>
+  </rdf:Property>
+  <rdfs:Class rdf:about="http://schema.org/Electrician">
+    <rdfs:label>Electrician</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/HomeAndConstructionBusiness"/>
+    <rdfs:subClassOf rdf:resource="http://schema.org/ProfessionalService"/>
+    <rdfs:comment>An electrician.</rdfs:comment>
+  </rdfs:Class>
+  <rdf:Property rdf:about="http://schema.org/seasonNumber">
+    <schema:range rdf:resource="http://schema.org/Integer"/>
+    <rdfs:label>seasonNumber</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/TVSeason"/>
+    <rdfs:comment>The season number.</rdfs:comment>
+  </rdf:Property>
+  <rdfs:Class rdf:about="http://schema.org/VideoGallery">
+    <rdfs:label>VideoGallery</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/CollectionPage"/>
+    <rdfs:comment>Web page type: Video gallery page.</rdfs:comment>
+  </rdfs:Class>
+  <rdf:Property rdf:about="http://schema.org/email">
+    <schema:range rdf:resource="http://schema.org/Text"/>
+    <rdfs:label>email</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/Organization"/>
+    <schema:domain rdf:resource="http://schema.org/ContactPoint"/>
+    <schema:domain rdf:resource="http://schema.org/Person"/>
+    <rdfs:comment>Email address.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://schema.org/colleagues">
+    <schema:range rdf:resource="http://schema.org/Person"/>
+    <rdfs:label>colleagues</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/Person"/>
+    <rdfs:comment>A colleague of the person.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://schema.org/unsaturatedFatContent">
+    <schema:range rdf:resource="http://schema.org/Mass"/>
+    <rdfs:label>unsaturatedFatContent</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/NutritionInformation"/>
+    <rdfs:comment>The number of grams of unsaturated fat.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://schema.org/description">
+    <schema:range rdf:resource="http://schema.org/Text"/>
+    <rdfs:label>description</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/Thing"/>
+    <rdfs:comment>A short description of the item.</rdfs:comment>
+  </rdf:Property>
+  <rdfs:Class rdf:about="http://schema.org/LandmarksOrHistoricalBuildings">
+    <rdfs:label>LandmarksOrHistoricalBuildings</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/Place"/>
+    <rdfs:comment>An historical landmark or building.</rdfs:comment>
+  </rdfs:Class>
+  <rdf:Property rdf:about="http://schema.org/expires">
+    <schema:range rdf:resource="http://schema.org/Date"/>
+    <rdfs:label>expires</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/MediaObject"/>
+    <rdfs:comment>Date the content expires and is no longer useful or available. Useful for videos.</rdfs:comment>
+  </rdf:Property>
+  <rdfs:Class rdf:about="http://schema.org/TennisComplex">
+    <rdfs:label>TennisComplex</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/SportsActivityLocation"/>
+    <rdfs:comment>A tennis complex.</rdfs:comment>
+  </rdfs:Class>
+  <rdf:Property rdf:about="http://schema.org/isPartOf">
+    <schema:range rdf:resource="http://schema.org/CollectionPage"/>
+    <rdfs:label>isPartOf</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/WebPage"/>
+    <rdfs:comment>Indicates the collection or gallery to which the item belongs.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://schema.org/workHours">
+    <schema:range rdf:resource="http://schema.org/Text"/>
+    <rdfs:label>workHours</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/JobPosting"/>
+    <rdfs:comment>The typical working hours for this job (e.g. 1st shift, night shift, 8am-5pm).</rdfs:comment>
+  </rdf:Property>
+  <rdfs:Class rdf:about="http://schema.org/Dentist">
+    <rdfs:label>Dentist</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/MedicalOrganization"/>
+    <rdfs:subClassOf rdf:resource="http://schema.org/ProfessionalService"/>
+    <rdfs:comment>A dentist.</rdfs:comment>
+  </rdfs:Class>
+  <rdf:Property rdf:about="http://schema.org/follows">
+    <schema:range rdf:resource="http://schema.org/Person"/>
+    <rdfs:label>follows</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/Person"/>
+    <rdfs:comment>The most generic uni-directional social relation.</rdfs:comment>
+  </rdf:Property>
+  <rdfs:Class rdf:about="http://schema.org/SearchResultsPage">
+    <rdfs:label>SearchResultsPage</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/WebPage"/>
+    <rdfs:comment>Web page type: Search results page.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/UserCheckins">
+    <rdfs:label>UserCheckins</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/UserInteraction"/>
+    <rdfs:comment>User interaction: Check-in at a place.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/WPAdBlock">
+    <rdfs:label>WPAdBlock</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/WebPageElement"/>
+    <rdfs:comment>An advertising section of the page.</rdfs:comment>
+  </rdfs:Class>
+  <rdf:Property rdf:about="http://schema.org/contentSize">
+    <schema:range rdf:resource="http://schema.org/Text"/>
+    <rdfs:label>contentSize</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/MediaObject"/>
+    <rdfs:comment>File size in (mega/kilo) bytes.</rdfs:comment>
+  </rdf:Property>
+  <rdfs:Class rdf:about="http://schema.org/BankOrCreditUnion">
+    <rdfs:label>BankOrCreditUnion</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/FinancialService"/>
+    <rdfs:comment>Bank or credit union.</rdfs:comment>
+  </rdfs:Class>
+  <rdf:Property rdf:about="http://schema.org/reviews">
+    <schema:range rdf:resource="http://schema.org/Review"/>
+    <rdfs:label>reviews</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/Product"/>
+    <schema:domain rdf:resource="http://schema.org/Organization"/>
+    <schema:domain rdf:resource="http://schema.org/CreativeWork"/>
+    <schema:domain rdf:resource="http://schema.org/Place"/>
+    <schema:domain rdf:resource="http://schema.org/Offer"/>
+    <rdfs:comment>Review of the item.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://schema.org/numTracks">
+    <schema:range rdf:resource="http://schema.org/Integer"/>
+    <rdfs:label>numTracks</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/MusicPlaylist"/>
+    <rdfs:comment>The number of tracks in this album or playlist.</rdfs:comment>
+  </rdf:Property>
+  <rdfs:Class rdf:about="http://schema.org/State">
+    <rdfs:label>State</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/AdministrativeArea"/>
+    <rdfs:comment>A state or province.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/CheckoutPage">
+    <rdfs:label>CheckoutPage</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/WebPage"/>
+    <rdfs:comment>Web page type: Checkout page.</rdfs:comment>
+  </rdfs:Class>
+  <rdf:Property rdf:about="http://schema.org/caption">
+    <schema:range rdf:resource="http://schema.org/Text"/>
+    <rdfs:label>caption</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/VideoObject"/>
+    <schema:domain rdf:resource="http://schema.org/ImageObject"/>
+    <rdfs:comment>The caption for this object.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://schema.org/cholesterolContent">
+    <schema:range rdf:resource="http://schema.org/Mass"/>
+    <rdfs:label>cholesterolContent</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/NutritionInformation"/>
+    <rdfs:comment>The number of milligrams of cholesterol.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://schema.org/honorificSuffix">
+    <schema:range rdf:resource="http://schema.org/Text"/>
+    <rdfs:label>honorificSuffix</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/Person"/>
+    <rdfs:comment>An honorific suffix preceding a Person's name such as M.D. /PhD/MSCSW.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://schema.org/streetAddress">
+    <schema:range rdf:resource="http://schema.org/Text"/>
+    <rdfs:label>streetAddress</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/PostalAddress"/>
+    <rdfs:comment>The street address. For example, 1600 Amphitheatre Pkwy.</rdfs:comment>
+  </rdf:Property>
+  <rdfs:Class rdf:about="http://schema.org/TheaterGroup">
+    <rdfs:label>TheaterGroup</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/PerformingGroup"/>
+    <rdfs:comment>A theater group or company—for example, the Royal Shakespeare Company or Druid Theatre.</rdfs:comment>
+  </rdfs:Class>
+  <rdf:Property rdf:about="http://schema.org/seasons">
+    <schema:range rdf:resource="http://schema.org/TVSeason"/>
+    <rdfs:label>seasons</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/TVSeries"/>
+    <rdfs:comment>The seasons of the TV series.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://schema.org/inPlaylist">
+    <schema:range rdf:resource="http://schema.org/MusicPlaylist"/>
+    <rdfs:label>inPlaylist</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/MusicRecording"/>
+    <rdfs:comment>The playlist to which this recording belongs.</rdfs:comment>
+  </rdf:Property>
+  <rdfs:Class rdf:about="http://schema.org/ContactPage">
+    <rdfs:label>ContactPage</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/WebPage"/>
+    <rdfs:comment>Web page type: Contact page.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/UserDownloads">
+    <rdfs:label>UserDownloads</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/UserInteraction"/>
+    <rdfs:comment>User interaction: Download of an item.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/Hospital">
+    <rdfs:label>Hospital</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/EmergencyService"/>
+    <rdfs:subClassOf rdf:resource="http://schema.org/MedicalOrganization"/>
+    <rdfs:subClassOf rdf:resource="http://schema.org/CivicStructure"/>
+    <rdfs:comment>A hospital.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/Physician">
+    <rdfs:label>Physician</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/MedicalOrganization"/>
+    <rdfs:comment>A doctor's office.</rdfs:comment>
+  </rdfs:Class>
+  <rdf:Property rdf:about="http://schema.org/exifData">
+    <schema:range rdf:resource="http://schema.org/Text"/>
+    <rdfs:label>exifData</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/ImageObject"/>
+    <rdfs:comment>exif data for this object.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://schema.org/qualifications">
+    <schema:range rdf:resource="http://schema.org/Text"/>
+    <rdfs:label>qualifications</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/JobPosting"/>
+    <rdfs:comment>Specific qualifications required for this role.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://schema.org/priceValidUntil">
+    <schema:range rdf:resource="http://schema.org/Date"/>
+    <rdfs:label>priceValidUntil</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/Offer"/>
+    <rdfs:comment>The date after which the price is no longer available.</rdfs:comment>
+  </rdf:Property>
+  <rdfs:Class rdf:about="http://schema.org/InsuranceAgency">
+    <rdfs:label>InsuranceAgency</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/FinancialService"/>
+    <rdfs:comment>Insurance agency.</rdfs:comment>
+  </rdfs:Class>
+  <rdf:Property rdf:about="http://schema.org/itemListElement">
+    <schema:range rdf:resource="http://schema.org/Text"/>
+    <rdfs:label>itemListElement</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/ItemList"/>
+    <rdfs:comment>A single list item.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://schema.org/screenshots">
+    <schema:range rdf:resource="http://schema.org/URL"/>
+    <rdfs:label>screenshots</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/MobileSoftwareApplication"/>
+    <rdfs:comment>Link(s) to app screenshots.</rdfs:comment>
+  </rdf:Property>
+  <rdfs:Class rdf:about="http://schema.org/Table">
+    <rdfs:label>Table</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/WebPageElement"/>
+    <rdfs:comment>A table on the page.</rdfs:comment>
+  </rdfs:Class>
+  <rdf:Property rdf:about="http://schema.org/musicBy">
+    <schema:range rdf:resource="http://schema.org/MusicGroup"/>
+    <schema:range rdf:resource="http://schema.org/Person"/>
+    <rdfs:label>musicBy</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/TVEpisode"/>
+    <schema:domain rdf:resource="http://schema.org/Movie"/>
+    <schema:domain rdf:resource="http://schema.org/TVSeries"/>
+    <rdfs:comment>The composer of the movie or TV soundtrack.</rdfs:comment>
+  </rdf:Property>
+  <rdfs:Class rdf:about="http://schema.org/ElectronicsStore">
+    <rdfs:label>ElectronicsStore</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/Store"/>
+    <rdfs:comment>An electronics store.</rdfs:comment>
+  </rdfs:Class>
+  <rdf:Property rdf:about="http://schema.org/knows">
+    <schema:range rdf:resource="http://schema.org/Person"/>
+    <rdfs:label>knows</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/Person"/>
+    <rdfs:comment>The most generic bi-directional social/work relation.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://schema.org/manufacturer">
+    <schema:range rdf:resource="http://schema.org/Organization"/>
+    <rdfs:label>manufacturer</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/Product"/>
+    <rdfs:comment>The manufacturer of the product.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://schema.org/headline">
+    <schema:range rdf:resource="http://schema.org/Text"/>
+    <rdfs:label>headline</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/CreativeWork"/>
+    <rdfs:comment>Headline of the article</rdfs:comment>
+  </rdf:Property>
+  <rdfs:Class rdf:about="http://schema.org/AboutPage">
+    <rdfs:label>AboutPage</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/WebPage"/>
+    <rdfs:comment>Web page type: About page.</rdfs:comment>
+  </rdfs:Class>
+  <rdf:Property rdf:about="http://schema.org/lowPrice">
+    <schema:range rdf:resource="http://schema.org/Number"/>
+    <schema:range rdf:resource="http://schema.org/Text"/>
+    <rdfs:label>lowPrice</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/AggregateOffer"/>
+    <rdfs:comment>The lowest price of all offers available.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://schema.org/thumbnail">
+    <schema:range rdf:resource="http://schema.org/ImageObject"/>
+    <rdfs:label>thumbnail</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/VideoObject"/>
+    <schema:domain rdf:resource="http://schema.org/ImageObject"/>
+    <rdfs:comment>Thumbnail image for an image or video.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://schema.org/branchOf">
+    <schema:range rdf:resource="http://schema.org/Organization"/>
+    <rdfs:label>branchOf</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/LocalBusiness"/>
+    <rdfs:comment>The larger organization that this local business is a branch of, if any.</rdfs:comment>
+  </rdf:Property>
+  <rdfs:Class rdf:about="http://schema.org/BikeStore">
+    <rdfs:label>BikeStore</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/Store"/>
+    <rdfs:comment>A bike store.</rdfs:comment>
+  </rdfs:Class>
+  <rdf:Property rdf:about="http://schema.org/bitrate">
+    <schema:range rdf:resource="http://schema.org/Text"/>
+    <rdfs:label>bitrate</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/MediaObject"/>
+    <rdfs:comment>The bitrate of the media object.</rdfs:comment>
+  </rdf:Property>
+  <rdfs:Class rdf:about="http://schema.org/BarOrPub">
+    <rdfs:label>BarOrPub</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/FoodEstablishment"/>
+    <rdfs:comment>A bar or pub.</rdfs:comment>
+  </rdfs:Class>
+  <rdf:Property rdf:about="http://schema.org/operatingSystems">
+    <schema:range rdf:resource="http://schema.org/Text"/>
+    <rdfs:label>operatingSystems</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/SoftwareApplication"/>
+    <rdfs:comment>Operating systems supported (Windows 7, OSX 10.6, Android 1.6).</rdfs:comment>
+  </rdf:Property>
+  <rdfs:Class rdf:about="http://schema.org/HomeGoodsStore">
+    <rdfs:label>HomeGoodsStore</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/Store"/>
+    <rdfs:comment>A home goods store.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/NightClub">
+    <rdfs:label>NightClub</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/EntertainmentBusiness"/>
+    <rdfs:comment>A nightclub or discotheque.</rdfs:comment>
+  </rdfs:Class>
+  <rdf:Property rdf:about="http://schema.org/sourceOrganization">
+    <schema:range rdf:resource="http://schema.org/Organization"/>
+    <rdfs:label>sourceOrganization</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/CreativeWork"/>
+    <rdfs:comment>The Organization on whose behalf the creator was working.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://schema.org/employmentType">
+    <schema:range rdf:resource="http://schema.org/Text"/>
+    <rdfs:label>employmentType</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/JobPosting"/>
+    <rdfs:comment>Type of employment (e.g. full-time, part-time, contract, temporary, seasonal, internship).</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://schema.org/attendees">
+    <schema:range rdf:resource="http://schema.org/Organization"/>
+    <schema:range rdf:resource="http://schema.org/Person"/>
+    <rdfs:label>attendees</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/Event"/>
+    <rdfs:comment>A person attending the event.</rdfs:comment>
+  </rdf:Property>
+  <rdfs:Class rdf:about="http://schema.org/Attorney">
+    <rdfs:label>Attorney</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/ProfessionalService"/>
+    <rdfs:comment>Professional service: Attorney.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/Winery">
+    <rdfs:label>Winery</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/FoodEstablishment"/>
+    <rdfs:comment>A winery.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/UserPageVisits">
+    <rdfs:label>UserPageVisits</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/UserInteraction"/>
+    <rdfs:comment>User interaction: Visit to a web page.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/BusStation">
+    <rdfs:label>BusStation</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/CivicStructure"/>
+    <rdfs:comment>A bus station.</rdfs:comment>
+  </rdfs:Class>
+  <rdf:Property rdf:about="http://schema.org/partOfTVSeries">
+    <schema:range rdf:resource="http://schema.org/TVSeries"/>
+    <rdfs:label>partOfTVSeries</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/TVEpisode"/>
+    <schema:domain rdf:resource="http://schema.org/TVSeason"/>
+    <rdfs:comment>The TV series to which this episode or season belongs.</rdfs:comment>
+  </rdf:Property>
+  <rdfs:Class rdf:about="http://schema.org/TattooParlor">
+    <rdfs:label>TattooParlor</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/HealthAndBeautyBusiness"/>
+    <rdfs:comment>A tattoo parlor.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/MusicVideoObject">
+    <rdfs:label>MusicVideoObject</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/MediaObject"/>
+    <rdfs:comment>A music video file.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/Restaurant">
+    <rdfs:label>Restaurant</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/FoodEstablishment"/>
+    <rdfs:comment>A restaurant.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/Map">
+    <rdfs:label>Map</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/CreativeWork"/>
+    <rdfs:comment>A map.</rdfs:comment>
+  </rdfs:Class>
+  <rdf:Property rdf:about="http://schema.org/about">
+    <schema:range rdf:resource="http://schema.org/Thing"/>
+    <rdfs:label>about</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/CreativeWork"/>
+    <rdfs:comment>The subject matter of the content.</rdfs:comment>
+  </rdf:Property>
+  <rdfs:Class rdf:about="http://schema.org/AutoDealer">
+    <rdfs:label>AutoDealer</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/AutomotiveBusiness"/>
+    <rdfs:comment>An car dealership.</rdfs:comment>
+  </rdfs:Class>
+  <rdf:Property rdf:about="http://schema.org/printSection">
+    <schema:range rdf:resource="http://schema.org/Text"/>
+    <rdfs:label>printSection</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/NewsArticle"/>
+    <rdfs:comment>If this NewsArticle appears in print, this field indicates the print section in which the article appeared.</rdfs:comment>
+  </rdf:Property>
+  <rdfs:Class rdf:about="http://schema.org/WPFooter">
+    <rdfs:label>WPFooter</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/WebPageElement"/>
+    <rdfs:comment>The footer section of the page.</rdfs:comment>
+  </rdfs:Class>
+  <rdf:Property rdf:about="http://schema.org/commentText">
+    <schema:range rdf:resource="http://schema.org/Text"/>
+    <rdfs:label>commentText</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/UserComments"/>
+    <rdfs:comment>The text of the UserComment.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://schema.org/publishingPrinciples">
+    <schema:range rdf:resource="http://schema.org/URL"/>
+    <rdfs:label>publishingPrinciples</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/CreativeWork"/>
+    <rdfs:comment>Link to page describing the editorial principles of the organization primarily responsible for the creation of the CreativeWork.</rdfs:comment>
+  </rdf:Property>
+  <rdfs:Class rdf:about="http://schema.org/Sculpture">
+    <rdfs:label>Sculpture</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/CreativeWork"/>
+    <rdfs:comment>A piece of sculpture.</rdfs:comment>
+  </rdfs:Class>
+  <rdf:Property rdf:about="http://schema.org/creator">
+    <schema:range rdf:resource="http://schema.org/Organization"/>
+    <schema:range rdf:resource="http://schema.org/Person"/>
+    <rdfs:label>creator</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/UserComments"/>
+    <schema:domain rdf:resource="http://schema.org/CreativeWork"/>
+    <rdfs:comment>The creator/author of this CreativeWork or UserComments. This is the same as the Author property for CreativeWork.</rdfs:comment>
+  </rdf:Property>
+  <rdfs:Class rdf:about="http://schema.org/HobbyShop">
+    <rdfs:label>HobbyShop</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/Store"/>
+    <rdfs:comment>A hobby store.</rdfs:comment>
+  </rdfs:Class>
+  <rdf:Property rdf:about="http://schema.org/nutrition">
+    <schema:range rdf:resource="http://schema.org/NutritionInformation"/>
+    <rdfs:label>nutrition</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/Recipe"/>
+    <rdfs:comment>Nutrition information about the recipe.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://schema.org/printPage">
+    <schema:range rdf:resource="http://schema.org/Text"/>
+    <rdfs:label>printPage</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/NewsArticle"/>
+    <rdfs:comment>If this NewsArticle appears in print, this field indicates the name of the page on which the article is found. Please note that this field is intended for the exact page name (e.g. A5, B18).</rdfs:comment>
+  </rdf:Property>
+  <rdfs:Class rdf:about="http://schema.org/Hostel">
+    <rdfs:label>Hostel</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/LodgingBusiness"/>
+    <rdfs:comment>A hostel.</rdfs:comment>
+  </rdfs:Class>
+  <rdf:Property rdf:about="http://schema.org/mainContentOfPage">
+    <schema:range rdf:resource="http://schema.org/WebPageElement"/>
+    <rdfs:label>mainContentOfPage</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/WebPage"/>
+    <rdfs:comment>Indicates if this web page element is the main subject of the page.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://schema.org/salaryCurrency">
+    <schema:range rdf:resource="http://schema.org/Text"/>
+    <rdfs:label>salaryCurrency</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/JobPosting"/>
+    <rdfs:comment>The currency (coded using ISO 4217, http://en.wikipedia.org/wiki/ISO_4217 used for the main salary information in this job posting.</rdfs:comment>
+  </rdf:Property>
+  <rdfs:Class rdf:about="http://schema.org/RoofingContractor">
+    <rdfs:label>RoofingContractor</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/HomeAndConstructionBusiness"/>
+    <rdfs:subClassOf rdf:resource="http://schema.org/ProfessionalService"/>
+    <rdfs:comment>A roofing contractor.</rdfs:comment>
+  </rdfs:Class>
+  <rdf:Property rdf:about="http://schema.org/acceptsReservations">
+    <schema:range rdf:resource="http://schema.org/URL"/>
+    <schema:range rdf:resource="http://schema.org/Text"/>
+    <rdfs:label>acceptsReservations</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/FoodEstablishment"/>
+    <rdfs:comment>Either Yes/No, or a URL at which reservations can be made.</rdfs:comment>
+  </rdf:Property>
+  <rdfs:Class rdf:about="http://schema.org/GolfCourse">
+    <rdfs:label>GolfCourse</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/SportsActivityLocation"/>
+    <rdfs:comment>A golf course.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/Plumber">
+    <rdfs:label>Plumber</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/HomeAndConstructionBusiness"/>
+    <rdfs:subClassOf rdf:resource="http://schema.org/ProfessionalService"/>
+    <rdfs:comment>A plumbing service.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/School">
+    <rdfs:label>School</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/EducationalOrganization"/>
+    <rdfs:comment>A school.</rdfs:comment>
+  </rdfs:Class>
+  <rdf:Property rdf:about="http://schema.org/duration">
+    <schema:range rdf:resource="http://schema.org/Duration"/>
+    <rdfs:label>duration</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/Event"/>
+    <schema:domain rdf:resource="http://schema.org/MusicRecording"/>
+    <schema:domain rdf:resource="http://schema.org/Movie"/>
+    <schema:domain rdf:resource="http://schema.org/MediaObject"/>
+    <rdfs:comment>The duration of the item (movie, audio recording, event, etc.) in ISO 8601 date format.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://schema.org/interactionCount">
+    <schema:range rdf:resource="http://schema.org/Text"/>
+    <rdfs:label>interactionCount</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/MediaObject"/>
+    <schema:domain rdf:resource="http://schema.org/Organization"/>
+    <schema:domain rdf:resource="http://schema.org/CreativeWork"/>
+    <schema:domain rdf:resource="http://schema.org/Place"/>
+    <schema:domain rdf:resource="http://schema.org/Person"/>
+    <rdfs:comment>A count of a specific user interactions with this item—for example, 20 UserLikes, 5 UserComments, or 300 UserDownloads. The user interaction type should be one of the sub types of UserInteraction.</rdfs:comment>
+  </rdf:Property>
+  <rdfs:Class rdf:about="http://schema.org/SelfStorage">
+    <rdfs:label>SelfStorage</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/LocalBusiness"/>
+    <rdfs:comment>Self-storage facility.</rdfs:comment>
+  </rdfs:Class>
+  <rdf:Property rdf:about="http://schema.org/regionsAllowed">
+    <schema:range rdf:resource="http://schema.org/Place"/>
+    <rdfs:label>regionsAllowed</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/MediaObject"/>
+    <rdfs:comment>The regions where the media is allowed. If not specified, then it's assumed to be allowed everywhere. Specify the countries in ISO 3166 format.</rdfs:comment>
+  </rdf:Property>
+  <rdfs:Class rdf:about="http://schema.org/AnimalShelter">
+    <rdfs:label>AnimalShelter</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/LocalBusiness"/>
+    <rdfs:comment>Animal shelter.</rdfs:comment>
+  </rdfs:Class>
+  <rdf:Property rdf:about="http://schema.org/experienceRequirements">
+    <schema:range rdf:resource="http://schema.org/Text"/>
+    <rdfs:label>experienceRequirements</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/JobPosting"/>
+    <rdfs:comment>Description of skills and experience needed for the position.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://schema.org/baseSalary">
+    <schema:range rdf:resource="http://schema.org/Number"/>
+    <rdfs:label>baseSalary</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/JobPosting"/>
+    <rdfs:comment>The base salary of the job.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://schema.org/children">
+    <schema:range rdf:resource="http://schema.org/Person"/>
+    <rdfs:label>children</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/Person"/>
+    <rdfs:comment>A child of the person.</rdfs:comment>
+  </rdf:Property>
+  <rdfs:Class rdf:about="http://schema.org/Float">
+    <rdfs:label>Float</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/Number"/>
+    <rdfs:comment>Data type: Floating number.</rdfs:comment>
+  </rdfs:Class>
+  <rdf:Property rdf:about="http://schema.org/dateModified">
+    <schema:range rdf:resource="http://schema.org/Date"/>
+    <rdfs:label>dateModified</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/CreativeWork"/>
+    <rdfs:comment>The date on which the CreativeWork was most recently modified.</rdfs:comment>
+  </rdf:Property>
+  <rdfs:Class rdf:about="http://schema.org/MobilePhoneStore">
+    <rdfs:label>MobilePhoneStore</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/Store"/>
+    <rdfs:comment>A mobile-phone store.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/NGO">
+    <rdfs:label>NGO</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/Organization"/>
+    <rdfs:comment>Organization: Non-governmental Organization.</rdfs:comment>
+  </rdfs:Class>
+  <rdf:Property rdf:about="http://schema.org/sugarContent">
+    <schema:range rdf:resource="http://schema.org/Mass"/>
+    <rdfs:label>sugarContent</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/NutritionInformation"/>
+    <rdfs:comment>The number of grams of sugar.</rdfs:comment>
+  </rdf:Property>
+  <rdfs:Class rdf:about="http://schema.org/GatedResidenceCommunity">
+    <rdfs:label>GatedResidenceCommunity</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/Residence"/>
+    <rdfs:comment>Residence type: Gated community.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/UserPlusOnes">
+    <rdfs:label>UserPlusOnes</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/UserInteraction"/>
+    <rdfs:comment>User interaction: +1.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/VeterinaryCare">
+    <rdfs:label>VeterinaryCare</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/MedicalOrganization"/>
+    <rdfs:comment>A vet's office.</rdfs:comment>
+  </rdfs:Class>
+  <rdf:Property rdf:about="http://schema.org/addressCountry">
+    <schema:range rdf:resource="http://schema.org/Country"/>
+    <rdfs:label>addressCountry</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/PostalAddress"/>
+    <rdfs:comment>The country. For example, USA. You can also provide the two-letter ISO 3166-1 alpha-2 country code.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://schema.org/offerCount">
+    <schema:range rdf:resource="http://schema.org/Integer"/>
+    <rdfs:label>offerCount</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/AggregateOffer"/>
+    <rdfs:comment>The number of offers for the product.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://schema.org/numDownloads">
+    <schema:range rdf:resource="http://schema.org/Integer"/>
+    <rdfs:label>numDownloads</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/SoftwareApplication"/>
+    <rdfs:comment>Number of Downloads.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://schema.org/polygon">
+    <schema:range rdf:resource="http://schema.org/Text"/>
+    <rdfs:label>polygon</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/GeoShape"/>
+    <rdfs:comment>A polygon is the area enclosed by a point-to-point path for which the starting and ending points are the same. A polygon is expressed as a series of four or more spacedelimited points where the first and final points are identical.</rdfs:comment>
+  </rdf:Property>
+  <rdfs:Class rdf:about="http://schema.org/Preschool">
+    <rdfs:label>Preschool</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/EducationalOrganization"/>
+    <rdfs:comment>A preschool.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/SingleFamilyResidence">
+    <rdfs:label>SingleFamilyResidence</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/Residence"/>
+    <rdfs:comment>Residence type: Single-family home.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/RecyclingCenter">
+    <rdfs:label>RecyclingCenter</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/LocalBusiness"/>
+    <rdfs:comment>A recycling center.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/SubwayStation">
+    <rdfs:label>SubwayStation</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/CivicStructure"/>
+    <rdfs:comment>A subway station.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/DefenceEstablishment">
+    <rdfs:label>DefenceEstablishment</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/GovernmentBuilding"/>
+    <rdfs:comment>A defence establishment, such as an army or navy base.</rdfs:comment>
+  </rdfs:Class>
+  <rdf:Property rdf:about="http://schema.org/author">
+    <schema:range rdf:resource="http://schema.org/Organization"/>
+    <schema:range rdf:resource="http://schema.org/Person"/>
+    <rdfs:label>author</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/CreativeWork"/>
+    <rdfs:comment>The author of this content. Please note that author is special in that HTML 5 provides a special mechanism for indicating authorship via the rel tag. That is equivalent to this and may be used interchangabely.</rdfs:comment>
+  </rdf:Property>
+  <rdfs:Class rdf:about="http://schema.org/SportsClub">
+    <rdfs:label>SportsClub</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/SportsActivityLocation"/>
+    <rdfs:comment>A sports club.</rdfs:comment>
+  </rdfs:Class>
+  <rdf:Property rdf:about="http://schema.org/numberOfEpisodes">
+    <schema:range rdf:resource="http://schema.org/Number"/>
+    <rdfs:label>numberOfEpisodes</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/TVSeries"/>
+    <schema:domain rdf:resource="http://schema.org/TVSeason"/>
+    <rdfs:comment>The number of episodes in this season or series.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://schema.org/printColumn">
+    <schema:range rdf:resource="http://schema.org/Text"/>
+    <rdfs:label>printColumn</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/NewsArticle"/>
+    <rdfs:comment>The number of the column in which the NewsArticle appears in the print edition.</rdfs:comment>
+  </rdf:Property>
+  <rdfs:Class rdf:about="http://schema.org/Painting">
+    <rdfs:label>Painting</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/CreativeWork"/>
+    <rdfs:comment>A painting.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/Playground">
+    <rdfs:label>Playground</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/CivicStructure"/>
+    <rdfs:comment>A playground.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/GardenStore">
+    <rdfs:label>GardenStore</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/Store"/>
+    <rdfs:comment>A garden store.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/Festival">
+    <rdfs:label>Festival</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/Event"/>
+    <rdfs:comment>Event type: Festival.</rdfs:comment>
+  </rdfs:Class>
+  <rdf:Property rdf:about="http://schema.org/subEvents">
+    <schema:range rdf:resource="http://schema.org/Event"/>
+    <rdfs:label>subEvents</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/Event"/>
+    <rdfs:comment>Events that are a part of this event. For example, a conference event includes many presentations, each are subEvents of the conference.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://schema.org/itemConditionDeprecated">
+    <schema:range rdf:resource="http://schema.org/Thing"/>
+    <rdfs:label>itemConditionDeprecated</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/Offer"/>
+    <rdfs:comment>The condition of the item for sale—for example New, Refurbished, Used, etc.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://schema.org/occupationalCategory">
+    <schema:range rdf:resource="http://schema.org/Text"/>
+    <rdfs:label>occupationalCategory</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/JobPosting"/>
+    <rdfs:comment>Category or categories describing the job. Use BLS O*NET-SOC taxonomy: http://www.onetcenter.org/taxonomy.html. Ideally includes textual label and formal code, with the property repeated for each applicable value.</rdfs:comment>
+  </rdf:Property>
+  <rdfs:Class rdf:about="http://schema.org/AutoBodyShop">
+    <rdfs:label>AutoBodyShop</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/AutomotiveBusiness"/>
+    <rdfs:comment>Auto body shop.</rdfs:comment>
+  </rdfs:Class>
+  <rdf:Property rdf:about="http://schema.org/menu">
+    <schema:range rdf:resource="http://schema.org/URL"/>
+    <schema:range rdf:resource="http://schema.org/Text"/>
+    <rdfs:label>menu</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/FoodEstablishment"/>
+    <rdfs:comment>Either the actual menu or a URL of the menu.</rdfs:comment>
+  </rdf:Property>
+  <rdfs:Class rdf:about="http://schema.org/TaxiStand">
+    <rdfs:label>TaxiStand</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/CivicStructure"/>
+    <rdfs:comment>A taxi stand.</rdfs:comment>
+  </rdfs:Class>
+  <rdf:Property rdf:about="http://schema.org/elevation">
+    <schema:range rdf:resource="http://schema.org/Number"/>
+    <schema:range rdf:resource="http://schema.org/Text"/>
+    <rdfs:label>elevation</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/GeoCoordinates"/>
+    <schema:domain rdf:resource="http://schema.org/GeoShape"/>
+    <rdfs:comment>The elevation of a location.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://schema.org/countriesSupported">
+    <schema:range rdf:resource="http://schema.org/Text"/>
+    <rdfs:label>countriesSupported</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/MobileSoftwareApplication"/>
+    <rdfs:comment>Countries that allow the application.</rdfs:comment>
+  </rdf:Property>
+  <rdfs:Class rdf:about="http://schema.org/MusicVenue">
+    <rdfs:label>MusicVenue</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/CivicStructure"/>
+    <rdfs:comment>A music venue.</rdfs:comment>
+  </rdfs:Class>
+  <rdf:Property rdf:about="http://schema.org/fileSize">
+    <schema:range rdf:resource="http://schema.org/Integer"/>
+    <rdfs:label>fileSize</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/SoftwareApplication"/>
+    <rdfs:comment>Size of the application / package in bytes.</rdfs:comment>
+  </rdf:Property>
+  <rdfs:Class rdf:about="http://schema.org/UserPlays">
+    <rdfs:label>UserPlays</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/UserInteraction"/>
+    <rdfs:comment>User interaction: Play count of an item, for example a video or a song.</rdfs:comment>
+  </rdfs:Class>
+  <rdf:Property rdf:about="http://schema.org/worksFor">
+    <schema:range rdf:resource="http://schema.org/Organization"/>
+    <rdfs:label>worksFor</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/Person"/>
+    <rdfs:comment>Organizations that the person works for.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://schema.org/openingHours">
+    <schema:range rdf:resource="http://schema.org/Duration"/>
+    <rdfs:label>openingHours</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/LocalBusiness"/>
+    <schema:domain rdf:resource="http://schema.org/CivicStructure"/>
+    <rdfs:comment><![CDATA[The opening hours for a business. Opening hours can be specified as a weekly time range, starting with days, then times per day. Multiple days can be listed with commas ',' separating each day. Day or time ranges are specified using a hyphen '-'.- Days are specified using the following two-letter combinations: Mo, Tu, We, Th, Fr, Sa, Su.- Times are specified using 24:00 time. For example, 3pm is specified as 15:00. - Here is an example: <time itemprop="openingHours" datetime="Tu,Th 16:00-20:00">Tuesdays and Thursdays 4-8pm</time>. - If a business is open 7 days a week, then it can be specified as <time itemprop="openingHours" datetime="Mo-Su">Monday through Sunday, all day</time>.]]></rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://schema.org/video">
+    <schema:range rdf:resource="http://schema.org/VideoObject"/>
+    <rdfs:label>video</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/CreativeWork"/>
+    <rdfs:comment>An embedded video object.</rdfs:comment>
+  </rdf:Property>
+  <rdfs:Class rdf:about="http://schema.org/EmploymentAgency">
+    <rdfs:label>EmploymentAgency</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/LocalBusiness"/>
+    <rdfs:comment>An employment agency.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/Pharmacy">
+    <rdfs:label>Pharmacy</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/MedicalOrganization"/>
+    <rdfs:comment>A pharmacy or drugstore.</rdfs:comment>
+  </rdfs:Class>
+  <rdf:Property rdf:about="http://schema.org/startDate">
+    <schema:range rdf:resource="http://schema.org/Date"/>
+    <rdfs:label>startDate</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/Event"/>
+    <schema:domain rdf:resource="http://schema.org/TVSeries"/>
+    <schema:domain rdf:resource="http://schema.org/TVSeason"/>
+    <rdfs:comment>The start date and time of the event (in ISO 8601 date format).</rdfs:comment>
+  </rdf:Property>
+  <rdfs:Class rdf:about="http://schema.org/FoodEvent">
+    <rdfs:label>FoodEvent</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/Event"/>
+    <rdfs:comment>Event type: Food event.</rdfs:comment>
+  </rdfs:Class>
+  <rdf:Property rdf:about="http://schema.org/brand">
+    <schema:range rdf:resource="http://schema.org/Organization"/>
+    <rdfs:label>brand</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/Product"/>
+    <rdfs:comment>The brand of the product.</rdfs:comment>
+  </rdf:Property>
+  <rdfs:Class rdf:about="http://schema.org/NailSalon">
+    <rdfs:label>NailSalon</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/HealthAndBeautyBusiness"/>
+    <rdfs:comment>A nail salon.</rdfs:comment>
+  </rdfs:Class>
+  <rdf:Property rdf:about="http://schema.org/accountablePerson">
+    <schema:range rdf:resource="http://schema.org/Person"/>
+    <rdfs:label>accountablePerson</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/CreativeWork"/>
+    <rdfs:comment>Specifies the Person that is legally accountable for the CreativeWork.</rdfs:comment>
+  </rdf:Property>
+  <rdfs:Class rdf:about="http://schema.org/AutoPartsStore">
+    <rdfs:label>AutoPartsStore</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/Store"/>
+    <rdfs:subClassOf rdf:resource="http://schema.org/AutomotiveBusiness"/>
+    <rdfs:comment>An auto parts store.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/Casino">
+    <rdfs:label>Casino</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/EntertainmentBusiness"/>
+    <rdfs:comment>A casino.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/IceCreamShop">
+    <rdfs:label>IceCreamShop</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/FoodEstablishment"/>
+    <rdfs:comment>An ice cream shop</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/DryCleaningOrLaundry">
+    <rdfs:label>DryCleaningOrLaundry</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/LocalBusiness"/>
+    <rdfs:comment>A dry-cleaning business.</rdfs:comment>
+  </rdfs:Class>
+  <rdf:Property rdf:about="http://schema.org/transFatContent">
+    <schema:range rdf:resource="http://schema.org/Mass"/>
+    <rdfs:label>transFatContent</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/NutritionInformation"/>
+    <rdfs:comment>The number of grams of trans fat.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://schema.org/blogPosts">
+    <schema:range rdf:resource="http://schema.org/BlogPosting"/>
+    <rdfs:label>blogPosts</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/Blog"/>
+    <rdfs:comment>The postings that are part of this blog</rdfs:comment>
+  </rdf:Property>
+  <rdfs:Class rdf:about="http://schema.org/ChildrensEvent">
+    <rdfs:label>ChildrensEvent</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/Event"/>
+    <rdfs:comment>Event type: Children's event.</rdfs:comment>
+  </rdfs:Class>
+  <rdf:Property rdf:about="http://schema.org/itemListOrder">
+    <schema:range rdf:resource="http://schema.org/Text"/>
+    <rdfs:label>itemListOrder</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/ItemList"/>
+    <rdfs:comment>Type of ordering (e.g. Ascending, Descending, Unordered).</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://schema.org/episodeNumber">
+    <schema:range rdf:resource="http://schema.org/Number"/>
+    <rdfs:label>episodeNumber</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/TVEpisode"/>
+    <rdfs:comment>The episode number.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://schema.org/requiresSubscription">
+    <schema:range rdf:resource="http://schema.org/Boolean"/>
+    <rdfs:label>requiresSubscription</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/MediaObject"/>
+    <rdfs:comment>Indicates if use of the media require a subscription  (either paid or free). Allowed values are yes or no.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://schema.org/usageTermsDeprecated">
+    <schema:range rdf:resource="http://schema.org/URL"/>
+    <schema:range rdf:resource="http://schema.org/Text"/>
+    <rdfs:label>usageTermsDeprecated</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/CreativeWork"/>
+    <rdfs:comment>A statement about the usage terms pertaining to the CreativeWork.</rdfs:comment>
+  </rdf:Property>
+  <rdfs:Class rdf:about="http://schema.org/BookStore">
+    <rdfs:label>BookStore</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/Store"/>
+    <rdfs:comment>A bookstore.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/EducationEvent">
+    <rdfs:label>EducationEvent</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/Event"/>
+    <rdfs:comment>Event type: Education event.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/InternetCafe">
+    <rdfs:label>InternetCafe</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/LocalBusiness"/>
+    <rdfs:comment>An internet cafe.</rdfs:comment>
+  </rdfs:Class>
+  <rdf:Property rdf:about="http://schema.org/highPrice">
+    <schema:range rdf:resource="http://schema.org/Number"/>
+    <schema:range rdf:resource="http://schema.org/Text"/>
+    <rdfs:label>highPrice</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/AggregateOffer"/>
+    <rdfs:comment>The highest price of all offers available.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://schema.org/founders">
+    <schema:range rdf:resource="http://schema.org/Person"/>
+    <rdfs:label>founders</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/Organization"/>
+    <rdfs:comment>A person who founded this organization.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://schema.org/playerType">
+    <schema:range rdf:resource="http://schema.org/Text"/>
+    <rdfs:label>playerType</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/MediaObject"/>
+    <rdfs:comment>Player type required—for example, Flash or Silverlight.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://schema.org/uploadDate">
+    <schema:range rdf:resource="http://schema.org/Date"/>
+    <rdfs:label>uploadDate</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/MediaObject"/>
+    <rdfs:comment>Date when this media object was uploaded to this site.</rdfs:comment>
+  </rdf:Property>
+  <rdfs:Class rdf:about="http://schema.org/ClothingStore">
+    <rdfs:label>ClothingStore</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/Store"/>
+    <rdfs:comment>A clothing store.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/SeaBodyOfWater">
+    <rdfs:label>SeaBodyOfWater</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/BodyOfWater"/>
+    <rdfs:comment>A sea (for example, the Caspian sea).</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/Aquarium">
+    <rdfs:label>Aquarium</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/CivicStructure"/>
+    <rdfs:comment>Aquarium.</rdfs:comment>
+  </rdfs:Class>
+  <rdf:Property rdf:about="http://schema.org/carbohydrateContent">
+    <schema:range rdf:resource="http://schema.org/Mass"/>
+    <rdfs:label>carbohydrateContent</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/NutritionInformation"/>
+    <rdfs:comment>The number of grams of carbohydrates.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://schema.org/episodes">
+    <schema:range rdf:resource="http://schema.org/TVEpisode"/>
+    <rdfs:label>episodes</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/TVSeries"/>
+    <schema:domain rdf:resource="http://schema.org/TVSeason"/>
+    <rdfs:comment>The episode of a TV series or season.</rdfs:comment>
+  </rdf:Property>
+  <rdfs:Class rdf:about="http://schema.org/WholesaleStore">
+    <rdfs:label>WholesaleStore</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/Store"/>
+    <rdfs:comment>A wholesale store.</rdfs:comment>
+  </rdfs:Class>
+  <rdf:Property rdf:about="http://schema.org/musicGroupMember">
+    <schema:range rdf:resource="http://schema.org/Person"/>
+    <rdfs:label>musicGroupMember</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/MusicGroup"/>
+    <rdfs:comment>A member of the music group—for example, John, Paul, George, or Ringo.</rdfs:comment>
+  </rdf:Property>
+  <rdfs:Class rdf:about="http://schema.org/FastFoodRestaurant">
+    <rdfs:label>FastFoodRestaurant</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/FoodEstablishment"/>
+    <rdfs:comment>A fast-food restaurant.</rdfs:comment>
+  </rdfs:Class>
+  <rdf:Property rdf:about="http://schema.org/specialCommitments">
+    <schema:range rdf:resource="http://schema.org/Text"/>
+    <rdfs:label>specialCommitments</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/JobPosting"/>
+    <rdfs:comment>Any special commitments associated with this job posting. Valid entries include VeteranCommit, MilitarySpouseCommit, etc.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://schema.org/illustrator">
+    <schema:range rdf:resource="http://schema.org/Person"/>
+    <rdfs:label>illustrator</rdfs:label>
+    <schema:domain rdf:resource="http://schema.org/Book"/>
+    <rdfs:comment>The illustrator of the book.</rdfs:comment>
+  </rdf:Property>
+  <rdfs:Class rdf:about="http://schema.org/EntertainmentBusiness">
+    <rdfs:label>EntertainmentBusiness</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/LocalBusiness"/>
+    <rdfs:comment>A business providing entertainment.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/ImageObject">
+    <rdfs:label>ImageObject</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/MediaObject"/>
+    <rdfs:comment>An image file.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/Thing">
+    <rdfs:label>Thing</rdfs:label>
+    <rdfs:comment>The most generic type of item.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/EducationalOrganization">
+    <rdfs:label>EducationalOrganization</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/Organization"/>
+    <rdfs:comment>An educational organization.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/FoodEstablishment">
+    <rdfs:label>FoodEstablishment</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/LocalBusiness"/>
+    <rdfs:comment>A food-related business.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/Event">
+    <rdfs:label>Event</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/Thing"/>
+    <rdfs:comment>An event happening at a certain time at a certain location.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/UserInteraction">
+    <rdfs:label>UserInteraction</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/Event"/>
+    <rdfs:comment>A user interacting with a page</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/Review">
+    <rdfs:label>Review</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/CreativeWork"/>
+    <rdfs:comment>A review of an item - for example, a restaurant, movie, or store.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/WebPageElement">
+    <rdfs:label>WebPageElement</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/CreativeWork"/>
+    <rdfs:comment>A web page element, like a table or an image</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/Quantity">
+    <rdfs:label>Quantity</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/Intangible"/>
+    <rdfs:comment>Quantities such as distance, time, mass, weight, etc. Particular instances of say Mass are entities like '3 Kg' or '4 milligrams'.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/Mass">
+    <rdfs:label>Mass</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/Quantity"/>
+    <rdfs:comment><![CDATA[Properties that take Mass as values are of the form '<Number> <Mass unit of measure>'. E.g., '7 kg']]></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/Intangible">
+    <rdfs:label>Intangible</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/Thing"/>
+    <rdfs:comment>A utility class that serves as the umbrella for a number of 'intangible' things such as quantities, structured values, etc.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/SportsActivityLocation">
+    <rdfs:label>SportsActivityLocation</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/LocalBusiness"/>
+    <rdfs:comment>A sports location, such as a playing field.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/Place">
+    <rdfs:label>Place</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/Thing"/>
+    <rdfs:comment>Entities that have a somewhat fixed, physical extension.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/Number">
+    <rdfs:label>Number</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/DataType"/>
+    <rdfs:comment>Data type: Number.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/Recipe">
+    <rdfs:label>Recipe</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/CreativeWork"/>
+    <rdfs:comment>A recipe.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/ProfessionalService">
+    <rdfs:label>ProfessionalService</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/LocalBusiness"/>
+    <rdfs:comment>Provider of professional services.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/EmergencyService">
+    <rdfs:label>EmergencyService</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/LocalBusiness"/>
+    <rdfs:comment>An emergency service, such as a fire station or ER.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/AdministrativeArea">
+    <rdfs:label>AdministrativeArea</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/Place"/>
+    <rdfs:comment>A geographical region under the jurisdiction of a particular government.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/GeoShape">
+    <rdfs:label>GeoShape</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/StructuredValue"/>
+    <rdfs:comment>The geographic shape of a place.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/BodyOfWater">
+    <rdfs:label>BodyOfWater</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/Landform"/>
+    <rdfs:comment>A body of water, such as a sea, ocean, or lake.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/PerformingGroup">
+    <rdfs:label>PerformingGroup</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/Organization"/>
+    <rdfs:comment>A performance group, such as a band, an orchestra, or a circus.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/SoftwareApplication">
+    <rdfs:label>SoftwareApplication</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/CreativeWork"/>
+    <rdfs:comment>A software application.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/CivicStructure">
+    <rdfs:label>CivicStructure</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/Place"/>
+    <rdfs:comment>A public structure, such as a town hall or concert hall.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/NutritionInformation">
+    <rdfs:label>NutritionInformation</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/StructuredValue"/>
+    <rdfs:comment>Nutritional information about the recipe.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/Photograph">
+    <rdfs:label>Photograph</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/CreativeWork"/>
+    <rdfs:comment>A photograph.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/ContactPoint">
+    <rdfs:label>ContactPoint</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/StructuredValue"/>
+    <rdfs:comment>A contact point—for example, a Customer Complaints department.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/URL">
+    <rdfs:label>URL</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/Text"/>
+    <rdfs:comment>Data type: URL.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/Book">
+    <rdfs:label>Book</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/CreativeWork"/>
+    <rdfs:comment>A book.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/Enumeration">
+    <rdfs:label>Enumeration</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/Intangible"/>
+    <rdfs:comment>Lists or enumerations—for example, a list of cuisines or music genres, etc.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/GovernmentBuilding">
+    <rdfs:label>GovernmentBuilding</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/CivicStructure"/>
+    <rdfs:comment>A government building.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/MusicRecording">
+    <rdfs:label>MusicRecording</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/CreativeWork"/>
+    <rdfs:comment>A music recording (track), usually a single song.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/LocalBusiness">
+    <rdfs:label>LocalBusiness</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/Organization"/>
+    <rdfs:subClassOf rdf:resource="http://schema.org/Place"/>
+    <rdfs:comment>A particular physical business or branch of an organization. Examples of LocalBusiness include a restaurant, a particular branch of a restaurant chain, a branch of a bank, a medical practice, a club, a bowling alley, etc.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/Text">
+    <rdfs:label>Text</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/DataType"/>
+    <rdfs:comment>Data type: Text.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/HomeAndConstructionBusiness">
+    <rdfs:label>HomeAndConstructionBusiness</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/LocalBusiness"/>
+    <rdfs:comment>A construction business.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/Rating">
+    <rdfs:label>Rating</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/Intangible"/>
+    <rdfs:comment>The rating of the video.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/ItemAvailability">
+    <rdfs:label>ItemAvailability</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/Enumeration"/>
+    <rdfs:comment>A list of possible product availablity options.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/MusicPlaylist">
+    <rdfs:label>MusicPlaylist</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/CreativeWork"/>
+    <rdfs:comment>A collection of music tracks in playlist form.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/Person">
+    <rdfs:label>Person</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/Thing"/>
+    <rdfs:comment>A person (alive, dead, undead, or fictional).</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/UserComments">
+    <rdfs:label>UserComments</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/UserInteraction"/>
+    <rdfs:comment>User interaction: A comment about an item.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/MedicalOrganization">
+    <rdfs:label>MedicalOrganization</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/LocalBusiness"/>
+    <rdfs:comment>A medical organization, such as a doctor's office or clinic.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/TVEpisode">
+    <rdfs:label>TVEpisode</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/CreativeWork"/>
+    <rdfs:comment>An episode of a TV series or season.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/FinancialService">
+    <rdfs:label>FinancialService</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/LocalBusiness"/>
+    <rdfs:comment>Financial services business.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/MusicAlbum">
+    <rdfs:label>MusicAlbum</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/MusicPlaylist"/>
+    <rdfs:comment>A collection of music tracks.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/NewsArticle">
+    <rdfs:label>NewsArticle</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/Article"/>
+    <rdfs:comment>A news article</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/WebPage">
+    <rdfs:label>WebPage</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/CreativeWork"/>
+    <rdfs:comment>A web page. Every web page is implicitly assumed to be declared to be of type WebPage, so the various properties about that webpage, such as breadcrumb may be used. We recommend explicit declaration if these properties are specified, but if they are found outside of an itemscope, they will be assumed to be about the page</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/Landform">
+    <rdfs:label>Landform</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/Place"/>
+    <rdfs:comment>A landform or physical feature.  Landform elements include mountains, plains, lakes, rivers, seascape and oceanic waterbody interface features such as bays, peninsulas, seas and so forth, including sub-aqueous terrain features such as submersed mountain ranges, volcanoes, and the great ocean basins.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/AggregateRating">
+    <rdfs:label>AggregateRating</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/Rating"/>
+    <rdfs:comment>The average rating based on multiple ratings or reviews.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/CollectionPage">
+    <rdfs:label>CollectionPage</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/WebPage"/>
+    <rdfs:comment>Web page type: Collection page.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/TVSeason">
+    <rdfs:label>TVSeason</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/CreativeWork"/>
+    <rdfs:comment>A TV season.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/ItemList">
+    <rdfs:label>ItemList</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/CreativeWork"/>
+    <rdfs:comment>A list of items of any sort—for example, Top 10 Movies About Weathermen, or Top 100 Party Songs. Not to be confused with HTML lists, which are often used only for formatting.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/Movie">
+    <rdfs:label>Movie</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/CreativeWork"/>
+    <rdfs:comment>A movie.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/Article">
+    <rdfs:label>Article</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/CreativeWork"/>
+    <rdfs:comment>An article, such as a news article or piece of investigative report. Newspapers and magazines have articles of many different types and this is intended to cover them all.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/PlaceOfWorship">
+    <rdfs:label>PlaceOfWorship</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/CivicStructure"/>
+    <rdfs:comment>Place of worship, such as a church, synagogue, or mosque.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/AggregateOffer">
+    <rdfs:label>AggregateOffer</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/Offer"/>
+    <rdfs:comment>When a single product that has different offers (for example, the same pair of shoes is offered by different merchants), then AggregateOffer can be used.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/OfferItemCondition">
+    <rdfs:label>OfferItemCondition</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/Enumeration"/>
+    <rdfs:comment>A list of possible conditions for the item for sale.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/GovernmentOffice">
+    <rdfs:label>GovernmentOffice</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/LocalBusiness"/>
+    <rdfs:comment>A government office—for example, an IRS or DMV office.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/DataType">
+    <rdfs:label>DataType</rdfs:label>
+    <rdfs:comment>The basic data types such as Integers, Strings, etc.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/Blog">
+    <rdfs:label>Blog</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/CreativeWork"/>
+    <rdfs:comment>A blog</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/Country">
+    <rdfs:label>Country</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/AdministrativeArea"/>
+    <rdfs:comment>A country.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/BookFormatType">
+    <rdfs:label>BookFormatType</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/Enumeration"/>
+    <rdfs:comment>The publication format of the book.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/Corporation">
+    <rdfs:label>Corporation</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/Organization"/>
+    <rdfs:comment>Organization: A business corporation.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/Energy">
+    <rdfs:label>Energy</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/Quantity"/>
+    <rdfs:comment><![CDATA[Properties that take Enerygy as values are of the form '<Number> <Energy unit of measure>']]></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/BlogPosting">
+    <rdfs:label>BlogPosting</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/Article"/>
+    <rdfs:comment>A blog post.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/Organization">
+    <rdfs:label>Organization</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/Thing"/>
+    <rdfs:comment>An organization such as a school, NGO, corporation, club, etc.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/HealthAndBeautyBusiness">
+    <rdfs:label>HealthAndBeautyBusiness</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/LocalBusiness"/>
+    <rdfs:comment>Health and beauty.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/Date">
+    <rdfs:label>Date</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/DataType"/>
+    <rdfs:comment>A date value in ISO 8601 date format.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/SoftwareApplicationType">
+    <rdfs:label>SoftwareApplicationType</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/Enumeration"/>
+    <rdfs:comment>Type of software application.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/StructuredValue">
+    <rdfs:label>StructuredValue</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/Intangible"/>
+    <rdfs:comment>Structured values are strings—for example, addresses—that have certain constraints on their structure.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/MusicGroup">
+    <rdfs:label>MusicGroup</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/PerformingGroup"/>
+    <rdfs:comment>A musical group, such as a band, an orchestra, or a choir. Can also be a solo musician.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/Offer">
+    <rdfs:label>Offer</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/Intangible"/>
+    <rdfs:comment>An offer to sell an item—for example, an offer to sell a product, the DVD of a movie, or tickets to an event.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/AutomotiveBusiness">
+    <rdfs:label>AutomotiveBusiness</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/LocalBusiness"/>
+    <rdfs:comment>Car repair, sales, or parts.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/MediaObject">
+    <rdfs:label>MediaObject</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/CreativeWork"/>
+    <rdfs:comment>An image, video, or audio object embedded in a web page. Note that a creative work may have many media objects associated with it on the same web page. For example, a page about a single song (MusicRecording) may have a music video (VideoObject), and a high and low bandwidth audio stream (2 AudioObject's).</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/Boolean">
+    <rdfs:label>Boolean</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/DataType"/>
+    <rdfs:comment>Boolean: True or False.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/MobileSoftwareApplication">
+    <rdfs:label>MobileSoftwareApplication</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/SoftwareApplication"/>
+    <rdfs:comment>A mobile software application.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/Duration">
+    <rdfs:label>Duration</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/Quantity"/>
+    <rdfs:comment>Quantity: Duration (use  ISO 8601 duration format).</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/LodgingBusiness">
+    <rdfs:label>LodgingBusiness</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/LocalBusiness"/>
+    <rdfs:comment>A lodging business, such as a motel, hotel, or inn.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/Distance">
+    <rdfs:label>Distance</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/Quantity"/>
+    <rdfs:comment><![CDATA[Properties that take Distances as values are of the form '<Number> <Length unit of measure>'. E.g., '7 ft']]></rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/Residence">
+    <rdfs:label>Residence</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/Place"/>
+    <rdfs:comment>The place where a person lives.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/VideoObject">
+    <rdfs:label>VideoObject</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/MediaObject"/>
+    <rdfs:comment>A video file.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/AudioObject">
+    <rdfs:label>AudioObject</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/MediaObject"/>
+    <rdfs:comment>An audio file.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/Product">
+    <rdfs:label>Product</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/Thing"/>
+    <rdfs:comment>A product is anything that is made available for sale—for example, a pair of shoes, a concert ticket, or a car.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/Integer">
+    <rdfs:label>Integer</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/Number"/>
+    <rdfs:comment>Data type: Integer.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/Store">
+    <rdfs:label>Store</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/LocalBusiness"/>
+    <rdfs:comment>A retail good store.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/CreativeWork">
+    <rdfs:label>CreativeWork</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/Thing"/>
+    <rdfs:comment>The most generic kind of creative work, including books, movies, photographs, software programs, etc.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/TVSeries">
+    <rdfs:label>TVSeries</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/CreativeWork"/>
+    <rdfs:comment>A television series.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/GeoCoordinates">
+    <rdfs:label>GeoCoordinates</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/StructuredValue"/>
+    <rdfs:comment>The geographic coordinates of a place or event.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/JobPosting">
+    <rdfs:label>JobPosting</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/Intangible"/>
+    <rdfs:comment>A listing that describes a job opening in a certain organization.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/WebApplication">
+    <rdfs:label>WebApplication</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/SoftwareApplication"/>
+    <rdfs:comment>Web applications.</rdfs:comment>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://schema.org/PostalAddress">
+    <rdfs:label>PostalAddress</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://schema.org/ContactPoint"/>
+    <rdfs:comment>The mailing address.</rdfs:comment>
+  </rdfs:Class>
+</rdf:RDF>
+

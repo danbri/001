@@ -728,7 +728,7 @@ schema:LakeBodyOfWater a rdfs:Class;
 
 schema:Landform a rdfs:Class;
     rdfs:label "Landform";
-    rdfs:comment "A landform or physical feature.  Landform elements include mountains, plains, lakes, rivers, seascape and oceanic waterbody interface features such as bays, peninsulas, seas and so forth, including sub-aqueous terrain features such as submersed mountain http://schema.org/ranges, volcanoes, and the great ocean basins.";
+    rdfs:comment "A landform or physical feature.  Landform elements include mountains, plains, lakes, rivers, seascape and oceanic waterbody interface features such as bays, peninsulas, seas and so forth, including sub-aqueous terrain features such as submersed mountain ranges, volcanoes, and the great ocean basins.";
     rdfs:subClassOf schema:Place .
 
 schema:LandmarksOrHistoricalBuildings a rdfs:Class;
@@ -1533,15 +1533,15 @@ schema:about a rdf:Property;
     schema:range schema:Thing;
     rdfs:comment "The subject matter of the content." .
 
-schema:acceptsreservations a rdf:Property;
-    rdfs:label "acceptsreservations";
+schema:acceptsReservations a rdf:Property;
+    rdfs:label "acceptsReservations";
     schema:domain schema:FoodEstablishment;
     schema:range schema:Text,
         schema:URL;
     rdfs:comment "Either Yes/No, or a URL at which reservations can be made." .
 
-schema:accountableperson a rdf:Property;
-    rdfs:label "accountableperson";
+schema:accountablePerson a rdf:Property;
+    rdfs:label "accountablePerson";
     schema:domain schema:CreativeWork;
     schema:range schema:Person;
     rdfs:comment "Specifies the Person that is legally accountable for the CreativeWork." .
@@ -1554,8 +1554,8 @@ schema:actors a rdf:Property;
     schema:range schema:Person;
     rdfs:comment "A cast member of the movie, TV series, season, or episode, or video." .
 
-schema:additionalname a rdf:Property;
-    rdfs:label "additionalname";
+schema:additionalName a rdf:Property;
+    rdfs:label "additionalName";
     schema:domain schema:Person;
     schema:range schema:Text;
     rdfs:comment "An additional name for a Person, can be used for a middle name." .
@@ -1568,20 +1568,20 @@ schema:address a rdf:Property;
     schema:range schema:PostalAddress;
     rdfs:comment "Physical address of the item." .
 
-schema:addresscountry a rdf:Property;
-    rdfs:label "addresscountry";
+schema:addressCountry a rdf:Property;
+    rdfs:label "addressCountry";
     schema:domain schema:PostalAddress;
     schema:range schema:Country;
     rdfs:comment "The country. For example, USA. You can also provide the two-letter ISO 3166-1 alpha-2 country code." .
 
-schema:addresslocality a rdf:Property;
-    rdfs:label "addresslocality";
+schema:addressLocality a rdf:Property;
+    rdfs:label "addressLocality";
     schema:domain schema:PostalAddress;
     schema:range schema:Text;
     rdfs:comment "The locality. For example, Mountain View." .
 
-schema:addressregion a rdf:Property;
-    rdfs:label "addressregion";
+schema:addressRegion a rdf:Property;
+    rdfs:label "addressRegion";
     schema:domain schema:PostalAddress;
     schema:range schema:Text;
     rdfs:comment "The region. For example, CA." .
@@ -1592,8 +1592,8 @@ schema:affiliation a rdf:Property;
     schema:range schema:Organization;
     rdfs:comment "An organization that this person is affiliated with. For example, a school/university, a club, or a team." .
 
-schema:aggregaterating a rdf:Property;
-    rdfs:label "aggregaterating";
+schema:aggregateRating a rdf:Property;
+    rdfs:label "aggregateRating";
     schema:domain schema:CreativeWork,
         schema:Offer,
         schema:Organization,
@@ -1608,8 +1608,8 @@ schema:albums a rdf:Property;
     schema:range schema:MusicAlbum;
     rdfs:comment "A collection of music albums." .
 
-schema:alternativeheadline a rdf:Property;
-    rdfs:label "alternativeheadline";
+schema:alternativeHeadline a rdf:Property;
+    rdfs:label "alternativeHeadline";
     schema:domain schema:CreativeWork;
     schema:range schema:Text;
     rdfs:comment "A secondary title of the CreativeWork." .
@@ -1620,32 +1620,32 @@ schema:alumni a rdf:Property;
     schema:range schema:Person;
     rdfs:comment "Alumni of educational organization." .
 
-schema:alumniof a rdf:Property;
-    rdfs:label "alumniof";
+schema:alumniOf a rdf:Property;
+    rdfs:label "alumniOf";
     schema:domain schema:Person;
     schema:range schema:EducationalOrganization;
     rdfs:comment "An educational organizations that the person is an alumni of." .
 
-schema:articlebody a rdf:Property;
-    rdfs:label "articlebody";
+schema:articleBody a rdf:Property;
+    rdfs:label "articleBody";
     schema:domain schema:Article;
     schema:range schema:Text;
     rdfs:comment "The actual body of the article." .
 
-schema:articlesection a rdf:Property;
-    rdfs:label "articlesection";
+schema:articleSection a rdf:Property;
+    rdfs:label "articleSection";
     schema:domain schema:Article;
     schema:range schema:Text;
     rdfs:comment "Articles may belong to one or more 'sections' in a magazine or newspaper, such as Sports, Lifestyle, etc." .
 
-schema:associatedarticle a rdf:Property;
-    rdfs:label "associatedarticle";
+schema:associatedArticle a rdf:Property;
+    rdfs:label "associatedArticle";
     schema:domain schema:MediaObject;
     schema:range schema:NewsArticle;
     rdfs:comment "A NewsArticle associated with the Media Object." .
 
-schema:associatedmedia a rdf:Property;
-    rdfs:label "associatedmedia";
+schema:associatedMedia a rdf:Property;
+    rdfs:label "associatedMedia";
     schema:domain schema:CreativeWork;
     schema:range schema:MediaObject;
     rdfs:comment "The media objects that encode this creative work. This property is a synonym for encodings." .
@@ -1676,8 +1676,8 @@ schema:availability a rdf:Property;
     schema:range schema:ItemAvailability;
     rdfs:comment "The availability of this item—for example In stock, Out of stock, Pre-order, etc." .
 
-schema:availabilitydeprecated a rdf:Property;
-    rdfs:label "availabilitydeprecated";
+schema:availabilityDeprecated a rdf:Property;
+    rdfs:label "availabilityDeprecated";
     schema:domain schema:Offer;
     schema:range schema:Thing;
     rdfs:comment "The availability of this item—for example In stock, Out of stock, Pre-order, etc." .
@@ -1689,8 +1689,8 @@ schema:awards a rdf:Property;
     schema:range schema:Text;
     rdfs:comment "Awards won by this person or for this creative work." .
 
-schema:basesalary a rdf:Property;
-    rdfs:label "basesalary";
+schema:baseSalary a rdf:Property;
+    rdfs:label "baseSalary";
     schema:domain schema:JobPosting;
     schema:range schema:Number;
     rdfs:comment "The base salary of the job." .
@@ -1701,15 +1701,15 @@ schema:benefits a rdf:Property;
     schema:range schema:Text;
     rdfs:comment "Description of benefits associated with the job." .
 
-schema:bestrating a rdf:Property;
-    rdfs:label "bestrating";
+schema:bestRating a rdf:Property;
+    rdfs:label "bestRating";
     schema:domain schema:Rating;
     schema:range schema:Number,
         schema:Text;
     rdfs:comment "The highest value allowed in this rating system. If bestRating is omitted, 5 is assumed." .
 
-schema:birthdate a rdf:Property;
-    rdfs:label "birthdate";
+schema:birthDate a rdf:Property;
+    rdfs:label "birthDate";
     schema:domain schema:Person;
     schema:range schema:Date;
     rdfs:comment "Date of birth." .
@@ -1720,26 +1720,26 @@ schema:bitrate a rdf:Property;
     schema:range schema:Text;
     rdfs:comment "The bitrate of the media object." .
 
-schema:blogposts a rdf:Property;
-    rdfs:label "blogposts";
+schema:blogPosts a rdf:Property;
+    rdfs:label "blogPosts";
     schema:domain schema:Blog;
     schema:range schema:BlogPosting;
     rdfs:comment "The postings that are part of this blog" .
 
-schema:bookedition a rdf:Property;
-    rdfs:label "bookedition";
+schema:bookEdition a rdf:Property;
+    rdfs:label "bookEdition";
     schema:domain schema:Book;
     schema:range schema:Text;
     rdfs:comment "The edition of the book." .
 
-schema:bookformat a rdf:Property;
-    rdfs:label "bookformat";
+schema:bookFormat a rdf:Property;
+    rdfs:label "bookFormat";
     schema:domain schema:Book;
     schema:range schema:BookFormatType;
     rdfs:comment "The format of the book." .
 
-schema:bookformatdeprecated a rdf:Property;
-    rdfs:label "bookformatdeprecated";
+schema:bookFormatDeprecated a rdf:Property;
+    rdfs:label "bookFormatDeprecated";
     schema:domain schema:Book;
     schema:range schema:Thing;
     rdfs:comment "The format of the book." .
@@ -1750,8 +1750,8 @@ schema:box a rdf:Property;
     schema:range schema:Text;
     rdfs:comment "A polygon is the area enclosed by a point-to-point path for which the starting and ending points are the same. A polygon is expressed as a series of four or more spacedelimited points where the first and final points are identical." .
 
-schema:branchof a rdf:Property;
-    rdfs:label "branchof";
+schema:branchOf a rdf:Property;
+    rdfs:label "branchOf";
     schema:domain schema:LocalBusiness;
     schema:range schema:Organization;
     rdfs:comment "The larger organization that this local business is a branch of, if any." .
@@ -1774,8 +1774,8 @@ schema:browsers a rdf:Property;
     schema:range schema:Text;
     rdfs:comment "One or more browsers required to run the app." .
 
-schema:byartist a rdf:Property;
-    rdfs:label "byartist";
+schema:byArtist a rdf:Property;
+    rdfs:label "byArtist";
     schema:domain schema:MusicAlbum,
         schema:MusicRecording;
     schema:range schema:MusicGroup;
@@ -1794,8 +1794,8 @@ schema:caption a rdf:Property;
     schema:range schema:Text;
     rdfs:comment "The caption for this object." .
 
-schema:carbohydratecontent a rdf:Property;
-    rdfs:label "carbohydratecontent";
+schema:carbohydrateContent a rdf:Property;
+    rdfs:label "carbohydrateContent";
     schema:domain schema:NutritionInformation;
     schema:range schema:Mass;
     rdfs:comment "The number of grams of carbohydrates." .
@@ -1806,8 +1806,8 @@ schema:children a rdf:Property;
     schema:range schema:Person;
     rdfs:comment "A child of the person." .
 
-schema:cholesterolcontent a rdf:Property;
-    rdfs:label "cholesterolcontent";
+schema:cholesterolContent a rdf:Property;
+    rdfs:label "cholesterolContent";
     schema:domain schema:NutritionInformation;
     schema:range schema:Mass;
     rdfs:comment "The number of milligrams of cholesterol." .
@@ -1830,57 +1830,57 @@ schema:comment a rdf:Property;
     schema:range schema:UserComments;
     rdfs:comment "Comments, typically from users, on this CreativeWork." .
 
-schema:commenttext a rdf:Property;
-    rdfs:label "commenttext";
+schema:commentText a rdf:Property;
+    rdfs:label "commentText";
     schema:domain schema:UserComments;
     schema:range schema:Text;
     rdfs:comment "The text of the UserComment." .
 
-schema:commenttime a rdf:Property;
-    rdfs:label "commenttime";
+schema:commentTime a rdf:Property;
+    rdfs:label "commentTime";
     schema:domain schema:UserComments;
     schema:range schema:Date;
     rdfs:comment "The time at which the UserComment was made." .
 
-schema:contactpoints a rdf:Property;
-    rdfs:label "contactpoints";
+schema:contactPoints a rdf:Property;
+    rdfs:label "contactPoints";
     schema:domain schema:Organization,
         schema:Person;
     schema:range schema:ContactPoint;
     rdfs:comment "A contact point for a person or organization." .
 
-schema:contacttype a rdf:Property;
-    rdfs:label "contacttype";
+schema:contactType a rdf:Property;
+    rdfs:label "contactType";
     schema:domain schema:ContactPoint;
     schema:range schema:Text;
     rdfs:comment "A person or organization can have different contact points, for different purposes. For example, a sales contact point, a PR contact point and so on. This property is used to specify the kind of contact point." .
 
-schema:containedin a rdf:Property;
-    rdfs:label "containedin";
+schema:containedIn a rdf:Property;
+    rdfs:label "containedIn";
     schema:domain schema:Place;
     schema:range schema:Place;
     rdfs:comment "The basic containment relation between places." .
 
-schema:contentlocation a rdf:Property;
-    rdfs:label "contentlocation";
+schema:contentLocation a rdf:Property;
+    rdfs:label "contentLocation";
     schema:domain schema:CreativeWork;
     schema:range schema:Place;
     rdfs:comment "The location of the content." .
 
-schema:contentrating a rdf:Property;
-    rdfs:label "contentrating";
+schema:contentRating a rdf:Property;
+    rdfs:label "contentRating";
     schema:domain schema:CreativeWork;
     schema:range schema:Text;
     rdfs:comment "Official rating of a piece of content—for example,'MPAA PG-13'." .
 
-schema:contentsize a rdf:Property;
-    rdfs:label "contentsize";
+schema:contentSize a rdf:Property;
+    rdfs:label "contentSize";
     schema:domain schema:MediaObject;
     schema:range schema:Text;
     rdfs:comment "File size in (mega/kilo) bytes." .
 
-schema:contenturl a rdf:Property;
-    rdfs:label "contenturl";
+schema:contentURL a rdf:Property;
+    rdfs:label "contentURL";
     schema:domain schema:MediaObject;
     schema:range schema:URL;
     rdfs:comment "Actual bytes of the media object, for example the image file or video file." .
@@ -1892,46 +1892,46 @@ schema:contributor a rdf:Property;
         schema:Person;
     rdfs:comment "A secondary contributor to the CreativeWork." .
 
-schema:cookingmethod a rdf:Property;
-    rdfs:label "cookingmethod";
-    schema:domain schema:Recipe;
-    schema:range schema:Text;
-    rdfs:comment "The method of cooking, such as Frying, Steaming, ..." .
-
-schema:cooktime a rdf:Property;
-    rdfs:label "cooktime";
+schema:cookTime a rdf:Property;
+    rdfs:label "cookTime";
     schema:domain schema:Recipe;
     schema:range schema:Duration;
     rdfs:comment "The time it takes to actually cook the dish, in ISO 8601 duration format." .
 
-schema:copyrightholder a rdf:Property;
-    rdfs:label "copyrightholder";
+schema:cookingMethod a rdf:Property;
+    rdfs:label "cookingMethod";
+    schema:domain schema:Recipe;
+    schema:range schema:Text;
+    rdfs:comment "The method of cooking, such as Frying, Steaming, ..." .
+
+schema:copyrightHolder a rdf:Property;
+    rdfs:label "copyrightHolder";
     schema:domain schema:CreativeWork;
     schema:range schema:Organization,
         schema:Person;
     rdfs:comment "The party holding the legal copyright to the CreativeWork." .
 
-schema:copyrightnoticedeprecated a rdf:Property;
-    rdfs:label "copyrightnoticedeprecated";
+schema:copyrightNoticeDeprecated a rdf:Property;
+    rdfs:label "copyrightNoticeDeprecated";
     schema:domain schema:CreativeWork;
     schema:range schema:Text,
         schema:URL;
     rdfs:comment "Any necessary copyright notice for claiming the intellectual property for the CreativeWork." .
 
-schema:copyrightyear a rdf:Property;
-    rdfs:label "copyrightyear";
+schema:copyrightYear a rdf:Property;
+    rdfs:label "copyrightYear";
     schema:domain schema:CreativeWork;
     schema:range schema:Number;
     rdfs:comment "The year during which the claimed copyright for the CreativeWork was first asserted." .
 
-schema:countriesnotsupported a rdf:Property;
-    rdfs:label "countriesnotsupported";
+schema:countriesNotSupported a rdf:Property;
+    rdfs:label "countriesNotSupported";
     schema:domain schema:MobileSoftwareApplication;
     schema:range schema:Text;
     rdfs:comment "Countries that dlsallow the application." .
 
-schema:countriessupported a rdf:Property;
-    rdfs:label "countriessupported";
+schema:countriesSupported a rdf:Property;
+    rdfs:label "countriesSupported";
     schema:domain schema:MobileSoftwareApplication;
     schema:range schema:Text;
     rdfs:comment "Countries that allow the application." .
@@ -1944,17 +1944,35 @@ schema:creator a rdf:Property;
         schema:Person;
     rdfs:comment "The creator/author of this CreativeWork or UserComments. This is the same as the Author property for CreativeWork." .
 
-schema:currenciesaccepted a rdf:Property;
-    rdfs:label "currenciesaccepted";
+schema:currenciesAccepted a rdf:Property;
+    rdfs:label "currenciesAccepted";
     schema:domain schema:LocalBusiness;
     schema:range schema:Text;
     rdfs:comment "The currency accepted (in ISO 4217 currency format)." .
 
-schema:datecreated a rdf:Property;
-    rdfs:label "datecreated";
+schema:dateCreated a rdf:Property;
+    rdfs:label "dateCreated";
     schema:domain schema:CreativeWork;
     schema:range schema:Date;
     rdfs:comment "The date on which the CreativeWork was created." .
+
+schema:dateModified a rdf:Property;
+    rdfs:label "dateModified";
+    schema:domain schema:CreativeWork;
+    schema:range schema:Date;
+    rdfs:comment "The date on which the CreativeWork was most recently modified." .
+
+schema:datePosted a rdf:Property;
+    rdfs:label "datePosted";
+    schema:domain schema:JobPosting;
+    schema:range schema:Date;
+    rdfs:comment "Publication date for the job posting." .
+
+schema:datePublished a rdf:Property;
+    rdfs:label "datePublished";
+    schema:domain schema:CreativeWork;
+    schema:range schema:Date;
+    rdfs:comment "Date of first broadcast/publication." .
 
 schema:dateline a rdf:Property;
     rdfs:label "dateline";
@@ -1962,26 +1980,8 @@ schema:dateline a rdf:Property;
     schema:range schema:Text;
     rdfs:comment "The location where the NewsArticle was produced." .
 
-schema:datemodified a rdf:Property;
-    rdfs:label "datemodified";
-    schema:domain schema:CreativeWork;
-    schema:range schema:Date;
-    rdfs:comment "The date on which the CreativeWork was most recently modified." .
-
-schema:dateposted a rdf:Property;
-    rdfs:label "dateposted";
-    schema:domain schema:JobPosting;
-    schema:range schema:Date;
-    rdfs:comment "Publication date for the job posting." .
-
-schema:datepublished a rdf:Property;
-    rdfs:label "datepublished";
-    schema:domain schema:CreativeWork;
-    schema:range schema:Date;
-    rdfs:comment "Date of first broadcast/publication." .
-
-schema:deathdate a rdf:Property;
-    rdfs:label "deathdate";
+schema:deathDate a rdf:Property;
+    rdfs:label "deathDate";
     schema:domain schema:Person;
     schema:range schema:Date;
     rdfs:comment "Date of death." .
@@ -2006,14 +2006,14 @@ schema:discusses a rdf:Property;
     schema:range schema:CreativeWork;
     rdfs:comment "Specifies the CreativeWork associated with the UserComment." .
 
-schema:discussionurl a rdf:Property;
-    rdfs:label "discussionurl";
+schema:discussionUrl a rdf:Property;
+    rdfs:label "discussionUrl";
     schema:domain schema:CreativeWork;
     schema:range schema:URL;
     rdfs:comment "A link to the page containing the comments of the CreativeWork." .
 
-schema:downloadurl a rdf:Property;
-    rdfs:label "downloadurl";
+schema:downloadURL a rdf:Property;
+    rdfs:label "downloadURL";
     schema:domain schema:SoftwareApplication;
     schema:range schema:URL;
     rdfs:comment "If the file can be downloaded, URL to download the binary." .
@@ -2033,8 +2033,8 @@ schema:editor a rdf:Property;
     schema:range schema:Person;
     rdfs:comment "Specifies the Person who edited the CreativeWork." .
 
-schema:educationrequirements a rdf:Property;
-    rdfs:label "educationrequirements";
+schema:educationRequirements a rdf:Property;
+    rdfs:label "educationRequirements";
     schema:domain schema:JobPosting;
     schema:range schema:Text;
     rdfs:comment "Educational background needed for the position." .
@@ -2055,8 +2055,8 @@ schema:email a rdf:Property;
     schema:range schema:Text;
     rdfs:comment "Email address." .
 
-schema:embedurl a rdf:Property;
-    rdfs:label "embedurl";
+schema:embedURL a rdf:Property;
+    rdfs:label "embedURL";
     schema:domain schema:MediaObject;
     schema:range schema:URL;
     rdfs:comment "A URL pointing to a player for a specific video. In general, this is the information in the src element of an embed tag and should not be the same as the content of the loc tag." .
@@ -2067,20 +2067,20 @@ schema:employees a rdf:Property;
     schema:range schema:Person;
     rdfs:comment "People working for this organization." .
 
-schema:employmenttype a rdf:Property;
-    rdfs:label "employmenttype";
+schema:employmentType a rdf:Property;
+    rdfs:label "employmentType";
     schema:domain schema:JobPosting;
     schema:range schema:Text;
     rdfs:comment "Type of employment (e.g. full-time, part-time, contract, temporary, seasonal, internship)." .
 
-schema:encodescreativework a rdf:Property;
-    rdfs:label "encodescreativework";
+schema:encodesCreativeWork a rdf:Property;
+    rdfs:label "encodesCreativeWork";
     schema:domain schema:MediaObject;
     schema:range schema:CreativeWork;
     rdfs:comment "The creative work encoded by this media object" .
 
-schema:encodingformat a rdf:Property;
-    rdfs:label "encodingformat";
+schema:encodingFormat a rdf:Property;
+    rdfs:label "encodingFormat";
     schema:domain schema:MediaObject;
     schema:range schema:Text;
     rdfs:comment "mp3, mpeg4, etc." .
@@ -2091,16 +2091,16 @@ schema:encodings a rdf:Property;
     schema:range schema:MediaObject;
     rdfs:comment "The media objects that encode this creative work" .
 
-schema:enddate a rdf:Property;
-    rdfs:label "enddate";
+schema:endDate a rdf:Property;
+    rdfs:label "endDate";
     schema:domain schema:Event,
         schema:TVSeason,
         schema:TVSeries;
     schema:range schema:Date;
     rdfs:comment "The end date and time of the event (in ISO 8601 date format)." .
 
-schema:episodenumber a rdf:Property;
-    rdfs:label "episodenumber";
+schema:episodeNumber a rdf:Property;
+    rdfs:label "episodeNumber";
     schema:domain schema:TVEpisode;
     schema:range schema:Number;
     rdfs:comment "The episode number." .
@@ -2119,14 +2119,14 @@ schema:events a rdf:Property;
     schema:range schema:Event;
     rdfs:comment "Upcoming or past events associated with this place or organization." .
 
-schema:exifdata a rdf:Property;
-    rdfs:label "exifdata";
+schema:exifData a rdf:Property;
+    rdfs:label "exifData";
     schema:domain schema:ImageObject;
     schema:range schema:Text;
     rdfs:comment "exif data for this object." .
 
-schema:experiencerequirements a rdf:Property;
-    rdfs:label "experiencerequirements";
+schema:experienceRequirements a rdf:Property;
+    rdfs:label "experienceRequirements";
     schema:domain schema:JobPosting;
     schema:range schema:Text;
     rdfs:comment "Description of skills and experience needed for the position." .
@@ -2137,20 +2137,20 @@ schema:expires a rdf:Property;
     schema:range schema:Date;
     rdfs:comment "Date the content expires and is no longer useful or available. Useful for videos." .
 
-schema:familyname a rdf:Property;
-    rdfs:label "familyname";
+schema:familyName a rdf:Property;
+    rdfs:label "familyName";
     schema:domain schema:Person;
     schema:range schema:Text;
     rdfs:comment "Family name. In the U.S., the last name of an Person. This can be used along with givenName instead of the Name property." .
 
-schema:fatcontent a rdf:Property;
-    rdfs:label "fatcontent";
+schema:fatContent a rdf:Property;
+    rdfs:label "fatContent";
     schema:domain schema:NutritionInformation;
     schema:range schema:Mass;
     rdfs:comment "The number of grams of fat." .
 
-schema:faxnumber a rdf:Property;
-    rdfs:label "faxnumber";
+schema:faxNumber a rdf:Property;
+    rdfs:label "faxNumber";
     schema:domain schema:ContactPoint,
         schema:Organization,
         schema:Person,
@@ -2158,20 +2158,20 @@ schema:faxnumber a rdf:Property;
     schema:range schema:Text;
     rdfs:comment "The fax number." .
 
-schema:fibercontent a rdf:Property;
-    rdfs:label "fibercontent";
+schema:fiberContent a rdf:Property;
+    rdfs:label "fiberContent";
     schema:domain schema:NutritionInformation;
     schema:range schema:Mass;
     rdfs:comment "The number of grams of fiber." .
 
-schema:fileformat a rdf:Property;
-    rdfs:label "fileformat";
+schema:fileFormat a rdf:Property;
+    rdfs:label "fileFormat";
     schema:domain schema:SoftwareApplication;
     schema:range schema:Text;
     rdfs:comment "MIME format of the binary (e.g. application/zip)." .
 
-schema:filesize a rdf:Property;
-    rdfs:label "filesize";
+schema:fileSize a rdf:Property;
+    rdfs:label "fileSize";
     schema:domain schema:SoftwareApplication;
     schema:range schema:Integer;
     rdfs:comment "Size of the application / package in bytes." .
@@ -2188,8 +2188,8 @@ schema:founders a rdf:Property;
     schema:range schema:Person;
     rdfs:comment "A person who founded this organization." .
 
-schema:foundingdate a rdf:Property;
-    rdfs:label "foundingdate";
+schema:foundingDate a rdf:Property;
+    rdfs:label "foundingDate";
     schema:domain schema:Organization;
     schema:range schema:Date;
     rdfs:comment "The date that this organization was founded." .
@@ -2213,8 +2213,8 @@ schema:geo a rdf:Property;
         schema:GeoShape;
     rdfs:comment "The geo coordinates of the place." .
 
-schema:givenname a rdf:Property;
-    rdfs:label "givenname";
+schema:givenName a rdf:Property;
+    rdfs:label "givenName";
     schema:domain schema:Person;
     schema:range schema:Text;
     rdfs:comment "Given name. In the U.S., the first name of a Person. This can be used along with familyName instead of the Name property." .
@@ -2231,34 +2231,34 @@ schema:height a rdf:Property;
     schema:range schema:Distance;
     rdfs:comment "The height of the media object." .
 
-schema:highprice a rdf:Property;
-    rdfs:label "highprice";
+schema:highPrice a rdf:Property;
+    rdfs:label "highPrice";
     schema:domain schema:AggregateOffer;
     schema:range schema:Number,
         schema:Text;
     rdfs:comment "The highest price of all offers available." .
 
-schema:hiringorganization a rdf:Property;
-    rdfs:label "hiringorganization";
+schema:hiringOrganization a rdf:Property;
+    rdfs:label "hiringOrganization";
     schema:domain schema:JobPosting;
     schema:range schema:Organization;
     rdfs:comment "Organization offering the job position." .
 
-schema:homelocation a rdf:Property;
-    rdfs:label "homelocation";
+schema:homeLocation a rdf:Property;
+    rdfs:label "homeLocation";
     schema:domain schema:Person;
     schema:range schema:ContactPoint,
         schema:Place;
     rdfs:comment "A contact location for a person's residence." .
 
-schema:honorificprefix a rdf:Property;
-    rdfs:label "honorificprefix";
+schema:honorificPrefix a rdf:Property;
+    rdfs:label "honorificPrefix";
     schema:domain schema:Person;
     schema:range schema:Text;
     rdfs:comment "An honorific prefix preceding a Person's name such as Dr/Mrs/Mr." .
 
-schema:honorificsuffix a rdf:Property;
-    rdfs:label "honorificsuffix";
+schema:honorificSuffix a rdf:Property;
+    rdfs:label "honorificSuffix";
     schema:domain schema:Person;
     schema:range schema:Text;
     rdfs:comment "An honorific suffix preceding a Person's name such as M.D. /PhD/MSCSW." .
@@ -2275,11 +2275,23 @@ schema:image a rdf:Property;
     schema:range schema:URL;
     rdfs:comment "URL of an image of the item." .
 
-schema:inalbum a rdf:Property;
-    rdfs:label "inalbum";
+schema:inAlbum a rdf:Property;
+    rdfs:label "inAlbum";
     schema:domain schema:MusicRecording;
     schema:range schema:MusicAlbum;
     rdfs:comment "The album to which this recording belongs." .
+
+schema:inLanguage a rdf:Property;
+    rdfs:label "inLanguage";
+    schema:domain schema:CreativeWork;
+    schema:range schema:Text;
+    rdfs:comment "The language of the content. please use one of the language codes from the IETF BCP 47 standard." .
+
+schema:inPlaylist a rdf:Property;
+    rdfs:label "inPlaylist";
+    schema:domain schema:MusicRecording;
+    schema:range schema:MusicPlaylist;
+    rdfs:comment "The playlist to which this recording belongs." .
 
 schema:incentives a rdf:Property;
     rdfs:label "incentives";
@@ -2299,20 +2311,8 @@ schema:ingredients a rdf:Property;
     schema:range schema:Text;
     rdfs:comment "An ingredient used in the recipe." .
 
-schema:inlanguage a rdf:Property;
-    rdfs:label "inlanguage";
-    schema:domain schema:CreativeWork;
-    schema:range schema:Text;
-    rdfs:comment "The language of the content. please use one of the language codes from the IETF BCP 47 standard." .
-
-schema:inplaylist a rdf:Property;
-    rdfs:label "inplaylist";
-    schema:domain schema:MusicRecording;
-    schema:range schema:MusicPlaylist;
-    rdfs:comment "The playlist to which this recording belongs." .
-
-schema:interactioncount a rdf:Property;
-    rdfs:label "interactioncount";
+schema:interactionCount a rdf:Property;
+    rdfs:label "interactionCount";
     schema:domain schema:CreativeWork,
         schema:MediaObject,
         schema:Organization,
@@ -2321,75 +2321,75 @@ schema:interactioncount a rdf:Property;
     schema:range schema:Text;
     rdfs:comment "A count of a specific user interactions with this item—for example, 20 UserLikes, 5 UserComments, or 300 UserDownloads. The user interaction type should be one of the sub types of UserInteraction." .
 
+schema:isDownloadable a rdf:Property;
+    rdfs:label "isDownloadable";
+    schema:domain schema:SoftwareApplication;
+    schema:range schema:Boolean;
+    rdfs:comment "Indicates whether the software is available for download." .
+
+schema:isFamilyFriendly a rdf:Property;
+    rdfs:label "isFamilyFriendly";
+    schema:domain schema:CreativeWork;
+    schema:range schema:Boolean;
+    rdfs:comment "Indicates whether this content is family friendly." .
+
+schema:isPartOf a rdf:Property;
+    rdfs:label "isPartOf";
+    schema:domain schema:WebPage;
+    schema:range schema:CollectionPage;
+    rdfs:comment "Indicates the collection or gallery to which the item belongs." .
+
 schema:isbn a rdf:Property;
     rdfs:label "isbn";
     schema:domain schema:Book;
     schema:range schema:Text;
     rdfs:comment "The ISBN of the book." .
 
-schema:isdownloadable a rdf:Property;
-    rdfs:label "isdownloadable";
-    schema:domain schema:SoftwareApplication;
-    schema:range schema:Boolean;
-    rdfs:comment "Indicates whether the software is available for download." .
-
-schema:isfamilyfriendly a rdf:Property;
-    rdfs:label "isfamilyfriendly";
-    schema:domain schema:CreativeWork;
-    schema:range schema:Boolean;
-    rdfs:comment "Indicates whether this content is family friendly." .
-
-schema:ispartof a rdf:Property;
-    rdfs:label "ispartof";
-    schema:domain schema:WebPage;
-    schema:range schema:CollectionPage;
-    rdfs:comment "Indicates the collection or gallery to which the item belongs." .
-
-schema:itemcondition a rdf:Property;
-    rdfs:label "itemcondition";
+schema:itemCondition a rdf:Property;
+    rdfs:label "itemCondition";
     schema:domain schema:Offer;
     schema:range schema:OfferItemCondition;
     rdfs:comment "The condition of the item for sale—for example New, Refurbished, Used, etc." .
 
-schema:itemconditiondeprecated a rdf:Property;
-    rdfs:label "itemconditiondeprecated";
+schema:itemConditionDeprecated a rdf:Property;
+    rdfs:label "itemConditionDeprecated";
     schema:domain schema:Offer;
     schema:range schema:Thing;
     rdfs:comment "The condition of the item for sale—for example New, Refurbished, Used, etc." .
 
-schema:itemlistelement a rdf:Property;
-    rdfs:label "itemlistelement";
+schema:itemListElement a rdf:Property;
+    rdfs:label "itemListElement";
     schema:domain schema:ItemList;
     schema:range schema:Text;
     rdfs:comment "A single list item." .
 
-schema:itemlistorder a rdf:Property;
-    rdfs:label "itemlistorder";
+schema:itemListOrder a rdf:Property;
+    rdfs:label "itemListOrder";
     schema:domain schema:ItemList;
     schema:range schema:Text;
     rdfs:comment "Type of ordering (e.g. Ascending, Descending, Unordered)." .
 
-schema:itemoffered a rdf:Property;
-    rdfs:label "itemoffered";
+schema:itemOffered a rdf:Property;
+    rdfs:label "itemOffered";
     schema:domain schema:Offer;
     schema:range schema:Product;
     rdfs:comment "The item being sold." .
 
-schema:itemreviewed a rdf:Property;
-    rdfs:label "itemreviewed";
+schema:itemReviewed a rdf:Property;
+    rdfs:label "itemReviewed";
     schema:domain schema:AggregateRating,
         schema:Review;
     schema:range schema:Thing;
     rdfs:comment "The item that is being reviewed/rated." .
 
-schema:joblocation a rdf:Property;
-    rdfs:label "joblocation";
+schema:jobLocation a rdf:Property;
+    rdfs:label "jobLocation";
     schema:domain schema:JobPosting;
     schema:range schema:Place;
     rdfs:comment "A (typically single) geographic location associated with the job position." .
 
-schema:jobtitle a rdf:Property;
-    rdfs:label "jobtitle";
+schema:jobTitle a rdf:Property;
+    rdfs:label "jobTitle";
     schema:domain schema:Person;
     schema:range schema:Text;
     rdfs:comment "The job title of the person (for example, Financial Manager)." .
@@ -2434,15 +2434,15 @@ schema:longitude a rdf:Property;
         schema:Text;
     rdfs:comment "The longitude of a location. For example -122.08585." .
 
-schema:lowprice a rdf:Property;
-    rdfs:label "lowprice";
+schema:lowPrice a rdf:Property;
+    rdfs:label "lowPrice";
     schema:domain schema:AggregateOffer;
     schema:range schema:Number,
         schema:Text;
     rdfs:comment "The lowest price of all offers available." .
 
-schema:maincontentofpage a rdf:Property;
-    rdfs:label "maincontentofpage";
+schema:mainContentOfPage a rdf:Property;
+    rdfs:label "mainContentOfPage";
     schema:domain schema:WebPage;
     schema:range schema:WebPageElement;
     rdfs:comment "Indicates if this web page element is the main subject of the page." .
@@ -2459,8 +2459,8 @@ schema:maps a rdf:Property;
     schema:range schema:URL;
     rdfs:comment "A URL to a map of the place." .
 
-schema:memberof a rdf:Property;
-    rdfs:label "memberof";
+schema:memberOf a rdf:Property;
+    rdfs:label "memberOf";
     schema:domain schema:Person;
     schema:range schema:Organization;
     rdfs:comment "An organization to which the person belongs." .
@@ -2491,8 +2491,8 @@ schema:model a rdf:Property;
     schema:range schema:Text;
     rdfs:comment "The model of the product." .
 
-schema:musicby a rdf:Property;
-    rdfs:label "musicby";
+schema:musicBy a rdf:Property;
+    rdfs:label "musicBy";
     schema:domain schema:Movie,
         schema:TVEpisode,
         schema:TVSeries;
@@ -2500,8 +2500,8 @@ schema:musicby a rdf:Property;
         schema:Person;
     rdfs:comment "The composer of the movie or TV soundtrack." .
 
-schema:musicgroupmember a rdf:Property;
-    rdfs:label "musicgroupmember";
+schema:musicGroupMember a rdf:Property;
+    rdfs:label "musicGroupMember";
     schema:domain schema:MusicGroup;
     schema:range schema:Person;
     rdfs:comment "A member of the music group—for example, John, Paul, George, or Ringo." .
@@ -2518,30 +2518,30 @@ schema:nationality a rdf:Property;
     schema:range schema:Country;
     rdfs:comment "Nationality of the person." .
 
-schema:numberofepisodes a rdf:Property;
-    rdfs:label "numberofepisodes";
+schema:numDownloads a rdf:Property;
+    rdfs:label "numDownloads";
+    schema:domain schema:SoftwareApplication;
+    schema:range schema:Integer;
+    rdfs:comment "Number of Downloads." .
+
+schema:numTracks a rdf:Property;
+    rdfs:label "numTracks";
+    schema:domain schema:MusicPlaylist;
+    schema:range schema:Integer;
+    rdfs:comment "The number of tracks in this album or playlist." .
+
+schema:numberOfEpisodes a rdf:Property;
+    rdfs:label "numberOfEpisodes";
     schema:domain schema:TVSeason,
         schema:TVSeries;
     schema:range schema:Number;
     rdfs:comment "The number of episodes in this season or series." .
 
-schema:numberofpages a rdf:Property;
-    rdfs:label "numberofpages";
+schema:numberOfPages a rdf:Property;
+    rdfs:label "numberOfPages";
     schema:domain schema:Book;
     schema:range schema:Integer;
     rdfs:comment "The number of pages in the book." .
-
-schema:numdownloads a rdf:Property;
-    rdfs:label "numdownloads";
-    schema:domain schema:SoftwareApplication;
-    schema:range schema:Integer;
-    rdfs:comment "Number of Downloads." .
-
-schema:numtracks a rdf:Property;
-    rdfs:label "numtracks";
-    schema:domain schema:MusicPlaylist;
-    schema:range schema:Integer;
-    rdfs:comment "The number of tracks in this album or playlist." .
 
 schema:nutrition a rdf:Property;
     rdfs:label "nutrition";
@@ -2549,14 +2549,14 @@ schema:nutrition a rdf:Property;
     schema:range schema:NutritionInformation;
     rdfs:comment "Nutrition information about the recipe." .
 
-schema:occupationalcategory a rdf:Property;
-    rdfs:label "occupationalcategory";
+schema:occupationalCategory a rdf:Property;
+    rdfs:label "occupationalCategory";
     schema:domain schema:JobPosting;
     schema:range schema:Text;
     rdfs:comment "Category or categories describing the job. Use BLS O*NET-SOC taxonomy: http://www.onetcenter.org/taxonomy.html. Ideally includes textual label and formal code, with the property repeated for each applicable value." .
 
-schema:offercount a rdf:Property;
-    rdfs:label "offercount";
+schema:offerCount a rdf:Property;
+    rdfs:label "offerCount";
     schema:domain schema:AggregateOffer;
     schema:range schema:Integer;
     rdfs:comment "The number of offers for the product." .
@@ -2570,15 +2570,15 @@ schema:offers a rdf:Property;
     schema:range schema:Offer;
     rdfs:comment "An offer to sell this item—for example, an offer to sell a product, the DVD of a movie, or tickets to an event." .
 
-schema:openinghours a rdf:Property;
-    rdfs:label "openinghours";
+schema:openingHours a rdf:Property;
+    rdfs:label "openingHours";
     schema:domain schema:CivicStructure,
         schema:LocalBusiness;
     schema:range schema:Duration;
-    rdfs:comment "The opening hours for a business. Opening hours can be specified as a weekly time http://schema.org/range, starting with days, then times per day. Multiple days can be listed with commas ',' separating each day. Day or time http://schema.org/ranges are specified using a hyphen '-'.- Days are specified using the following two-letter combinations: Mo, Tu, We, Th, Fr, Sa, Su.- Times are specified using 24:00 time. For example, 3pm is specified as 15:00. - Here is an example: <time itemprop=\"openingHours\" datetime=\"Tu,Th 16:00-20:00\">Tuesdays and Thursdays 4-8pm</time>. - If a business is open 7 days a week, then it can be specified as <time itemprop=\"openingHours\" datetime=\"Mo-Su\">Monday through Sunday, all day</time>." .
+    rdfs:comment "The opening hours for a business. Opening hours can be specified as a weekly time range, starting with days, then times per day. Multiple days can be listed with commas ',' separating each day. Day or time ranges are specified using a hyphen '-'.- Days are specified using the following two-letter combinations: Mo, Tu, We, Th, Fr, Sa, Su.- Times are specified using 24:00 time. For example, 3pm is specified as 15:00. - Here is an example: <time itemprop=\"openingHours\" datetime=\"Tu,Th 16:00-20:00\">Tuesdays and Thursdays 4-8pm</time>. - If a business is open 7 days a week, then it can be specified as <time itemprop=\"openingHours\" datetime=\"Mo-Su\">Monday through Sunday, all day</time>." .
 
-schema:operatingsystems a rdf:Property;
-    rdfs:label "operatingsystems";
+schema:operatingSystems a rdf:Property;
+    rdfs:label "operatingSystems";
     schema:domain schema:SoftwareApplication;
     schema:range schema:Text;
     rdfs:comment "Operating systems supported (Windows 7, OSX 10.6, Android 1.6)." .
@@ -2589,27 +2589,27 @@ schema:parents a rdf:Property;
     schema:range schema:Person;
     rdfs:comment "A parents of the person." .
 
-schema:partofseason a rdf:Property;
-    rdfs:label "partofseason";
+schema:partOfSeason a rdf:Property;
+    rdfs:label "partOfSeason";
     schema:domain schema:TVEpisode;
     schema:range schema:TVSeason;
     rdfs:comment "The season to which this episode belongs." .
 
-schema:partoftvseries a rdf:Property;
-    rdfs:label "partoftvseries";
+schema:partOfTVSeries a rdf:Property;
+    rdfs:label "partOfTVSeries";
     schema:domain schema:TVEpisode,
         schema:TVSeason;
     schema:range schema:TVSeries;
     rdfs:comment "The TV series to which this episode or season belongs." .
 
-schema:paymentaccepted a rdf:Property;
-    rdfs:label "paymentaccepted";
+schema:paymentAccepted a rdf:Property;
+    rdfs:label "paymentAccepted";
     schema:domain schema:LocalBusiness;
     schema:range schema:Text;
     rdfs:comment "Cash, credit card, etc." .
 
-schema:performerin a rdf:Property;
-    rdfs:label "performerin";
+schema:performerIn a rdf:Property;
+    rdfs:label "performerIn";
     schema:domain schema:Person;
     schema:range schema:Event;
     rdfs:comment "Event that this person is a performer or participant in." .
@@ -2634,8 +2634,8 @@ schema:photos a rdf:Property;
         schema:Photograph;
     rdfs:comment "Photographs of this place." .
 
-schema:playertype a rdf:Property;
-    rdfs:label "playertype";
+schema:playerType a rdf:Property;
+    rdfs:label "playerType";
     schema:domain schema:MediaObject;
     schema:range schema:Text;
     rdfs:comment "Player type required—for example, Flash or Silverlight." .
@@ -2646,20 +2646,20 @@ schema:polygon a rdf:Property;
     schema:range schema:Text;
     rdfs:comment "A polygon is the area enclosed by a point-to-point path for which the starting and ending points are the same. A polygon is expressed as a series of four or more spacedelimited points where the first and final points are identical." .
 
-schema:postalcode a rdf:Property;
-    rdfs:label "postalcode";
-    schema:domain schema:PostalAddress;
-    schema:range schema:Text;
-    rdfs:comment "The postal code. For example, 94043." .
-
-schema:postofficeboxnumber a rdf:Property;
-    rdfs:label "postofficeboxnumber";
+schema:postOfficeBoxNumber a rdf:Property;
+    rdfs:label "postOfficeBoxNumber";
     schema:domain schema:PostalAddress;
     schema:range schema:Text;
     rdfs:comment "The post offce box number for PO box addresses." .
 
-schema:preptime a rdf:Property;
-    rdfs:label "preptime";
+schema:postalCode a rdf:Property;
+    rdfs:label "postalCode";
+    schema:domain schema:PostalAddress;
+    schema:range schema:Text;
+    rdfs:comment "The postal code. For example, 94043." .
+
+schema:prepTime a rdf:Property;
+    rdfs:label "prepTime";
     schema:domain schema:Recipe;
     schema:range schema:Duration;
     rdfs:comment "The length of time it takes to prepare the recipe, in ISO 8601 duration format." .
@@ -2671,50 +2671,50 @@ schema:price a rdf:Property;
         schema:Text;
     rdfs:comment "The offer price of the product." .
 
-schema:pricecurrency a rdf:Property;
-    rdfs:label "pricecurrency";
+schema:priceCurrency a rdf:Property;
+    rdfs:label "priceCurrency";
     schema:domain schema:Offer;
     schema:range schema:Text;
     rdfs:comment "The currency (in 3-letter ISO 4217 format) of the offer price." .
 
-<http://schema.org/pricehttp://schema.org/range> a rdf:Property;
-    rdfs:label "pricehttp://schema.org/range";
+schema:priceRange a rdf:Property;
+    rdfs:label "priceRange";
     schema:domain schema:LocalBusiness;
     schema:range schema:Text;
-    rdfs:comment "The price http://schema.org/range of the business, for example $$$." .
+    rdfs:comment "The price range of the business, for example $$$." .
 
-schema:pricevaliduntil a rdf:Property;
-    rdfs:label "pricevaliduntil";
+schema:priceValidUntil a rdf:Property;
+    rdfs:label "priceValidUntil";
     schema:domain schema:Offer;
     schema:range schema:Date;
     rdfs:comment "The date after which the price is no longer available." .
 
-schema:primaryimageofpage a rdf:Property;
-    rdfs:label "primaryimageofpage";
+schema:primaryImageOfPage a rdf:Property;
+    rdfs:label "primaryImageOfPage";
     schema:domain schema:WebPage;
     schema:range schema:ImageObject;
     rdfs:comment "Indicates the main image on the page" .
 
-schema:printcolumn a rdf:Property;
-    rdfs:label "printcolumn";
+schema:printColumn a rdf:Property;
+    rdfs:label "printColumn";
     schema:domain schema:NewsArticle;
     schema:range schema:Text;
     rdfs:comment "The number of the column in which the NewsArticle appears in the print edition." .
 
-schema:printedition a rdf:Property;
-    rdfs:label "printedition";
+schema:printEdition a rdf:Property;
+    rdfs:label "printEdition";
     schema:domain schema:NewsArticle;
     schema:range schema:Text;
     rdfs:comment "The edition of the print product in which the NewsArticle appears." .
 
-schema:printpage a rdf:Property;
-    rdfs:label "printpage";
+schema:printPage a rdf:Property;
+    rdfs:label "printPage";
     schema:domain schema:NewsArticle;
     schema:range schema:Text;
     rdfs:comment "If this NewsArticle appears in print, this field indicates the name of the page on which the article is found. Please note that this field is intended for the exact page name (e.g. A5, B18)." .
 
-schema:printsection a rdf:Property;
-    rdfs:label "printsection";
+schema:printSection a rdf:Property;
+    rdfs:label "printSection";
     schema:domain schema:NewsArticle;
     schema:range schema:Text;
     rdfs:comment "If this NewsArticle appears in print, this field indicates the print section in which the article appeared." .
@@ -2727,14 +2727,14 @@ schema:producer a rdf:Property;
     schema:range schema:Person;
     rdfs:comment "The producer of the movie, TV series, season, or episode, or video." .
 
-schema:productid a rdf:Property;
-    rdfs:label "productid";
+schema:productID a rdf:Property;
+    rdfs:label "productID";
     schema:domain schema:Product;
     schema:range schema:Text;
     rdfs:comment "The product identifier, such as ISBN. For example: <meta itemprop='productID' content='isbn:123-456-789'/>." .
 
-schema:productioncompany a rdf:Property;
-    rdfs:label "productioncompany";
+schema:productionCompany a rdf:Property;
+    rdfs:label "productionCompany";
     schema:domain schema:Movie,
         schema:TVEpisode,
         schema:TVSeries,
@@ -2742,8 +2742,8 @@ schema:productioncompany a rdf:Property;
     schema:range schema:Organization;
     rdfs:comment "The production company or studio that made the movie, TV series, season, or episode, or video." .
 
-schema:proteincontent a rdf:Property;
-    rdfs:label "proteincontent";
+schema:proteinContent a rdf:Property;
+    rdfs:label "proteinContent";
     schema:domain schema:NutritionInformation;
     schema:range schema:Mass;
     rdfs:comment "The number of grams of protein." .
@@ -2761,8 +2761,8 @@ schema:publisher a rdf:Property;
     schema:range schema:Organization;
     rdfs:comment "The publisher of the creative work." .
 
-schema:publishingprinciples a rdf:Property;
-    rdfs:label "publishingprinciples";
+schema:publishingPrinciples a rdf:Property;
+    rdfs:label "publishingPrinciples";
     schema:domain schema:CreativeWork;
     schema:range schema:URL;
     rdfs:comment "Link to page describing the editorial principles of the organization primarily responsible for the creation of the CreativeWork." .
@@ -2773,68 +2773,68 @@ schema:qualifications a rdf:Property;
     schema:range schema:Text;
     rdfs:comment "Specific qualifications required for this role." .
 
-schema:ratingcount a rdf:Property;
-    rdfs:label "ratingcount";
+schema:ratingCount a rdf:Property;
+    rdfs:label "ratingCount";
     schema:domain schema:AggregateRating;
     schema:range schema:Number;
     rdfs:comment "The count of total number of ratings." .
 
-schema:ratingvalue a rdf:Property;
-    rdfs:label "ratingvalue";
+schema:ratingValue a rdf:Property;
+    rdfs:label "ratingValue";
     schema:domain schema:Rating;
     schema:range schema:Text;
     rdfs:comment "The rating for the content." .
 
-schema:recipecategory a rdf:Property;
-    rdfs:label "recipecategory";
+schema:recipeCategory a rdf:Property;
+    rdfs:label "recipeCategory";
     schema:domain schema:Recipe;
     schema:range schema:Text;
     rdfs:comment "The category of the recipe—for example, appetizer, entree, etc." .
 
-schema:recipecuisine a rdf:Property;
-    rdfs:label "recipecuisine";
+schema:recipeCuisine a rdf:Property;
+    rdfs:label "recipeCuisine";
     schema:domain schema:Recipe;
     schema:range schema:Text;
     rdfs:comment "The cuisine of the recipe (for example, French or Ethopian)." .
 
-schema:recipeinstructions a rdf:Property;
-    rdfs:label "recipeinstructions";
+schema:recipeInstructions a rdf:Property;
+    rdfs:label "recipeInstructions";
     schema:domain schema:Recipe;
     schema:range schema:Text;
     rdfs:comment "The steps to make the dish." .
 
-schema:recipeyield a rdf:Property;
-    rdfs:label "recipeyield";
+schema:recipeYield a rdf:Property;
+    rdfs:label "recipeYield";
     schema:domain schema:Recipe;
     schema:range schema:Text;
     rdfs:comment "The quantity produced by the recipe (for example, number of people served, number of servings, etc)." .
 
-schema:regionsallowed a rdf:Property;
-    rdfs:label "regionsallowed";
+schema:regionsAllowed a rdf:Property;
+    rdfs:label "regionsAllowed";
     schema:domain schema:MediaObject;
     schema:range schema:Place;
     rdfs:comment "The regions where the media is allowed. If not specified, then it's assumed to be allowed everywhere. Specify the countries in ISO 3166 format." .
 
-schema:relatedto a rdf:Property;
-    rdfs:label "relatedto";
+schema:relatedTo a rdf:Property;
+    rdfs:label "relatedTo";
     schema:domain schema:Person;
     schema:range schema:Person;
     rdfs:comment "The most generic familial relation." .
 
-schema:replytourl a rdf:Property;
-    rdfs:label "replytourl";
+schema:replyToUrl a rdf:Property;
+    rdfs:label "replyToUrl";
     schema:domain schema:UserComments;
     schema:range schema:URL;
     rdfs:comment "The URL at which a reply may be posted to the specified UserComment." .
 
-schema:representativeofpage a rdf:Property;
-    rdfs:label "representativeofpage";
+schema:representativeOfPage a rdf:Property;
+    rdfs:label "representativeOfPage";
     schema:domain schema:ImageObject;
     schema:range schema:Boolean;
     rdfs:comment "Indicates whether this image is representative of the content of the page." .
 
-schema:requiressubscription a rdf:Property;
-    rdfs:label "requiressubscription";
+schema:requiresSubscription a rdf:Property;
+    rdfs:label "requiresSubscription";
     schema:domain schema:MediaObject;
     schema:range schema:Boolean;
     rdfs:comment "Indicates if use of the media require a subscription  (either paid or free). Allowed values are yes or no." .
@@ -2845,20 +2845,20 @@ schema:responsibilities a rdf:Property;
     schema:range schema:Text;
     rdfs:comment "Responsibilities associated with this role." .
 
-schema:reviewbody a rdf:Property;
-    rdfs:label "reviewbody";
+schema:reviewBody a rdf:Property;
+    rdfs:label "reviewBody";
     schema:domain schema:Review;
     schema:range schema:Text;
     rdfs:comment "The actual body of the review" .
 
-schema:reviewcount a rdf:Property;
-    rdfs:label "reviewcount";
+schema:reviewCount a rdf:Property;
+    rdfs:label "reviewCount";
     schema:domain schema:AggregateRating;
     schema:range schema:Number;
     rdfs:comment "The count of total number of reviews." .
 
-schema:reviewrating a rdf:Property;
-    rdfs:label "reviewrating";
+schema:reviewRating a rdf:Property;
+    rdfs:label "reviewRating";
     schema:domain schema:Review;
     schema:range schema:Rating;
     rdfs:comment "The rating given in this review. Note that reviews can themselves be rated. The reviewRating applies to rating given by the review. The aggregateRating property applies to the review itself, as a creative work." .
@@ -2873,14 +2873,14 @@ schema:reviews a rdf:Property;
     schema:range schema:Review;
     rdfs:comment "Review of the item." .
 
-schema:salarycurrency a rdf:Property;
-    rdfs:label "salarycurrency";
+schema:salaryCurrency a rdf:Property;
+    rdfs:label "salaryCurrency";
     schema:domain schema:JobPosting;
     schema:range schema:Text;
     rdfs:comment "The currency (coded using ISO 4217, http://en.wikipedia.org/wiki/ISO_4217 used for the main salary information in this job posting." .
 
-schema:saturatedfatcontent a rdf:Property;
-    rdfs:label "saturatedfatcontent";
+schema:saturatedFatContent a rdf:Property;
+    rdfs:label "saturatedFatContent";
     schema:domain schema:NutritionInformation;
     schema:range schema:Mass;
     rdfs:comment "The number of grams of saturated fat." .
@@ -2891,8 +2891,8 @@ schema:screenshots a rdf:Property;
     schema:range schema:URL;
     rdfs:comment "Link(s) to app screenshots." .
 
-schema:seasonnumber a rdf:Property;
-    rdfs:label "seasonnumber";
+schema:seasonNumber a rdf:Property;
+    rdfs:label "seasonNumber";
     schema:domain schema:TVSeason;
     schema:range schema:Integer;
     rdfs:comment "The season number." .
@@ -2909,14 +2909,14 @@ schema:seller a rdf:Property;
     schema:range schema:Organization;
     rdfs:comment "The seller of the product." .
 
-schema:servescuisine a rdf:Property;
-    rdfs:label "servescuisine";
+schema:servesCuisine a rdf:Property;
+    rdfs:label "servesCuisine";
     schema:domain schema:FoodEstablishment;
     schema:range schema:Text;
     rdfs:comment "The cuisine of the restaurant." .
 
-schema:servingsize a rdf:Property;
-    rdfs:label "servingsize";
+schema:servingSize a rdf:Property;
+    rdfs:label "servingSize";
     schema:domain schema:NutritionInformation;
     schema:range schema:Text;
     rdfs:comment "The serving size, in terms of the number of volume or mass" .
@@ -2927,8 +2927,8 @@ schema:siblings a rdf:Property;
     schema:range schema:Person;
     rdfs:comment "A sibling of the person." .
 
-schema:significantlinks a rdf:Property;
-    rdfs:label "significantlinks";
+schema:significantLinks a rdf:Property;
+    rdfs:label "significantLinks";
     schema:domain schema:WebPage;
     schema:range schema:URL;
     rdfs:comment "The most significant URLs on the page. Typically, these are the non-navigation links that are clicked on the most" .
@@ -2939,44 +2939,44 @@ schema:skills a rdf:Property;
     schema:range schema:Text;
     rdfs:comment "Skills required to fulfill this role." .
 
-schema:sodiumcontent a rdf:Property;
-    rdfs:label "sodiumcontent";
+schema:sodiumContent a rdf:Property;
+    rdfs:label "sodiumContent";
     schema:domain schema:NutritionInformation;
     schema:range schema:Mass;
     rdfs:comment "The number of milligrams of sodium." .
 
-schema:softwareapplicationcategory a rdf:Property;
-    rdfs:label "softwareapplicationcategory";
+schema:softwareApplicationCategory a rdf:Property;
+    rdfs:label "softwareApplicationCategory";
     schema:domain schema:SoftwareApplication;
     schema:range schema:SoftwareApplicationType;
     rdfs:comment "Type of software application." .
 
-schema:softwareapplicationcategorydeprecated a rdf:Property;
-    rdfs:label "softwareapplicationcategorydeprecated";
+schema:softwareApplicationCategoryDeprecated a rdf:Property;
+    rdfs:label "softwareApplicationCategoryDeprecated";
     schema:domain schema:SoftwareApplication;
     schema:range schema:Thing;
     rdfs:comment "Type of software application." .
 
-schema:softwareapplicationsubcategory a rdf:Property;
-    rdfs:label "softwareapplicationsubcategory";
+schema:softwareApplicationSubCategory a rdf:Property;
+    rdfs:label "softwareApplicationSubCategory";
     schema:domain schema:SoftwareApplication;
     schema:range schema:Text;
     rdfs:comment "Subcategory of the application." .
 
-schema:softwareversion a rdf:Property;
-    rdfs:label "softwareversion";
+schema:softwareVersion a rdf:Property;
+    rdfs:label "softwareVersion";
     schema:domain schema:SoftwareApplication;
     schema:range schema:Text;
     rdfs:comment "Version of the software instance." .
 
-schema:sourceorganization a rdf:Property;
-    rdfs:label "sourceorganization";
+schema:sourceOrganization a rdf:Property;
+    rdfs:label "sourceOrganization";
     schema:domain schema:CreativeWork;
     schema:range schema:Organization;
     rdfs:comment "The Organization on whose behalf the creator was working." .
 
-schema:specialcommitments a rdf:Property;
-    rdfs:label "specialcommitments";
+schema:specialCommitments a rdf:Property;
+    rdfs:label "specialCommitments";
     schema:domain schema:JobPosting;
     schema:range schema:Text;
     rdfs:comment "Any special commitments associated with this job posting. Valid entries include VeteranCommit, MilitarySpouseCommit, etc." .
@@ -2987,34 +2987,34 @@ schema:spouse a rdf:Property;
     schema:range schema:Person;
     rdfs:comment "The person's spouse." .
 
-schema:startdate a rdf:Property;
-    rdfs:label "startdate";
+schema:startDate a rdf:Property;
+    rdfs:label "startDate";
     schema:domain schema:Event,
         schema:TVSeason,
         schema:TVSeries;
     schema:range schema:Date;
     rdfs:comment "The start date and time of the event (in ISO 8601 date format)." .
 
-schema:streetaddress a rdf:Property;
-    rdfs:label "streetaddress";
+schema:streetAddress a rdf:Property;
+    rdfs:label "streetAddress";
     schema:domain schema:PostalAddress;
     schema:range schema:Text;
     rdfs:comment "The street address. For example, 1600 Amphitheatre Pkwy." .
 
-schema:subevents a rdf:Property;
-    rdfs:label "subevents";
+schema:subEvents a rdf:Property;
+    rdfs:label "subEvents";
     schema:domain schema:Event;
     schema:range schema:Event;
     rdfs:comment "Events that are a part of this event. For example, a conference event includes many presentations, each are subEvents of the conference." .
 
-schema:sugarcontent a rdf:Property;
-    rdfs:label "sugarcontent";
+schema:sugarContent a rdf:Property;
+    rdfs:label "sugarContent";
     schema:domain schema:NutritionInformation;
     schema:range schema:Mass;
     rdfs:comment "The number of grams of sugar." .
 
-schema:superevent a rdf:Property;
-    rdfs:label "superevent";
+schema:superEvent a rdf:Property;
+    rdfs:label "superEvent";
     schema:domain schema:Event;
     schema:range schema:Event;
     rdfs:comment "An event that this event is a part of. For example, a collection of individual music performances might each have a music festival as their superEvent." .
@@ -3035,14 +3035,14 @@ schema:thumbnail a rdf:Property;
     schema:range schema:ImageObject;
     rdfs:comment "Thumbnail image for an image or video." .
 
-schema:thumbnailurl a rdf:Property;
-    rdfs:label "thumbnailurl";
+schema:thumbnailUrl a rdf:Property;
+    rdfs:label "thumbnailUrl";
     schema:domain schema:CreativeWork;
     schema:range schema:URL;
     rdfs:comment "A thumbnail image relevant to the Thing." .
 
-schema:tickersymbol a rdf:Property;
-    rdfs:label "tickersymbol";
+schema:tickerSymbol a rdf:Property;
+    rdfs:label "tickerSymbol";
     schema:domain schema:Corporation;
     schema:range schema:Text;
     rdfs:comment "The exchange traded instrument associated with a Corporation object. The tickerSymbol is expressed as an exchange and an instrument name separated by a space character. For the exchange component of the tickerSymbol attribute, we reccommend using the controlled vocaulary of Market Identifier Codes (MIC) specified in ISO15022." .
@@ -3053,8 +3053,8 @@ schema:title a rdf:Property;
     schema:range schema:Text;
     rdfs:comment "The title of the job." .
 
-schema:totaltime a rdf:Property;
-    rdfs:label "totaltime";
+schema:totalTime a rdf:Property;
+    rdfs:label "totalTime";
     schema:domain schema:Recipe;
     schema:range schema:Duration;
     rdfs:comment "The total time it takes to prepare and cook the recipe, in ISO 8601 duration format." .
@@ -3075,6 +3075,12 @@ schema:trailer a rdf:Property;
     schema:range schema:VideoObject;
     rdfs:comment "The trailer of the movie or TV series, season, or episode." .
 
+schema:transFatContent a rdf:Property;
+    rdfs:label "transFatContent";
+    schema:domain schema:NutritionInformation;
+    schema:range schema:Mass;
+    rdfs:comment "The number of grams of trans fat." .
+
 schema:transcript a rdf:Property;
     rdfs:label "transcript";
     schema:domain schema:AudioObject,
@@ -3082,26 +3088,20 @@ schema:transcript a rdf:Property;
     schema:range schema:Text;
     rdfs:comment "If this MediaObject is an AudioObject or VideoObject, the transcript of that object." .
 
-schema:transfatcontent a rdf:Property;
-    rdfs:label "transfatcontent";
-    schema:domain schema:NutritionInformation;
-    schema:range schema:Mass;
-    rdfs:comment "The number of grams of trans fat." .
-
 schema:type a rdf:Property;
     rdfs:label "type";
     schema:domain schema:Thing;
     schema:range schema:Text;
     rdfs:comment "Auto added type field." .
 
-schema:unsaturatedfatcontent a rdf:Property;
-    rdfs:label "unsaturatedfatcontent";
+schema:unsaturatedFatContent a rdf:Property;
+    rdfs:label "unsaturatedFatContent";
     schema:domain schema:NutritionInformation;
     schema:range schema:Mass;
     rdfs:comment "The number of grams of unsaturated fat." .
 
-schema:uploaddate a rdf:Property;
-    rdfs:label "uploaddate";
+schema:uploadDate a rdf:Property;
+    rdfs:label "uploadDate";
     schema:domain schema:MediaObject;
     schema:range schema:Date;
     rdfs:comment "Date when this media object was uploaded to this site." .
@@ -3112,8 +3112,8 @@ schema:url a rdf:Property;
     schema:range schema:URL;
     rdfs:comment "URL of the item." .
 
-schema:usagetermsdeprecated a rdf:Property;
-    rdfs:label "usagetermsdeprecated";
+schema:usageTermsDeprecated a rdf:Property;
+    rdfs:label "usageTermsDeprecated";
     schema:domain schema:CreativeWork;
     schema:range schema:Text,
         schema:URL;
@@ -3131,14 +3131,14 @@ schema:video a rdf:Property;
     schema:range schema:VideoObject;
     rdfs:comment "An embedded video object." .
 
-schema:videoframesize a rdf:Property;
-    rdfs:label "videoframesize";
+schema:videoFrameSize a rdf:Property;
+    rdfs:label "videoFrameSize";
     schema:domain schema:VideoObject;
     schema:range schema:Text;
     rdfs:comment "The frame size of the video." .
 
-schema:videoquality a rdf:Property;
-    rdfs:label "videoquality";
+schema:videoQuality a rdf:Property;
+    rdfs:label "videoQuality";
     schema:domain schema:VideoObject;
     schema:range schema:Text;
     rdfs:comment "The quality of the video." .
@@ -3149,33 +3149,33 @@ schema:width a rdf:Property;
     schema:range schema:Distance;
     rdfs:comment "The width of the media object." .
 
-schema:wordcount a rdf:Property;
-    rdfs:label "wordcount";
+schema:wordCount a rdf:Property;
+    rdfs:label "wordCount";
     schema:domain schema:Article;
     schema:range schema:Integer;
     rdfs:comment "The number of words in the text of the Article." .
 
-schema:workhours a rdf:Property;
-    rdfs:label "workhours";
+schema:workHours a rdf:Property;
+    rdfs:label "workHours";
     schema:domain schema:JobPosting;
     schema:range schema:Text;
     rdfs:comment "The typical working hours for this job (e.g. 1st shift, night shift, 8am-5pm)." .
 
-schema:worklocation a rdf:Property;
-    rdfs:label "worklocation";
+schema:workLocation a rdf:Property;
+    rdfs:label "workLocation";
     schema:domain schema:Person;
     schema:range schema:ContactPoint,
         schema:Place;
     rdfs:comment "A contact location for a person's place of work." .
 
-schema:worksfor a rdf:Property;
-    rdfs:label "worksfor";
+schema:worksFor a rdf:Property;
+    rdfs:label "worksFor";
     schema:domain schema:Person;
     schema:range schema:Organization;
     rdfs:comment "Organizations that the person works for." .
 
-schema:worstrating a rdf:Property;
-    rdfs:label "worstrating";
+schema:worstRating a rdf:Property;
+    rdfs:label "worstRating";
     schema:domain schema:Rating;
     schema:range schema:Number,
         schema:Text;
